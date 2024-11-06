@@ -1,0 +1,26 @@
+|fulladder
+cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+a => halfadder:inst.a
+b => halfadder:inst.b
+cin => halfadder:inst1.b
+s <= halfadder:inst1.s
+
+
+|fulladder|halfadder:inst
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fulladder|halfadder:inst1
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
