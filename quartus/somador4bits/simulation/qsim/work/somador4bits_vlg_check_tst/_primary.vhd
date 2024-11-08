@@ -2,9 +2,6 @@ library verilog;
 use verilog.vl_types.all;
 entity somador4bits_vlg_check_tst is
     port(
-        c0              : in     vl_logic;
-        c1              : in     vl_logic;
-        c2              : in     vl_logic;
         cout            : in     vl_logic;
         s0              : in     vl_logic;
         s1              : in     vl_logic;
