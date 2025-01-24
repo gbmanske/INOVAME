@@ -9,7 +9,7 @@ set DESIGN alu
 
 set GEN_EFF low
 
-set DATE [clock format [clock seconds] -format "%b%d-%T"] 
+set DATE [clock format [clock seconds] -format "%b%d-%H%M%S"]
 set _REPORTS_PATH report/reports_${DATE}
 set _LOG_PATH log/logs_${DATE}
 #################################################################
