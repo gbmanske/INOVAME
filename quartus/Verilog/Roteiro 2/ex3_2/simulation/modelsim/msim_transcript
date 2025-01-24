@@ -1,0 +1,88 @@
+# do ex3_2_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {ex3_2.vo}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ex3_2
+# 
+# Top level modules:
+# 	ex3_2
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/ex3_2 {/home/gme/guilherme.manske/quartus/Verilog/ex3_2/tb_data_driver.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_data_driver
+# 
+# Top level modules:
+# 	tb_data_driver
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs="+acc"  tb_data_driver
+# vsim +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps tb_data_driver 
+# Loading work.tb_data_driver
+# Loading work.ex3_2
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# Loading instances from ex3_2_v.sdo
+# Loading timing data from ex3_2_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_data_driver File: /home/gme/guilherme.manske/quartus/Verilog/ex3_2/tb_data_driver.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time=0 | enable=0 | data_in=10101010 | data_out=xxxxxxxx
+# Time=3 | enable=0 | data_in=10101010 | data_out=xxxxxzzx
+# Time=3 | enable=0 | data_in=10101010 | data_out=xxxxzzzx
+# Time=3 | enable=0 | data_in=10101010 | data_out=xxzxzzzz
+# Time=3 | enable=0 | data_in=10101010 | data_out=zxzzzzzz
+# Time=3 | enable=0 | data_in=10101010 | data_out=zzzzzzzz
+# Time=4 | enable=0 | data_in=10101010 | data_out=zzzzzzzx
+# Time=4 | enable=0 | data_in=10101010 | data_out=zzzzzzzz
+# Time=10 | enable=1 | data_in=10101010 | data_out=zzzzzzzz
+# Time=14 | enable=1 | data_in=10101010 | data_out=zzz0zzzz
+# Time=14 | enable=1 | data_in=10101010 | data_out=zzz0z0zz
+# Time=14 | enable=1 | data_in=10101010 | data_out=zzz0z0z0
+# Time=14 | enable=1 | data_in=10101010 | data_out=zzz0z010
+# Time=14 | enable=1 | data_in=10101010 | data_out=zz10z010
+# Time=15 | enable=1 | data_in=10101010 | data_out=zz101010
+# Time=15 | enable=1 | data_in=10101010 | data_out=1z101010
+# Time=15 | enable=1 | data_in=10101010 | data_out=10101010
+# Time=20 | enable=0 | data_in=11110000 | data_out=10101010
+# Time=24 | enable=0 | data_in=11110000 | data_out=101z1010
+# Time=24 | enable=0 | data_in=11110000 | data_out=101z10z0
+# Time=25 | enable=0 | data_in=11110000 | data_out=101z1zz0
+# Time=25 | enable=0 | data_in=11110000 | data_out=10zz1zz0
+# Time=25 | enable=0 | data_in=11110000 | data_out=10zzzzz0
+# Time=25 | enable=0 | data_in=11110000 | data_out=10zzzzzz
+# Time=25 | enable=0 | data_in=11110000 | data_out=z0zzzzzz
+# Time=26 | enable=0 | data_in=11110000 | data_out=zzzzzzzz
+# Time=30 | enable=1 | data_in=00001111 | data_out=zzzzzzzz
+# Time=34 | enable=1 | data_in=00001111 | data_out=zzz1zzzz
+# Time=34 | enable=1 | data_in=00001111 | data_out=zzz1z00z
+# Time=34 | enable=1 | data_in=00001111 | data_out=zzz1z000
+# Time=34 | enable=1 | data_in=00001111 | data_out=zzz10000
+# Time=34 | enable=1 | data_in=00001111 | data_out=zzz10001
+# Time=34 | enable=1 | data_in=00001111 | data_out=zz110001
+# Time=35 | enable=1 | data_in=00001111 | data_out=1z110001
+# Time=35 | enable=1 | data_in=00001111 | data_out=11110001
+# Time=36 | enable=1 | data_in=00001111 | data_out=11111001
+# Time=36 | enable=1 | data_in=00001111 | data_out=11111101
+# Time=36 | enable=1 | data_in=00001111 | data_out=11111111
+# Time=36 | enable=1 | data_in=00001111 | data_out=11101111
+# Time=37 | enable=1 | data_in=00001111 | data_out=01101111
+# Time=37 | enable=1 | data_in=00001111 | data_out=01001111
+# Time=38 | enable=1 | data_in=00001111 | data_out=00001111
+# Break in Module tb_data_driver at /home/gme/guilherme.manske/quartus/Verilog/ex3_2/tb_data_driver.v line 40
+# Simulation Breakpoint: Break in Module tb_data_driver at /home/gme/guilherme.manske/quartus/Verilog/ex3_2/tb_data_driver.v line 40
+# MACRO ./ex3_2_run_msim_gate_verilog.do PAUSED at line 17

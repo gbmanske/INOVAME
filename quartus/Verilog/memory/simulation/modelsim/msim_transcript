@@ -1,0 +1,64 @@
+# do memory_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/memory {/home/gme/guilherme.manske/quartus/Verilog/memory/memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/memory {/home/gme/guilherme.manske/quartus/Verilog/memory/memory_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module memory_tb
+# 
+# Top level modules:
+# 	memory_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  memory_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps memory_tb 
+# Loading work.memory_tb
+# Loading work.memory
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# clock: 0, read: 0, address: 0, data: xx
+# clock: 1, read: 0, address: 0, data: xx
+# clock: 0, read: 0, address: 0, data: xx
+# clock: 0, read: 1, address: 0, data: xx
+# clock: 1, read: 1, address: 0, data: ab
+# clock: 0, read: 1, address: 1, data: ab
+# clock: 1, read: 1, address: 1, data: 23
+# clock: 0, read: 1, address: 2, data: 23
+# clock: 1, read: 1, address: 2, data: cd
+# clock: 0, read: 1, address: 3, data: cd
+# clock: 1, read: 1, address: 3, data: 45
+# clock: 0, read: 1, address: 4, data: 45
+# clock: 1, read: 1, address: 4, data: ef
+# clock: 0, read: 1, address: 5, data: ef
+# clock: 1, read: 1, address: 5, data: 67
+# clock: 0, read: 1, address: 6, data: 67
+# clock: 1, read: 1, address: 6, data: 01
+# clock: 0, read: 1, address: 7, data: 01
+# clock: 1, read: 1, address: 7, data: 89
+# clock: 0, read: 1, address: 0, data: 89
+# clock: 1, read: 1, address: 0, data: ab
+# clock: 0, read: 1, address: 1, data: ab
+# clock: 1, read: 1, address: 1, data: 23
+# clock: 0, read: 1, address: 2, data: 23
+# Break in Module memory_tb at /home/gme/guilherme.manske/quartus/Verilog/memory/memory_tb.v line 25
+# Simulation Breakpoint: Break in Module memory_tb at /home/gme/guilherme.manske/quartus/Verilog/memory/memory_tb.v line 25
+# MACRO ./memory_run_msim_rtl_verilog.do PAUSED at line 17
+# WARNING: No extended dataflow license exists

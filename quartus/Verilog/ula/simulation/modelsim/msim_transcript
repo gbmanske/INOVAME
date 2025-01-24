@@ -1,0 +1,58 @@
+# do ula_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/ula {/home/gme/guilherme.manske/quartus/Verilog/ula/ula.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ula
+# 
+# Top level modules:
+# 	ula
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/ula {/home/gme/guilherme.manske/quartus/Verilog/ula/tb_alu_32bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_alu_32bit
+# 
+# Top level modules:
+# 	tb_alu_32bit
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_alu_32bit
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_alu_32bit 
+# Loading work.tb_alu_32bit
+# Loading work.ula
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Teste AND
+# AND: A=ffffffff, B=0000ffff, Result=0000ffff, Overflow=0, Zero=0, Negative=0
+# AND: A=00000000, B=ffffffff, Result=00000000, Overflow=0, Zero=1, Negative=0
+# Teste OR
+# OR: A=0000f0f0, B=0f0f0000, Result=0f0ff0f0, Overflow=0, Zero=0, Negative=0
+# OR: A=00000000, B=00000000, Result=00000000, Overflow=0, Zero=1, Negative=0
+# Teste Soma
+# ADD: A=7fffffff, B=00000001, Result=80000000, Overflow=1, Zero=0, Negative=1
+# ADD: A=80000000, B=ffffffff, Result=7fffffff, Overflow=1, Zero=0, Negative=0
+# Teste Subtração
+# SUB: A=80000000, B=00000001, Result=7fffffff, Overflow=1, Zero=0, Negative=0
+# SUB: A=7fffffff, B=ffffffff, Result=80000000, Overflow=1, Zero=0, Negative=1
+# Teste A AND !B
+# A AND !B: A=ffff0000, B=0000ffff, Result=ffff0000, Overflow=0, Zero=0, Negative=1
+# Teste A OR !B
+# A OR !B: A=0f0f0f0f, B=f0f0f0f0, Result=0f0f0f0f, Overflow=0, Zero=0, Negative=0
+# Teste SLT
+# SLT: A=00000001, B=00000002, Result=00000000, Overflow=0, Zero=1, Negative=0
+# SLT: A=ffffffff, B=00000000, Result=00000001, Overflow=0, Zero=0, Negative=0
+# Break in Module tb_alu_32bit at /home/gme/guilherme.manske/quartus/Verilog/ula/tb_alu_32bit.v line 66
+# Simulation Breakpoint: Break in Module tb_alu_32bit at /home/gme/guilherme.manske/quartus/Verilog/ula/tb_alu_32bit.v line 66
+# MACRO ./ula_run_msim_rtl_verilog.do PAUSED at line 17

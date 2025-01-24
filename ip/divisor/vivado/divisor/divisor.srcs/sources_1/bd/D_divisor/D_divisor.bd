@@ -1,0 +1,166 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x39D4A302FF5FECDA",
+      "device": "xczu7ev-ffvf1517-3-e",
+      "gen_directory": "../../../../divisor.gen/sources_1/bd/D_divisor",
+      "name": "D_divisor",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "div_0": ""
+    },
+    "ports": {
+      "i_a": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "c_a_ap_vld": {
+        "direction": "I"
+      },
+      "ap_clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "D_divisor_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "i_b": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "c_b_ap_vld": {
+        "direction": "I"
+      },
+      "o_res": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "c_res_ap_vld": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "div_0": {
+        "vlnv": "GbManske:Arith:div:1.0",
+        "ip_revision": "2113910289",
+        "xci_name": "D_divisor_div_0_0",
+        "xci_path": "ip/D_divisor_div_0_0/D_divisor_div_0_0.xci",
+        "inst_hier_path": "div_0"
+      }
+    },
+    "nets": {
+      "a_0_1": {
+        "ports": [
+          "i_a",
+          "div_0/a"
+        ]
+      },
+      "a_ap_vld_0_1": {
+        "ports": [
+          "c_a_ap_vld",
+          "div_0/a_ap_vld"
+        ]
+      },
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk_0",
+          "div_0/ap_clk"
+        ]
+      },
+      "ap_rst_0_1": {
+        "ports": [
+          "ap_rst_0",
+          "div_0/ap_rst"
+        ]
+      },
+      "b_0_1": {
+        "ports": [
+          "i_b",
+          "div_0/b"
+        ]
+      },
+      "b_ap_vld_0_1": {
+        "ports": [
+          "c_b_ap_vld",
+          "div_0/b_ap_vld"
+        ]
+      },
+      "div_0_res": {
+        "ports": [
+          "div_0/res",
+          "o_res"
+        ]
+      },
+      "div_0_res_ap_vld": {
+        "ports": [
+          "div_0/res_ap_vld",
+          "c_res_ap_vld"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+# do ex3_5_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/ex3_5 {/home/gme/guilherme.manske/quartus/Verilog/ex3_5/ex3_5.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ex3_5
+# 
+# Top level modules:
+# 	ex3_5
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/ex3_5 {/home/gme/guilherme.manske/quartus/Verilog/ex3_5/tb_signed_sum4inputs.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_signed_sum4inputs
+# 
+# Top level modules:
+# 	tb_signed_sum4inputs
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_signed_sum4inputs
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_signed_sum4inputs 
+# Loading work.tb_signed_sum4inputs
+# Loading work.ex3_5
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# A=  3, B=  2, C= -1, D=  1 | sum=  5, overflow=0
+# A=  7, B=  4, C=  3, D= -2 | sum= -4, overflow=1
+# A= -8, B= -4, C= -1, D=  7 | sum= -6, overflow=0
+# A= -6, B= -3, C= -2, D= -1 | sum=  4, overflow=1
+# A=  0, B=  0, C=  0, D=  0 | sum=  0, overflow=0
+# Break in Module tb_signed_sum4inputs at /home/gme/guilherme.manske/quartus/Verilog/ex3_5/tb_signed_sum4inputs.v line 41
+# Simulation Breakpoint: Break in Module tb_signed_sum4inputs at /home/gme/guilherme.manske/quartus/Verilog/ex3_5/tb_signed_sum4inputs.v line 41
+# MACRO ./ex3_5_run_msim_rtl_verilog.do PAUSED at line 17

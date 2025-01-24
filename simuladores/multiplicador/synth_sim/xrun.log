@@ -1,0 +1,179 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Dec 18, 2024 at 17:12:12 -03
+xrun
+	-f sim_local.f
+		-smartorder
+		-work work
+		-define USE_NETLIST
+		-top tb_mult_serial
+		-gui
+		-access +rw
+		-maxdelays
+		-sdf_cmd_file ./sdf.cmd
+		/tools/pdk/cadence/gpdk045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/verilog/fast_vdd1v0_basicCells_lvt.v
+		../synth/mult_serial_logic_mapped.v
+		../tb/tb_mult_32b.sv
+	-input wave.tcl
+Recompiling... reason: file '../synth/mult_serial_logic_mapped.sdf' is newer than expected.
+	expected: Wed Dec 18 16:44:43 2024
+	actual:   Wed Dec 18 17:11:14 2024
+	Elaborating the design hierarchy:
+		Caching library 'work' ....... Done
+	Top level design units:
+		tb_mult_serial
+	Reading SDF file from location "../synth/mult_serial_logic_mapped.sdf"
+	Compiled SDF file "mult_serial_logic_mapped.sdf.X" older than source SDF file "../synth/mult_serial_logic_mapped.sdf".
+	Recompiling.
+	Writing compiled SDF file to "mult_serial_logic_mapped.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     mult_serial_logic_mapped.sdf.X
+		Log file:              ./sdf.log
+		Backannotation scope:  tb_mult_serial:dut
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         1:1:1
+		Scale type:            FROM_MAXIMUM
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-17) (23)) of instance tb_mult_serial.dut.\state_reg[1]  of module DFFRX1LVT <../synth/mult_serial_logic_mapped.sdf, line 4818>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-17) (23)) of instance tb_mult_serial.dut.\state_reg[0]  of module DFFRX1LVT <../synth/mult_serial_logic_mapped.sdf, line 4838>.
+	Annotation completed with 0 Errors and 2 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 888     	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (888/888) 
+		 No. of Tchecks    = 576     	 No. of Disabled Tchecks    = 0        Annotated = 49.31% (284/576) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	           888	             0	               888	                100.00
+		       $hold	             2	             0	                 0	                  0.00
+		      $width	           282	             0	                 0	                  0.00
+		   $recovery	             2	             0	                 0	                  0.00
+		  $setuphold	           290	             0	               284	                 97.93
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                 335      29
+		UDPs:                    277       5
+		Primitives:              734       5
+		Timing outputs:          364      11
+		Registers:               150      20
+		Scalar wires:            516       -
+		Expanded wires:          128       3
+		Always blocks:             1       1
+		Initial blocks:            1       1
+		Pseudo assignments:        8       -
+		Timing checks:           866     146
+		Interconnect:            835       -
+		Delayed tcheck signals:  285     149
+		Assertions:                1       1
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: work.tb_mult_serial:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> 
+xcelium> # XM-Sim Command File
+xcelium> # TOOL:	xmsim(64)	23.09-s013
+xcelium> #
+xcelium> #
+xcelium> # You can restore this configuration with:
+xcelium> #
+xcelium> #      xrun -f sim_local.f -input wave.tcl
+xcelium> #
+xcelium> 
+xcelium> set tcl_prompt1 {puts -nonewline "xcelium> "}
+puts -nonewline "xcelium> "
+xcelium> set tcl_prompt2 {puts -nonewline "> "}
+puts -nonewline "> "
+xcelium> set vlog_format %h
+%h
+xcelium> set vhdl_format %v
+%v
+xcelium> set real_precision 6
+6
+xcelium> set display_unit auto
+auto
+xcelium> set time_unit module
+module
+xcelium> set heap_garbage_size -200
+-200
+xcelium> set heap_garbage_time 0
+0
+xcelium> set assert_report_level note
+note
+xcelium> set assert_stop_level error
+error
+xcelium> set autoscope yes
+yes
+xcelium> set assert_1164_warnings yes
+yes
+xcelium> set pack_assert_off {}
+xcelium> set severity_pack_assert_off {note warning}
+note warning
+xcelium> set assert_output_stop_level failed
+failed
+xcelium> set tcl_debug_level 0
+0
+xcelium> set relax_path_name 1
+1
+xcelium> set vhdl_vcdmap XX01ZX01X
+XX01ZX01X
+xcelium> set intovf_severity_level ERROR
+ERROR
+xcelium> set probe_screen_format 0
+0
+xcelium> set rangecnst_severity_level ERROR
+ERROR
+xcelium> set textio_severity_level ERROR
+ERROR
+xcelium> set vital_timing_checks_on 1
+1
+xcelium> set vlog_code_show_force 0
+0
+xcelium> set assert_count_attempts 1
+1
+xcelium> set tcl_all64 false
+false
+xcelium> set tcl_runerror_exit false
+false
+xcelium> set assert_report_incompletes 0
+0
+xcelium> set show_force 1
+1
+xcelium> set force_reset_by_reinvoke 0
+0
+xcelium> set tcl_relaxed_literal 0
+0
+xcelium> set probe_exclude_patterns {}
+xcelium> set probe_packed_limit 4k
+4k
+xcelium> set probe_unpacked_limit 16k
+16k
+xcelium> set assert_internal_msg no
+no
+xcelium> set svseed 1
+1
+xcelium> set assert_reporting_mode 0
+0
+xcelium> set vcd_compact_mode 0
+0
+xcelium> set vhdl_forgen_loopindex_enum_pos 0
+0
+xcelium> set tcl_sigval_prefix {#}
+#
+xcelium> alias . run
+xcelium> alias indago verisium
+xcelium> alias quit exit
+xcelium> database -open -vcd -into dump.fst _dump.fst1 -timescale fs
+Created VCD database _dump.fst1
+xcelium> database -open -evcd -into dump.fst _dump.fst -timescale fs
+xmsim: *E,FNINUS: File name dump.fst is already in use as a VCD file.
+xcelium> database -open -shm -into waves.shm waves -default
+Created default SHM database waves
+xcelium> probe -create -database waves tb_mult_serial.clk tb_mult_serial.end_mul tb_mult_serial.expected_prod tb_mult_serial.produto tb_mult_serial.rand_A tb_mult_serial.rand_B tb_mult_serial.reset tb_mult_serial.start tb_mult_serial.dut.cont tb_mult_serial.dut.state
+Created probe 1
+xcelium> 
+xcelium> simvision -input wave.tcl.svcf
+xcelium> TOOL:	xrun(64)	23.09-s013: Exiting on Dec 18, 2024 at 17:33:10 -03  (total: 00:20:58)

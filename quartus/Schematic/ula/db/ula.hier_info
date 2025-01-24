@@ -1,0 +1,351 @@
+|ula
+s[0] <= mux4bits4x1:inst5.s[3]
+s[1] <= mux4bits4x1:inst5.s[2]
+s[2] <= mux4bits4x1:inst5.s[1]
+s[3] <= mux4bits4x1:inst5.s[0]
+a[0] => and2x4:inst2.a[0]
+a[0] => shifter:inst3.in[0]
+a[0] => somador4bits:inst1.a[0]
+a[0] => mux4bits4x1:inst5.d[3]
+a[1] => and2x4:inst2.a[1]
+a[1] => shifter:inst3.in[1]
+a[1] => somador4bits:inst1.a[1]
+a[1] => mux4bits4x1:inst5.d[2]
+a[2] => and2x4:inst2.a[2]
+a[2] => shifter:inst3.in[2]
+a[2] => somador4bits:inst1.a[2]
+a[2] => mux4bits4x1:inst5.d[1]
+a[3] => and2x4:inst2.a[3]
+a[3] => shifter:inst3.in[3]
+a[3] => somador4bits:inst1.a[3]
+a[3] => mux4bits4x1:inst5.d[0]
+b[0] => and2x4:inst2.b[0]
+b[0] => somador4bits:inst1.b[0]
+b[1] => and2x4:inst2.b[1]
+b[1] => somador4bits:inst1.b[1]
+b[2] => and2x4:inst2.b[2]
+b[2] => somador4bits:inst1.b[2]
+b[3] => and2x4:inst2.b[3]
+b[3] => somador4bits:inst1.b[3]
+sel[0] => mux4bits4x1:inst5.sel[0]
+sel[1] => mux4bits4x1:inst5.sel[1]
+
+
+|ula|mux4bits4x1:inst5
+s[3] <= mux4x1:inst3.s
+s[2] <= mux4x1:inst2.s
+s[1] <= mux4x1:inst1.s
+s[0] <= mux4x1:inst.s
+a[3] => mux4x1:inst3.in0
+a[2] => mux4x1:inst2.in0
+a[1] => mux4x1:inst1.in0
+a[0] => mux4x1:inst.in0
+b[3] => mux4x1:inst3.in1
+b[2] => mux4x1:inst2.in1
+b[1] => mux4x1:inst1.in1
+b[0] => mux4x1:inst.in1
+c[3] => mux4x1:inst3.in2
+c[2] => mux4x1:inst2.in2
+c[1] => mux4x1:inst1.in2
+c[0] => mux4x1:inst.in2
+d[3] => mux4x1:inst3.in3
+d[2] => mux4x1:inst2.in3
+d[1] => mux4x1:inst1.in3
+d[0] => mux4x1:inst.in3
+sel[0] => mux4x1:inst.sel[0]
+sel[0] => mux4x1:inst1.sel[0]
+sel[0] => mux4x1:inst2.sel[0]
+sel[0] => mux4x1:inst3.sel[0]
+sel[1] => mux4x1:inst.sel[1]
+sel[1] => mux4x1:inst1.sel[1]
+sel[1] => mux4x1:inst2.sel[1]
+sel[1] => mux4x1:inst3.sel[1]
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst
+s <= mux2x1:inst2.s
+in0 => mux2x1:inst.a
+sel[0] => mux2x1:inst.sel
+sel[0] => mux2x1:inst1.sel
+sel[1] => mux2x1:inst2.sel
+in1 => mux2x1:inst.b
+in2 => mux2x1:inst1.a
+in3 => mux2x1:inst1.b
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst|mux2x1:inst2
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst|mux2x1:inst
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst|mux2x1:inst1
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst1
+s <= mux2x1:inst2.s
+in0 => mux2x1:inst.a
+sel[0] => mux2x1:inst.sel
+sel[0] => mux2x1:inst1.sel
+sel[1] => mux2x1:inst2.sel
+in1 => mux2x1:inst.b
+in2 => mux2x1:inst1.a
+in3 => mux2x1:inst1.b
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst1|mux2x1:inst2
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst1|mux2x1:inst
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst1|mux2x1:inst1
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst2
+s <= mux2x1:inst2.s
+in0 => mux2x1:inst.a
+sel[0] => mux2x1:inst.sel
+sel[0] => mux2x1:inst1.sel
+sel[1] => mux2x1:inst2.sel
+in1 => mux2x1:inst.b
+in2 => mux2x1:inst1.a
+in3 => mux2x1:inst1.b
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst2|mux2x1:inst2
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst2|mux2x1:inst
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst2|mux2x1:inst1
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst3
+s <= mux2x1:inst2.s
+in0 => mux2x1:inst.a
+sel[0] => mux2x1:inst.sel
+sel[0] => mux2x1:inst1.sel
+sel[1] => mux2x1:inst2.sel
+in1 => mux2x1:inst.b
+in2 => mux2x1:inst1.a
+in3 => mux2x1:inst1.b
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst3|mux2x1:inst2
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst3|mux2x1:inst
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|mux4bits4x1:inst5|mux4x1:inst3|mux2x1:inst1
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|ula|and2x4:inst2
+s[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+a[0] => inst.IN0
+a[1] => inst1.IN0
+a[2] => inst2.IN0
+a[3] => inst3.IN0
+b[0] => inst.IN1
+b[1] => inst1.IN1
+b[2] => inst2.IN1
+b[3] => inst3.IN1
+
+
+|ula|shifter:inst3
+out[0] <= <GND>
+out[1] <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+in[0] => out[1].DATAIN
+in[1] => out[2].DATAIN
+in[2] => out[3].DATAIN
+in[3] => ~NO_FANOUT~
+
+
+|ula|somador4bits:inst1
+cout <= fulladder:inst3.cout
+a[0] => fulladder:inst.a
+a[1] => fulladder:inst1.a
+a[2] => fulladder:inst2.a
+a[3] => fulladder:inst3.a
+b[0] => fulladder:inst.b
+b[1] => fulladder:inst1.b
+b[2] => fulladder:inst2.b
+b[3] => fulladder:inst3.b
+cin => fulladder:inst.cin
+s[0] <= fulladder:inst.s
+s[1] <= fulladder:inst1.s
+s[2] <= fulladder:inst2.s
+s[3] <= fulladder:inst3.s
+
+
+|ula|somador4bits:inst1|fulladder:inst3
+cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+a => halfadder:inst.a
+b => halfadder:inst.b
+cin => halfadder:inst1.b
+s <= halfadder:inst1.s
+
+
+|ula|somador4bits:inst1|fulladder:inst3|halfadder:inst
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador4bits:inst1|fulladder:inst3|halfadder:inst1
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador4bits:inst1|fulladder:inst2
+cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+a => halfadder:inst.a
+b => halfadder:inst.b
+cin => halfadder:inst1.b
+s <= halfadder:inst1.s
+
+
+|ula|somador4bits:inst1|fulladder:inst2|halfadder:inst
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador4bits:inst1|fulladder:inst2|halfadder:inst1
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador4bits:inst1|fulladder:inst1
+cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+a => halfadder:inst.a
+b => halfadder:inst.b
+cin => halfadder:inst1.b
+s <= halfadder:inst1.s
+
+
+|ula|somador4bits:inst1|fulladder:inst1|halfadder:inst
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador4bits:inst1|fulladder:inst1|halfadder:inst1
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador4bits:inst1|fulladder:inst
+cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+a => halfadder:inst.a
+b => halfadder:inst.b
+cin => halfadder:inst1.b
+s <= halfadder:inst1.s
+
+
+|ula|somador4bits:inst1|fulladder:inst|halfadder:inst
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ula|somador4bits:inst1|fulladder:inst|halfadder:inst1
+s <= inst.DB_MAX_OUTPUT_PORT_TYPE
+a => inst.IN0
+a => inst1.IN0
+b => inst.IN1
+b => inst1.IN1
+cout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+

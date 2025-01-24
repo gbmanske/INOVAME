@@ -1,0 +1,311 @@
+|shiftreg4bits
+Q[0] <= dffrs:inst3.Q
+Q[1] <= dffrs:inst5.Q
+Q[2] <= dffrs:inst7.Q
+Q[3] <= dffrs:inst9.Q
+S => dffrs:inst5.S
+S => dffrs:inst3.S
+S => dffrs:inst7.S
+S => dffrs:inst9.S
+R => dffrs:inst5.R
+R => dffrs:inst3.R
+R => dffrs:inst7.R
+R => dffrs:inst9.R
+D[0] => mux4x1:inst4.d
+D[1] => mux4x1:inst6.d
+D[2] => mux4x1:inst8.d
+D[3] => mux4x1:inst10.d
+SEL[0] => mux4x1:inst6.sel[0]
+SEL[0] => mux4x1:inst4.sel[0]
+SEL[0] => mux4x1:inst8.sel[0]
+SEL[0] => mux4x1:inst10.sel[0]
+SEL[1] => mux4x1:inst6.sel[1]
+SEL[1] => mux4x1:inst4.sel[1]
+SEL[1] => mux4x1:inst8.sel[1]
+SEL[1] => mux4x1:inst10.sel[1]
+CLK => dffrs:inst5.CLK
+CLK => dffrs:inst3.CLK
+CLK => dffrs:inst7.CLK
+CLK => dffrs:inst9.CLK
+Qn[0] <= dffrs:inst3.Qn
+Qn[1] <= dffrs:inst5.Qn
+Qn[2] <= dffrs:inst7.Qn
+Qn[3] <= dffrs:inst9.Qn
+
+
+|shiftreg4bits|dffrs:inst5
+Q <= latchDSR:inst1.Q
+S => latchDSR:inst1.S
+S => latchDSR:inst.S
+D => latchDSR:inst.D
+CLK => inst2.IN0
+CLK => latchDSR:inst1.enable
+R => latchDSR:inst.R
+R => latchDSR:inst1.R
+Qn <= latchDSR:inst1.Qn
+
+
+|shiftreg4bits|dffrs:inst5|latchDSR:inst1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg4bits|dffrs:inst5|latchDSR:inst
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg4bits|mux4x1:inst6
+s <= mux2x1:inst2.s
+a => mux2x1:inst.a
+sel[0] => mux2x1:inst.sel
+sel[0] => mux2x1:inst1.sel
+sel[1] => mux2x1:inst2.sel
+b => mux2x1:inst.b
+c => mux2x1:inst1.a
+d => mux2x1:inst1.b
+
+
+|shiftreg4bits|mux4x1:inst6|mux2x1:inst2
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|mux4x1:inst6|mux2x1:inst
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|mux4x1:inst6|mux2x1:inst1
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|dffrs:inst3
+Q <= latchDSR:inst1.Q
+S => latchDSR:inst1.S
+S => latchDSR:inst.S
+D => latchDSR:inst.D
+CLK => inst2.IN0
+CLK => latchDSR:inst1.enable
+R => latchDSR:inst.R
+R => latchDSR:inst1.R
+Qn <= latchDSR:inst1.Qn
+
+
+|shiftreg4bits|dffrs:inst3|latchDSR:inst1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg4bits|dffrs:inst3|latchDSR:inst
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg4bits|mux4x1:inst4
+s <= mux2x1:inst2.s
+a => mux2x1:inst.a
+sel[0] => mux2x1:inst.sel
+sel[0] => mux2x1:inst1.sel
+sel[1] => mux2x1:inst2.sel
+b => mux2x1:inst.b
+c => mux2x1:inst1.a
+d => mux2x1:inst1.b
+
+
+|shiftreg4bits|mux4x1:inst4|mux2x1:inst2
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|mux4x1:inst4|mux2x1:inst
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|mux4x1:inst4|mux2x1:inst1
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|dffrs:inst7
+Q <= latchDSR:inst1.Q
+S => latchDSR:inst1.S
+S => latchDSR:inst.S
+D => latchDSR:inst.D
+CLK => inst2.IN0
+CLK => latchDSR:inst1.enable
+R => latchDSR:inst.R
+R => latchDSR:inst1.R
+Qn <= latchDSR:inst1.Qn
+
+
+|shiftreg4bits|dffrs:inst7|latchDSR:inst1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg4bits|dffrs:inst7|latchDSR:inst
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg4bits|mux4x1:inst8
+s <= mux2x1:inst2.s
+a => mux2x1:inst.a
+sel[0] => mux2x1:inst.sel
+sel[0] => mux2x1:inst1.sel
+sel[1] => mux2x1:inst2.sel
+b => mux2x1:inst.b
+c => mux2x1:inst1.a
+d => mux2x1:inst1.b
+
+
+|shiftreg4bits|mux4x1:inst8|mux2x1:inst2
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|mux4x1:inst8|mux2x1:inst
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|mux4x1:inst8|mux2x1:inst1
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|dffrs:inst9
+Q <= latchDSR:inst1.Q
+S => latchDSR:inst1.S
+S => latchDSR:inst.S
+D => latchDSR:inst.D
+CLK => inst2.IN0
+CLK => latchDSR:inst1.enable
+R => latchDSR:inst.R
+R => latchDSR:inst1.R
+Qn <= latchDSR:inst1.Qn
+
+
+|shiftreg4bits|dffrs:inst9|latchDSR:inst1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg4bits|dffrs:inst9|latchDSR:inst
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg4bits|mux4x1:inst10
+s <= mux2x1:inst2.s
+a => mux2x1:inst.a
+sel[0] => mux2x1:inst.sel
+sel[0] => mux2x1:inst1.sel
+sel[1] => mux2x1:inst2.sel
+b => mux2x1:inst.b
+c => mux2x1:inst1.a
+d => mux2x1:inst1.b
+
+
+|shiftreg4bits|mux4x1:inst10|mux2x1:inst2
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|mux4x1:inst10|mux2x1:inst
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+
+|shiftreg4bits|mux4x1:inst10|mux2x1:inst1
+s <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+sel => inst1.IN0
+sel => inst3.IN0
+b => inst1.IN1
+a => inst.IN0
+
+

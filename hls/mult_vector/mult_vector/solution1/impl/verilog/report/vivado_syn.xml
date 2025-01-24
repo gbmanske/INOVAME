@@ -1,0 +1,95 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2023.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>4.249</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>4.249</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>4.249</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>5.751</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>5.751</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>5.751</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>5.751</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>3</BRAM>
+    <CLB>0</CLB>
+    <DSP>3</DSP>
+    <FF>3299</FF>
+    <LATCH>0</LATCH>
+    <LUT>2234</LUT>
+    <SRL>393</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>730</BRAM>
+    <CLB>0</CLB>
+    <DSP>740</DSP>
+    <FF>269200</FF>
+    <LUT>134600</LUT>
+    <URAM>0</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="kernel" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="4">control_s_axi_U gmem0_m_axi_U gmem1_m_axi_U mul_32s_32s_32_1_1_U1</SubModules>
+    <Resources BRAM="3" DSP="3" FF="3299" LUT="2234" LogicLUT="1841" RAMB18="3" SRL="393"/>
+    <LocalResources DSP="1" FF="289" LUT="25" LogicLUT="22" SRL="3"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="kernel_control_s_axi" DEPTH="1" FILE_NAME="kernel.v" ORIG_REF_NAME="kernel_control_s_axi">
+    <Resources FF="235" LUT="206" LogicLUT="206"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem0_m_axi_U" BINDMODULE="kernel_gmem0_m_axi" DEPTH="1" FILE_NAME="kernel.v" ORIG_REF_NAME="kernel_gmem0_m_axi">
+    <Resources BRAM="2" FF="1923" LUT="1406" LogicLUT="1110" RAMB18="2" SRL="296"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem1_m_axi_U" BINDMODULE="kernel_gmem1_m_axi" DEPTH="1" FILE_NAME="kernel.v" ORIG_REF_NAME="kernel_gmem1_m_axi">
+    <Resources BRAM="1" FF="852" LUT="582" LogicLUT="488" RAMB18="1" SRL="94"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_32s_32s_32_1_1_U1" BINDMODULE="kernel_mul_32s_32s_32_1_1" DEPTH="1" FILE_NAME="kernel.v" ORIG_REF_NAME="kernel_mul_32s_32s_32_1_1">
+    <Resources DSP="2" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="3.153" DATAPATH_LOGIC_DELAY="3.098" DATAPATH_NET_DELAY="0.055" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg/PCIN[0]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="5.751" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.153" DATAPATH_LOGIC_DELAY="3.098" DATAPATH_NET_DELAY="0.055" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg/PCIN[10]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="5.751" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.153" DATAPATH_LOGIC_DELAY="3.098" DATAPATH_NET_DELAY="0.055" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg/PCIN[11]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="5.751" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.153" DATAPATH_LOGIC_DELAY="3.098" DATAPATH_NET_DELAY="0.055" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg/PCIN[12]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="5.751" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.153" DATAPATH_LOGIC_DELAY="3.098" DATAPATH_NET_DELAY="0.055" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg/PCIN[13]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="5.751" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0/CLK">
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_32s_32s_32_1_1_U1/tmp_product__0" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mul_ln24_reg_355_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" LINE_NUMBER="30"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/kernel_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/kernel_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/kernel_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/kernel_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/kernel_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/kernel_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

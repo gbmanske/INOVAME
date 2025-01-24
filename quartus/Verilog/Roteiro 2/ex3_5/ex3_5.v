@@ -1,0 +1,13 @@
+module ex3_5(A, B, C, D, sum, overflow);
+input  signed[3:0] A, B, C, D;
+output signed[3:0] sum;
+output overflow;
+
+wire signed[5:0] sum2;
+
+assign sum2 = A+B+C+D;
+
+assign sum = sum2[3:0];
+assign overflow = (sum2<8 && sum2>(-9))? 0 : 1;
+
+endmodule

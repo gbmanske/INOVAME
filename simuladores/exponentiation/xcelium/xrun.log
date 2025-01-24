@@ -1,0 +1,271 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Dec 19, 2024 at 16:32:41 -03
+xrun
+	-f file_list.f
+		-smartorder
+		-work work
+		-top tb
+		-notimingchecks
+		-gui
+		-access +rw
+		../rtl/exponentiation.sv
+		../rtl/mult_serial.sv
+		../tb/tb_exp.sv
+	-input wave.tcl
+Recompiling... reason: file '../rtl/exponentiation.sv' is newer than expected.
+	expected: Thu Dec 19 16:26:15 2024
+	actual:   Thu Dec 19 16:32:30 2024
+file: ../rtl/exponentiation.sv
+	module work.exponentiation:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'work' ....... Done
+	Top level design units:
+		tb
+    .B(op2), //--------------------
+         |
+xmelab: *W,CUVMPW (../rtl/exponentiation.sv,148|9): port sizes differ in port connection(128/120) for the instance(tb.dut) .
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		work.exponentiation:sv <0x536610ae>
+			streams:  20, words: 13100
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 3       3
+		Registers:              31      31
+		Scalar wires:            8       -
+		Vectored wires:          8       -
+		Always blocks:           7       7
+		Initial blocks:          1       1
+		Pseudo assignments:     12       -
+		Assertions:              1       1
+		Process Clocks:          4       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: work.tb:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> 
+xcelium> # XM-Sim Command File
+xcelium> # TOOL:	xmsim(64)	23.09-s013
+xcelium> #
+xcelium> #
+xcelium> # You can restore this configuration with:
+xcelium> #
+xcelium> #      xrun -f file_list.f -input wave.tcl
+xcelium> #
+xcelium> 
+xcelium> set tcl_prompt1 {puts -nonewline "xcelium> "}
+puts -nonewline "xcelium> "
+xcelium> set tcl_prompt2 {puts -nonewline "> "}
+puts -nonewline "> "
+xcelium> set vlog_format %h
+%h
+xcelium> set vhdl_format %v
+%v
+xcelium> set real_precision 6
+6
+xcelium> set display_unit auto
+auto
+xcelium> set time_unit module
+module
+xcelium> set heap_garbage_size -200
+-200
+xcelium> set heap_garbage_time 0
+0
+xcelium> set assert_report_level note
+note
+xcelium> set assert_stop_level error
+error
+xcelium> set autoscope yes
+yes
+xcelium> set assert_1164_warnings yes
+yes
+xcelium> set pack_assert_off {}
+xcelium> set severity_pack_assert_off {note warning}
+note warning
+xcelium> set assert_output_stop_level failed
+failed
+xcelium> set tcl_debug_level 0
+0
+xcelium> set relax_path_name 1
+1
+xcelium> set vhdl_vcdmap XX01ZX01X
+XX01ZX01X
+xcelium> set intovf_severity_level ERROR
+ERROR
+xcelium> set probe_screen_format 0
+0
+xcelium> set rangecnst_severity_level ERROR
+ERROR
+xcelium> set textio_severity_level ERROR
+ERROR
+xcelium> set vital_timing_checks_on 1
+xmsim: *E,NOEVTC: VITAL timing checks not available: -notimingchecks was used during elaboration.
+1
+xcelium> set vlog_code_show_force 0
+0
+xcelium> set assert_count_attempts 1
+1
+xcelium> set tcl_all64 false
+false
+xcelium> set tcl_runerror_exit false
+false
+xcelium> set assert_report_incompletes 0
+0
+xcelium> set show_force 1
+1
+xcelium> set force_reset_by_reinvoke 0
+0
+xcelium> set tcl_relaxed_literal 0
+0
+xcelium> set probe_exclude_patterns {}
+xcelium> set probe_packed_limit 4k
+4k
+xcelium> set probe_unpacked_limit 16k
+16k
+xcelium> set assert_internal_msg no
+no
+xcelium> set svseed 1
+1
+xcelium> set assert_reporting_mode 0
+0
+xcelium> set vcd_compact_mode 0
+0
+xcelium> set vhdl_forgen_loopindex_enum_pos 0
+0
+xcelium> set tcl_sigval_prefix {#}
+#
+xcelium> alias . run
+xcelium> alias indago verisium
+xcelium> alias quit exit
+xcelium> database -open -vcd -into dump.fst _dump.fst1 -timescale fs
+Created VCD database _dump.fst1
+xcelium> database -open -evcd -into dump.fst _dump.fst -timescale fs
+xmsim: *E,FNINUS: File name dump.fst is already in use as a VCD file.
+xcelium> database -open -shm -into waves.shm waves -default
+Created default SHM database waves
+xcelium> probe -create -database waves tb.dut.cont tb.dut.X tb.dut.Y tb.dut.state tb.dut.start tb.dut.start_mult tb.dut.end_expo tb.dut.end_mult tb.dut.resultado tb.dut.reset
+Created probe 1
+xcelium> 
+xcelium> simvision -input wave.tcl.svcf
+xcelium> run
+xmsim: *W,DFUSE: $dumpfile dump.fst is already in use (VCD file).
+            File: ../tb/tb_exp.sv, line = 43, pos = 16
+           Scope: tb
+            Time: 0 FS + 0
+
+Valor 5 ^ 5: Resultado esperado: 3125, Resultado obtido: 3125
+Valor 109 ^ 11: Resultado esperado: 25804264053054077850709, Resultado obtido: 25804264053054077850709
+Valor 255 ^ 8: Resultado esperado: 17878103347812890625, Resultado obtido: 17878103347812890625
+Valor 75 ^ 10: Resultado esperado: 5631351470947265625, Resultado obtido: 5631351470947265625
+Valor 43 ^ 9: Resultado esperado: 502592611936843, Resultado obtido: 502592611936843
+Valor 11 ^ 8: Resultado esperado: 214358881, Resultado obtido: 214358881
+Valor 246 ^ 12: Resultado esperado: 49115807124344448192809865216, Resultado obtido: 49115807124344448192809865216
+Valor 97 ^ 15: Resultado esperado: 633251189136789386043275954593, Resultado obtido: 633251189136789386043275954593
+Valor 186 ^ 2: Resultado esperado: 34596, Resultado obtido: 34596
+Valor 174 ^ 6: Resultado esperado: 27752076864576, Resultado obtido: 27752076864576
+Valor 59 ^ 7: Resultado esperado: 2488651484819, Resultado obtido: 2488651484819
+Valor 123 ^ 14: Resultado esperado: 181414317867238075368413196009, Resultado obtido: 181414317867238075368413196009
+Valor 45 ^ 4: Resultado esperado: 4100625, Resultado obtido: 4100625
+Valor 1 ^ 7: Resultado esperado: 1, Resultado obtido: 1
+Valor 170 ^ 13: Resultado esperado: 99045780329059370000000000000, Resultado obtido: 99045780329059370000000000000
+Valor 163 ^ 10: Resultado esperado: 13239635967018160063849, Resultado obtido: 13239635967018160063849
+Valor 190 ^ 2: Resultado esperado: 36100, Resultado obtido: 36100
+Valor 113 ^ 14: Resultado esperado: 55347525466347647961440563489, Resultado obtido: 55347525466347647961440563489
+Valor 222 ^ 0: Resultado esperado: 1, Resultado obtido: 1
+Valor 165 ^ 6: Resultado esperado: 20179187015625, Resultado obtido: 20179187015625
+Valor 106 ^ 15: Resultado esperado: 2396558193099689811132027928576, Resultado obtido: 2396558193099689811132027928576
+Valor 39 ^ 15: Resultado esperado: 734461618571137961752599, Resultado obtido: 734461618571137961752599
+Valor 49 ^ 4: Resultado esperado: 5764801, Resultado obtido: 5764801
+Valor 10 ^ 4: Resultado esperado: 10000, Resultado obtido: 10000
+Valor 235 ^ 14: Resultado esperado: 1566570960618087215175592041015625, Resultado obtido: 1566570960618087215175592041015625
+Valor 14 ^ 13: Resultado esperado: 793714773254144, Resultado obtido: 793714773254144
+Valor 190 ^ 10: Resultado esperado: 61310662578010000000000, Resultado obtido: 61310662578010000000000
+Valor 31 ^ 9: Resultado esperado: 26439622160671, Resultado obtido: 26439622160671
+Valor 187 ^ 1: Resultado esperado: 187, Resultado obtido: 187
+Valor 210 ^ 10: Resultado esperado: 166798809782010000000000, Resultado obtido: 166798809782010000000000
+Valor 97 ^ 7: Resultado esperado: 80798284478113, Resultado obtido: 80798284478113
+Valor 237 ^ 7: Resultado esperado: 41998948952729733, Resultado obtido: 41998948952729733
+Valor 23 ^ 12: Resultado esperado: 21914624432020321, Resultado obtido: 21914624432020321
+Valor 222 ^ 9: Resultado esperado: 1309714905285888302592, Resultado obtido: 1309714905285888302592
+Valor 180 ^ 13: Resultado esperado: 208229648656711680000000000000, Resultado obtido: 208229648656711680000000000000
+Valor 65 ^ 1: Resultado esperado: 65, Resultado obtido: 65
+Valor 248 ^ 2: Resultado esperado: 61504, Resultado obtido: 61504
+Valor 93 ^ 14: Resultado esperado: 3620439376899076955409413049, Resultado obtido: 3620439376899076955409413049
+Valor 18 ^ 0: Resultado esperado: 1, Resultado obtido: 1
+Valor 165 ^ 11: Resultado esperado: 2467876294615567236328125, Resultado obtido: 2467876294615567236328125
+Valor 27 ^ 6: Resultado esperado: 387420489, Resultado obtido: 387420489
+Valor 57 ^ 12: Resultado esperado: 1176246293903439668001, Resultado obtido: 1176246293903439668001
+Valor 151 ^ 2: Resultado esperado: 22801, Resultado obtido: 22801
+Valor 101 ^ 6: Resultado esperado: 1061520150601, Resultado obtido: 1061520150601
+Valor 249 ^ 11: Resultado esperado: 228135472299766291637190249, Resultado obtido: 228135472299766291637190249
+Valor 30 ^ 5: Resultado esperado: 24300000, Resultado obtido: 24300000
+Valor 29 ^ 6: Resultado esperado: 594823321, Resultado obtido: 594823321
+Valor 138 ^ 6: Resultado esperado: 6906762437184, Resultado obtido: 6906762437184
+Valor 206 ^ 3: Resultado esperado: 8741816, Resultado obtido: 8741816
+Valor 119 ^ 13: Resultado esperado: 959644764107166918445086359, Resultado obtido: 959644764107166918445086359
+Valor 64 ^ 15: Resultado esperado: 1237940039285380274899124224, Resultado obtido: 1237940039285380274899124224
+Valor 225 ^ 14: Resultado esperado: 852226929923929274082183837890625, Resultado obtido: 852226929923929274082183837890625
+Valor 149 ^ 2: Resultado esperado: 22201, Resultado obtido: 22201
+Valor 110 ^ 7: Resultado esperado: 194871710000000, Resultado obtido: 194871710000000
+Valor 90 ^ 1: Resultado esperado: 90, Resultado obtido: 90
+Valor 243 ^ 1: Resultado esperado: 243, Resultado obtido: 243
+Valor 9 ^ 11: Resultado esperado: 31381059609, Resultado obtido: 31381059609
+Valor 239 ^ 5: Resultado esperado: 779811265199, Resultado obtido: 779811265199
+Valor 135 ^ 14: Resultado esperado: 667840509835890864312744140625, Resultado obtido: 667840509835890864312744140625
+Valor 13 ^ 3: Resultado esperado: 2197, Resultado obtido: 2197
+Valor 165 ^ 1: Resultado esperado: 165, Resultado obtido: 165
+Valor 165 ^ 10: Resultado esperado: 14956826027973134765625, Resultado obtido: 14956826027973134765625
+Valor 161 ^ 9: Resultado esperado: 72683006647681947041, Resultado obtido: 72683006647681947041
+Valor 57 ^ 5: Resultado esperado: 601692057, Resultado obtido: 601692057
+Valor 164 ^ 7: Resultado esperado: 3190854023266304, Resultado obtido: 3190854023266304
+Valor 250 ^ 10: Resultado esperado: 953674316406250000000000, Resultado obtido: 953674316406250000000000
+Valor 68 ^ 6: Resultado esperado: 98867482624, Resultado obtido: 98867482624
+Valor 67 ^ 11: Resultado esperado: 122130132904968017083, Resultado obtido: 122130132904968017083
+Valor 1 ^ 15: Resultado esperado: 1, Resultado obtido: 1
+Valor 26 ^ 8: Resultado esperado: 208827064576, Resultado obtido: 208827064576
+Valor 202 ^ 7: Resultado esperado: 13723332506969728, Resultado obtido: 13723332506969728
+Valor 180 ^ 9: Resultado esperado: 198359290368000000000, Resultado obtido: 198359290368000000000
+Valor 119 ^ 13: Resultado esperado: 959644764107166918445086359, Resultado obtido: 959644764107166918445086359
+Valor 240 ^ 6: Resultado esperado: 191102976000000, Resultado obtido: 191102976000000
+Valor 78 ^ 15: Resultado esperado: 24066838317339048730709164032, Resultado obtido: 24066838317339048730709164032
+Valor 217 ^ 0: Resultado esperado: 1, Resultado obtido: 1
+Valor 128 ^ 4: Resultado esperado: 268435456, Resultado obtido: 268435456
+Valor 38 ^ 7: Resultado esperado: 114415582592, Resultado obtido: 114415582592
+Valor 172 ^ 2: Resultado esperado: 29584, Resultado obtido: 29584
+Valor 188 ^ 5: Resultado esperado: 234849287168, Resultado obtido: 234849287168
+Valor 89 ^ 7: Resultado esperado: 44231334895529, Resultado obtido: 44231334895529
+Valor 40 ^ 15: Resultado esperado: 1073741824000000000000000, Resultado obtido: 1073741824000000000000000
+Valor 126 ^ 1: Resultado esperado: 126, Resultado obtido: 126
+Valor 40 ^ 9: Resultado esperado: 262144000000000, Resultado obtido: 262144000000000
+Valor 251 ^ 9: Resultado esperado: 3954244264165377252251, Resultado obtido: 3954244264165377252251
+Valor 33 ^ 1: Resultado esperado: 33, Resultado obtido: 33
+Valor 31 ^ 2: Resultado esperado: 961, Resultado obtido: 961
+Valor 168 ^ 1: Resultado esperado: 168, Resultado obtido: 168
+Valor 35 ^ 12: Resultado esperado: 3379220508056640625, Resultado obtido: 3379220508056640625
+Valor 251 ^ 0: Resultado esperado: 1, Resultado obtido: 1
+Valor 171 ^ 5: Resultado esperado: 146211169851, Resultado obtido: 146211169851
+Valor 135 ^ 15: Resultado esperado: 90158468827845266682220458984375, Resultado obtido: 90158468827845266682220458984375
+Valor 74 ^ 4: Resultado esperado: 29986576, Resultado obtido: 29986576
+Valor 98 ^ 13: Resultado esperado: 76902238926010403271876608, Resultado obtido: 76902238926010403271876608
+Valor 253 ^ 15: Resultado esperado: 1113801549245339397667479729210795157, Resultado obtido: 1113801549245339397667479729210795157
+Valor 209 ^ 6: Resultado esperado: 83344647990241, Resultado obtido: 83344647990241
+Valor 172 ^ 4: Resultado esperado: 875213056, Resultado obtido: 875213056
+Valor 193 ^ 14: Resultado esperado: 99495245076524950698517189573249, Resultado obtido: 99495245076524950698517189573249
+Valor 175 ^ 2: Resultado esperado: 30625, Resultado obtido: 30625
+Valor 79 ^ 8: Resultado esperado: 1517108809906561, Resultado obtido: 1517108809906561
+All  tests executed
+Simulation complete via $finish(1) at time 36410 NS + 0
+../tb/tb_exp.sv:83         $finish;
+xcelium> ^C
+xcelium> exit
+...Regained control from SimVision
+-------------------------------------
+TOOL:	xrun(64)	23.09-s013: Exiting on Dec 19, 2024 at 16:33:42 -03  (total: 00:01:01)

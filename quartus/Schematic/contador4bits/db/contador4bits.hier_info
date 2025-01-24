@@ -1,0 +1,274 @@
+|contador4bits
+Q[0] <= contador:inst.Q
+Q[1] <= contador:inst6.Q
+Q[2] <= contador:inst7.Q
+Q[3] <= contador:inst8.Q
+D[0] => contador:inst.in
+D[1] => contador:inst6.in
+D[2] => contador:inst7.in
+D[3] => contador:inst8.in
+SEL[0] => contador:inst.prev2
+SEL[0] => contador:inst.prev1
+SEL[0] => contador:inst.sel[0]
+SEL[0] => contador:inst7.sel[0]
+SEL[0] => contador:inst6.prev2
+SEL[0] => contador:inst6.sel[0]
+SEL[0] => contador:inst8.sel[0]
+SEL[1] => contador:inst.sel[1]
+SEL[1] => contador:inst7.sel[1]
+SEL[1] => contador:inst6.sel[1]
+SEL[1] => contador:inst8.sel[1]
+CLK => contador:inst.CLK
+CLK => contador:inst7.CLK
+CLK => contador:inst6.CLK
+CLK => contador:inst8.CLK
+R => contador:inst.R
+R => contador:inst7.R
+R => contador:inst6.R
+R => contador:inst8.R
+S => contador:inst.S
+S => contador:inst7.S
+S => contador:inst6.S
+S => contador:inst8.S
+
+
+|contador4bits|contador:inst
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+R => inst7.IN0
+CLK => inst5.CLK
+sel[0] => MUX:inst.sel[0]
+sel[0] => inst8.IN0
+sel[1] => MUX:inst.sel[1]
+sel[1] => inst9.IN1
+S => inst6.IN0
+SANDOR <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+prev2 => inst2.IN0
+prev2 => inst1.IN1
+prev1 => inst2.IN1
+prev1 => inst1.IN0
+in => MUX:inst.data[3]
+
+
+|contador4bits|contador:inst|MUX:inst
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+data[2] => lpm_mux:$00001.data[2][0]
+data[3] => lpm_mux:$00001.data[3][0]
+sel[0] => lpm_mux:$00001.sel[0]
+sel[1] => lpm_mux:$00001.sel[1]
+result <= lpm_mux:$00001.result[0]
+
+
+|contador4bits|contador:inst|MUX:inst|lpm_mux:$00001
+data[0][0] => mux_4vc:auto_generated.data[0]
+data[1][0] => mux_4vc:auto_generated.data[1]
+data[2][0] => mux_4vc:auto_generated.data[2]
+data[3][0] => mux_4vc:auto_generated.data[3]
+sel[0] => mux_4vc:auto_generated.sel[0]
+sel[1] => mux_4vc:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_4vc:auto_generated.result[0]
+
+
+|contador4bits|contador:inst|MUX:inst|lpm_mux:$00001|mux_4vc:auto_generated
+data[0] => _.IN0
+data[0] => _.IN0
+data[1] => _.IN0
+data[2] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => _.IN1
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+
+
+|contador4bits|contador:inst7
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+R => inst7.IN0
+CLK => inst5.CLK
+sel[0] => MUX:inst.sel[0]
+sel[0] => inst8.IN0
+sel[1] => MUX:inst.sel[1]
+sel[1] => inst9.IN1
+S => inst6.IN0
+SANDOR <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+prev2 => inst2.IN0
+prev2 => inst1.IN1
+prev1 => inst2.IN1
+prev1 => inst1.IN0
+in => MUX:inst.data[3]
+
+
+|contador4bits|contador:inst7|MUX:inst
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+data[2] => lpm_mux:$00001.data[2][0]
+data[3] => lpm_mux:$00001.data[3][0]
+sel[0] => lpm_mux:$00001.sel[0]
+sel[1] => lpm_mux:$00001.sel[1]
+result <= lpm_mux:$00001.result[0]
+
+
+|contador4bits|contador:inst7|MUX:inst|lpm_mux:$00001
+data[0][0] => mux_4vc:auto_generated.data[0]
+data[1][0] => mux_4vc:auto_generated.data[1]
+data[2][0] => mux_4vc:auto_generated.data[2]
+data[3][0] => mux_4vc:auto_generated.data[3]
+sel[0] => mux_4vc:auto_generated.sel[0]
+sel[1] => mux_4vc:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_4vc:auto_generated.result[0]
+
+
+|contador4bits|contador:inst7|MUX:inst|lpm_mux:$00001|mux_4vc:auto_generated
+data[0] => _.IN0
+data[0] => _.IN0
+data[1] => _.IN0
+data[2] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => _.IN1
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+
+
+|contador4bits|contador:inst6
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+R => inst7.IN0
+CLK => inst5.CLK
+sel[0] => MUX:inst.sel[0]
+sel[0] => inst8.IN0
+sel[1] => MUX:inst.sel[1]
+sel[1] => inst9.IN1
+S => inst6.IN0
+SANDOR <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+prev2 => inst2.IN0
+prev2 => inst1.IN1
+prev1 => inst2.IN1
+prev1 => inst1.IN0
+in => MUX:inst.data[3]
+
+
+|contador4bits|contador:inst6|MUX:inst
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+data[2] => lpm_mux:$00001.data[2][0]
+data[3] => lpm_mux:$00001.data[3][0]
+sel[0] => lpm_mux:$00001.sel[0]
+sel[1] => lpm_mux:$00001.sel[1]
+result <= lpm_mux:$00001.result[0]
+
+
+|contador4bits|contador:inst6|MUX:inst|lpm_mux:$00001
+data[0][0] => mux_4vc:auto_generated.data[0]
+data[1][0] => mux_4vc:auto_generated.data[1]
+data[2][0] => mux_4vc:auto_generated.data[2]
+data[3][0] => mux_4vc:auto_generated.data[3]
+sel[0] => mux_4vc:auto_generated.sel[0]
+sel[1] => mux_4vc:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_4vc:auto_generated.result[0]
+
+
+|contador4bits|contador:inst6|MUX:inst|lpm_mux:$00001|mux_4vc:auto_generated
+data[0] => _.IN0
+data[0] => _.IN0
+data[1] => _.IN0
+data[2] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => _.IN1
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+
+
+|contador4bits|contador:inst8
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+R => inst7.IN0
+CLK => inst5.CLK
+sel[0] => MUX:inst.sel[0]
+sel[0] => inst8.IN0
+sel[1] => MUX:inst.sel[1]
+sel[1] => inst9.IN1
+S => inst6.IN0
+SANDOR <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+prev2 => inst2.IN0
+prev2 => inst1.IN1
+prev1 => inst2.IN1
+prev1 => inst1.IN0
+in => MUX:inst.data[3]
+
+
+|contador4bits|contador:inst8|MUX:inst
+data[0] => lpm_mux:$00001.data[0][0]
+data[1] => lpm_mux:$00001.data[1][0]
+data[2] => lpm_mux:$00001.data[2][0]
+data[3] => lpm_mux:$00001.data[3][0]
+sel[0] => lpm_mux:$00001.sel[0]
+sel[1] => lpm_mux:$00001.sel[1]
+result <= lpm_mux:$00001.result[0]
+
+
+|contador4bits|contador:inst8|MUX:inst|lpm_mux:$00001
+data[0][0] => mux_4vc:auto_generated.data[0]
+data[1][0] => mux_4vc:auto_generated.data[1]
+data[2][0] => mux_4vc:auto_generated.data[2]
+data[3][0] => mux_4vc:auto_generated.data[3]
+sel[0] => mux_4vc:auto_generated.sel[0]
+sel[1] => mux_4vc:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_4vc:auto_generated.result[0]
+
+
+|contador4bits|contador:inst8|MUX:inst|lpm_mux:$00001|mux_4vc:auto_generated
+data[0] => _.IN0
+data[0] => _.IN0
+data[1] => _.IN0
+data[2] => _.IN1
+data[2] => _.IN1
+data[3] => _.IN0
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => _.IN1
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[0] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+sel[1] => _.IN0
+
+

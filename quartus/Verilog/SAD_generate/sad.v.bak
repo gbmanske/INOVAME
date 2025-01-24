@@ -1,0 +1,20 @@
+module sad(a, b, sad);
+
+parameter WIDTH=8;
+parameter INPUTS=4; //number of inputs from each block
+
+input [WIDTH*INPUTS-1:0] a,b;
+output [WIDTH+$clog2(INPUTS)-1:0] sad;
+
+
+wire signed [(WIDTH+1)*INPUTS-1:0] differences;
+wire [WIDTH*INPUTS-1:0] absolutes;
+
+//differences
+differences_layer #(WIDTH, INPUTS) D(a, b, differences);
+//absolute
+absolute_layer #(WIDTH, INPUTS) A(differences, absolutes);
+//sum
+sum_tree #(WIDTH, INPUTS) S(absolutes, sad);
+
+endmodule

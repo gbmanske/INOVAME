@@ -1,0 +1,86 @@
+|somatorio
+clk => clk.IN2
+reset => reset.IN2
+iniciar => iniciar.IN1
+ent[0] => ent[0].IN1
+ent[1] => ent[1].IN1
+ent[2] => ent[2].IN1
+ent[3] => ent[3].IN1
+ent[4] => ent[4].IN1
+ent[5] => ent[5].IN1
+ent[6] => ent[6].IN1
+ent[7] => ent[7].IN1
+soma[0] << somatorio_datapath:datapath.soma
+soma[1] << somatorio_datapath:datapath.soma
+soma[2] << somatorio_datapath:datapath.soma
+soma[3] << somatorio_datapath:datapath.soma
+soma[4] << somatorio_datapath:datapath.soma
+soma[5] << somatorio_datapath:datapath.soma
+soma[6] << somatorio_datapath:datapath.soma
+soma[7] << somatorio_datapath:datapath.soma
+pronto << somatorio_control:control.pronto
+erro << somatorio_control:control.erro
+
+
+|somatorio|somatorio_datapath:datapath
+clk => partial_sum[0].CLK
+clk => partial_sum[1].CLK
+clk => partial_sum[2].CLK
+clk => partial_sum[3].CLK
+clk => partial_sum[4].CLK
+clk => partial_sum[5].CLK
+clk => partial_sum[6].CLK
+clk => partial_sum[7].CLK
+clk => partial_sum[8].CLK
+clk => partial_sum[9].CLK
+reset => partial_sum[0].ACLR
+reset => partial_sum[1].ACLR
+reset => partial_sum[2].ACLR
+reset => partial_sum[3].ACLR
+reset => partial_sum[4].ACLR
+reset => partial_sum[5].ACLR
+reset => partial_sum[6].ACLR
+reset => partial_sum[7].ACLR
+reset => partial_sum[8].ACLR
+reset => partial_sum[9].ACLR
+ent[0] => Add0.IN10
+ent[1] => Add0.IN9
+ent[2] => Add0.IN8
+ent[3] => Add0.IN7
+ent[4] => Add0.IN6
+ent[5] => Add0.IN5
+ent[6] => Add0.IN4
+ent[7] => Add0.IN3
+enable_sum => partial_sum[9].ENA
+enable_sum => partial_sum[8].ENA
+enable_sum => partial_sum[7].ENA
+enable_sum => partial_sum[6].ENA
+enable_sum => partial_sum[5].ENA
+enable_sum => partial_sum[4].ENA
+enable_sum => partial_sum[3].ENA
+enable_sum => partial_sum[2].ENA
+enable_sum => partial_sum[1].ENA
+enable_sum => partial_sum[0].ENA
+soma[0] <= partial_sum[0].DB_MAX_OUTPUT_PORT_TYPE
+soma[1] <= partial_sum[1].DB_MAX_OUTPUT_PORT_TYPE
+soma[2] <= partial_sum[2].DB_MAX_OUTPUT_PORT_TYPE
+soma[3] <= partial_sum[3].DB_MAX_OUTPUT_PORT_TYPE
+soma[4] <= partial_sum[4].DB_MAX_OUTPUT_PORT_TYPE
+soma[5] <= partial_sum[5].DB_MAX_OUTPUT_PORT_TYPE
+soma[6] <= partial_sum[6].DB_MAX_OUTPUT_PORT_TYPE
+soma[7] <= partial_sum[7].DB_MAX_OUTPUT_PORT_TYPE
+ov <= ov.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somatorio|somatorio_control:control
+clk => state~1.DATAIN
+reset => state~3.DATAIN
+iniciar => next_state.START.DATAB
+iniciar => Selector0.IN2
+ov => next_state.ERRO.DATAB
+ov => next_state.DONE.DATAB
+enable_sum <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
+erro <= erro.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/gme/guilherme.manske/hls/fibonacci/solution1/./sim/autowrap/testbench/fibonacci.cpp_pre.cpp.tb.cpp

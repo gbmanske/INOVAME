@@ -1,0 +1,57 @@
+|tb_spi_mode0
+
+
+|tb_spi_mode0|main_SPI:master
+rstn => shift_reg[0].ACLR
+rstn => shift_reg[1].ACLR
+rstn => shift_reg[2].ACLR
+rstn => shift_reg[3].ACLR
+rstn => shift_reg[4].ACLR
+rstn => shift_reg[5].ACLR
+rstn => shift_reg[6].ACLR
+rstn => shift_reg[7].ACLR
+rstn => state~3.DATAIN
+sys_clk => spi_clk.DATAA
+sys_clk => state~1.DATAIN
+t_start => next_state.INT.DATAB
+t_start => Selector1.IN1
+data_in[0] => shift_reg.DATAB
+data_in[1] => shift_reg.DATAB
+data_in[2] => shift_reg.DATAB
+data_in[3] => shift_reg.DATAB
+data_in[4] => shift_reg.DATAB
+data_in[5] => shift_reg.DATAB
+data_in[6] => shift_reg.DATAB
+data_in[7] => shift_reg.DATAB
+t_size[0] => ~NO_FANOUT~
+t_size[1] => ~NO_FANOUT~
+t_size[2] => ~NO_FANOUT~
+t_size[3] => ~NO_FANOUT~
+miso => shift_reg.DATAA
+mosi <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+spi_clk <= spi_clk.DB_MAX_OUTPUT_PORT_TYPE
+cs <= cs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tb_spi_mode0|spi_slave_ex:slave
+rst => data[0].ACLR
+rst => data[1].ACLR
+rst => data[2].ACLR
+rst => data[3].ACLR
+rst => data[4].ACLR
+rst => data[5].ACLR
+rst => data[6].ACLR
+rst => data[7].ACLR
+cs => ~NO_FANOUT~
+sclk => data[0].CLK
+sclk => data[1].CLK
+sclk => data[2].CLK
+sclk => data[3].CLK
+sclk => data[4].CLK
+sclk => data[5].CLK
+sclk => data[6].CLK
+sclk => data[7].CLK
+mosi => data[0].DATAIN
+miso <= data[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

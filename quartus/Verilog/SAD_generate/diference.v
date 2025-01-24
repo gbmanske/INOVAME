@@ -1,0 +1,10 @@
+module diference(inA, inB, out);
+
+parameter WIDTH=8;
+
+input [WIDTH-1:0] inA, inB;
+output signed [WIDTH:0] out;
+
+assign out = inA - inB;
+
+endmodule

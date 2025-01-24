@@ -1,0 +1,69 @@
+# do somatorio_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/somatorio {/home/gme/guilherme.manske/quartus/Verilog/somatorio/somatorio_datapath.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module somatorio_datapath
+# 
+# Top level modules:
+# 	somatorio_datapath
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/somatorio {/home/gme/guilherme.manske/quartus/Verilog/somatorio/somatorio_control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module somatorio_control
+# 
+# Top level modules:
+# 	somatorio_control
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/somatorio {/home/gme/guilherme.manske/quartus/Verilog/somatorio/somatorio.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module somatorio
+# 
+# Top level modules:
+# 	somatorio
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/somatorio {/home/gme/guilherme.manske/quartus/Verilog/somatorio/tb_somatorio.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_somatorio
+# 
+# Top level modules:
+# 	tb_somatorio
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_somatorio
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_somatorio 
+# Loading work.tb_somatorio
+# Loading work.somatorio
+# Loading work.somatorio_datapath
+# Loading work.somatorio_control
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Soma de  10 +  20 + 30 +  40 = 100 - Soma do teste  0 correta
+# Soma de 100 + 100 +100 + 100 = 144 e 1 no overflow - Overflow do teste  1 correto
+# Soma de   0 +   0 +  0 +   0 =   0 - Soma do teste  2 correta
+# Soma de   3 +   7 +  9 +  12 =  31 - Soma do teste  3 correta
+# Soma de  50 +  20 + 30 +  25 = 125 - Soma do teste  4 correta
+# Soma de 200 + 150 + 50 +  60 = 204 e 1 no overflow - Overflow do teste  5 correto
+# Soma de   7 +  14 + 28 +  21 =  70 - Soma do teste  6 correta
+# Soma de  20 +  15 +  7 +   1 =  43 - Soma do teste  7 correta
+# Soma de   1 +   2 +  3 +   5 =  11 - Soma do teste  8 correta
+# Soma de 250 + 200 +100 +  50 =  88 e 1 no overflow - Overflow do teste  9 correto
+# Soma de 250 + 200 +100 +  50 =  88 e 1 no overflow - Overflow do teste 10 correto
+# 11 tests completed with  0 errors
+# ** Note: $finish    : /home/gme/guilherme.manske/quartus/Verilog/somatorio/tb_somatorio.v(85)
+#    Time: 775 ns  Iteration: 3  Instance: /tb_somatorio
+# 1
+# Break in Module tb_somatorio at /home/gme/guilherme.manske/quartus/Verilog/somatorio/tb_somatorio.v line 85
+# Simulation Breakpoint: 1
+# Break in Module tb_somatorio at /home/gme/guilherme.manske/quartus/Verilog/somatorio/tb_somatorio.v line 85
+# MACRO ./somatorio_run_msim_rtl_verilog.do PAUSED at line 19

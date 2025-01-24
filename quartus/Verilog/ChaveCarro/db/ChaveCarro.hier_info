@@ -1,0 +1,36 @@
+|ChaveCarro
+comeca => comeca.IN1
+clk => clk.IN2
+rst => rst.IN2
+start <= Carro:car1.port5
+codigo1 <= codigo.DB_MAX_OUTPUT_PORT_TYPE
+req1 <= req.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ChaveCarro|Chave:key1
+req => next_state.ENVIA1.DATAB
+req => Selector0.IN2
+clk => state~1.DATAIN
+rst => state~3.DATAIN
+codigo <= codigo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ChaveCarro|Carro:car1
+codigo => Mux1.IN7
+codigo => Mux0.IN6
+codigo => Mux0.IN7
+codigo => Mux2.IN6
+codigo => Mux1.IN6
+codigo => Mux2.IN5
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+rst => state[0].ACLR
+rst => state[1].ACLR
+rst => state[2].ACLR
+comeca => Mux2.IN7
+comeca => req.DATAB
+req <= req.DB_MAX_OUTPUT_PORT_TYPE
+start <= start.DB_MAX_OUTPUT_PORT_TYPE
+
+

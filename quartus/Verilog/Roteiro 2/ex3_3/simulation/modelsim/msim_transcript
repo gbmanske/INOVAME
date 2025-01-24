@@ -1,0 +1,71 @@
+# do ex3_3_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {ex3_3.vo}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ex3_3
+# 
+# Top level modules:
+# 	ex3_3
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/ex3_3 {/home/gme/guilherme.manske/quartus/Verilog/ex3_3/tb_full_adder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_full_adder
+# 
+# Top level modules:
+# 	tb_full_adder
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs="+acc"  tb_full_adder
+# vsim +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps tb_full_adder 
+# Loading work.tb_full_adder
+# Loading work.ex3_3
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# Loading instances from ex3_3_v.sdo
+# Loading timing data from ex3_3_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_full_adder File: /home/gme/guilherme.manske/quartus/Verilog/ex3_3/tb_full_adder.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# a=0, b=0, carry_in=0 | sum=x, carry_out=x
+# a=0, b=0, carry_in=0 | sum=0, carry_out=x
+# a=0, b=0, carry_in=0 | sum=0, carry_out=0
+# a=0, b=0, carry_in=1 | sum=0, carry_out=0
+# a=0, b=0, carry_in=1 | sum=1, carry_out=0
+# a=0, b=1, carry_in=0 | sum=1, carry_out=0
+# a=0, b=1, carry_in=0 | sum=0, carry_out=0
+# a=0, b=1, carry_in=0 | sum=0, carry_out=1
+# a=0, b=1, carry_in=0 | sum=1, carry_out=1
+# a=0, b=1, carry_in=0 | sum=1, carry_out=0
+# a=0, b=1, carry_in=1 | sum=1, carry_out=0
+# a=0, b=1, carry_in=1 | sum=0, carry_out=0
+# a=0, b=1, carry_in=1 | sum=0, carry_out=1
+# a=1, b=0, carry_in=0 | sum=0, carry_out=1
+# a=1, b=0, carry_in=0 | sum=1, carry_out=1
+# a=1, b=0, carry_in=0 | sum=1, carry_out=0
+# a=1, b=0, carry_in=1 | sum=1, carry_out=0
+# a=1, b=0, carry_in=1 | sum=0, carry_out=0
+# a=1, b=0, carry_in=1 | sum=0, carry_out=1
+# a=1, b=1, carry_in=0 | sum=0, carry_out=1
+# a=1, b=1, carry_in=0 | sum=1, carry_out=1
+# a=1, b=1, carry_in=0 | sum=0, carry_out=1
+# a=1, b=1, carry_in=1 | sum=0, carry_out=1
+# a=1, b=1, carry_in=1 | sum=1, carry_out=1
+# Break in Module tb_full_adder at /home/gme/guilherme.manske/quartus/Verilog/ex3_3/tb_full_adder.v line 53
+# Simulation Breakpoint: Break in Module tb_full_adder at /home/gme/guilherme.manske/quartus/Verilog/ex3_3/tb_full_adder.v line 53
+# MACRO ./ex3_3_run_msim_gate_verilog.do PAUSED at line 17

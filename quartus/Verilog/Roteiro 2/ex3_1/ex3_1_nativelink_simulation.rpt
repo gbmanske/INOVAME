@@ -1,0 +1,71 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneivgx
+Quartus root          :  /tools/intel/quartus/13.1/quartus/linux/
+Quartus sim root      :  /tools/intel/quartus/13.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  ex3_1.vo
+Sim SDF file          :  ex3_1__verilog.sdo
+Sim dir               :  simulation/modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script /tools/intel/quartus/13.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Probing transcript
+ModelSim-Altera Info: # do ex3_1_run_msim_gate_verilog.do 
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Warning: # ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+ModelSim-Altera Info: #          Updated modelsim.ini.
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {ex3_1.vo}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module ex3_1
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	ex3_1
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/ex3_1 {/home/gme/guilherme.manske/quartus/Verilog/ex3_1/tb_compare_concat.v}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module tb_compare_concat
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	tb_compare_concat
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs="+acc"  tb_compare_concat
+ModelSim-Altera Info: # vsim +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps tb_compare_concat 
+ModelSim-Altera Info: # Loading work.tb_compare_concat
+ModelSim-Altera Info: # Loading work.ex3_1
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_io_obuf
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_io_ibuf
+ModelSim-Altera Info: # Loading cycloneiv_ver.cycloneiv_lcell_comb
+ModelSim-Altera Info: # SDF 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # Loading instances from ex3_1_v.sdo
+ModelSim-Altera Info: # Loading timing data from ex3_1_v.sdo
+ModelSim-Altera Info: # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /tb_compare_concat File: /home/gme/guilherme.manske/quartus/Verilog/ex3_1/tb_compare_concat.v
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # add wave *
+ModelSim-Altera Info: # view structure
+ModelSim-Altera Info: # .main_pane.structure.interior.cs.body.struct
+ModelSim-Altera Info: # view signals
+ModelSim-Altera Info: # .main_pane.objects.interior.cs.body.tree
+ModelSim-Altera Info: # run -all
+ModelSim-Altera Info: # a=01, b=10, c=11 => result=0
+ModelSim-Altera Info: # a=11, b=00, c=01 => result=1
+ModelSim-Altera Info: # a=10, b=10, c=10 => result=0
+ModelSim-Altera Info: # Break in Module tb_compare_concat at /home/gme/guilherme.manske/quartus/Verilog/ex3_1/tb_compare_concat.v line 32
+ModelSim-Altera Info: # Simulation Breakpoint: Break in Module tb_compare_concat at /home/gme/guilherme.manske/quartus/Verilog/ex3_1/tb_compare_concat.v line 32
+ModelSim-Altera Info: # MACRO ./ex3_1_run_msim_gate_verilog.do PAUSED at line 17
+Info: NativeLink simulation flow was successful

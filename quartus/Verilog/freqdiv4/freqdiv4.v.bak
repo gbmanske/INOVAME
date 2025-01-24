@@ -1,0 +1,17 @@
+module freqdiv4(input d,clk,rst output reg q);
+
+wire aux;
+
+always @(posedge clk) begin
+	if(rst) begin
+		aux = 1'b0;
+		q=1'b0;
+	end
+	else
+		aux = ~aux;
+end
+
+always @(posedge aux)
+	q = ~q;
+
+endmodule

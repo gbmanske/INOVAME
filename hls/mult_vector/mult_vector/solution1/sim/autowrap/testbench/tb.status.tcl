@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/gme/guilherme.manske/hls/mult_vector/mult_vector/solution1/./sim/autowrap/testbench/mult_vector.cpp_pre.cpp.tb.cpp
