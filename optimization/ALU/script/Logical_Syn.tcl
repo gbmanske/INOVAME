@@ -1,17 +1,19 @@
 ###############################################################################
 # TOP 
 ###############################################################################
-set DESIGN alu
+#set DESIGN alu
 
 ##############################################################################
 ## Preset global variables and attributes
 ##############################################################################
 
-set GEN_EFF low
+#set GEN_EFF [lindex $argv 5]
 
-set DATE [clock format [clock seconds] -format "%b%d-%H%M%S"]
-set _REPORTS_PATH report/reports_${DATE}
-set _LOG_PATH log/logs_${DATE}
+
+#set CLOCKRUN [lindex $argv 7]
+#set DATE [lindex $argv 3]
+set _REPORTS_PATH report/${DESIGN}/reports_${DATE}/${GEN_EFF}/clk_${RUN}
+set _LOG_PATH log/${DESIGN}/logs_${DATE}/${GEN_EFF}/clk_${RUN}
 #################################################################
 ## library_sets (lib from library)
 #################################################################

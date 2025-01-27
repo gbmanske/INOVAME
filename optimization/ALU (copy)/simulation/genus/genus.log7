@@ -1,0 +1,1643 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[16:15:30.196481] Configured Lic search path (23.02-s003): 5280@pgmicro01.ufrgs.br
+
+Version: 23.12-s086_1, built Wed Jul 24 15:05:35 PDT 2024
+Options: -files Logical_Syn.tcl 
+Date:    Wed Jan 22 16:15:30 2025
+Host:    cadmicro-inf-el8-623207 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (6cores*12cpus*1physical cpu*12th Gen Intel(R) Core(TM) i5-12400 18432KB) (32673624KB)
+PID:     43807
+OS:      Rocky Linux release 8.10 (Green Obsidian)
+
+Checking out license: Genus_Synthesis
+[16:15:30.206211] Periodic Lic check successful
+[16:15:30.730506] Feature usage summary:
+[16:15:30.730506] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (0 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (7 seconds elapsed).
+
+#@ Processing -files option
+@genus:root: 1> source Logical_Syn.tcl
+#@ Begin verbose source ./Logical_Syn.tcl
+@file(Logical_Syn.tcl) 4: set DESIGN alu
+@file(Logical_Syn.tcl) 10: set GEN_EFF low
+@file(Logical_Syn.tcl) 12: set DATE [clock format [clock seconds] -format "%b%d-%T"] 
+@file(Logical_Syn.tcl) 13: set _REPORTS_PATH reports_${DATE}
+@file(Logical_Syn.tcl) 14: set _LOG_PATH logs_${DATE}
+@file(Logical_Syn.tcl) 23: set TECH_PATH  /tools/pdk/cadence/gpdk045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4
+@file(Logical_Syn.tcl) 25: read_libs "${TECH_PATH}/gsclib045_lvt/timing/fast_vdd1v2_basicCells_lvt.lib"
+
+  Message Summary for Library fast_vdd1v2_basicCells_lvt.lib:
+  ***********************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  ***********************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.320000, 0.000000) in library 'fast_vdd1v2_basicCells_lvt.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNALVT' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'fast_vdd1v2/ANTENNALVT'.
+        : Specify a valid area value for the libcell.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNALVT' must have an output pin.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'fast_vdd1v2/DFFNSRX4LVT'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'fast_vdd1v2/DFFSX2LVT'.
+@file(Logical_Syn.tcl) 27: read_physical -lef "{${TECH_PATH}/gsclib045_tech/lef/gsclib045_tech.lef ${TECH_PATH}/gsclib045_lvt/lef/gsclib045_lvt_macro.lef}"
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_HV' has no resistance value.
+        : If this is the expected behavior, this message can be ignored.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M4_M3_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M4_M3_VV' has no resistance value.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'PHYS-129'.
+
+  According to lef_library, there are total 11 routing layers [ V(5) / H(6) ]
+
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL1LVT cannot be found in library.
+        : Ensure that the proper library files are available and have been imported.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL16LVT cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL2LVT cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL32LVT cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL4LVT cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL64LVT cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL8LVT cannot be found in library.
+@file(Logical_Syn.tcl) 29: read_qrc "${TECH_PATH}/gsclib045_tech/qrc/qx/gpdk045.tch"
+
+  According to qrc_tech_file, there are total 11 routing layers [ V(5) / H(6) ]
+
+Done reading qrc_tech_file
+@file(Logical_Syn.tcl) 31: puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@file(Logical_Syn.tcl) 32: puts "Configuration of the Genus"
+Configuration of the Genus
+@file(Logical_Syn.tcl) 33: puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@file(Logical_Syn.tcl) 37:     set_db interconnect_mode ple
+  Setting attribute of root '/': 'interconnect_mode' = ple
+@file(Logical_Syn.tcl) 40:     set_db information_level 7
+  Setting attribute of root '/': 'information_level' = 7
+@file(Logical_Syn.tcl) 43:     set_db hdl_error_on_latch true
+  Setting attribute of root '/': 'hdl_error_on_latch' = true
+@file(Logical_Syn.tcl) 45:     set_db lp_insert_clock_gating false
+  Setting attribute of root '/': 'lp_insert_clock_gating' = false
+@file(Logical_Syn.tcl) 47: if {![file exists ${_LOG_PATH}]} {
+  file mkdir ${_LOG_PATH}
+  puts "Creating directory ${_LOG_PATH}"
+}
+Creating directory logs_Jan22-16:15:38
+@file(Logical_Syn.tcl) 52: if {![file exists ${_REPORTS_PATH}]} {
+  file mkdir ${_REPORTS_PATH}
+  puts "Creating directory ${_REPORTS_PATH}"
+}
+Creating directory reports_Jan22-16:15:38
+@file(Logical_Syn.tcl) 57: puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@file(Logical_Syn.tcl) 58: puts "  Load Design   and Elaboration"
+  Load Design   and Elaboration
+@file(Logical_Syn.tcl) 59: puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@file(Logical_Syn.tcl) 61:    read_hdl -sv ../../rtl/$DESIGN.sv
+            Reading Verilog file '../../rtl/alu.sv'
+@file(Logical_Syn.tcl) 62:    elaborate $DESIGN
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CI' and 'S' in libcell 'ADDFHX1LVT' is 'pos_unate', but unateness determined from function is 'non_unate'.
+        : The 'timing_sense' attribute will be respected.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CI' and 'S' in libcell 'ADDFHX1LVT' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX1LVT'.
+        : Setting the 'timing_sense' to non_unate.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'ADDFHX1LVT' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'ADDFHX1LVT' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX1LVT'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'A' and 'S' in libcell 'ADDFHX1LVT' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'A' and 'S' in libcell 'ADDFHX1LVT' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX1LVT'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CI' and 'S' in libcell 'ADDFHX2LVT' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'CI' and 'S' in libcell 'ADDFHX2LVT' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX2LVT'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'ADDFHX2LVT' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'B' and 'S' in libcell 'ADDFHX2LVT' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX2LVT'.
+Info    : Setting the maximum print count of this message to 10 if information_level is less than 9. [LBR-161]
+        : To print all the warning messages, set the information_level to 9.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX2LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHX4LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHX4LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHX4LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFHXLLVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFHXLLVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFHXLLVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX1LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX1LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFX1LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX2LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX2LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'S' in libcell 'ADDFX2LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CI' and 'S' in libcell 'ADDFX4LVT'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'S' in libcell 'ADDFX4LVT'.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-162'.
+  Libraries have 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'alu' from file '../../rtl/alu.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'alu' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'alu'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+-------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (s) | 
+-------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       1 |       0 |        0.00 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.00 | 
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       0 |       0 |        0.00 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.00 | 
+-------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: alu, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: alu, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: alu, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: alu, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+--------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (s) | 
+--------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |        0.00 | 
+| hlo_clip_mux_input             |       0 |       0 |        0.00 | 
+| hlo_clip                       |       0 |       0 |        0.00 | 
+| hlo_cleanup                    |       0 |       0 |        0.00 | 
+--------------------------------------------------------------------
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+@file(Logical_Syn.tcl) 64:    read_sdc ../../sdc/constraints.sdc
+Warning : Could not find requested search value. [SDC-208] [get_ports]
+        : The 'get_ports' command on line '7' of the SDC file '../../sdc/constraints.sdc'  cannot find any ports named '<Nome_da_Porta_Clock>'
+        : Use get_* commands to find the objects along with a wild card entry in the name of the object to check if the object is existing with different naming style.
+Error   : A command argument is of the wrong type. [TUI-66] [create_clock]
+        : A floating point number was expected, but '<Valor_do_Periodo>' was seen instead.
+        : Check the command usage and correct the input to the command.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '7' of the SDC file '../../sdc/constraints.sdc': create_clock -name {clock} -period $period_clock [get_ports {<Nome_da_Porta_Clock>}].
+        : The 'read_sdc' command encountered a problem while trying to evaluate an SDC command. This SDC command will be added to the Tcl variable $::dc::sdc_failed_commands.
+Warning : Could not find requested search value. [SDC-208] [get_ports]
+        : The 'get_ports' command on line '10' of the SDC file '../../sdc/constraints.sdc'  cannot find any ports named '<Nome_da_Porta_Reset>'
+Error   : A required object parameter could not be found. [TUI-61] [set_false_path]
+        : An object of type 'clock|port|inst|hinst|pin|hpin|port_bus|hpin_bus' named '' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '10' of the SDC file '../../sdc/constraints.sdc': set_false_path -from [get_ports {<Nome_da_Porta_Reset>}].
+Warning : Could not find requested search value. [SDC-208] [get_clocks]
+        : The 'get_clocks' command on line '13' of the SDC file '../../sdc/constraints.sdc'  cannot find any clocks named 'clock'
+Error   : Option missing for SDC command. [SDC-203] [set_clock_uncertainty]
+        : The set_clock_uncertainty command requires '-from', '-to', '-rise_from', '-fall_from', '-rise_to', '-fall_to', or list of objects option.
+        : This SDC command requires the indicated options.  Check the SDC command and contact Cadence customer support if you believe this option combination should be supported.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '13' of the SDC file '../../sdc/constraints.sdc': set_clock_uncertainty -setup 0.1 [get_clocks clock].
+Warning : Could not find requested search value. [SDC-208] [get_clocks]
+        : The 'get_clocks' command on line '14' of the SDC file '../../sdc/constraints.sdc'  cannot find any clocks named 'clock'
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '14' of the SDC file '../../sdc/constraints.sdc': set_clock_uncertainty -hold 0.1 [get_clocks clock].
+            Reading file '/home/gme/guilherme.manske/otimizaÁ„o/ALU/simulation/genus/../../sdc/constraints.sdc'
+Statistics for commands executed by read_sdc:
+ "all_inputs"               - successful      2 , failed      0 (runtime  0.00)
+ "all_outputs"              - successful      1 , failed      0 (runtime  0.00)
+ "create_clock"             - successful      0 , failed      1 (runtime  0.00)
+ "get_clocks"               - successful      0 , failed      2 (runtime  0.00)
+ "get_ports"                - successful      0 , failed      2 (runtime  0.00)
+ "set_clock_uncertainty"    - successful      0 , failed      2 (runtime  0.00)
+ "set_false_path"           - successful      0 , failed      1 (runtime  0.00)
+ "set_input_transition"     - successful      1 , failed      0 (runtime  0.00)
+ "set_load"                 - successful      1 , failed      0 (runtime  0.00)
+ "set_load_unit"            - successful      1 , failed      0 (runtime  0.00)
+ "set_max_fanout"           - successful      1 , failed      0 (runtime  0.00)
+ "set_time_unit"            - successful      1 , failed      0 (runtime  0.00)
+Warning : Total failed commands during read_sdc are 8
+Warning : One or more commands failed when these constraints were applied. [SDC-209]
+        : The 'read_sdc' command encountered a problem while processing commands.
+        : You can examine the failed commands or save them to a file by querying the Tcl variable $::dc::sdc_failed_commands.
+read_sdc completed in 00:00:00 (hh:mm:ss)
+@file(Logical_Syn.tcl) 67:    puts $::dc::sdc_failed_commands
+# command failed at line '7' of file '../../sdc/constraints.sdc':
+create_clock -name {clock} -period $period_clock [get_ports {<Nome_da_Porta_Clock>}]
+# command failed at line '10' of file '../../sdc/constraints.sdc':
+set_false_path -from [get_ports {<Nome_da_Porta_Reset>}]
+# command failed at line '13' of file '../../sdc/constraints.sdc':
+set_clock_uncertainty -setup 0.1 [get_clocks clock]
+# command failed at line '14' of file '../../sdc/constraints.sdc':
+set_clock_uncertainty -hold 0.1 [get_clocks clock]
+
+@file(Logical_Syn.tcl) 69:    init_design 
+Started checking and loading power intent for design alu...
+===========================================================
+No power intent for design 'alu'.
+Completed checking and loading power intent for design alu (runtime:0.00s memory_usage:0.00M peak_memory:0.00M).
+================================================================================================================
+#
+# Reading SDC ../../sdc/constraints.sdc for view: (constraint_mode:default_emulate_constraint_mode)
+#
+Warning : Could not find requested search value. [SDC-208] [get_ports]
+        : The 'get_ports' command on line '7' of the SDC file '../../sdc/constraints.sdc'  cannot find any ports named '<Nome_da_Porta_Clock>'
+Error   : A command argument is of the wrong type. [TUI-66] [create_clock]
+        : A floating point number was expected, but '<Valor_do_Periodo>' was seen instead.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '7' of the SDC file '../../sdc/constraints.sdc': create_clock -name {clock} -period $period_clock [get_ports {<Nome_da_Porta_Clock>}].
+Warning : Could not find requested search value. [SDC-208] [get_ports]
+        : The 'get_ports' command on line '10' of the SDC file '../../sdc/constraints.sdc'  cannot find any ports named '<Nome_da_Porta_Reset>'
+Error   : A required object parameter could not be found. [TUI-61] [set_false_path]
+        : An object of type 'clock|port|inst|hinst|pin|hpin|port_bus|hpin_bus' named '' could not be found.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '10' of the SDC file '../../sdc/constraints.sdc': set_false_path -from [get_ports {<Nome_da_Porta_Reset>}].
+Warning : Could not find requested search value. [SDC-208] [get_clocks]
+        : The 'get_clocks' command on line '13' of the SDC file '../../sdc/constraints.sdc'  cannot find any clocks named 'clock'
+Error   : Option missing for SDC command. [SDC-203] [set_clock_uncertainty]
+        : The set_clock_uncertainty command requires '-from', '-to', '-rise_from', '-fall_from', '-rise_to', '-fall_to', or list of objects option.
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '13' of the SDC file '../../sdc/constraints.sdc': set_clock_uncertainty -setup 0.1 [get_clocks clock].
+Warning : Could not find requested search value. [SDC-208] [get_clocks]
+        : The 'get_clocks' command on line '14' of the SDC file '../../sdc/constraints.sdc'  cannot find any clocks named 'clock'
+Error   : Could not interpret SDC command. [SDC-202] [read_sdc]
+        : The 'read_sdc' command encountered an error while processing this command on line '14' of the SDC file '../../sdc/constraints.sdc': set_clock_uncertainty -hold 0.1 [get_clocks clock].
+            Reading file '/home/gme/guilherme.manske/otimizaÁ„o/ALU/simulation/genus/../../sdc/constraints.sdc'
+            Reading file '/home/gme/guilherme.manske/otimizaÁ„o/ALU/simulation/genus/../../sdc/constraints.sdc'
+Statistics for commands executed by read_sdc:
+ "all_inputs"               - successful      2 , failed      0 (runtime  0.00)
+ "all_outputs"              - successful      1 , failed      0 (runtime  0.00)
+ "create_clock"             - successful      0 , failed      1 (runtime  0.00)
+ "get_clocks"               - successful      0 , failed      2 (runtime  0.00)
+ "get_ports"                - successful      0 , failed      2 (runtime  0.00)
+ "set_clock_uncertainty"    - successful      0 , failed      2 (runtime  0.00)
+ "set_false_path"           - successful      0 , failed      1 (runtime  0.00)
+ "set_input_transition"     - successful      1 , failed      0 (runtime  0.00)
+ "set_load"                 - successful      1 , failed      0 (runtime  0.00)
+ "set_load_unit"            - successful      1 , failed      0 (runtime  0.00)
+ "set_max_fanout"           - successful      1 , failed      0 (runtime  0.00)
+ "set_time_unit"            - successful      1 , failed      0 (runtime  0.00)
+Warning : Total failed commands during read_sdc are 8
+Warning : One or more commands failed when these constraints were applied. [SDC-209]
+        : The 'read_sdc' command encountered a problem while processing commands.
+read_sdc completed in 00:00:00 (hh:mm:ss)
+  Setting attribute of root '/': 'read_qrc_tech_file_rc_corner' = true
+@file(Logical_Syn.tcl) 72: puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@file(Logical_Syn.tcl) 73: puts "Synthesis - mapping and optimization"
+Synthesis - mapping and optimization
+@file(Logical_Syn.tcl) 74: puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@file(Logical_Syn.tcl) 75:     set_db syn_global_effort $GEN_EFF
+  Setting attribute of root '/': 'syn_global_effort' = low
+@file(Logical_Syn.tcl) 76:     syn_generic
+stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:09(00:00:08) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:39 (Jan22) |  617.9 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+      Running additional step before syn_gen...
+
+
+Stage: pre_early_cg
+-----------------------------------------------
+| Transform | Accepts | Rejects | Runtime (s) | 
+-----------------------------------------------
+-----------------------------------------------
+Mapping ChipWare ICG instances in alu
+Found 0 unmapped ChipWare ICG instances
+Mapped 0 of 0 ChipWare ICG instances
+##Generic Timing Info: typical gate delay   19.2 ps   std_slew:    3.2 ps   std_load:  0.8 fF  for library domain _default_
+Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: alu, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+
+Stage: pre_to_gen_setup
+-----------------------------------------------------
+| Transform       | Accepts | Rejects | Runtime (s) | 
+-----------------------------------------------------
+| hlo_mux_reorder |       0 |       0 |        0.00 | 
+-----------------------------------------------------
+Running DP early constant propagation (netlist alu)...
+Running DP early redundancy removal
+Completed DP early redundancy removal on alu (runtime = 0.0s)
+Multi-threaded constant propagation [4|0] ...
+...done running DP early constant propagation (0 seconds CPU time, netlist alu).
+qor: dump_pre_qor for alu (ptr: 0x7fe33709a080,pid: 43807)
+Current PLE settings:
+
+Aspect ratio        : 1.000
+Shrink factor       : 1.000
+Scale of res/length : 1.000
+Scale of cap/length : 1.000
+Net derating factor : 1.000
+Thermal factor      : 1.000
+Via Resistance      : 6.600 ohm (from qrc_tech_file)
+Site size           : 1.910 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+METAL_1         H         0.00        0.000210  
+METAL_2         V         1.00        0.000174  
+METAL_3         H         1.00        0.000174  
+METAL_4         V         1.00        0.000174  
+METAL_5         H         1.00        0.000174  
+METAL_6         V         1.00        0.000174  
+METAL_7         H         1.00        0.000175  
+METAL_8         V         1.00        0.000176  
+METAL_9         H         1.00        0.001240  
+METAL_10        V         1.00        0.000529  
+METAL_11        H         1.00        0.000686  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+METAL_1         H         0.00         1.226667  
+METAL_2         V         1.00         0.755000  
+METAL_3         H         1.00         0.755000  
+METAL_4         V         1.00         0.755000  
+METAL_5         H         1.00         0.755000  
+METAL_6         V         1.00         0.755000  
+METAL_7         H         1.00         0.755000  
+METAL_8         V         1.00         0.267500  
+METAL_9         H         1.00         0.267500  
+METAL_10        V         1.00         0.097273  
+METAL_11        H         1.00         0.095455  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+Metal1          H         0.00         0.060000  
+Metal2          V         1.00         0.080000  
+Metal3          H         1.00         0.080000  
+Metal4          V         1.00         0.080000  
+Metal5          H         1.00         0.080000  
+Metal6          V         1.00         0.080000  
+Metal7          H         1.00         0.080000  
+Metal8          V         1.00         0.080000  
+Metal9          H         1.00         0.080000  
+Metal10         V         1.00         0.220000  
+Metal11         H         1.00         0.220000  
+
+Info    : Synthesizing. [SYNTH-1]
+        : Synthesizing 'alu' to generic gates using 'low' effort.
+Running Synthesis Turbo Flow Version 3.
+        Computing net loads.
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed generic optimization to kick in.
+Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: alu, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: pre_to_gen_setup
+-----------------------------------------------------
+| Transform       | Accepts | Rejects | Runtime (s) | 
+-----------------------------------------------------
+| hlo_mux_reorder |       0 |       0 |        0.00 | 
+-----------------------------------------------------
+Starting mux data reorder optimization [v1.0] (stage: post_to_gen_setup, startdef: alu, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_to_gen_setup
+-----------------------------------------------------
+| Transform       | Accepts | Rejects | Runtime (s) | 
+-----------------------------------------------------
+| hlo_mux_reorder |       0 |       0 |        0.00 | 
+-----------------------------------------------------
+Current PLE settings:
+
+Aspect ratio        : 1.000
+Shrink factor       : 1.000
+Scale of res/length : 1.000
+Scale of cap/length : 1.000
+Net derating factor : 1.000
+Thermal factor      : 1.000
+Via Resistance      : 6.600 ohm (from qrc_tech_file)
+Site size           : 1.910 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+METAL_1         H         0.00        0.000210  
+METAL_2         V         1.00        0.000174  
+METAL_3         H         1.00        0.000174  
+METAL_4         V         1.00        0.000174  
+METAL_5         H         1.00        0.000174  
+METAL_6         V         1.00        0.000174  
+METAL_7         H         1.00        0.000175  
+METAL_8         V         1.00        0.000176  
+METAL_9         H         1.00        0.001240  
+METAL_10        V         1.00        0.000529  
+METAL_11        H         1.00        0.000686  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+METAL_1         H         0.00         1.226667  
+METAL_2         V         1.00         0.755000  
+METAL_3         H         1.00         0.755000  
+METAL_4         V         1.00         0.755000  
+METAL_5         H         1.00         0.755000  
+METAL_6         V         1.00         0.755000  
+METAL_7         H         1.00         0.755000  
+METAL_8         V         1.00         0.267500  
+METAL_9         H         1.00         0.267500  
+METAL_10        V         1.00         0.097273  
+METAL_11        H         1.00         0.095455  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+Metal1          H         0.00         0.060000  
+Metal2          V         1.00         0.080000  
+Metal3          H         1.00         0.080000  
+Metal4          V         1.00         0.080000  
+Metal5          H         1.00         0.080000  
+Metal6          V         1.00         0.080000  
+Metal7          H         1.00         0.080000  
+Metal8          V         1.00         0.080000  
+Metal9          H         1.00         0.080000  
+Metal10         V         1.00         0.220000  
+Metal11         H         1.00         0.220000  
+
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: pre_hlo_rtlopt
+-----------------------------------------------
+| Trick     | Accepts | Rejects | Runtime (s) | 
+-----------------------------------------------
+| ume_ssm   |       0 |       0 |        0.00 | 
+| ume_sweep |       0 |       0 |        0.00 | 
+| ume_share |       0 |       0 |        0.00 | 
+-----------------------------------------------
+Begin SDR optimization CTX_region 
+  Setting attribute of root '/': 'hier_sandbox_support_folded' = 1
+#Special hiers formed inside alu = 0
+No special hier is found 
+  Setting attribute of root '/': 'hier_sandbox_support_folded' = 0
+End SDR optimization CTX_region 
+Begin SDR optimization UME_region 
+  Setting attribute of root '/': 'hier_sandbox_support_folded' = 1
+#Special hiers formed inside alu = 0
+No special hier is found 
+  Setting attribute of root '/': 'hier_sandbox_support_folded' = 0
+End SDR optimization UME_region 
+Starting timing based select reordering [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed timing based select reordering (accepts: 0, rejects: 0, runtime: 0.006s)
+Starting recase case-box optimization [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed recase case-box optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting infer macro optimization [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed infer macro optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting decode mux sandwich optimization [v2.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed decode mux sandwich optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting decode mux optimization [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed decode mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting chop wide muxes [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed chop wide muxes (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting constant-data mux optimization [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed constant-data mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting chain-to-tree inequality transform [v2.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed chain-to-tree inequality transform (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting reconvergence optimization [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed reconvergence optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting logic restructure optimization [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting identity transform [v3.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed identity transform (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting reduce operator chain [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed reduce operator chain (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting optimize datapath elements [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed optimize datapath elements (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting datapath recasting [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed datapath recasting (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting word-level redundancy removal [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed word-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip mux common data inputs [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting basic netlist cleanup [v1.0] (stage: pre_rtlopt, startdef: alu, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: pre_rtlopt
+-----------------------------------------------------------------
+| Transform                   | Accepts | Rejects | Runtime (s) | 
+-----------------------------------------------------------------
+| hlo_timing_reorder          |       0 |       0 |        0.01 | 
+| hlo_recase_casebox          |       0 |       0 |        0.00 | 
+| hlo_infer_macro             |       0 |       0 |        0.00 | 
+| hlo_decode_mux_sandwich     |       0 |       0 |        0.00 | 
+| hlo_mux_decode              |       0 |       0 |        0.00 | 
+| hlo_chop_mux                |       0 |       0 |        0.00 | 
+| hlo_mux_cascade_opt         |       0 |       0 |        0.00 | 
+| hlo_mux_consolidation       |       0 |       0 |        0.00 | 
+| hlo_constant_mux_opt        |       0 |       0 |        0.00 | 
+| hlo_inequality_transform    |       0 |       0 |        0.00 | 
+| hlo_reconv_opt              |       0 |       0 |        0.00 | 
+| hlo_restructure             |       0 |       0 |        0.00 | 
+| hlo_identity_transform      |       0 |       0 |        0.00 | 
+| hlo_reduce_operator_chain   |       0 |       0 |        0.00 | 
+| hlo_mux_cascade_opt         |       0 |       0 |        0.00 | 
+| hlo_mux_consolidation       |       0 |       0 |        0.00 | 
+| hlo_optimize_datapath       |       0 |       0 |        0.00 | 
+| hlo_datapath_recast         |       0 |       0 |        0.00 | 
+| hlo_redundancy_removal_word |       0 |       0 |        0.00 | 
+| hlo_clip_mux_input          |       0 |       0 |        0.00 | 
+| hlo_clip                    |       0 |       0 |        0.00 | 
+| hlo_cleanup                 |       0 |       0 |        0.00 | 
+-----------------------------------------------------------------
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_hlo_rtlopt
+----------------------------------------------------------
+| Trick                | Accepts | Rejects | Runtime (s) | 
+----------------------------------------------------------
+| ume_sweep_aggressive |       0 |       0 |        0.00 | 
+| ume_runtime          |       0 |       0 |        0.00 | 
+----------------------------------------------------------
+Number of big hc bmuxes before = 0
+              Info: total 1 bmuxes found, 1 are converted to onehot form, and 0 are kept as binary form
+Info    : Pre-processed datapath logic. [DPOPT-6]
+        : No pre-processing optimizations applied to datapath logic in 'alu'.
+Info    : Optimizing datapath logic. [DPOPT-1]
+        : Optimizing datapath logic in 'alu'.
+Info    : Implementing datapath configurations. [DPOPT-3]
+        : Implementing datapath configurations for 'CDN_DP_region_0_0'
+CSAGen Prep Share:0 Re-Write:0 Speculation: 0
+    MaxCSA: weighted_instance_count is 64 
+      Timing addsub_signed_28...
+        Done timing addsub_signed_28.
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c7 in alu':
+	  (SUB_TC_OP, ADD_TC_OP)
+
+      Timing addsub_unsigned_45...
+        Done timing addsub_unsigned_45.
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c1 in alu':
+	  (sub_13_28, add_12_28)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c2 in alu':
+	  (sub_13_28, add_12_28)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c3 in alu':
+	  (sub_13_28, add_12_28)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c4 in alu':
+	  (sub_13_28, add_12_28)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c5 in alu':
+	  (sub_13_28, add_12_28)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c6 in alu':
+	  (sub_13_28, add_12_28)
+
+CDN_DP_region_0_0 level = 0 loads = 0 drivers = 0
+CDN_DP_region_0_0_c0 in alu: area: 5416235370 ,dp = 6 mux = 1  ctl_case = 0  decode = 1  sg = slow         worst_clk_period: -1.0000 
+    wns: 0  norm_wns:  -1.0000 
+    fail_endp: -1 
+    tns:  0  tns_per_endp:  -1.0000   norm_tns_per_endp:  -1.0000 
+    tns_sense_max:  -1.0000  tns_sense_avg:  -1.0000   tns_sense_num: -1
+ skipped
+CDN_DP_region_0_0_c1 in alu: area: 3893920695 ,dp = 1 mux = 2  ctl_case = 0  decode = 1  other = 66  sg = fast         worst_clk_period: -1.0000 
+    wns: 0  norm_wns:  -1.0000 
+    fail_endp: -1 
+    tns:  0  tns_per_endp:  -1.0000   norm_tns_per_endp:  -1.0000 
+    tns_sense_max:  -1.0000  tns_sense_avg:  -1.0000   tns_sense_num: -1
+ is current best
+CDN_DP_region_0_0_c2 in alu: area: 3893920695 ,dp = 1 mux = 2  ctl_case = 0  decode = 1  other = 66  sg = very_slow    worst_clk_period: -1.0000 
+    wns: 0  norm_wns:  -1.0000 
+    fail_endp: -1 
+    tns:  0  tns_per_endp:  -1.0000   norm_tns_per_endp:  -1.0000 
+    tns_sense_max:  -1.0000  tns_sense_avg:  -1.0000   tns_sense_num: -1
+ is current best
+CDN_DP_region_0_0_c3 in alu: area: 3893920695 ,dp = 1 mux = 2  ctl_case = 0  decode = 1  other = 66  sg = very_fast    worst_clk_period: -1.0000 
+    wns: 0  norm_wns:  -1.0000 
+    fail_endp: -1 
+    tns:  0  tns_per_endp:  -1.0000   norm_tns_per_endp:  -1.0000 
+    tns_sense_max:  -1.0000  tns_sense_avg:  -1.0000   tns_sense_num: -1
+ is current best
+CDN_DP_region_0_0_c4 in alu: area: 3893920695 ,dp = 1 mux = 2  ctl_case = 0  decode = 1  other = 66  sg = very_fast    worst_clk_period: -1.0000 
+    wns: 0  norm_wns:  -1.0000 
+    fail_endp: -1 
+    tns:  0  tns_per_endp:  -1.0000   norm_tns_per_endp:  -1.0000 
+    tns_sense_max:  -1.0000  tns_sense_avg:  -1.0000   tns_sense_num: -1
+ is current best
+CDN_DP_region_0_0_c5 in alu: area: 3893920695 ,dp = 1 mux = 2  ctl_case = 0  decode = 1  other = 66  sg = very_fast    worst_clk_period: -1.0000 
+    wns: 0  norm_wns:  -1.0000 
+    fail_endp: -1 
+    tns:  0  tns_per_endp:  -1.0000   norm_tns_per_endp:  -1.0000 
+    tns_sense_max:  -1.0000  tns_sense_avg:  -1.0000   tns_sense_num: -1
+ is current best
+CDN_DP_region_0_0_c6 in alu: area: 3893920695 ,dp = 1 mux = 2  ctl_case = 0  decode = 1  other = 66  sg = very_fast    worst_clk_period: -1.0000 
+    wns: 0  norm_wns:  -1.0000 
+    fail_endp: -1 
+    tns:  0  tns_per_endp:  -1.0000   norm_tns_per_endp:  -1.0000 
+    tns_sense_max:  -1.0000  tns_sense_avg:  -1.0000   tns_sense_num: -1
+ is current best
+CDN_DP_region_0_0_c7 in alu: area: 3899262150 ,dp = 1 mux = 2  ctl_case = 0  decode = 1  other = 66  sg = very_fast    worst_clk_period: -1.0000 
+    wns: 0  norm_wns:  -1.0000 
+    fail_endp: -1 
+    tns:  0  tns_per_endp:  -1.0000   norm_tns_per_endp:  -1.0000 
+    tns_sense_max:  -1.0000  tns_sense_avg:  -1.0000   tns_sense_num: -1
+
+Best config: CDN_DP_region_0_0_c6 in alu: area: 3893920695 ,dp = 1 mux = 2  ctl_case = 0  decode = 1  other = 66  sg = very_fast    worst_clk_period: -1.0000 
+    wns: 0  norm_wns:  -1.0000 
+    fail_endp: -1 
+    tns:  0  tns_per_endp:  -1.0000   norm_tns_per_endp:  -1.0000 
+    tns_sense_max:  -1.0000  tns_sense_avg:  -1.0000   tns_sense_num: -1
+  Smallest config area : 3893920695.  Fastest config wns;  0
+##>+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>Summary table of configs (Best config is CDN_DP_region_0_0_c6)
+##>+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>                     0                  1                  2                  3                  4                  5                  6                  7            
+##>+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>           Area       5416235370         3893920695         3893920695         3893920695         3893920695         3893920695         3893920695         3899262150  
+##>            WNS    +214748364.70      +214748364.70      +214748364.70      +214748364.70      +214748364.70      +214748364.70      +214748364.70      +214748364.70  
+##>            TNS                0                  0                  0                  0                  0                  0                  0                  0  
+##>    Num Rewrite                0                  0                  0                  0                  0                  0                  0                  0  
+##>     Num Factor                0                  0                  0                  0                  0                  0                  0                  0  
+##>      Num Share                0                  1                  1                  1                  1                  1                  1                  1  
+##>   Num CmultCse                0                  0                  0                  0                  0                  0                  0                  0  
+##>   Num Downsize                0                  0                  0                  0                  0                  0                  0                  0  
+##>  Num Speculate                0                  0                  0                  0                  0                  0                  0                  0  
+##>     Runtime(s)                0                  0                  0                  0                  0                  0                  0                  0  
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>
+##>
+##>+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>Optimization Step DEBUG Table for config CDN_DP_region_0_0_c6
+##>
+##>                          Step                        Area   (  % Chg)         WNS (Change)          TNS (Change)                Power   (  % Chg)        Runtime (s)        Comment                   
+##>+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>createMaxCarrySave              START             5416235370 (       )    214748364.70 (        )          0 (        )                    0 (       )              
+##> datapath_rewrite_one_def       START             5416235370 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>  fast_cse_elim                 START             5416235370 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             5416235370 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>  fast_cse_elim                 START             5416235370 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             5416235370 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>                                  END             5416235370 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##> dpopt_share_one_def            START             5416235370 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 ( -28.11)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##> csa_opto                       START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>                                  END             3893920695 ( -28.11)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>canonicalize_by_names           START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>datapath_rewrite_post_csa_one_  START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>datapath_csa_factoring_one_gde  START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>dpopt_share_one_def             START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>datapath_rewrite_post_share     START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>dp_combine_const_mult_with_com  START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>speculate_in_gdef               START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##> pre_speculate_mux_merge        START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>dp_operator_level_decompositio  START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>selective_flatten_dp_config     START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>createMaxCarrySave              START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##> datapath_rewrite_one_def       START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>  fast_cse_elim                 START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>  fast_cse_elim                 START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##> dpopt_share_one_def            START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##> csa_opto                       START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>context_based_simplify          START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>group_csa_final_adder_dp        START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>dpopt_flatten_critical_muxes_i  START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>speculate_in_gdef               START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##> pre_speculate_mux_merge        START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>create_score                    START             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)              
+##>                                  END             3893920695 (  +0.00)    214748364.70 (   +0.00)          0 (       0)                    0 (  +0.00)           0  
+##>+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Committed config: CDN_DP_region_0_0_c6
+Info    : Done implementing datapath configurations. [DPOPT-4]
+        : Selected 'very_fast' configuration 6 for module 'CDN_DP_region_0_0_c6'.
+          Optimizations applied to 'very_fast' configuration:
+            rewriting(0), factoring(0), sharing(1), cmultcse(0), downsizing(0), speculation(0)
+Info:  Ungrouped 0 dp-cluster instances.  0 cluster instances were left intact, to aid verification.
+              Preparing netlist for verification ...
+              Done preparing netlist for verification.
+Info    : Done optimizing datapath logic. [DPOPT-2]
+        : Done optimizing datapath logic in 'alu'.
+      Removing temporary intermediate hierarchies under alu
+Number of big hc bmuxes after = 0
+Starting bit-level redundancy removal [v1.0] (stage: post_rtlopt, startdef: alu, recur: true)
+Completed bit-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting logic reduction [v1.0] (stage: post_rtlopt, startdef: alu, recur: true)
+Completed logic reduction (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux data reorder optimization [v1.0] (stage: post_rtlopt, startdef: alu, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting timing based select reordering [v1.0] (stage: post_rtlopt, startdef: alu, recur: true)
+Completed timing based select reordering (accepts: 0, rejects: 0, runtime: 0.004s)
+
+Stage: post_rtlopt
+----------------------------------------------------------------
+| Transform                  | Accepts | Rejects | Runtime (s) | 
+----------------------------------------------------------------
+| hlo_redundancy_removal_bit |       0 |       0 |        0.00 | 
+| hlo_logic_reduction        |       0 |       0 |        0.00 | 
+| hlo_mux_reorder            |       0 |       0 |        0.00 | 
+| hlo_timing_reorder         |       0 |       0 |        0.00 | 
+----------------------------------------------------------------
+              Optimizing muxes in design 'alu'.
+              Post blast muxes in design 'alu'.
+Starting mux speculation [v1.0] (stage: post_muxopt, startdef: alu, recur: true)
+Starting speculation optimization
+Completed speculation optimization (accepts:0)
+Completed mux speculation (accepts: 0, rejects: 0, runtime: 0.004s)
+Starting timing based select reordering [v1.0] (stage: post_muxopt, startdef: alu, recur: true)
+Completed timing based select reordering (accepts: 0, rejects: 0, runtime: 0.004s)
+
+Stage: post_muxopt
+--------------------------------------------------------
+| Transform          | Accepts | Rejects | Runtime (s) | 
+--------------------------------------------------------
+| hlo_speculation    |       0 |       0 |        0.00 | 
+| hlo_timing_reorder |       0 |       0 |        0.00 | 
+--------------------------------------------------------
+==================================
+Stage : to_generic 
+==================================
+  =================
+   Message Summary
+  =================
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|   Id    |  Sev  |Count|                                                                                    Message Text                                                                                    |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|CDFG-818 |Warning|    1|Using default parameter value for module elaboration.                                                                                                                               |
+|CWD-19   |Info   |   18|An implementation was inferred.                                                                                                                                                     |
+|DPOPT-1  |Info   |    1|Optimizing datapath logic.                                                                                                                                                          |
+|DPOPT-2  |Info   |    1|Done optimizing datapath logic.                                                                                                                                                     |
+|DPOPT-3  |Info   |    1|Implementing datapath configurations.                                                                                                                                               |
+|DPOPT-4  |Info   |    1|Done implementing datapath configurations.                                                                                                                                          |
+|DPOPT-6  |Info   |    1|Pre-processed datapath logic.                                                                                                                                                       |
+|ELAB-1   |Info   |    1|Elaborating Design.                                                                                                                                                                 |
+|ELAB-3   |Info   |    1|Done Elaborating Design.                                                                                                                                                            |
+|GLO-40   |Info   |    1|Combinational hierarchical blocks with identical inputs have been merged.                                                                                                           |
+|         |       |     |This optimization usually reduces design area. To prevent merging of combinational hierarchical blocks, set the 'merge_combinational_hier_instances' root attribute to 'false' or   |
+|         |       |     | the 'merge_combinational_hier_instance' instance attribute to 'false'.                                                                                                             |
+|LBR-9    |Warning|    2|Library cell has no output pins defined.                                                                                                                                            |
+|         |       |     |Add the missing output pin(s)                                                                                                                                                       |
+|         |       |     | , then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no |
+|         |       |     | output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will |
+|         |       |     | not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message  |
+|         |       |     | LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin)                             |
+|         |       |     | of the cell, to use it for mapping. The pg_pin will not have any function defined.                                                                                                 |
+|LBR-41   |Info   |    1|An output library pin lacks a function attribute.                                                                                                                                   |
+|         |       |     |If the remainder of this library cell's semantic checks are successful, it will be considered as a timing-model (because one of its outputs does not have a valid function.         |
+|LBR-43   |Warning|    3|Libcell has no area attribute.  Defaulting to 0 area.                                                                                                                               |
+|         |       |     |Specify a valid area value for the libcell.                                                                                                                                         |
+|LBR-155  |Info   |  264|Mismatch in unateness between 'timing_sense' attribute and the function.                                                                                                            |
+|         |       |     |The 'timing_sense' attribute will be respected.                                                                                                                                     |
+|LBR-161  |Info   |    1|Setting the maximum print count of this message to 10 if information_level is less than 9.                                                                                          |
+|LBR-162  |Info   |  124|Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed.                                                                                                             |
+|         |       |     |Setting the 'timing_sense' to non_unate.                                                                                                                                            |
+|LBR-412  |Info   |    1|Created nominal operating condition.                                                                                                                                                |
+|         |       |     |The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively)     |
+|         |       |     | , or by the default PVT values (1.0,1.0,1.0).                                                                                                                                      |
+|LBR-518  |Info   |    1|Missing a function attribute in the output pin definition.                                                                                                                          |
+|PHYS-129 |Info   |  119|Via with no resistance will have a value of '0.0' assigned for resistance value.                                                                                                    |
+|         |       |     |If this is the expected behavior, this message can be ignored.                                                                                                                      |
+|PHYS-279 |Warning|    7|Physical cell not defined in library.                                                                                                                                               |
+|         |       |     |Ensure that the proper library files are available and have been imported.                                                                                                          |
+|PHYS-752 |Info   |    1|Partition Based Synthesis execution skipped.                                                                                                                                        |
+|RTLOPT-30|Info   |    7|Accepted resource sharing opportunity.                                                                                                                                              |
+|SDC-202  |Error  |    8|Could not interpret SDC command.                                                                                                                                                    |
+|         |       |     |The 'read_sdc' command encountered a problem while trying to evaluate an SDC command. This SDC command will be added to the Tcl variable $::dc::sdc_failed_commands.                |
+|SDC-203  |Error  |    2|Option missing for SDC command.                                                                                                                                                     |
+|         |       |     |This SDC command requires the indicated options.  Check the SDC command and contact Cadence customer support if you believe this option combination should be supported.            |
+|SDC-208  |Warning|    8|Could not find requested search value.                                                                                                                                              |
+|         |       |     |Use get_* commands to find the objects along with a wild card entry in the name of the object to check if the object is existing with different naming style.                       |
+|SDC-209  |Warning|    2|One or more commands failed when these constraints were applied.                                                                                                                    |
+|         |       |     |You can examine the failed commands or save them to a file by querying the Tcl variable $::dc::sdc_failed_commands.                                                                 |
+|SYNTH-1  |Info   |    1|Synthesizing.                                                                                                                                                                       |
+|TUI-61   |Error  |    2|A required object parameter could not be found.                                                                                                                                     |
+|         |       |     |Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.                                        |
+|TUI-66   |Error  |    2|A command argument is of the wrong type.                                                                                                                                            |
+|         |       |     |Check the command usage and correct the input to the command.                                                                                                                       |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Current PLE settings:
+
+Aspect ratio        : 1.000
+Shrink factor       : 1.000
+Scale of res/length : 1.000
+Scale of cap/length : 1.000
+Net derating factor : 1.000
+Thermal factor      : 1.000
+Via Resistance      : 6.600 ohm (from qrc_tech_file)
+Site size           : 1.910 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+METAL_1         H         0.00        0.000210  
+METAL_2         V         1.00        0.000174  
+METAL_3         H         1.00        0.000174  
+METAL_4         V         1.00        0.000174  
+METAL_5         H         1.00        0.000174  
+METAL_6         V         1.00        0.000174  
+METAL_7         H         1.00        0.000175  
+METAL_8         V         1.00        0.000176  
+METAL_9         H         1.00        0.001240  
+METAL_10        V         1.00        0.000529  
+METAL_11        H         1.00        0.000686  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+METAL_1         H         0.00         1.226667  
+METAL_2         V         1.00         0.755000  
+METAL_3         H         1.00         0.755000  
+METAL_4         V         1.00         0.755000  
+METAL_5         H         1.00         0.755000  
+METAL_6         V         1.00         0.755000  
+METAL_7         H         1.00         0.755000  
+METAL_8         V         1.00         0.267500  
+METAL_9         H         1.00         0.267500  
+METAL_10        V         1.00         0.097273  
+METAL_11        H         1.00         0.095455  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+Metal1          H         0.00         0.060000  
+Metal2          V         1.00         0.080000  
+Metal3          H         1.00         0.080000  
+Metal4          V         1.00         0.080000  
+Metal5          H         1.00         0.080000  
+Metal6          V         1.00         0.080000  
+Metal7          H         1.00         0.080000  
+Metal8          V         1.00         0.080000  
+Metal9          H         1.00         0.080000  
+Metal10         V         1.00         0.220000  
+Metal11         H         1.00         0.220000  
+
+Mapper: Libraries have:
+	domain _default_: 324 combo usable cells and 128 sequential usable cells
+      Mapping 'alu'...
+        Preparing the circuit
+          Pruning unused logic
+Error   : Failed to parse attribute string. [TUI-23] [::legacy::set_attribute]
+        : Unable to convert the string '/home/gme/guilherme.manske/otimiza√ß√£o/ALU/simulation/genus/.st_launch_cadmicro-inf-el8-623207_43807' to type 'string' for the attribute 'st_master_tmp_directory'.
+        : To see the usage/description for this attribute, type '::legacy::set_attribute -h <attr_name> *' (in legacy UI mode) or 'help * <attr_name> -detail' (in CUI mode).
+1
+    while executing
+"::legacy::set_attribute -quiet st_master_tmp_directory $tdir /"
+    (procedure "init_st_tmp_dir" line 14)
+    invoked from within
+"init_st_tmp_dir"
+    (procedure "rc_st::fg::launch_servers" line 3)
+    invoked from within
+"rc_st::fg::launch_servers 0 0"          Analyzing hierarchical boundaries
+          Aggressive hierarchical optimization: disabled
+          Propagating constants
+        Done preparing the circuit
+          Structuring (delay-based) alu...
+          Done structuring (delay-based) alu
+Multi-threaded Virtual Mapping    (8 threads, 8 of 12 CPUs usable)
+          Structuring (delay-based) logic partition in alu...
+          Done structuring (delay-based) logic partition in alu
+        Mapping logic partition in alu...
+          Structuring (delay-based) addsub_unsigned_45...
+          Done structuring (delay-based) addsub_unsigned_45
+        Mapping component addsub_unsigned_45...
+          Structuring (delay-based) logic partition in alu...
+          Done structuring (delay-based) logic partition in alu
+        Mapping logic partition in alu...
+==================================
+Stage : first_condense 
+==================================
+  =================
+   Message Summary
+  =================
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Id  | Sev |Count|                                                                           Message Text                                                                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|TUI-23|Error|    1|Failed to parse attribute string.                                                                                                                                  |
+|      |     |     |To see the usage/description for this attribute, type '::legacy::set_attribute -h <attr_name> *' (in legacy UI mode) or 'help * <attr_name> -detail' (in CUI mode).|
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack: Unconstrained
+
+        Computing net loads.
+PBS_Generic_Opt-Post - Elapsed_Time 2, CPU_Time 1.9050659999999997
+stamp 'PBS_Generic_Opt-Post' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:09(00:00:08) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:39 (Jan22) |  617.9 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:01(00:00:02) | 100.0(100.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+        Computing net loads.
+PBS_Generic-Postgen HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Postgen HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:09(00:00:08) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:39 (Jan22) |  617.9 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:01(00:00:02) | 100.0(100.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Starting post syn_generic ultra-effort Boolean optimization
+Redundancy removal succeeded.
+Done post syn_generic ultra-effort Boolean optimization (0.00 cpu seconds) (0.00 elapsed cpu seconds)
+Info    : Done synthesizing. [SYNTH-2]
+        : Done synthesizing 'alu' to generic gates.
+        Computing net loads.
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>=================== Cadence Confidential (Generic-Logical) ===================
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   syn_gen
+@file(Logical_Syn.tcl) 77:     syn_map
+#------------------------------------------------------------------------------------
+# Root attributes for category: opt
+#------------------------------------------------------------------------------------
+# Feature                           | Attribute                | Value            
+#------------------------------------------------------------------------------------
+# Power optimization effort         | design_power_effort      | none (default)   
+# Do not use qbar sequential pins   | dont_use_qbar_seq_pins   | false (default)  
+#------------------------------------------------------------------------------------
+
+##Generic Timing Info: typical gate delay   19.2 ps   std_slew:    3.2 ps   std_load:  0.8 fF  for library domain _default_
+Mapping ChipWare ICG instances in alu
+Found 0 unmapped ChipWare ICG instances
+Mapped 0 of 0 ChipWare ICG instances
+Current PLE settings:
+
+Aspect ratio        : 1.000
+Shrink factor       : 1.000
+Scale of res/length : 1.000
+Scale of cap/length : 1.000
+Net derating factor : 1.000
+Thermal factor      : 1.000
+Via Resistance      : 6.600 ohm (from qrc_tech_file)
+Site size           : 1.910 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+METAL_1         H         0.00        0.000210  
+METAL_2         V         1.00        0.000174  
+METAL_3         H         1.00        0.000174  
+METAL_4         V         1.00        0.000174  
+METAL_5         H         1.00        0.000174  
+METAL_6         V         1.00        0.000174  
+METAL_7         H         1.00        0.000175  
+METAL_8         V         1.00        0.000176  
+METAL_9         H         1.00        0.001240  
+METAL_10        V         1.00        0.000529  
+METAL_11        H         1.00        0.000686  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+METAL_1         H         0.00         1.226667  
+METAL_2         V         1.00         0.755000  
+METAL_3         H         1.00         0.755000  
+METAL_4         V         1.00         0.755000  
+METAL_5         H         1.00         0.755000  
+METAL_6         V         1.00         0.755000  
+METAL_7         H         1.00         0.755000  
+METAL_8         V         1.00         0.267500  
+METAL_9         H         1.00         0.267500  
+METAL_10        V         1.00         0.097273  
+METAL_11        H         1.00         0.095455  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+Metal1          H         0.00         0.060000  
+Metal2          V         1.00         0.080000  
+Metal3          H         1.00         0.080000  
+Metal4          V         1.00         0.080000  
+Metal5          H         1.00         0.080000  
+Metal6          V         1.00         0.080000  
+Metal7          H         1.00         0.080000  
+Metal8          V         1.00         0.080000  
+Metal9          H         1.00         0.080000  
+Metal10         V         1.00         0.220000  
+Metal11         H         1.00         0.220000  
+
+Info    : Mapping. [SYNTH-4]
+        : Mapping 'alu' using 'low' effort.
+Mapper: Libraries have:
+	domain _default_: 324 combo usable cells and 128 sequential usable cells
+PBS_TechMap-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:09(00:00:08) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:39 (Jan22) |  617.9 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:01(00:00:02) | 100.0(100.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+        Computing net loads.
+PBS_TechMap-Premap HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Premap HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:09(00:00:08) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:39 (Jan22) |  617.9 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:01(00:00:02) | 100.0(100.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |   16:15:41 (Jan22) |  617.9 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed mapping optimization to kick in.
+Current PLE settings:
+
+Aspect ratio        : 1.000
+Shrink factor       : 1.000
+Scale of res/length : 1.000
+Scale of cap/length : 1.000
+Net derating factor : 1.000
+Thermal factor      : 1.000
+Via Resistance      : 6.600 ohm (from qrc_tech_file)
+Site size           : 1.910 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       qrc_tech_file
+------------------------------------------------
+METAL_1         H         0.00        0.000210  
+METAL_2         V         1.00        0.000174  
+METAL_3         H         1.00        0.000174  
+METAL_4         V         1.00        0.000174  
+METAL_5         H         1.00        0.000174  
+METAL_6         V         1.00        0.000174  
+METAL_7         H         1.00        0.000175  
+METAL_8         V         1.00        0.000176  
+METAL_9         H         1.00        0.001240  
+METAL_10        V         1.00        0.000529  
+METAL_11        H         1.00        0.000686  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       qrc_tech_file
+-------------------------------------------------
+METAL_1         H         0.00         1.226667  
+METAL_2         V         1.00         0.755000  
+METAL_3         H         1.00         0.755000  
+METAL_4         V         1.00         0.755000  
+METAL_5         H         1.00         0.755000  
+METAL_6         V         1.00         0.755000  
+METAL_7         H         1.00         0.755000  
+METAL_8         V         1.00         0.267500  
+METAL_9         H         1.00         0.267500  
+METAL_10        V         1.00         0.097273  
+METAL_11        H         1.00         0.095455  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+Metal1          H         0.00         0.060000  
+Metal2          V         1.00         0.080000  
+Metal3          H         1.00         0.080000  
+Metal4          V         1.00         0.080000  
+Metal5          H         1.00         0.080000  
+Metal6          V         1.00         0.080000  
+Metal7          H         1.00         0.080000  
+Metal8          V         1.00         0.080000  
+Metal9          H         1.00         0.080000  
+Metal10         V         1.00         0.220000  
+Metal11         H         1.00         0.220000  
+
+              Enable datapath components refolding ...
+Mapper: Libraries have:
+	domain _default_: 324 combo usable cells and 128 sequential usable cells
+      Mapping 'alu'...
+        Preparing the circuit
+          Pruning unused logic
+Updating ST server settings
+          Analyzing hierarchical boundaries
+          Aggressive hierarchical optimization: disabled
+          Propagating constants
+        Done preparing the circuit
+          Structuring (delay-based) alu...
+          Done structuring (delay-based) alu
+Multi-threaded Virtual Mapping    (8 threads per ST process, 8 of 12 CPUs usable)
+          Structuring (delay-based) logic partition in alu...
+          Done structuring (delay-based) logic partition in alu
+        Mapping logic partition in alu...
+=================================== ERROR in ST!!! ================================
+Tcl command: '::rc_st::fg::execute_jobs ::rc_st::fg::map_condense_send 0 addsub_unsigned_45 1 ::rc_st::fg::condense_foregound_defs {}'
+================================= Begin error info ================================
+can not find channel named ""
+    while executing
+"puts $fd "set ::rc_st::bg::job [list $job]""
+    (procedure "send_job" line 65)
+    invoked from within
+"send_job serverTbl $send_cmd $pass $job $verbose"
+    (procedure "execute_jobs_int" line 70)
+    invoked from within
+"execute_jobs_int serverTableST $send_cmd $pass $jobs $keep_order $fg_func $fg_defs $jobs_post_processing_order $verbose"
+    (procedure "::rc_st::fg::execute_jobs" line 8)
+    invoked from within
+"::rc_st::fg::execute_jobs ::rc_st::fg::map_condense_send 0 addsub_unsigned_45 1 ::rc_st::fg::condense_foregound_defs {}"
+================================== End error info =================================
+Try to continue execution...
+
+Segmentation Fault accessing address 10.
+
+Segmentation Fault accessing address 10.
+
+Segmentation Fault accessing address 10.
+
+Segmentation Fault accessing address 10.
+
+Segmentation Fault accessing address 10.
+
+Fatal internal error, code 11 (Segmentation fault)
+
+Segmentation Fault accessing address 10.
+
+Dumping stack trace (tid:7fe333adf700/sub thread).
+
+Fatal internal error, code 11 (Segmentation fault)
+
+Fatal internal error, code 11 (Segmentation fault)
+
+Segmentation Fault accessing address 10.
+
+Fatal internal error, code 11 (Segmentation fault)
+
+Segmentation Fault accessing address 10.
+
+Fatal internal error, code 11 (Segmentation fault)
+
+Fatal internal error, code 11 (Segmentation fault)
+Suppressing parallel dumps of stack trace (7fe3171d5700). Going to sleep.
+Suppressing parallel dumps of stack trace (7fe319808700). Going to sleep.
+Suppressing parallel dumps of stack trace (7fe319007700). Going to sleep.
+
+Fatal internal error, code 11 (Segmentation fault)
+Suppressing parallel dumps of stack trace (7fe318806700). Going to sleep.
+Suppressing parallel dumps of stack trace (7fe31a009700). Going to sleep.
+Suppressing parallel dumps of stack trace (7fe3169d4700). Going to sleep.
+
+Fatal internal error, code 11 (Segmentation fault)
+Suppressing parallel dumps of stack trace (7fe3161d3700). Going to sleep.
+
+Operating System: linux
+Product Version: 23.12-s086_1
+Build Date: Jul 24 2024 19:05:35
+Executable: /tools/cadence/DDIEXPORT23/GENUS231/tools.lnx86/synth/bin/64bit/genus
+Startup Options: -f Logical_Syn.tcl 
+Current Directory: /home/gme/guilherme.manske/otimiza√ß√£o/ALU/simulation/genus
+Stack trace:
+Thread 23 (Thread 0x7fe3171d5700 (LWP 44273)):
+#0  0x00007fe36e4a71a0 in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000009a2e8c7 in dump_stack_trace_low(_IO_FILE*, _IO_FILE*, unsigned long*, bool, bool) ()
+#2  0x0000000009a308b6 in sig_exit(int) ()
+#3  0x00000000099b0945 in fatal_handler(int) ()
+#4  0x0000000009a30aac in segv_fatal_handler(int, siginfo_t*) ()
+#5  <signal handler called>
+#6  0x00000000037b49cf in map_is_timing_case_constant(MapMmmc const&, MapMode, GBI::Gpin*, int*) ()
+#7  0x00000000037b70fc in compute_funterm_case_constant(MapMode, Map_node*, int*) [clone .isra.0] ()
+#8  0x00000000037b8ddb in map_compute_case_constant(Map_node*, bool) ()
+#9  0x000000000367eb84 in condense_node(Map_node*, bool, bool, bool, bool, bool, Map_prev_condense*) ()
+#10 0x00000000036805fe in condense_nodes_and_dogs_thread(void*) ()
+#11 0x00000000098b3d62 in ThreadPool::thread(void*) ()
+#12 0x0000000009a2d22c in create_head(void*) ()
+#13 0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#14 0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 22 (Thread 0x7fe319007700 (LWP 44272)):
+#0  0x00007fe36e4a71a0 in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000009a2e8c7 in dump_stack_trace_low(_IO_FILE*, _IO_FILE*, unsigned long*, bool, bool) ()
+#2  0x0000000009a308b6 in sig_exit(int) ()
+#3  0x00000000099b0945 in fatal_handler(int) ()
+#4  0x0000000009a30aac in segv_fatal_handler(int, siginfo_t*) ()
+#5  <signal handler called>
+#6  0x00000000037b49cf in map_is_timing_case_constant(MapMmmc const&, MapMode, GBI::Gpin*, int*) ()
+#7  0x00000000037b70fc in compute_funterm_case_constant(MapMode, Map_node*, int*) [clone .isra.0] ()
+#8  0x00000000037b8ddb in map_compute_case_constant(Map_node*, bool) ()
+#9  0x000000000367eb84 in condense_node(Map_node*, bool, bool, bool, bool, bool, Map_prev_condense*) ()
+#10 0x00000000036805fe in condense_nodes_and_dogs_thread(void*) ()
+#11 0x00000000098b3d62 in ThreadPool::thread(void*) ()
+#12 0x0000000009a2d22c in create_head(void*) ()
+#13 0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#14 0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 21 (Thread 0x7fe319808700 (LWP 44271)):
+#0  0x00007fe36e4a71a0 in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000009a2e8c7 in dump_stack_trace_low(_IO_FILE*, _IO_FILE*, unsigned long*, bool, bool) ()
+#2  0x0000000009a308b6 in sig_exit(int) ()
+#3  0x00000000099b0945 in fatal_handler(int) ()
+#4  0x0000000009a30aac in segv_fatal_handler(int, siginfo_t*) ()
+#5  <signal handler called>
+#6  0x00000000037b49cf in map_is_timing_case_constant(MapMmmc const&, MapMode, GBI::Gpin*, int*) ()
+#7  0x00000000037b70fc in compute_funterm_case_constant(MapMode, Map_node*, int*) [clone .isra.0] ()
+#8  0x00000000037b8ddb in map_compute_case_constant(Map_node*, bool) ()
+#9  0x000000000367eb84 in condense_node(Map_node*, bool, bool, bool, bool, bool, Map_prev_condense*) ()
+#10 0x00000000036805fe in condense_nodes_and_dogs_thread(void*) ()
+#11 0x00000000098b3d62 in ThreadPool::thread(void*) ()
+#12 0x0000000009a2d22c in create_head(void*) ()
+#13 0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#14 0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 20 (Thread 0x7fe31a009700 (LWP 44270)):
+#0  0x00007fe36e4a71a0 in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000009a2e8c7 in dump_stack_trace_low(_IO_FILE*, _IO_FILE*, unsigned long*, bool, bool) ()
+#2  0x0000000009a308b6 in sig_exit(int) ()
+#3  0x00000000099b0945 in fatal_handler(int) ()
+#4  0x0000000009a30aac in segv_fatal_handler(int, siginfo_t*) ()
+#5  <signal handler called>
+#6  0x00000000037b49cf in map_is_timing_case_constant(MapMmmc const&, MapMode, GBI::Gpin*, int*) ()
+#7  0x00000000037b70fc in compute_funterm_case_constant(MapMode, Map_node*, int*) [clone .isra.0] ()
+#8  0x00000000037b8ddb in map_compute_case_constant(Map_node*, bool) ()
+#9  0x000000000367eb84 in condense_node(Map_node*, bool, bool, bool, bool, bool, Map_prev_condense*) ()
+#10 0x00000000036805fe in condense_nodes_and_dogs_thread(void*) ()
+#11 0x00000000098b3d62 in ThreadPool::thread(void*) ()
+#12 0x0000000009a2d22c in create_head(void*) ()
+#13 0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#14 0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 19 (Thread 0x7fe333adf700 (LWP 44269)):
+#0  0x00007fe36e4a7692 in waitpid () from /lib64/libpthread.so.0
+#1  0x0000000009a2e139 in pstack_stacktrace(int, _IO_FILE*) ()
+#2  0x0000000009a2eb53 in dump_stack_trace_low(_IO_FILE*, _IO_FILE*, unsigned long*, bool, bool) ()
+#3  0x0000000009a308b6 in sig_exit(int) ()
+#4  0x00000000099b0945 in fatal_handler(int) ()
+#5  0x0000000009a30aac in segv_fatal_handler(int, siginfo_t*) ()
+#6  <signal handler called>
+#7  0x00000000037b49cf in map_is_timing_case_constant(MapMmmc const&, MapMode, GBI::Gpin*, int*) ()
+#8  0x00000000037b70fc in compute_funterm_case_constant(MapMode, Map_node*, int*) [clone .isra.0] ()
+#9  0x00000000037b8ddb in map_compute_case_constant(Map_node*, bool) ()
+#10 0x000000000367eb84 in condense_node(Map_node*, bool, bool, bool, bool, bool, Map_prev_condense*) ()
+#11 0x00000000036805fe in condense_nodes_and_dogs_thread(void*) ()
+#12 0x00000000098b3d62 in ThreadPool::thread(void*) ()
+#13 0x0000000009a2d22c in create_head(void*) ()
+#14 0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#15 0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 18 (Thread 0x7fe318806700 (LWP 44268)):
+#0  0x00007fe36e4a71a0 in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000009a2e8c7 in dump_stack_trace_low(_IO_FILE*, _IO_FILE*, unsigned long*, bool, bool) ()
+#2  0x0000000009a308b6 in sig_exit(int) ()
+#3  0x00000000099b0945 in fatal_handler(int) ()
+#4  0x0000000009a30aac in segv_fatal_handler(int, siginfo_t*) ()
+#5  <signal handler called>
+#6  0x00000000037b49cf in map_is_timing_case_constant(MapMmmc const&, MapMode, GBI::Gpin*, int*) ()
+#7  0x00000000037b70fc in compute_funterm_case_constant(MapMode, Map_node*, int*) [clone .isra.0] ()
+#8  0x00000000037b8ddb in map_compute_case_constant(Map_node*, bool) ()
+#9  0x000000000367eb84 in condense_node(Map_node*, bool, bool, bool, bool, bool, Map_prev_condense*) ()
+#10 0x00000000036805fe in condense_nodes_and_dogs_thread(void*) ()
+#11 0x00000000098b3d62 in ThreadPool::thread(void*) ()
+#12 0x0000000009a2d22c in create_head(void*) ()
+#13 0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#14 0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 17 (Thread 0x7fe3169d4700 (LWP 44267)):
+#0  0x00007fe36e4a71a0 in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000009a2e8c7 in dump_stack_trace_low(_IO_FILE*, _IO_FILE*, unsigned long*, bool, bool) ()
+#2  0x0000000009a308b6 in sig_exit(int) ()
+#3  0x00000000099b0945 in fatal_handler(int) ()
+#4  0x0000000009a30aac in segv_fatal_handler(int, siginfo_t*) ()
+#5  <signal handler called>
+#6  0x00000000037b49cf in map_is_timing_case_constant(MapMmmc const&, MapMode, GBI::Gpin*, int*) ()
+#7  0x00000000037b70fc in compute_funterm_case_constant(MapMode, Map_node*, int*) [clone .isra.0] ()
+#8  0x00000000037b8ddb in map_compute_case_constant(Map_node*, bool) ()
+#9  0x000000000367eb84 in condense_node(Map_node*, bool, bool, bool, bool, bool, Map_prev_condense*) ()
+#10 0x00000000036805fe in condense_nodes_and_dogs_thread(void*) ()
+#11 0x00000000098b3d62 in ThreadPool::thread(void*) ()
+#12 0x0000000009a2d22c in create_head(void*) ()
+#13 0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#14 0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 16 (Thread 0x7fe3161d3700 (LWP 44266)):
+#0  0x00007fe36e4a71a0 in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000009a2e8c7 in dump_stack_trace_low(_IO_FILE*, _IO_FILE*, unsigned long*, bool, bool) ()
+#2  0x0000000009a308b6 in sig_exit(int) ()
+#3  0x00000000099b0945 in fatal_handler(int) ()
+#4  0x0000000009a30aac in segv_fatal_handler(int, siginfo_t*) ()
+#5  <signal handler called>
+#6  0x00000000037b49cf in map_is_timing_case_constant(MapMmmc const&, MapMode, GBI::Gpin*, int*) ()
+#7  0x00000000037b70fc in compute_funterm_case_constant(MapMode, Map_node*, int*) [clone .isra.0] ()
+#8  0x00000000037b8ddb in map_compute_case_constant(Map_node*, bool) ()
+#9  0x000000000367eb84 in condense_node(Map_node*, bool, bool, bool, bool, bool, Map_prev_condense*) ()
+#10 0x00000000036805fe in condense_nodes_and_dogs_thread(void*) ()
+#11 0x00000000098b3d62 in ThreadPool::thread(void*) ()
+#12 0x0000000009a2d22c in create_head(void*) ()
+#13 0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#14 0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 15 (Thread 0x7fe33c925700 (LWP 43866)):
+#0  0x00007fe369079bb6 in ppoll () from /lib64/libc.so.6
+#1  0x00007fe371dcf8a9 in qt_safe_poll(pollfd*, unsigned long, timespec const*) () from /tools/cadence/DDIEXPORT23/GENUS231/tools.lnx86/synth/bin/64bit/../../../Qt/v5/64bit/lib/libcdsQt5Core.so.5
+#2  0x00007fe371dd0d33 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /tools/cadence/DDIEXPORT23/GENUS231/tools.lnx86/synth/bin/64bit/../../../Qt/v5/64bit/lib/libcdsQt5Core.so.5
+#3  0x00007fe371d7bf5b in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /tools/cadence/DDIEXPORT23/GENUS231/tools.lnx86/synth/bin/64bit/../../../Qt/v5/64bit/lib/libcdsQt5Core.so.5
+#4  0x00007fe371b90f1e in QThread::exec() () from /tools/cadence/DDIEXPORT23/GENUS231/tools.lnx86/synth/bin/64bit/../../../Qt/v5/64bit/lib/libcdsQt5Core.so.5
+#5  0x00007fe3652372c7 in ?? () from /tools/cadence/DDIEXPORT23/GENUS231/tools.lnx86/Qt/v5/64bit/lib/libcdsQt5DBus.so.5
+#6  0x00007fe371b91f6f in ?? () from /tools/cadence/DDIEXPORT23/GENUS231/tools.lnx86/synth/bin/64bit/../../../Qt/v5/64bit/lib/libcdsQt5Core.so.5
+#7  0x0000000009a2d22c in create_head(void*) ()
+#8  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#9  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 14 (Thread 0x7fe33d13b700 (LWP 43865)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 13 (Thread 0x7fe33d93c700 (LWP 43864)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 12 (Thread 0x7fe33e13d700 (LWP 43863)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 11 (Thread 0x7fe33e93e700 (LWP 43862)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 10 (Thread 0x7fe33f13f700 (LWP 43861)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 9 (Thread 0x7fe33f940700 (LWP 43860)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 8 (Thread 0x7fe340141700 (LWP 43859)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 7 (Thread 0x7fe340942700 (LWP 43858)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 6 (Thread 0x7fe341143700 (LWP 43857)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 5 (Thread 0x7fe354f61700 (LWP 43856)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fe348c76e5d in cnd_wait () from /usr/lib64/dri/iris_dri.so
+#2  0x00007fe348c2a8fb in util_queue_thread_func () from /usr/lib64/dri/iris_dri.so
+#3  0x00007fe348c76d7b in impl_thrd_routine () from /usr/lib64/dri/iris_dri.so
+#4  0x0000000009a2d22c in create_head(void*) ()
+#5  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 4 (Thread 0x7fe35905f700 (LWP 43850)):
+#0  0x00007fe36907c1ff in select () from /lib64/libc.so.6
+#1  0x000000000999eabc in RedirectOutputHelperThread::helper_thread(bool) ()
+#2  0x0000000009a2d22c in create_head(void*) ()
+#3  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 3 (Thread 0x7fe35cbf6700 (LWP 43844)):
+#0  0x00007fe36e4a71a0 in nanosleep () from /lib64/libpthread.so.0
+#1  0x000000000924f9c4 in lic_recheck(void*) ()
+#2  0x0000000009a2d22c in create_head(void*) ()
+#3  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 2 (Thread 0x7fe35d808700 (LWP 43843)):
+#0  0x00007fe369079ac1 in poll () from /lib64/libc.so.6
+#1  0x00007fe3705316ff in _xcb_conn_wait () from /lib64/libxcb.so.1
+#2  0x00007fe37053338a in xcb_wait_for_event () from /lib64/libxcb.so.1
+#3  0x00007fe3681653e0 in ?? () from /tools/cadence/DDIEXPORT23/GENUS231/tools.lnx86/synth/bin/64bit/../../../lib/64bit/../../Qt/v5/64bit/lib/libcdsQt5XcbQpa.so.5
+#4  0x00007fe371b91f6f in ?? () from /tools/cadence/DDIEXPORT23/GENUS231/tools.lnx86/synth/bin/64bit/../../../Qt/v5/64bit/lib/libcdsQt5Core.so.5
+#5  0x0000000009a2d22c in create_head(void*) ()
+#6  0x00007fe36e49d1ca in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fe368f808d3 in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7fe3601cf4c0 (LWP 43807)):
+#0  0x00007fe36e4a347c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000098b4e0b in ThreadPool::waitAllJobs() ()
+#2  0x0000000003680ac1 in process_package(int, MapGdef*, Condense_Node_And_Dog_Jobs_Pair&, int*, int) ()
+#3  0x0000000003680f03 in condense_all_nodes(MapGdef*, bool, bool, bool) ()
+#4  0x000000000383f925 in core_map(MapGdef*, gbbdd_struct*&, bool, Hasht*, bool, bool) ()
+#5  0x000000000385bd84 in really_map_def(GBI::Gdef*, gbbdd_struct*&, Map_libs*, effort_type, bool, bool, bool, bool, bool, super_thread_status&, bool, bool, bool&, MapAutoPlacementAwareMapping const*, condense_opt_mode, bool) ()
+#6  0x000000000385ceac in uniquify_and_map_def_core(GBI::Gdef*, Map_libs*, gbbdd_struct*&, effort_type, bool, bool, bool, bool, bool, super_thread_status&, bool, bool, bool&, MapAutoPlacementAwareMapping const*, condense_opt_mode) ()
+#7  0x000000000385d925 in uniquify_and_map_def(GBI::Gdef*, Map_libs*, gbbdd_struct*&, effort_type, bool, bool, bool, bool, bool, bool, bool&, MapAutoPlacementAwareMapping const*) ()
+#8  0x000000000385e781 in prop_consts_and_map_def(GBI::Gdef*, Map_libs*, bool, bool, effort_type, bool, int, int, bool, bool, bool, bool, bool, bool, MapRevertibleCaseLoopBreaker*, bool&, MapAutoPlacementAwareMapping const*) ()
+#9  0x00000000038603cf in map_def(GBI::Gdef*, effort_type, bool, bool, bool, bool, int, int, bool, bool, bool, bool, bool, bool, bool) ()
+#10 0x0000000000abe06d in ui_map_def(GBI::Gdef*, syn_conf&, char const*) ()
+#11 0x0000000000abfc75 in synth_one_design_int(GBI::Gdef*, syn_conf&, char const*) ()
+#12 0x0000000000ac26b4 in synth_one_design(GBI::Gdef*, syn_conf&, char const*) ()
+#13 0x0000000000a6f35b in synthesize_internal_cmd(void*, Tcl_Interp*, int, Tcl_Obj* const*, bool) ()
+#14 0x0000000000a6f80d in synthesize_private_cmd(void*, Tcl_Interp*, int, Tcl_Obj* const*) ()
+#15 0x00000000095f6e06 in rc_cmd(void*, Tcl_Interp*, int, Tcl_Obj* const*) ()
+#16 0x000000000933a657 in TclEvalEx ()
+#17 0x000000000933b200 in Tcl_Eval ()
+#18 0x00000000095669e3 in char* my_tcl_eval_internal<false>(char const*) ()
+#19 0x0000000000abe6ea in ui_map_def(GBI::Gdef*, syn_conf&, char const*) ()
+#20 0x0000000000abfc75 in synth_one_design_int(GBI::Gdef*, syn_conf&, char const*) ()
+#21 0x0000000000ac26b4 in synth_one_design(GBI::Gdef*, syn_conf&, char const*) ()
+#22 0x0000000000a70948 in syn_map_cmd(void*, Tcl_Interp*, int, Tcl_Obj* const*) ()
+#23 0x00000000095f6e06 in rc_cmd(void*, Tcl_Interp*, int, Tcl_Obj* const*) ()
+#24 0x000000000933a657 in TclEvalEx ()
+#25 0x000000000933b3ed in TclNREvalObjEx ()
+#26 0x0000000009408393 in TclNREvalFile ()
+#27 0x000000000934fa25 in TclNRSourceObjCmd ()
+#28 0x000000000933a657 in TclEvalEx ()
+#29 0x000000000933b200 in Tcl_Eval ()
+#30 0x0000000009242827 in load_tcl_code(int, char**) ()
+#31 0x00000000096df308 in tcltk_startup_dmn_call ()
+#32 0x000000000940ed8b in Tcl_MainEx ()
+#33 0x000000000076430f in main ()
+
+Abnormal exit.
