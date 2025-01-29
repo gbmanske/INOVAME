@@ -1,0 +1,67 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Jan 28, 2025 at 16:50:45 -03
+xrun
+	-lwdgen
+	-access rwc
+	-svseed 12345679
+	-uvmhome /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+	-f file_list.f
+		-sv
+		/home/gme/guilherme.manske/INOVAME/verification/empty_env_conf/spi-vip-integ/class_a.sv
+		/home/gme/guilherme.manske/INOVAME/verification/empty_env_conf/spi-vip-integ/class_b.sv
+		/home/gme/guilherme.manske/INOVAME/verification/empty_env_conf/spi-vip-integ/top_tb.sv
+	+UVM_VERBOSITY=UVM_DEBUG
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_DEBUG
+
+Recompiling... reason: file './class_b.sv' is newer than expected.
+	expected: Tue Jan 28 16:45:35 2025
+	actual:   Tue Jan 28 16:50:40 2025
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+file: /home/gme/guilherme.manske/INOVAME/verification/empty_env_conf/spi-vip-integ/class_b.sv
+file: /home/gme/guilherme.manske/INOVAME/verification/empty_env_conf/spi-vip-integ/top_tb.sv
+	module worklib.top_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x0ccd3c2b
+		top_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top_tb:sv <0x164f804a>
+			streams:  15, words:  9584
+		worklib.\$unit_0x0ccd3c2b :compilation_unit <0x5ab1c451>
+			streams:  12, words:  5456
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                    1       1
+		Registers:                 26      34
+		Initial blocks:             1       1
+		Compilation units:          1       1
+		SV Class declarations:      4       4
+		SV Class specializations:   4       4
+	Writing initial simulation snapshot: worklib.top_tb:sv
+	Parallel LWD Data Generation
+	Generating Debug Data:
+		LWD Database path: (/home/gme/guilherme.manske/INOVAME/verification/empty_env_conf/spi-vip-integ/xcelium.d/worklib/top_tb/sv/debug_db/top_tb)
+		Power Aware Instances:                    0
+		Liberty Instances:                        0
+		Out Of Module References:                 0
+		Assertions:                               0
+		Liberty Information:
+			PG Pins:	                  0
+			Liberty Pins:	                  0
+Loading snapshot worklib.top_tb:sv .................... Done
+SVSEED set from command line: 12345679
+xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d//additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+object a: '{var1:'{15, 16}, var2:'h0, var3:31}
+object b: '{super:'{var1:'{25, 20, 24, 23, 24, 21}, var2:'h0, var3:6}, var4:0}
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun(64)	23.09-s013: Exiting on Jan 28, 2025 at 16:50:46 -03  (total: 00:00:01)
