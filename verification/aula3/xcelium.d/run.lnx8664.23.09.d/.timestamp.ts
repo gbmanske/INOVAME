@@ -1,9 +1,0 @@
-1738253392 /home/ciinovador/marcelo.silva/EnSilica/aula3/empty_if.sv
-1738253392 /home/gme/tulio.bitencourt/Desktop/workspaces/aula3/empty_if.sv
-1738253020 /home/gme/tulio.bitencourt/Desktop/workspaces/aula3/empty_pkg.sv
-1738253425 /home/gme/tulio.bitencourt/Desktop/workspaces/aula3/top_tb.sv
-1738253020 /home/ciinovador/marcelo.silva/EnSilica/aula3/empty_pkg.sv
-1738253425 /home/ciinovador/marcelo.silva/EnSilica/aula3/top_tb.sv
-1738253392 /home/gme/guilherme.manske/INOVAME/verification/aula3/empty_if.sv
-1738264330 /home/gme/guilherme.manske/INOVAME/verification/aula3/top_tb.sv
-1738264368 /home/gme/guilherme.manske/INOVAME/verification/aula3/empty_pkg.sv
