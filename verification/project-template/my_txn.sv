@@ -49,8 +49,8 @@ class my_txn;
             $write(" - %0h", data[i]);
         
         $display("");
-        //$display("\t%p", this);
-        //$display("\t%p", this.data);
+        $display("\t%p", this);
+        $display("\t%p", this.data);
         $display("\tOperation: %p\n",operation);
 
         
