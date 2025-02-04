@@ -1,0 +1,59 @@
+# Benchmark "data/5xp1" written by ABC on Wed Jan 29 19:32:25 2025
+.model data/5xp1
+.inputs i_5_ i_6_ i_3_ i_4_ i_1_ i_2_ i_0_
+.outputs ori01 ori02 ori00 ori09 ori07 ori08 ori05 ori06 ori03 ori04
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate INV        A=i_5_ Y=new_n18_
+.gate INV        A=i_4_ Y=new_n19_
+.gate NA2        A=new_n19_ B=i_5_ Y=new_n20_
+.gate INV        A=i_1_ Y=new_n21_
+.gate NO2        A=i_0_ B=new_n20_ Y=new_n22_
+.gate INV        A=i_6_ Y=new_n23_
+.gate NO2        A=new_n23_ B=i_5_ Y=new_n24_
+.gate INV        A=i_0_ Y=new_n25_
+.gate NO2        A=i_2_ B=i_1_ Y=new_n26_
+.gate OAI210     A0=new_n26_ A1=new_n25_ B0=new_n19_ Y=new_n27_
+.gate NO2        A=new_n19_ B=i_5_ Y=ori00
+.gate NO2        A=i_2_ B=i_3_ Y=new_n29_
+.gate NO3        A=new_n29_ B=new_n25_ C=new_n21_ Y=new_n30_
+.gate AO220      A0=new_n30_ A1=ori00 B0=new_n27_ B1=new_n24_ Y=new_n31_
+.gate NA2        A=i_2_ B=i_3_ Y=new_n32_
+.gate OR2        A=new_n31_ B=new_n22_ Y=ori01
+.gate NA2        A=i_0_ B=i_1_ Y=new_n34_
+.gate AOI220     A0=i_6_ A1=i_0_ B0=new_n34_ B1=new_n23_ Y=new_n35_
+.gate NO2        A=new_n35_ B=i_4_ Y=new_n36_
+.gate NA2        A=i_0_ B=i_6_ Y=new_n37_
+.gate OAI210     A0=i_0_ A1=i_1_ B0=new_n37_ Y=new_n38_
+.gate NO2        A=new_n66_ B=new_n19_ Y=new_n39_
+.gate AOI210     A0=i_0_ A1=i_1_ B0=i_6_ Y=new_n40_
+.gate AN2        A=new_n40_ B=ori00 Y=new_n41_
+.gate INV        A=new_n41_ Y=new_n42_
+.gate OAI210     A0=new_n39_ A1=new_n36_ B0=new_n42_ Y=ori02
+.gate INV        A=i_5_ Y=new_n44_
+.gate NO2        A=new_n44_ B=new_n19_ Y=ori09
+.gate NOi21      An=new_n32_ B=new_n29_ Y=ori07
+.gate INV        A=i_3_ Y=ori08
+.gate INV        A=new_n26_ Y=new_n48_
+.gate NA2        A=ori07 B=new_n48_ Y=new_n49_
+.gate XO2        A=new_n49_ B=new_n25_ Y=ori05
+.gate NO2        A=i_2_ B=ori08 Y=new_n51_
+.gate XO2        A=new_n51_ B=i_1_ Y=ori06
+.gate NO2        A=i_1_ B=i_6_ Y=new_n53_
+.gate OAI210     A0=new_n21_ A1=i_6_ B0=new_n18_ Y=new_n54_
+.gate NO2        A=new_n54_ B=new_n38_ Y=new_n55_
+.gate INV        A=new_n55_ Y=new_n56_
+.gate NA2        A=new_n56_ B=new_n18_ Y=ori03
+.gate NA2        A=new_n25_ B=ori08 Y=new_n58_
+.gate NA2        A=new_n30_ B=i_6_ Y=new_n59_
+.gate AOI210     A0=new_n29_ A1=new_n23_ B0=new_n26_ Y=new_n60_
+.gate OR2        A=new_n60_ B=new_n53_ Y=new_n61_
+.gate NA3        A=new_n58_ B=new_n53_ C=i_2_ Y=new_n62_
+.gate NA3        A=new_n62_ B=new_n61_ C=new_n59_ Y=ori04
+.gate INV        A=new_n37_ Y=new_n66_
+.end

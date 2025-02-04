@@ -1,0 +1,15 @@
+bash rename2.sh 5xp1
+bash rename2.sh 9sym
+bash rename2.sh 9symml
+bash rename2.sh alu1
+bash rename2.sh alu2
+bash rename2.sh alu4
+bash rename2.sh apex4
+bash rename2.sh b2
+bash rename2.sh b12
+bash rename2.sh clip
+bash rename2.sh ex7
+bash rename2.sh gary
+bash rename2.sh intb
+bash rename2.sh max1024
+bash rename2.sh misex3

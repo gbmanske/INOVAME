@@ -1,0 +1,17 @@
+bash roda2.sh 5xp1
+bash roda2.sh 9sym
+bash roda2.sh 9symml
+bash roda2.sh alu1
+bash roda2.sh alu2
+bash roda2.sh alu4
+bash roda2.sh amd
+bash roda2.sh apex4
+bash roda2.sh b2
+bash roda2.sh b12
+bash roda2.sh clip
+bash roda2.sh ex7
+bash roda2.sh gary
+bash roda2.sh intb
+bash roda2.sh max1024
+bash roda2.sh misex3
+bash roda2.sh prom

@@ -1,0 +1,520 @@
+// Benchmark "data/max1024_699" written by ABC on Fri Jun 21 17:49:27 2024
+
+module \data/max1024_699  ( 
+    x0, x1, x2, x3, x4, x5, x6, x7, x8, x9,
+    ori00, ori01, ori02, ori03, ori04, ori05  );
+  input  x0, x1, x2, x3, x4, x5, x6, x7, x8, x9;
+  output ori00, ori01, ori02, ori03, ori04, ori05;
+  wire new_new_n17_, new_new_n18_, new_new_n19_, new_new_n20_, new_new_n21_,
+    new_new_n22_, new_new_n23_, new_new_n24_, new_new_n25_, new_new_n26_,
+    new_new_n27_, new_new_n28_, new_new_n29_, new_new_n30_, new_new_n31_,
+    new_new_n32_, new_new_n33_, new_new_n35_, new_new_n36_, new_new_n37_,
+    new_new_n38_, new_new_n39_, new_new_n40_, new_new_n41_, new_new_n42_,
+    new_new_n43_, new_new_n44_, new_new_n45_, new_new_n46_, new_new_n47_,
+    new_new_n48_, new_new_n49_, new_new_n50_, new_new_n51_, new_new_n52_,
+    new_new_n53_, new_new_n54_, new_new_n55_, new_new_n56_, new_new_n57_,
+    new_new_n58_, new_new_n60_, new_new_n61_, new_new_n62_, new_new_n63_,
+    new_new_n64_, new_new_n65_, new_new_n66_, new_new_n67_, new_new_n68_,
+    new_new_n69_, new_new_n70_, new_new_n71_, new_new_n72_, new_new_n73_,
+    new_new_n74_, new_new_n75_, new_new_n76_, new_new_n77_, new_new_n78_,
+    new_new_n79_, new_new_n80_, new_new_n81_, new_new_n82_, new_new_n83_,
+    new_new_n84_, new_new_n85_, new_new_n86_, new_new_n87_, new_new_n88_,
+    new_new_n89_, new_new_n90_, new_new_n91_, new_new_n92_, new_new_n93_,
+    new_new_n94_, new_new_n95_, new_new_n96_, new_new_n97_, new_new_n98_,
+    new_new_n99_, new_new_n100_, new_new_n101_, new_new_n102_,
+    new_new_n103_, new_new_n105_, new_new_n106_, new_new_n107_,
+    new_new_n108_, new_new_n109_, new_new_n110_, new_new_n111_,
+    new_new_n112_, new_new_n113_, new_new_n114_, new_new_n115_,
+    new_new_n116_, new_new_n117_, new_new_n118_, new_new_n119_,
+    new_new_n120_, new_new_n121_, new_new_n122_, new_new_n123_,
+    new_new_n124_, new_new_n125_, new_new_n126_, new_new_n127_,
+    new_new_n128_, new_new_n129_, new_new_n130_, new_new_n131_,
+    new_new_n132_, new_new_n133_, new_new_n134_, new_new_n135_,
+    new_new_n136_, new_new_n137_, new_new_n138_, new_new_n139_,
+    new_new_n140_, new_new_n141_, new_new_n142_, new_new_n143_,
+    new_new_n144_, new_new_n145_, new_new_n146_, new_new_n147_,
+    new_new_n148_, new_new_n149_, new_new_n150_, new_new_n151_,
+    new_new_n152_, new_new_n153_, new_new_n154_, new_new_n155_,
+    new_new_n156_, new_new_n157_, new_new_n158_, new_new_n159_,
+    new_new_n160_, new_new_n161_, new_new_n162_, new_new_n163_,
+    new_new_n164_, new_new_n165_, new_new_n166_, new_new_n167_,
+    new_new_n168_, new_new_n169_, new_new_n170_, new_new_n171_,
+    new_new_n172_, new_new_n173_, new_new_n174_, new_new_n175_,
+    new_new_n176_, new_new_n177_, new_new_n178_, new_new_n180_,
+    new_new_n181_, new_new_n182_, new_new_n183_, new_new_n184_,
+    new_new_n185_, new_new_n186_, new_new_n187_, new_new_n188_,
+    new_new_n189_, new_new_n190_, new_new_n191_, new_new_n192_,
+    new_new_n193_, new_new_n194_, new_new_n195_, new_new_n196_,
+    new_new_n197_, new_new_n198_, new_new_n199_, new_new_n200_,
+    new_new_n201_, new_new_n202_, new_new_n203_, new_new_n204_,
+    new_new_n205_, new_new_n206_, new_new_n207_, new_new_n208_,
+    new_new_n209_, new_new_n210_, new_new_n211_, new_new_n212_,
+    new_new_n213_, new_new_n214_, new_new_n215_, new_new_n216_,
+    new_new_n217_, new_new_n218_, new_new_n219_, new_new_n220_,
+    new_new_n221_, new_new_n222_, new_new_n223_, new_new_n224_,
+    new_new_n225_, new_new_n226_, new_new_n227_, new_new_n228_,
+    new_new_n229_, new_new_n230_, new_new_n231_, new_new_n232_,
+    new_new_n233_, new_new_n234_, new_new_n235_, new_new_n236_,
+    new_new_n237_, new_new_n238_, new_new_n239_, new_new_n240_,
+    new_new_n241_, new_new_n242_, new_new_n243_, new_new_n244_,
+    new_new_n245_, new_new_n246_, new_new_n247_, new_new_n248_,
+    new_new_n249_, new_new_n250_, new_new_n251_, new_new_n252_,
+    new_new_n253_, new_new_n254_, new_new_n255_, new_new_n256_,
+    new_new_n257_, new_new_n258_, new_new_n259_, new_new_n260_,
+    new_new_n261_, new_new_n262_, new_new_n263_, new_new_n264_,
+    new_new_n265_, new_new_n266_, new_new_n267_, new_new_n268_,
+    new_new_n269_, new_new_n270_, new_new_n271_, new_new_n272_,
+    new_new_n273_, new_new_n274_, new_new_n275_, new_new_n276_,
+    new_new_n277_, new_new_n278_, new_new_n279_, new_new_n280_,
+    new_new_n281_, new_new_n282_, new_new_n283_, new_new_n284_,
+    new_new_n285_, new_new_n286_, new_new_n287_, new_new_n288_,
+    new_new_n289_, new_new_n290_, new_new_n291_, new_new_n292_,
+    new_new_n293_, new_new_n294_, new_new_n296_, new_new_n297_,
+    new_new_n298_, new_new_n299_, new_new_n300_, new_new_n301_,
+    new_new_n302_, new_new_n303_, new_new_n304_, new_new_n305_,
+    new_new_n306_, new_new_n307_, new_new_n308_, new_new_n309_,
+    new_new_n310_, new_new_n311_, new_new_n312_, new_new_n313_,
+    new_new_n314_, new_new_n315_, new_new_n316_, new_new_n317_,
+    new_new_n318_, new_new_n319_, new_new_n320_, new_new_n321_,
+    new_new_n322_, new_new_n323_, new_new_n324_, new_new_n325_,
+    new_new_n326_, new_new_n327_, new_new_n328_, new_new_n329_,
+    new_new_n330_, new_new_n331_, new_new_n332_, new_new_n333_,
+    new_new_n334_, new_new_n335_, new_new_n336_, new_new_n337_,
+    new_new_n338_, new_new_n339_, new_new_n340_, new_new_n341_,
+    new_new_n342_, new_new_n343_, new_new_n344_, new_new_n345_,
+    new_new_n346_, new_new_n347_, new_new_n348_, new_new_n349_,
+    new_new_n350_, new_new_n351_, new_new_n352_, new_new_n353_,
+    new_new_n354_, new_new_n355_, new_new_n356_, new_new_n357_,
+    new_new_n358_, new_new_n359_, new_new_n360_, new_new_n361_,
+    new_new_n362_, new_new_n363_, new_new_n364_, new_new_n365_,
+    new_new_n366_, new_new_n367_, new_new_n368_, new_new_n369_,
+    new_new_n370_, new_new_n371_, new_new_n372_, new_new_n373_,
+    new_new_n374_, new_new_n375_, new_new_n376_, new_new_n377_,
+    new_new_n378_, new_new_n379_, new_new_n380_, new_new_n381_,
+    new_new_n382_, new_new_n383_, new_new_n384_, new_new_n385_,
+    new_new_n386_, new_new_n387_, new_new_n388_, new_new_n389_,
+    new_new_n390_, new_new_n391_, new_new_n392_, new_new_n393_,
+    new_new_n394_, new_new_n395_, new_new_n396_, new_new_n397_,
+    new_new_n398_, new_new_n399_, new_new_n400_, new_new_n401_,
+    new_new_n402_, new_new_n403_, new_new_n404_, new_new_n405_,
+    new_new_n406_, new_new_n407_, new_new_n408_, new_new_n409_,
+    new_new_n410_, new_new_n411_, new_new_n412_, new_new_n413_,
+    new_new_n414_, new_new_n415_, new_new_n416_, new_new_n417_,
+    new_new_n418_, new_new_n419_, new_new_n420_, new_new_n421_,
+    new_new_n422_, new_new_n423_, new_new_n424_, new_new_n425_,
+    new_new_n426_, new_new_n427_;
+  INV        g000(.A(x0), .Y(new_new_n17_));
+  INV        g001(.A(x1), .Y(new_new_n18_));
+  NO2        g002(.A(new_new_n18_), .B(new_new_n17_), .Y(new_new_n19_));
+  NO2        g003(.A(x6), .B(x5), .Y(new_new_n20_));
+  OR2        g004(.A(x8), .B(x7), .Y(new_new_n21_));
+  NOi21      g005(.An(new_new_n20_), .B(new_new_n21_), .Y(new_new_n22_));
+  NAi21      g006(.An(new_new_n22_), .B(new_new_n19_), .Y(new_new_n23_));
+  NA2        g007(.A(new_new_n18_), .B(new_new_n17_), .Y(new_new_n24_));
+  INV        g008(.A(x5), .Y(new_new_n25_));
+  NA2        g009(.A(x7), .B(x6), .Y(new_new_n26_));
+  NA2        g010(.A(x8), .B(x3), .Y(new_new_n27_));
+  NA2        g011(.A(x4), .B(x2), .Y(new_new_n28_));
+  NO4        g012(.A(new_new_n28_), .B(new_new_n27_), .C(new_new_n26_), .D(new_new_n25_), .Y(new_new_n29_));
+  NO2        g013(.A(new_new_n29_), .B(new_new_n24_), .Y(new_new_n30_));
+  NO2        g014(.A(x4), .B(x3), .Y(new_new_n31_));
+  INV        g015(.A(new_new_n31_), .Y(new_new_n32_));
+  OA210      g016(.A0(new_new_n32_), .A1(x2), .B0(new_new_n19_), .Y(new_new_n33_));
+  NOi31      g017(.An(new_new_n23_), .B(new_new_n33_), .C(new_new_n30_), .Y(ori00));
+  NO2        g018(.A(x1), .B(x0), .Y(new_new_n35_));
+  INV        g019(.A(x6), .Y(new_new_n36_));
+  NO2        g020(.A(new_new_n36_), .B(new_new_n25_), .Y(new_new_n37_));
+  AN2        g021(.A(x8), .B(x7), .Y(new_new_n38_));
+  NA3        g022(.A(new_new_n38_), .B(new_new_n37_), .C(new_new_n35_), .Y(new_new_n39_));
+  NA2        g023(.A(x4), .B(x3), .Y(new_new_n40_));
+  AOI210     g024(.A0(new_new_n39_), .A1(new_new_n23_), .B0(new_new_n40_), .Y(new_new_n41_));
+  NO2        g025(.A(x2), .B(x0), .Y(new_new_n42_));
+  INV        g026(.A(x3), .Y(new_new_n43_));
+  NO2        g027(.A(new_new_n43_), .B(new_new_n18_), .Y(new_new_n44_));
+  INV        g028(.A(new_new_n44_), .Y(new_new_n45_));
+  NO2        g029(.A(new_new_n37_), .B(x4), .Y(new_new_n46_));
+  OAI210     g030(.A0(new_new_n46_), .A1(new_new_n45_), .B0(new_new_n42_), .Y(new_new_n47_));
+  INV        g031(.A(x4), .Y(new_new_n48_));
+  NO2        g032(.A(new_new_n48_), .B(new_new_n17_), .Y(new_new_n49_));
+  NA2        g033(.A(new_new_n49_), .B(x2), .Y(new_new_n50_));
+  OAI210     g034(.A0(new_new_n50_), .A1(new_new_n20_), .B0(new_new_n47_), .Y(new_new_n51_));
+  NA2        g035(.A(new_new_n38_), .B(new_new_n37_), .Y(new_new_n52_));
+  AOI220     g036(.A0(new_new_n52_), .A1(new_new_n35_), .B0(new_new_n22_), .B1(new_new_n19_), .Y(new_new_n53_));
+  INV        g037(.A(x2), .Y(new_new_n54_));
+  NO2        g038(.A(new_new_n54_), .B(new_new_n17_), .Y(new_new_n55_));
+  NA2        g039(.A(new_new_n43_), .B(new_new_n18_), .Y(new_new_n56_));
+  NA2        g040(.A(new_new_n56_), .B(new_new_n55_), .Y(new_new_n57_));
+  OAI210     g041(.A0(new_new_n53_), .A1(new_new_n32_), .B0(new_new_n57_), .Y(new_new_n58_));
+  NO3        g042(.A(new_new_n58_), .B(new_new_n51_), .C(new_new_n41_), .Y(ori01));
+  NA2        g043(.A(x8), .B(x7), .Y(new_new_n60_));
+  NA2        g044(.A(new_new_n43_), .B(x1), .Y(new_new_n61_));
+  INV        g045(.A(x9), .Y(new_new_n62_));
+  NO2        g046(.A(x7), .B(x6), .Y(new_new_n63_));
+  NO2        g047(.A(new_new_n61_), .B(x5), .Y(new_new_n64_));
+  NO2        g048(.A(x8), .B(x2), .Y(new_new_n65_));
+  INV        g049(.A(new_new_n65_), .Y(new_new_n66_));
+  NO2        g050(.A(new_new_n66_), .B(x1), .Y(new_new_n67_));
+  AN2        g051(.A(new_new_n67_), .B(new_new_n63_), .Y(new_new_n68_));
+  OAI210     g052(.A0(new_new_n44_), .A1(new_new_n25_), .B0(new_new_n54_), .Y(new_new_n69_));
+  OAI210     g053(.A0(new_new_n56_), .A1(new_new_n20_), .B0(new_new_n69_), .Y(new_new_n70_));
+  NO2        g054(.A(new_new_n70_), .B(new_new_n68_), .Y(new_new_n71_));
+  NA2        g055(.A(new_new_n71_), .B(x4), .Y(new_new_n72_));
+  NA2        g056(.A(new_new_n48_), .B(x2), .Y(new_new_n73_));
+  OAI210     g057(.A0(new_new_n73_), .A1(new_new_n56_), .B0(x0), .Y(new_new_n74_));
+  NA2        g058(.A(x5), .B(x3), .Y(new_new_n75_));
+  NO2        g059(.A(x8), .B(x6), .Y(new_new_n76_));
+  NO4        g060(.A(new_new_n76_), .B(new_new_n75_), .C(new_new_n63_), .D(new_new_n54_), .Y(new_new_n77_));
+  NAi21      g061(.An(x4), .B(x3), .Y(new_new_n78_));
+  INV        g062(.A(new_new_n78_), .Y(new_new_n79_));
+  NO2        g063(.A(new_new_n79_), .B(new_new_n22_), .Y(new_new_n80_));
+  NO2        g064(.A(x4), .B(x2), .Y(new_new_n81_));
+  NO2        g065(.A(new_new_n81_), .B(x3), .Y(new_new_n82_));
+  NO3        g066(.A(new_new_n82_), .B(new_new_n80_), .C(new_new_n18_), .Y(new_new_n83_));
+  NO3        g067(.A(new_new_n83_), .B(new_new_n77_), .C(new_new_n74_), .Y(new_new_n84_));
+  NA2        g068(.A(x3), .B(new_new_n18_), .Y(new_new_n85_));
+  NO2        g069(.A(new_new_n85_), .B(new_new_n25_), .Y(new_new_n86_));
+  INV        g070(.A(x8), .Y(new_new_n87_));
+  NA2        g071(.A(x2), .B(x1), .Y(new_new_n88_));
+  INV        g072(.A(new_new_n86_), .Y(new_new_n89_));
+  NO2        g073(.A(new_new_n89_), .B(new_new_n26_), .Y(new_new_n90_));
+  AOI210     g074(.A0(new_new_n56_), .A1(new_new_n25_), .B0(new_new_n54_), .Y(new_new_n91_));
+  OAI210     g075(.A0(new_new_n45_), .A1(new_new_n37_), .B0(new_new_n48_), .Y(new_new_n92_));
+  NO3        g076(.A(new_new_n92_), .B(new_new_n91_), .C(new_new_n90_), .Y(new_new_n93_));
+  NA2        g077(.A(x4), .B(new_new_n43_), .Y(new_new_n94_));
+  NO2        g078(.A(new_new_n48_), .B(new_new_n54_), .Y(new_new_n95_));
+  OAI210     g079(.A0(new_new_n95_), .A1(new_new_n43_), .B0(new_new_n18_), .Y(new_new_n96_));
+  AOI210     g080(.A0(new_new_n94_), .A1(new_new_n52_), .B0(new_new_n96_), .Y(new_new_n97_));
+  NO2        g081(.A(x3), .B(x2), .Y(new_new_n98_));
+  NA3        g082(.A(new_new_n98_), .B(new_new_n26_), .C(new_new_n25_), .Y(new_new_n99_));
+  INV        g083(.A(new_new_n99_), .Y(new_new_n100_));
+  NA2        g084(.A(new_new_n54_), .B(x1), .Y(new_new_n101_));
+  OAI210     g085(.A0(new_new_n101_), .A1(new_new_n40_), .B0(new_new_n17_), .Y(new_new_n102_));
+  NO4        g086(.A(new_new_n102_), .B(new_new_n100_), .C(new_new_n97_), .D(new_new_n93_), .Y(new_new_n103_));
+  AO210      g087(.A0(new_new_n84_), .A1(new_new_n72_), .B0(new_new_n103_), .Y(ori02));
+  NO2        g088(.A(x3), .B(new_new_n54_), .Y(new_new_n105_));
+  NO2        g089(.A(x8), .B(new_new_n18_), .Y(new_new_n106_));
+  NA2        g090(.A(new_new_n43_), .B(x0), .Y(new_new_n107_));
+  NAi21      g091(.An(x2), .B(x8), .Y(new_new_n108_));
+  NO2        g092(.A(x4), .B(x1), .Y(new_new_n109_));
+  NA2        g093(.A(new_new_n109_), .B(x2), .Y(new_new_n110_));
+  NOi21      g094(.An(x0), .B(x1), .Y(new_new_n111_));
+  NO3        g095(.A(x9), .B(x8), .C(x7), .Y(new_new_n112_));
+  NOi21      g096(.An(x0), .B(x4), .Y(new_new_n113_));
+  AOI220     g097(.A0(x7), .A1(new_new_n113_), .B0(new_new_n112_), .B1(new_new_n111_), .Y(new_new_n114_));
+  AOI210     g098(.A0(new_new_n114_), .A1(new_new_n110_), .B0(new_new_n75_), .Y(new_new_n115_));
+  NO2        g099(.A(x5), .B(new_new_n48_), .Y(new_new_n116_));
+  NA2        g100(.A(x2), .B(new_new_n18_), .Y(new_new_n117_));
+  AOI210     g101(.A0(new_new_n117_), .A1(new_new_n101_), .B0(new_new_n107_), .Y(new_new_n118_));
+  OAI210     g102(.A0(new_new_n118_), .A1(new_new_n35_), .B0(new_new_n116_), .Y(new_new_n119_));
+  NAi21      g103(.An(x0), .B(x4), .Y(new_new_n120_));
+  NO2        g104(.A(new_new_n120_), .B(x1), .Y(new_new_n121_));
+  NO2        g105(.A(x7), .B(x0), .Y(new_new_n122_));
+  NO2        g106(.A(new_new_n81_), .B(new_new_n95_), .Y(new_new_n123_));
+  NO2        g107(.A(new_new_n123_), .B(x3), .Y(new_new_n124_));
+  OAI210     g108(.A0(new_new_n122_), .A1(new_new_n121_), .B0(new_new_n124_), .Y(new_new_n125_));
+  NO2        g109(.A(new_new_n21_), .B(new_new_n43_), .Y(new_new_n126_));
+  NA2        g110(.A(x5), .B(x0), .Y(new_new_n127_));
+  NO2        g111(.A(new_new_n48_), .B(x2), .Y(new_new_n128_));
+  NA3        g112(.A(new_new_n128_), .B(new_new_n127_), .C(new_new_n126_), .Y(new_new_n129_));
+  NA4        g113(.A(new_new_n129_), .B(new_new_n125_), .C(new_new_n119_), .D(new_new_n36_), .Y(new_new_n130_));
+  NO2        g114(.A(new_new_n130_), .B(new_new_n115_), .Y(new_new_n131_));
+  NO3        g115(.A(new_new_n75_), .B(new_new_n73_), .C(new_new_n24_), .Y(new_new_n132_));
+  NO2        g116(.A(new_new_n28_), .B(new_new_n25_), .Y(new_new_n133_));
+  NA2        g117(.A(x7), .B(x3), .Y(new_new_n134_));
+  NO2        g118(.A(new_new_n94_), .B(x5), .Y(new_new_n135_));
+  NO2        g119(.A(x9), .B(x7), .Y(new_new_n136_));
+  NOi21      g120(.An(x8), .B(x0), .Y(new_new_n137_));
+  NO2        g121(.A(new_new_n43_), .B(x2), .Y(new_new_n138_));
+  INV        g122(.A(x7), .Y(new_new_n139_));
+  NA2        g123(.A(new_new_n139_), .B(new_new_n18_), .Y(new_new_n140_));
+  AOI220     g124(.A0(new_new_n140_), .A1(new_new_n138_), .B0(new_new_n105_), .B1(new_new_n38_), .Y(new_new_n141_));
+  NO2        g125(.A(new_new_n25_), .B(x4), .Y(new_new_n142_));
+  NO2        g126(.A(new_new_n142_), .B(new_new_n113_), .Y(new_new_n143_));
+  NO2        g127(.A(new_new_n143_), .B(new_new_n141_), .Y(new_new_n144_));
+  INV        g128(.A(new_new_n144_), .Y(new_new_n145_));
+  OAI210     g129(.A0(new_new_n134_), .A1(new_new_n50_), .B0(new_new_n145_), .Y(new_new_n146_));
+  NA2        g130(.A(x5), .B(x1), .Y(new_new_n147_));
+  INV        g131(.A(new_new_n147_), .Y(new_new_n148_));
+  AOI210     g132(.A0(new_new_n148_), .A1(new_new_n113_), .B0(new_new_n36_), .Y(new_new_n149_));
+  NAi21      g133(.An(x2), .B(x7), .Y(new_new_n150_));
+  NO2        g134(.A(new_new_n150_), .B(new_new_n48_), .Y(new_new_n151_));
+  NA2        g135(.A(new_new_n151_), .B(new_new_n64_), .Y(new_new_n152_));
+  NAi31      g136(.An(new_new_n75_), .B(new_new_n38_), .C(new_new_n35_), .Y(new_new_n153_));
+  NA3        g137(.A(new_new_n153_), .B(new_new_n152_), .C(new_new_n149_), .Y(new_new_n154_));
+  NO3        g138(.A(new_new_n154_), .B(new_new_n146_), .C(new_new_n132_), .Y(new_new_n155_));
+  NO2        g139(.A(new_new_n155_), .B(new_new_n131_), .Y(new_new_n156_));
+  NO2        g140(.A(new_new_n127_), .B(new_new_n123_), .Y(new_new_n157_));
+  NA2        g141(.A(new_new_n25_), .B(new_new_n18_), .Y(new_new_n158_));
+  NA2        g142(.A(new_new_n25_), .B(new_new_n17_), .Y(new_new_n159_));
+  NA3        g143(.A(new_new_n159_), .B(new_new_n158_), .C(new_new_n24_), .Y(new_new_n160_));
+  AN2        g144(.A(new_new_n160_), .B(new_new_n128_), .Y(new_new_n161_));
+  NA2        g145(.A(x8), .B(x0), .Y(new_new_n162_));
+  NO2        g146(.A(new_new_n139_), .B(new_new_n25_), .Y(new_new_n163_));
+  NA2        g147(.A(x2), .B(x0), .Y(new_new_n164_));
+  NA2        g148(.A(x4), .B(x1), .Y(new_new_n165_));
+  NAi21      g149(.An(new_new_n109_), .B(new_new_n165_), .Y(new_new_n166_));
+  NOi31      g150(.An(new_new_n166_), .B(new_new_n142_), .C(new_new_n164_), .Y(new_new_n167_));
+  NO3        g151(.A(new_new_n167_), .B(new_new_n161_), .C(new_new_n157_), .Y(new_new_n168_));
+  NO2        g152(.A(new_new_n168_), .B(new_new_n43_), .Y(new_new_n169_));
+  NO2        g153(.A(new_new_n160_), .B(new_new_n73_), .Y(new_new_n170_));
+  INV        g154(.A(new_new_n116_), .Y(new_new_n171_));
+  NO2        g155(.A(new_new_n101_), .B(new_new_n17_), .Y(new_new_n172_));
+  AOI210     g156(.A0(new_new_n35_), .A1(new_new_n87_), .B0(new_new_n172_), .Y(new_new_n173_));
+  NO3        g157(.A(new_new_n173_), .B(new_new_n171_), .C(x7), .Y(new_new_n174_));
+  NA3        g158(.A(new_new_n166_), .B(new_new_n171_), .C(new_new_n42_), .Y(new_new_n175_));
+  OAI210     g159(.A0(new_new_n159_), .A1(new_new_n123_), .B0(new_new_n175_), .Y(new_new_n176_));
+  NO3        g160(.A(new_new_n176_), .B(new_new_n174_), .C(new_new_n170_), .Y(new_new_n177_));
+  NO2        g161(.A(new_new_n177_), .B(x3), .Y(new_new_n178_));
+  NO3        g162(.A(new_new_n178_), .B(new_new_n169_), .C(new_new_n156_), .Y(ori03));
+  NO2        g163(.A(new_new_n48_), .B(x3), .Y(new_new_n180_));
+  NO2        g164(.A(x6), .B(new_new_n25_), .Y(new_new_n181_));
+  NO2        g165(.A(new_new_n54_), .B(x1), .Y(new_new_n182_));
+  NO2        g166(.A(new_new_n75_), .B(x6), .Y(new_new_n183_));
+  NA2        g167(.A(x6), .B(new_new_n25_), .Y(new_new_n184_));
+  NO2        g168(.A(new_new_n184_), .B(x4), .Y(new_new_n185_));
+  NO2        g169(.A(new_new_n18_), .B(x0), .Y(new_new_n186_));
+  NA2        g170(.A(x3), .B(new_new_n17_), .Y(new_new_n187_));
+  NO2        g171(.A(new_new_n187_), .B(new_new_n184_), .Y(new_new_n188_));
+  NA2        g172(.A(x9), .B(new_new_n54_), .Y(new_new_n189_));
+  NA2        g173(.A(new_new_n189_), .B(x4), .Y(new_new_n190_));
+  NA2        g174(.A(new_new_n184_), .B(new_new_n78_), .Y(new_new_n191_));
+  AOI210     g175(.A0(new_new_n25_), .A1(x3), .B0(new_new_n164_), .Y(new_new_n192_));
+  AOI220     g176(.A0(new_new_n192_), .A1(new_new_n191_), .B0(new_new_n190_), .B1(new_new_n188_), .Y(new_new_n193_));
+  NO3        g177(.A(x6), .B(new_new_n18_), .C(x0), .Y(new_new_n194_));
+  NO2        g178(.A(x5), .B(x1), .Y(new_new_n195_));
+  NO2        g179(.A(new_new_n187_), .B(new_new_n158_), .Y(new_new_n196_));
+  NO3        g180(.A(x3), .B(x2), .C(x1), .Y(new_new_n197_));
+  NO2        g181(.A(new_new_n197_), .B(new_new_n196_), .Y(new_new_n198_));
+  INV        g182(.A(new_new_n198_), .Y(new_new_n199_));
+  AOI220     g183(.A0(new_new_n199_), .A1(new_new_n48_), .B0(new_new_n194_), .B1(new_new_n116_), .Y(new_new_n200_));
+  NA2        g184(.A(new_new_n200_), .B(new_new_n193_), .Y(new_new_n201_));
+  NO2        g185(.A(new_new_n48_), .B(new_new_n43_), .Y(new_new_n202_));
+  NA2        g186(.A(new_new_n202_), .B(new_new_n19_), .Y(new_new_n203_));
+  NO2        g187(.A(x3), .B(new_new_n17_), .Y(new_new_n204_));
+  NO2        g188(.A(new_new_n204_), .B(x6), .Y(new_new_n205_));
+  NOi21      g189(.An(new_new_n81_), .B(new_new_n205_), .Y(new_new_n206_));
+  NA2        g190(.A(new_new_n62_), .B(new_new_n87_), .Y(new_new_n207_));
+  NA3        g191(.A(new_new_n207_), .B(new_new_n204_), .C(x6), .Y(new_new_n208_));
+  AOI210     g192(.A0(new_new_n208_), .A1(new_new_n206_), .B0(new_new_n139_), .Y(new_new_n209_));
+  AO210      g193(.A0(new_new_n209_), .A1(new_new_n203_), .B0(new_new_n163_), .Y(new_new_n210_));
+  NA2        g194(.A(new_new_n43_), .B(new_new_n54_), .Y(new_new_n211_));
+  OAI210     g195(.A0(new_new_n211_), .A1(new_new_n25_), .B0(new_new_n159_), .Y(new_new_n212_));
+  NO3        g196(.A(new_new_n165_), .B(new_new_n62_), .C(x6), .Y(new_new_n213_));
+  AOI220     g197(.A0(new_new_n213_), .A1(new_new_n212_), .B0(new_new_n128_), .B1(new_new_n86_), .Y(new_new_n214_));
+  NA2        g198(.A(x6), .B(new_new_n48_), .Y(new_new_n215_));
+  NO2        g199(.A(new_new_n215_), .B(new_new_n75_), .Y(new_new_n216_));
+  INV        g200(.A(x6), .Y(new_new_n217_));
+  NO2        g201(.A(new_new_n147_), .B(new_new_n43_), .Y(new_new_n218_));
+  OAI210     g202(.A0(new_new_n218_), .A1(new_new_n196_), .B0(new_new_n217_), .Y(new_new_n219_));
+  NA2        g203(.A(new_new_n181_), .B(new_new_n121_), .Y(new_new_n220_));
+  NA3        g204(.A(new_new_n187_), .B(new_new_n116_), .C(x6), .Y(new_new_n221_));
+  OAI210     g205(.A0(new_new_n87_), .A1(new_new_n36_), .B0(new_new_n64_), .Y(new_new_n222_));
+  NA4        g206(.A(new_new_n222_), .B(new_new_n221_), .C(new_new_n220_), .D(new_new_n219_), .Y(new_new_n223_));
+  OAI210     g207(.A0(new_new_n223_), .A1(new_new_n216_), .B0(x2), .Y(new_new_n224_));
+  NA3        g208(.A(new_new_n224_), .B(new_new_n214_), .C(new_new_n210_), .Y(new_new_n225_));
+  AOI210     g209(.A0(new_new_n201_), .A1(x8), .B0(new_new_n225_), .Y(new_new_n226_));
+  NO2        g210(.A(new_new_n87_), .B(x3), .Y(new_new_n227_));
+  NA2        g211(.A(new_new_n227_), .B(new_new_n185_), .Y(new_new_n228_));
+  NO3        g212(.A(new_new_n85_), .B(new_new_n76_), .C(new_new_n25_), .Y(new_new_n229_));
+  AOI210     g213(.A0(new_new_n205_), .A1(new_new_n142_), .B0(new_new_n229_), .Y(new_new_n230_));
+  AOI210     g214(.A0(new_new_n230_), .A1(new_new_n228_), .B0(x2), .Y(new_new_n231_));
+  NO2        g215(.A(x4), .B(new_new_n54_), .Y(new_new_n232_));
+  AOI220     g216(.A0(new_new_n185_), .A1(new_new_n172_), .B0(new_new_n232_), .B1(new_new_n64_), .Y(new_new_n233_));
+  NA2        g217(.A(new_new_n62_), .B(x6), .Y(new_new_n234_));
+  NA3        g218(.A(new_new_n25_), .B(x3), .C(x2), .Y(new_new_n235_));
+  AOI210     g219(.A0(new_new_n235_), .A1(new_new_n127_), .B0(new_new_n234_), .Y(new_new_n236_));
+  NA2        g220(.A(new_new_n43_), .B(new_new_n17_), .Y(new_new_n237_));
+  NO2        g221(.A(new_new_n237_), .B(new_new_n25_), .Y(new_new_n238_));
+  OAI210     g222(.A0(new_new_n238_), .A1(new_new_n236_), .B0(new_new_n109_), .Y(new_new_n239_));
+  NA2        g223(.A(new_new_n187_), .B(x6), .Y(new_new_n240_));
+  NO2        g224(.A(new_new_n187_), .B(x6), .Y(new_new_n241_));
+  INV        g225(.A(new_new_n241_), .Y(new_new_n242_));
+  NA3        g226(.A(new_new_n242_), .B(new_new_n240_), .C(new_new_n133_), .Y(new_new_n243_));
+  NA4        g227(.A(new_new_n243_), .B(new_new_n239_), .C(new_new_n233_), .D(new_new_n139_), .Y(new_new_n244_));
+  NA2        g228(.A(new_new_n181_), .B(new_new_n204_), .Y(new_new_n245_));
+  NO2        g229(.A(x9), .B(x6), .Y(new_new_n246_));
+  NO2        g230(.A(new_new_n127_), .B(new_new_n18_), .Y(new_new_n247_));
+  NAi21      g231(.An(new_new_n247_), .B(new_new_n235_), .Y(new_new_n248_));
+  NAi21      g232(.An(x1), .B(x4), .Y(new_new_n249_));
+  AOI210     g233(.A0(x3), .A1(x2), .B0(new_new_n48_), .Y(new_new_n250_));
+  OAI210     g234(.A0(new_new_n127_), .A1(x3), .B0(new_new_n250_), .Y(new_new_n251_));
+  AOI220     g235(.A0(new_new_n251_), .A1(new_new_n249_), .B0(new_new_n248_), .B1(new_new_n246_), .Y(new_new_n252_));
+  NA2        g236(.A(new_new_n252_), .B(new_new_n245_), .Y(new_new_n253_));
+  NA2        g237(.A(new_new_n62_), .B(x2), .Y(new_new_n254_));
+  NO2        g238(.A(new_new_n254_), .B(new_new_n245_), .Y(new_new_n255_));
+  NA2        g239(.A(x6), .B(x2), .Y(new_new_n256_));
+  OAI210     g240(.A0(x4), .A1(new_new_n255_), .B0(new_new_n253_), .Y(new_new_n257_));
+  NO2        g241(.A(x3), .B(new_new_n184_), .Y(new_new_n258_));
+  OR2        g242(.A(new_new_n258_), .B(new_new_n183_), .Y(new_new_n259_));
+  NA2        g243(.A(x4), .B(x0), .Y(new_new_n260_));
+  NA2        g244(.A(new_new_n259_), .B(new_new_n42_), .Y(new_new_n261_));
+  AOI210     g245(.A0(new_new_n261_), .A1(new_new_n257_), .B0(x8), .Y(new_new_n262_));
+  INV        g246(.A(new_new_n234_), .Y(new_new_n263_));
+  NA2        g247(.A(new_new_n247_), .B(new_new_n263_), .Y(new_new_n264_));
+  INV        g248(.A(new_new_n162_), .Y(new_new_n265_));
+  OAI210     g249(.A0(new_new_n265_), .A1(x4), .B0(new_new_n20_), .Y(new_new_n266_));
+  AOI210     g250(.A0(new_new_n266_), .A1(new_new_n264_), .B0(new_new_n211_), .Y(new_new_n267_));
+  NO4        g251(.A(new_new_n267_), .B(new_new_n262_), .C(new_new_n244_), .D(new_new_n231_), .Y(new_new_n268_));
+  INV        g252(.A(x1), .Y(new_new_n269_));
+  OAI210     g253(.A0(x1), .A1(new_new_n241_), .B0(x2), .Y(new_new_n270_));
+  OAI210     g254(.A0(new_new_n265_), .A1(x6), .B0(new_new_n44_), .Y(new_new_n271_));
+  AOI210     g255(.A0(new_new_n271_), .A1(new_new_n270_), .B0(new_new_n171_), .Y(new_new_n272_));
+  NOi21      g256(.An(new_new_n256_), .B(new_new_n17_), .Y(new_new_n273_));
+  NA3        g257(.A(new_new_n273_), .B(new_new_n195_), .C(new_new_n40_), .Y(new_new_n274_));
+  AOI210     g258(.A0(new_new_n36_), .A1(new_new_n54_), .B0(x0), .Y(new_new_n275_));
+  NA3        g259(.A(new_new_n275_), .B(new_new_n148_), .C(new_new_n32_), .Y(new_new_n276_));
+  NA2        g260(.A(x3), .B(x2), .Y(new_new_n277_));
+  AOI220     g261(.A0(new_new_n277_), .A1(new_new_n211_), .B0(new_new_n276_), .B1(new_new_n274_), .Y(new_new_n278_));
+  NAi21      g262(.An(x4), .B(x0), .Y(new_new_n279_));
+  NO3        g263(.A(new_new_n279_), .B(new_new_n44_), .C(x2), .Y(new_new_n280_));
+  OAI210     g264(.A0(x6), .A1(new_new_n18_), .B0(new_new_n280_), .Y(new_new_n281_));
+  OAI220     g265(.A0(new_new_n24_), .A1(x8), .B0(x6), .B1(x1), .Y(new_new_n282_));
+  NO2        g266(.A(x9), .B(x8), .Y(new_new_n283_));
+  NA3        g267(.A(new_new_n283_), .B(new_new_n36_), .C(new_new_n54_), .Y(new_new_n284_));
+  OAI210     g268(.A0(new_new_n275_), .A1(new_new_n273_), .B0(new_new_n284_), .Y(new_new_n285_));
+  AOI220     g269(.A0(new_new_n285_), .A1(new_new_n79_), .B0(new_new_n282_), .B1(new_new_n31_), .Y(new_new_n286_));
+  AOI210     g270(.A0(new_new_n286_), .A1(new_new_n281_), .B0(new_new_n25_), .Y(new_new_n287_));
+  NO2        g271(.A(new_new_n275_), .B(new_new_n273_), .Y(new_new_n288_));
+  INV        g272(.A(new_new_n196_), .Y(new_new_n289_));
+  NA2        g273(.A(new_new_n36_), .B(new_new_n43_), .Y(new_new_n290_));
+  OR2        g274(.A(new_new_n290_), .B(new_new_n260_), .Y(new_new_n291_));
+  OAI220     g275(.A0(new_new_n291_), .A1(new_new_n147_), .B0(new_new_n215_), .B1(new_new_n289_), .Y(new_new_n292_));
+  AO210      g276(.A0(new_new_n288_), .A1(new_new_n135_), .B0(new_new_n292_), .Y(new_new_n293_));
+  NO4        g277(.A(new_new_n293_), .B(new_new_n287_), .C(new_new_n278_), .D(new_new_n272_), .Y(new_new_n294_));
+  OAI210     g278(.A0(new_new_n268_), .A1(new_new_n226_), .B0(new_new_n294_), .Y(ori04));
+  NO2        g279(.A(x2), .B(x1), .Y(new_new_n296_));
+  OAI210     g280(.A0(new_new_n237_), .A1(new_new_n296_), .B0(new_new_n36_), .Y(new_new_n297_));
+  NO2        g281(.A(new_new_n296_), .B(new_new_n279_), .Y(new_new_n298_));
+  OAI210     g282(.A0(new_new_n54_), .A1(new_new_n298_), .B0(new_new_n227_), .Y(new_new_n299_));
+  NO2        g283(.A(new_new_n254_), .B(new_new_n85_), .Y(new_new_n300_));
+  NO2        g284(.A(new_new_n300_), .B(new_new_n36_), .Y(new_new_n301_));
+  NO2        g285(.A(new_new_n277_), .B(new_new_n186_), .Y(new_new_n302_));
+  NA2        g286(.A(x9), .B(x0), .Y(new_new_n303_));
+  AOI210     g287(.A0(new_new_n85_), .A1(new_new_n73_), .B0(new_new_n303_), .Y(new_new_n304_));
+  OAI210     g288(.A0(new_new_n304_), .A1(new_new_n302_), .B0(new_new_n87_), .Y(new_new_n305_));
+  NA3        g289(.A(new_new_n305_), .B(new_new_n301_), .C(new_new_n299_), .Y(new_new_n306_));
+  NA2        g290(.A(new_new_n306_), .B(new_new_n297_), .Y(new_new_n307_));
+  OAI210     g291(.A0(x0), .A1(new_new_n101_), .B0(new_new_n162_), .Y(new_new_n308_));
+  NA3        g292(.A(new_new_n308_), .B(x6), .C(x3), .Y(new_new_n309_));
+  AOI210     g293(.A0(x8), .A1(x0), .B0(x1), .Y(new_new_n310_));
+  NO2        g294(.A(new_new_n310_), .B(new_new_n290_), .Y(new_new_n311_));
+  INV        g295(.A(new_new_n311_), .Y(new_new_n312_));
+  NA2        g296(.A(x2), .B(new_new_n17_), .Y(new_new_n313_));
+  OAI210     g297(.A0(new_new_n101_), .A1(new_new_n17_), .B0(new_new_n313_), .Y(new_new_n314_));
+  AOI220     g298(.A0(new_new_n314_), .A1(new_new_n76_), .B0(new_new_n300_), .B1(new_new_n87_), .Y(new_new_n315_));
+  NA3        g299(.A(new_new_n315_), .B(new_new_n312_), .C(new_new_n309_), .Y(new_new_n316_));
+  OAI210     g300(.A0(new_new_n106_), .A1(x3), .B0(new_new_n280_), .Y(new_new_n317_));
+  NA2        g301(.A(new_new_n194_), .B(new_new_n81_), .Y(new_new_n318_));
+  NA3        g302(.A(new_new_n318_), .B(new_new_n317_), .C(new_new_n139_), .Y(new_new_n319_));
+  AOI210     g303(.A0(new_new_n316_), .A1(x4), .B0(new_new_n319_), .Y(new_new_n320_));
+  NA3        g304(.A(new_new_n298_), .B(new_new_n189_), .C(new_new_n87_), .Y(new_new_n321_));
+  NOi21      g305(.An(x4), .B(x0), .Y(new_new_n322_));
+  XO2        g306(.A(x4), .B(x0), .Y(new_new_n323_));
+  INV        g307(.A(new_new_n249_), .Y(new_new_n324_));
+  AOI220     g308(.A0(new_new_n324_), .A1(x8), .B0(new_new_n322_), .B1(new_new_n88_), .Y(new_new_n325_));
+  AOI210     g309(.A0(new_new_n325_), .A1(new_new_n321_), .B0(x3), .Y(new_new_n326_));
+  INV        g310(.A(new_new_n88_), .Y(new_new_n327_));
+  NO2        g311(.A(new_new_n87_), .B(x4), .Y(new_new_n328_));
+  AOI220     g312(.A0(new_new_n328_), .A1(new_new_n44_), .B0(new_new_n113_), .B1(new_new_n327_), .Y(new_new_n329_));
+  NO2        g313(.A(new_new_n323_), .B(x2), .Y(new_new_n330_));
+  NO3        g314(.A(new_new_n207_), .B(new_new_n28_), .C(new_new_n24_), .Y(new_new_n331_));
+  NO2        g315(.A(new_new_n331_), .B(new_new_n330_), .Y(new_new_n332_));
+  NA4        g316(.A(new_new_n332_), .B(new_new_n329_), .C(new_new_n203_), .D(x6), .Y(new_new_n333_));
+  NO2        g317(.A(new_new_n164_), .B(new_new_n87_), .Y(new_new_n334_));
+  NO2        g318(.A(new_new_n43_), .B(x0), .Y(new_new_n335_));
+  OR2        g319(.A(new_new_n328_), .B(new_new_n335_), .Y(new_new_n336_));
+  NO2        g320(.A(new_new_n137_), .B(new_new_n101_), .Y(new_new_n337_));
+  AOI220     g321(.A0(new_new_n337_), .A1(new_new_n336_), .B0(new_new_n334_), .B1(new_new_n61_), .Y(new_new_n338_));
+  NO2        g322(.A(new_new_n137_), .B(new_new_n78_), .Y(new_new_n339_));
+  NO2        g323(.A(new_new_n35_), .B(x2), .Y(new_new_n340_));
+  NOi21      g324(.An(new_new_n109_), .B(new_new_n27_), .Y(new_new_n341_));
+  AOI210     g325(.A0(new_new_n340_), .A1(new_new_n339_), .B0(new_new_n341_), .Y(new_new_n342_));
+  OAI210     g326(.A0(new_new_n338_), .A1(new_new_n62_), .B0(new_new_n342_), .Y(new_new_n343_));
+  OAI220     g327(.A0(new_new_n343_), .A1(x6), .B0(new_new_n333_), .B1(new_new_n326_), .Y(new_new_n344_));
+  OAI210     g328(.A0(x6), .A1(new_new_n48_), .B0(new_new_n42_), .Y(new_new_n345_));
+  OAI210     g329(.A0(new_new_n345_), .A1(new_new_n87_), .B0(new_new_n291_), .Y(new_new_n346_));
+  AOI210     g330(.A0(new_new_n346_), .A1(new_new_n18_), .B0(new_new_n139_), .Y(new_new_n347_));
+  AO220      g331(.A0(new_new_n347_), .A1(new_new_n344_), .B0(new_new_n320_), .B1(new_new_n307_), .Y(new_new_n348_));
+  NA2        g332(.A(new_new_n340_), .B(x6), .Y(new_new_n349_));
+  AOI210     g333(.A0(x6), .A1(x1), .B0(new_new_n138_), .Y(new_new_n350_));
+  NA2        g334(.A(new_new_n328_), .B(x0), .Y(new_new_n351_));
+  NA2        g335(.A(new_new_n81_), .B(x6), .Y(new_new_n352_));
+  OAI210     g336(.A0(new_new_n351_), .A1(new_new_n350_), .B0(new_new_n352_), .Y(new_new_n353_));
+  AOI220     g337(.A0(new_new_n353_), .A1(new_new_n349_), .B0(new_new_n197_), .B1(new_new_n49_), .Y(new_new_n354_));
+  NA2        g338(.A(new_new_n354_), .B(new_new_n348_), .Y(new_new_n355_));
+  AOI210     g339(.A0(new_new_n182_), .A1(x8), .B0(new_new_n106_), .Y(new_new_n356_));
+  NA2        g340(.A(new_new_n356_), .B(new_new_n313_), .Y(new_new_n357_));
+  NA3        g341(.A(new_new_n357_), .B(new_new_n180_), .C(new_new_n139_), .Y(new_new_n358_));
+  NA3        g342(.A(x7), .B(x3), .C(x0), .Y(new_new_n359_));
+  NA2        g343(.A(new_new_n202_), .B(x0), .Y(new_new_n360_));
+  OAI220     g344(.A0(new_new_n360_), .A1(new_new_n189_), .B0(new_new_n359_), .B1(new_new_n327_), .Y(new_new_n361_));
+  INV        g345(.A(new_new_n361_), .Y(new_new_n362_));
+  AOI210     g346(.A0(new_new_n362_), .A1(new_new_n358_), .B0(new_new_n25_), .Y(new_new_n363_));
+  OAI210     g347(.A0(new_new_n180_), .A1(new_new_n65_), .B0(new_new_n186_), .Y(new_new_n364_));
+  NA3        g348(.A(new_new_n182_), .B(new_new_n204_), .C(x8), .Y(new_new_n365_));
+  AOI210     g349(.A0(new_new_n365_), .A1(new_new_n364_), .B0(new_new_n25_), .Y(new_new_n366_));
+  AOI210     g350(.A0(new_new_n108_), .A1(x0), .B0(new_new_n42_), .Y(new_new_n367_));
+  NOi31      g351(.An(new_new_n367_), .B(new_new_n335_), .C(new_new_n165_), .Y(new_new_n368_));
+  OAI210     g352(.A0(new_new_n368_), .A1(new_new_n366_), .B0(new_new_n136_), .Y(new_new_n369_));
+  NAi31      g353(.An(new_new_n50_), .B(new_new_n269_), .C(new_new_n163_), .Y(new_new_n370_));
+  NA2        g354(.A(new_new_n370_), .B(new_new_n369_), .Y(new_new_n371_));
+  OAI210     g355(.A0(new_new_n371_), .A1(new_new_n363_), .B0(x6), .Y(new_new_n372_));
+  NO2        g356(.A(x0), .B(new_new_n32_), .Y(new_new_n373_));
+  NA2        g357(.A(new_new_n180_), .B(new_new_n139_), .Y(new_new_n374_));
+  AOI210     g358(.A0(x7), .A1(new_new_n232_), .B0(x1), .Y(new_new_n375_));
+  OAI210     g359(.A0(new_new_n374_), .A1(x8), .B0(new_new_n375_), .Y(new_new_n376_));
+  NAi31      g360(.An(x2), .B(x8), .C(x0), .Y(new_new_n377_));
+  OAI210     g361(.A0(new_new_n377_), .A1(x4), .B0(new_new_n150_), .Y(new_new_n378_));
+  NA3        g362(.A(new_new_n378_), .B(new_new_n134_), .C(x9), .Y(new_new_n379_));
+  NO4        g363(.A(x8), .B(new_new_n279_), .C(x9), .D(x2), .Y(new_new_n380_));
+  NOi21      g364(.An(new_new_n112_), .B(new_new_n164_), .Y(new_new_n381_));
+  NO3        g365(.A(new_new_n381_), .B(new_new_n380_), .C(new_new_n18_), .Y(new_new_n382_));
+  NA2        g366(.A(new_new_n339_), .B(new_new_n139_), .Y(new_new_n383_));
+  NA4        g367(.A(new_new_n383_), .B(new_new_n382_), .C(new_new_n379_), .D(new_new_n50_), .Y(new_new_n384_));
+  OAI210     g368(.A0(new_new_n376_), .A1(new_new_n373_), .B0(new_new_n384_), .Y(new_new_n385_));
+  AOI210     g369(.A0(new_new_n38_), .A1(x9), .B0(new_new_n120_), .Y(new_new_n386_));
+  NO3        g370(.A(new_new_n386_), .B(new_new_n112_), .C(new_new_n43_), .Y(new_new_n387_));
+  NOi31      g371(.An(x1), .B(x8), .C(x7), .Y(new_new_n388_));
+  AOI220     g372(.A0(new_new_n388_), .A1(new_new_n322_), .B0(new_new_n113_), .B1(x3), .Y(new_new_n389_));
+  AOI210     g373(.A0(new_new_n249_), .A1(new_new_n60_), .B0(new_new_n111_), .Y(new_new_n390_));
+  OAI210     g374(.A0(new_new_n390_), .A1(x3), .B0(new_new_n389_), .Y(new_new_n391_));
+  NO3        g375(.A(new_new_n391_), .B(new_new_n387_), .C(x2), .Y(new_new_n392_));
+  OAI220     g376(.A0(new_new_n323_), .A1(new_new_n283_), .B0(new_new_n279_), .B1(new_new_n43_), .Y(new_new_n393_));
+  NA2        g377(.A(new_new_n393_), .B(new_new_n139_), .Y(new_new_n394_));
+  NO2        g378(.A(new_new_n394_), .B(new_new_n54_), .Y(new_new_n395_));
+  NO2        g379(.A(new_new_n395_), .B(new_new_n392_), .Y(new_new_n396_));
+  AOI210     g380(.A0(new_new_n396_), .A1(new_new_n385_), .B0(new_new_n25_), .Y(new_new_n397_));
+  NA4        g381(.A(new_new_n31_), .B(new_new_n87_), .C(x2), .D(new_new_n17_), .Y(new_new_n398_));
+  NO3        g382(.A(new_new_n62_), .B(x4), .C(x1), .Y(new_new_n399_));
+  NO3        g383(.A(new_new_n65_), .B(new_new_n18_), .C(x0), .Y(new_new_n400_));
+  AOI220     g384(.A0(new_new_n400_), .A1(new_new_n250_), .B0(new_new_n399_), .B1(new_new_n367_), .Y(new_new_n401_));
+  NO2        g385(.A(new_new_n401_), .B(new_new_n98_), .Y(new_new_n402_));
+  NO3        g386(.A(new_new_n254_), .B(new_new_n162_), .C(new_new_n40_), .Y(new_new_n403_));
+  OAI210     g387(.A0(new_new_n403_), .A1(new_new_n402_), .B0(x7), .Y(new_new_n404_));
+  NA2        g388(.A(new_new_n207_), .B(x7), .Y(new_new_n405_));
+  NA3        g389(.A(new_new_n405_), .B(new_new_n138_), .C(new_new_n121_), .Y(new_new_n406_));
+  NA3        g390(.A(new_new_n406_), .B(new_new_n404_), .C(new_new_n398_), .Y(new_new_n407_));
+  OAI210     g391(.A0(new_new_n407_), .A1(new_new_n397_), .B0(new_new_n36_), .Y(new_new_n408_));
+  INV        g392(.A(new_new_n186_), .Y(new_new_n409_));
+  NO4        g393(.A(new_new_n409_), .B(new_new_n75_), .C(x4), .D(new_new_n54_), .Y(new_new_n410_));
+  NA2        g394(.A(new_new_n237_), .B(new_new_n21_), .Y(new_new_n411_));
+  NO2        g395(.A(new_new_n147_), .B(new_new_n122_), .Y(new_new_n412_));
+  NA2        g396(.A(new_new_n412_), .B(new_new_n411_), .Y(new_new_n413_));
+  AOI210     g397(.A0(new_new_n413_), .A1(new_new_n153_), .B0(new_new_n28_), .Y(new_new_n414_));
+  AOI220     g398(.A0(new_new_n335_), .A1(new_new_n87_), .B0(new_new_n137_), .B1(new_new_n182_), .Y(new_new_n415_));
+  NA3        g399(.A(new_new_n415_), .B(new_new_n377_), .C(new_new_n85_), .Y(new_new_n416_));
+  NA2        g400(.A(new_new_n416_), .B(new_new_n163_), .Y(new_new_n417_));
+  OAI220     g401(.A0(x3), .A1(new_new_n66_), .B0(new_new_n147_), .B1(new_new_n43_), .Y(new_new_n418_));
+  NA2        g402(.A(x3), .B(new_new_n54_), .Y(new_new_n419_));
+  OAI210     g403(.A0(new_new_n136_), .A1(new_new_n18_), .B0(new_new_n21_), .Y(new_new_n420_));
+  NO3        g404(.A(new_new_n388_), .B(x3), .C(new_new_n54_), .Y(new_new_n421_));
+  NA2        g405(.A(new_new_n421_), .B(new_new_n420_), .Y(new_new_n422_));
+  OAI210     g406(.A0(new_new_n140_), .A1(new_new_n419_), .B0(new_new_n422_), .Y(new_new_n423_));
+  AOI220     g407(.A0(new_new_n423_), .A1(x0), .B0(new_new_n418_), .B1(new_new_n122_), .Y(new_new_n424_));
+  AOI210     g408(.A0(new_new_n424_), .A1(new_new_n417_), .B0(new_new_n215_), .Y(new_new_n425_));
+  NO3        g409(.A(new_new_n425_), .B(new_new_n414_), .C(new_new_n410_), .Y(new_new_n426_));
+  NA3        g410(.A(new_new_n426_), .B(new_new_n408_), .C(new_new_n372_), .Y(new_new_n427_));
+  AOI210     g411(.A0(new_new_n355_), .A1(new_new_n25_), .B0(new_new_n427_), .Y(ori05));
+endmodule
+
+
