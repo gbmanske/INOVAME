@@ -34,7 +34,9 @@ class spi_beat extends uvm_sequence_item;
   `uvm_object_utils_end
 
   //  Group: Constraints
-
+  constraint c_delay {
+    delay inside {[0:100]};
+  }
 
   //  Group: Functions
 
