@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/gme/guilherme.manske/hls/sum_matrix/solution1/./sim/autowrap/testbench/sum_matrix.cpp_pre.cpp.tb.cpp

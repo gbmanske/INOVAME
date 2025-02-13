@@ -1,0 +1,82 @@
+# do SAD_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SAD_generate {/home/gme/guilherme.manske/quartus/Verilog/SAD_generate/diferences_layer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module diferences_layer
+# 
+# Top level modules:
+# 	diferences_layer
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SAD_generate {/home/gme/guilherme.manske/quartus/Verilog/SAD_generate/diference.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module diference
+# 
+# Top level modules:
+# 	diference
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SAD_generate {/home/gme/guilherme.manske/quartus/Verilog/SAD_generate/sum_tree.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sum_tree
+# 
+# Top level modules:
+# 	--none--
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SAD_generate {/home/gme/guilherme.manske/quartus/Verilog/SAD_generate/sad.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sad
+# 
+# Top level modules:
+# 	sad
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SAD_generate {/home/gme/guilherme.manske/quartus/Verilog/SAD_generate/adder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SAD_generate {/home/gme/guilherme.manske/quartus/Verilog/SAD_generate/absolute_layer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module absolute_layer
+# 
+# Top level modules:
+# 	absolute_layer
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SAD_generate {/home/gme/guilherme.manske/quartus/Verilog/SAD_generate/absolute.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module absolute
+# 
+# Top level modules:
+# 	absolute
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SAD_generate {/home/gme/guilherme.manske/quartus/Verilog/SAD_generate/tb_sad.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_sad
+# 
+# Top level modules:
+# 	tb_sad
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_sad
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_sad 
+# Loading work.tb_sad
+# Loading work.sad
+# Loading work.diferences_layer
+# Loading work.absolute_layer
+# Loading work.sum_tree
+# Loading work.diference
+# Loading work.absolute
+# Loading work.adder
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Teste 1 correto:    4 ==    4
+# Teste 2 correto:    4 ==    4
+# Teste 3 correto:    0 ==    0
+# ERROR in tb_sad: 1019 != 1020

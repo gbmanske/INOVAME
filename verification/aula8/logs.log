@@ -1,0 +1,247 @@
+THIS: /home/gme/guilherme.manske/INOVAME/verification/aula8
+Running seed: 100032171
+TOOL:	xrun	23.09-s013: Started on Feb 10, 2025 at 14:57:54 -03
+TOOL:	xrun(64)	23.09-s013: Started on Feb 10, 2025 at 14:57:54 -03
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+Recompiling... reason: file './components/cov_agent.sv' is newer than expected.
+	expected: Mon Feb 10 14:22:07 2025
+	actual:   Mon Feb 10 14:57:50 2025
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+file: /home/gme/guilherme.manske/INOVAME/verification/aula8/alu_pkg.sv
+    `uvm_component_utils(cov_agent);
+                                   |
+xmvlog: *W,UEXPSC (/home/gme/guilherme.manske/INOVAME/verification/aula8/components/cov_agent.sv,4|35): Ignored unexpected semicolon following SystemVerilog description keyword (endfunction).
+package alu_pkg;
+              |
+xmvlog: *W,TSNSPK (/home/gme/guilherme.manske/INOVAME/verification/aula8/alu_pkg.sv,10|14): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+	package worklib.alu_pkg:sv
+		errors: 0, warnings: 2
+file: /home/gme/guilherme.manske/INOVAME/verification/aula8/top_tb.sv
+	module worklib.top_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		alu_pkg
+		top_tb
+
+	Extracting FSMs for coverage:
+		worklib.alu
+		worklib.top_tb
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.top_tb:sv <0x503451fb>
+			streams: 747, words: 894683
+	Building instance specific data structures.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    1       1
+		Verilog packages:              5       5
+		Registers:                 14232   10261
+		Scalar wires:                  4       -
+		Vectored wires:                6       -
+		Named events:                  4      12
+		Always blocks:                 2       2
+		Initial blocks:              291     157
+		Parallel blocks:              26      27
+		Cont. assignments:             1       1
+		Pseudo assignments:            7       -
+		Assertions:                    2       2
+		Covergroup Instances:          0       1
+		SV Class declarations:       204     318
+		SV Class specializations:    391     391
+		Process Clocks:                2       1
+	Writing initial simulation snapshot: worklib.top_tb:sv
+	Parallel LWD Data Generation
+	Generating Debug Data:
+		LWD Database path: (/home/gme/guilherme.manske/INOVAME/verification/aula8/xcelium.d/worklib/top_tb/sv/debug_db/top_tb)
+		Power Aware Instances:                    0
+		Liberty Instances:                        0
+		Out Of Module References:               177
+		Assertions:                               2
+		Finite State Machines:                    0
+		Liberty Information:
+			PG Pins:	                  0
+			Liberty Pins:	                  0
+Loading snapshot worklib.top_tb:sv .................... Done
+SVSEED set from command line: 100032171
+xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d//additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (23.09-s013)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test alu_base_test...
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_base_test.sv(19) @ 0: uvm_test_top [TEST_BUILD] Starting build_phase for uvm_test_top
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_base_test.sv(36) @ 0: uvm_test_top [TEST_BUILD] Finishing build_phase for uvm_test_top
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_env.sv(18) @ 0: uvm_test_top.m_env [START_PHASE] Starting build_phase for uvm_test_top.m_env
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_env.sv(25) @ 0: uvm_test_top.m_env [END_PHASE] Finishing build_phase for uvm_test_top.m_env
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_agent.sv(17) @ 0: uvm_test_top.m_env.m_agt_active [AGT_BUILD] Starting build_phase for uvm_test_top.m_env.m_agt_active
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_agent.sv(29) @ 0: uvm_test_top.m_env.m_agt_active [AGT_BUILD] Finishing build_phase for uvm_test_top.m_env.m_agt_active
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_driver.sv(14) @ 0: uvm_test_top.m_env.m_agt_active.m_drv [START_PHASE] Starting build_phase for uvm_test_top.m_env.m_agt_active.m_drv
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_driver.sv(20) @ 0: uvm_test_top.m_env.m_agt_active.m_drv [END_PHASE] Finishing build_phase for uvm_test_top.m_env.m_agt_active.m_drv
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(21) @ 0: uvm_test_top.m_env.m_agt_active.m_mon [MON_BUILD] Starting build_phase for uvm_test_top.m_env.m_agt_active.m_mon
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(32) @ 0: uvm_test_top.m_env.m_agt_active.m_mon [MON_BUILD] Finishing build_phase for uvm_test_top.m_env.m_agt_active.m_mon
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_agent.sv(17) @ 0: uvm_test_top.m_env.m_agt_passive [AGT_BUILD] Starting build_phase for uvm_test_top.m_env.m_agt_passive
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_agent.sv(29) @ 0: uvm_test_top.m_env.m_agt_passive [AGT_BUILD] Finishing build_phase for uvm_test_top.m_env.m_agt_passive
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(21) @ 0: uvm_test_top.m_env.m_agt_passive.m_mon [MON_BUILD] Starting build_phase for uvm_test_top.m_env.m_agt_passive.m_mon
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(32) @ 0: uvm_test_top.m_env.m_agt_passive.m_mon [MON_BUILD] Finishing build_phase for uvm_test_top.m_env.m_agt_passive.m_mon
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_agent.sv(36) @ 0: uvm_test_top.m_env.m_agt_active [AGT_CONNECT] Starting connect_phase for uvm_test_top.m_env.m_agt_active
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_agent.sv(42) @ 0: uvm_test_top.m_env.m_agt_active [AGT_CONNECT] Finishing connect_phase for uvm_test_top.m_env.m_agt_active
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_agent.sv(36) @ 0: uvm_test_top.m_env.m_agt_passive [AGT_CONNECT] Starting connect_phase for uvm_test_top.m_env.m_agt_passive
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_agent.sv(42) @ 0: uvm_test_top.m_env.m_agt_passive [AGT_CONNECT] Finishing connect_phase for uvm_test_top.m_env.m_agt_passive
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_env.sv(31) @ 0: uvm_test_top.m_env [TEST_CONNECT] Starting connect_phase for uvm_test_top.m_env
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_env.sv(37) @ 0: uvm_test_top.m_env [TEST_CONNECT] Finishing connect_phase for uvm_test_top.m_env
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_base_test.sv(43) @ 0: uvm_test_top [TEST_CONNECT] Starting connect_phase for uvm_test_top
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_base_test.sv(49) @ 0: uvm_test_top [TEST_CONNECT] Finishing connect_phase for uvm_test_top
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------
+Name                       Type                      Size  Value
+----------------------------------------------------------------
+uvm_test_top               alu_base_test             -     @2649
+  m_env                    alu_env                   -     @2729
+    m_agt_active           alu_agent                 -     @2800
+      m_drv                alu_driver                -     @2907
+        rsp_port           uvm_analysis_port         -     @3007
+        seq_item_port      uvm_seq_item_pull_port    -     @2956
+      m_mon                alu_monitor               -     @3624
+        mon_analysis_port  uvm_analysis_port         -     @3742
+      m_seqr               alu_sequencer             -     @3038
+        rsp_export         uvm_analysis_export       -     @3097
+        seq_item_export    uvm_seq_item_pull_imp     -     @3645
+        arbitration_queue  array                     0     -    
+        lock_queue         array                     0     -    
+        num_last_reqs      integral                  32    'd1  
+        num_last_rsps      integral                  32    'd1  
+    m_agt_passive          alu_agent                 -     @2837
+      m_mon                alu_monitor               -     @3797
+        mon_analysis_port  uvm_analysis_port         -     @3844
+    m_cover                cov_agent                 -     @2867
+      active_imp           uvm_analysis_imp_active   -     @3895
+      passive_imp          uvm_analysis_imp_passive  -     @3944
+  m_scbd                   alu_scoreboard            -     @2759
+    active_imp             uvm_analysis_imp_active   -     @3996
+    passive_imp            uvm_analysis_imp_passive  -     @4045
+----------------------------------------------------------------
+
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_base_test.sv(62) @ 0: uvm_test_top [TEST_RUN] Starting run_phase for uvm_test_top
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(74) @ 0: uvm_test_top.m_env.m_agt_passive.m_mon [MON_PASSIVE] Starting monitor PASSIVE
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(48) @ 0: uvm_test_top.m_env.m_agt_active.m_mon [MON_ACTIVE] Starting monitor ACTIVE
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/objects/alu_base_seq.sv(62) @ 0: uvm_test_top.m_env.m_agt_active.m_seqr@@seq [BODY] Started sequence 'uvm_test_top.m_env.m_agt_active.m_seqr.seq'.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/objects/alu_base_seq.sv(79) @ 0: uvm_test_top.m_env.m_agt_active.m_seqr@@seq [BODY] Randomized m_item for 'uvm_test_top.m_env.m_agt_active.m_seqr.seq'.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(61) @ 18: uvm_test_top.m_env.m_agt_active.m_mon [MON_ACTIVE] Monitor captured INPUT item.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/cov_agent.sv(71) @ 18: uvm_test_top.m_env.m_cover [COV_AGENT_ACTIVE] Item received by write_active.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(29) @ 18: uvm_test_top.m_scbd [WRITE_ACTIVE] Item received by write_active.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(34) @ 18: uvm_test_top.m_scbd [WRITE_ACTIVE] Item predicted by write_active.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/objects/alu_base_seq.sv(87) @ 18: uvm_test_top.m_env.m_agt_active.m_seqr@@seq [BODY] Finished sequence 'uvm_test_top.m_env.m_agt_active.m_seqr.seq'.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/objects/alu_base_seq.sv(62) @ 18: uvm_test_top.m_env.m_agt_active.m_seqr@@seq [BODY] Started sequence 'uvm_test_top.m_env.m_agt_active.m_seqr.seq'.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/objects/alu_base_seq.sv(79) @ 18: uvm_test_top.m_env.m_agt_active.m_seqr@@seq [BODY] Randomized m_item for 'uvm_test_top.m_env.m_agt_active.m_seqr.seq'.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(86) @ 26: uvm_test_top.m_env.m_agt_passive.m_mon [MON_PASSIVE] Monitor captured OUTPUT item.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/cov_agent.sv(83) @ 26: uvm_test_top.m_env.m_cover [COV_AGENT_PASSIVE] Item received by write_passive.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(44) @ 26: uvm_test_top.m_scbd [WRITE_PASSIVE] Item received by write_passive.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(61) @ 242: uvm_test_top.m_env.m_agt_active.m_mon [MON_ACTIVE] Monitor captured INPUT item.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/cov_agent.sv(71) @ 242: uvm_test_top.m_env.m_cover [COV_AGENT_ACTIVE] Item received by write_active.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(29) @ 242: uvm_test_top.m_scbd [WRITE_ACTIVE] Item received by write_active.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(34) @ 242: uvm_test_top.m_scbd [WRITE_ACTIVE] Item predicted by write_active.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/objects/alu_base_seq.sv(87) @ 242: uvm_test_top.m_env.m_agt_active.m_seqr@@seq [BODY] Finished sequence 'uvm_test_top.m_env.m_agt_active.m_seqr.seq'.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/objects/alu_base_seq.sv(62) @ 242: uvm_test_top.m_env.m_agt_active.m_seqr@@seq [BODY] Started sequence 'uvm_test_top.m_env.m_agt_active.m_seqr.seq'.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/objects/alu_base_seq.sv(79) @ 242: uvm_test_top.m_env.m_agt_active.m_seqr@@seq [BODY] Randomized m_item for 'uvm_test_top.m_env.m_agt_active.m_seqr.seq'.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(86) @ 250: uvm_test_top.m_env.m_agt_passive.m_mon [MON_PASSIVE] Monitor captured OUTPUT item.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/cov_agent.sv(83) @ 250: uvm_test_top.m_env.m_cover [COV_AGENT_PASSIVE] Item received by write_passive.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(44) @ 250: uvm_test_top.m_scbd [WRITE_PASSIVE] Item received by write_passive.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(61) @ 378: uvm_test_top.m_env.m_agt_active.m_mon [MON_ACTIVE] Monitor captured INPUT item.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/cov_agent.sv(71) @ 378: uvm_test_top.m_env.m_cover [COV_AGENT_ACTIVE] Item received by write_active.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(29) @ 378: uvm_test_top.m_scbd [WRITE_ACTIVE] Item received by write_active.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(34) @ 378: uvm_test_top.m_scbd [WRITE_ACTIVE] Item predicted by write_active.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/objects/alu_base_seq.sv(87) @ 378: uvm_test_top.m_env.m_agt_active.m_seqr@@seq [BODY] Finished sequence 'uvm_test_top.m_env.m_agt_active.m_seqr.seq'.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_monitor.sv(86) @ 386: uvm_test_top.m_env.m_agt_passive.m_mon [MON_PASSIVE] Monitor captured OUTPUT item.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/cov_agent.sv(83) @ 386: uvm_test_top.m_env.m_cover [COV_AGENT_PASSIVE] Item received by write_passive.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(44) @ 386: uvm_test_top.m_scbd [WRITE_PASSIVE] Item received by write_passive.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_base_test.sv(81) @ 478: uvm_test_top [TEST_RUN] Finishing run_phase for uvm_test_top
+UVM_INFO /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 478: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(101) @ 478: uvm_test_top.m_scbd [REPORT] Scoreboard RECEIVED 3 items from the RTL.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(104) @ 478: uvm_test_top.m_scbd [REPORT] Scoreboard PREDICTED 3 items.
+UVM_INFO /home/gme/guilherme.manske/INOVAME/verification/aula8/components/alu_scoreboard.sv(109) @ 478: uvm_test_top.m_scbd [REPORT] All items were checked and no issues were found.
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   62
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[AGT_BUILD]     4
+[AGT_CONNECT]     4
+[BODY]     9
+[COV_AGENT_ACTIVE]     3
+[COV_AGENT_PASSIVE]     3
+[END_PHASE]     2
+[MON_ACTIVE]     4
+[MON_BUILD]     4
+[MON_PASSIVE]     4
+[REPORT]     3
+[RNTST]     1
+[START_PHASE]     2
+[TEST_BUILD]     2
+[TEST_CONNECT]     4
+[TEST_DONE]     1
+[TEST_RUN]     2
+[UVMTOP]     1
+[WRITE_ACTIVE]     6
+[WRITE_PASSIVE]     3
+Simulation complete via $finish(1) at time 478 NS + 45
+/tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "cg_operations" will not be dumped to database as per_instance option value is set to 0:./components/cov_agent.sv, 56.
+xmsim: *W,CGPIZE: Instance coverage for covergroup instance "cg_operations" will not be dumped to database as per_instance option value is set to 0:./components/cov_agent.sv, 56.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  top_tb(top_tb)
+  scope    :  scope
+  testname :  test_sv100032171
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_1b53ff19_7738fe5e.ucm
+  data               :  ./cov_work/scope/test_sv100032171/icc_1b53ff19_7738fe5e.ucd
+TOOL:	xrun(64)	23.09-s013: Exiting on Feb 10, 2025 at 14:57:56 -03  (total: 00:00:02)

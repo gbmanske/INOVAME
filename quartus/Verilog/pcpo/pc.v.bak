@@ -1,0 +1,48 @@
+module pcpo(
+input [15:0] A,
+input clk, reset, start,
+output [4:0] resultado,
+output pronto
+);
+
+wire [15:0] regx;
+reg [4:0] acc; 
+reg [1:0] current_state,next_state;
+
+always @(posedge clk,reset)
+begin
+
+	if(reset)
+	begin
+		state = 2'b00;		
+	end
+	
+	else
+	begin
+		state = next_state;		
+	end
+	
+
+end
+
+always @(current_state,reset)
+begin
+	case(current_state)
+	2'b00:begin
+				if (s==1) next_state = 2'b01;
+				else 		 next_state = 2'b00;
+			end
+	2'b01:begin
+	
+			end
+	2'b10:begin
+	
+			end
+	default:begin
+	
+			end
+
+
+end
+
+endmodule

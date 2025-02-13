@@ -1,0 +1,82 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Feb 03, 2025 at 16:52:12 -03
+xrun
+	-lwdgen
+	-access rwc
+	-uvm
+	-uvmhome /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+	-svseed 100025928
+	-f file_list.f
+		-sv
+		/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/empty_if.sv
+		+incdir+/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/objects/
+		+incdir+/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/
+		/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/empty_pkg.sv
+		/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/top_tb.sv
+	+UVM_VERBOSITY=UVM_DEBUG
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_DEBUG
+
+file: /home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/empty_pkg.sv
+  `include "empty_tx.sv"
+                       |
+xmvlog: *E,COFILX (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/empty_pkg.sv,10|23): cannot open include file 'empty_tx.sv'.
+  `include "empty_seq.sv"
+                        |
+xmvlog: *E,COFILX (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/empty_pkg.sv,11|24): cannot open include file 'empty_seq.sv'.
+  `include "empty_sequencer.sv"
+                              |
+xmvlog: *E,COFILX (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/empty_pkg.sv,12|30): cannot open include file 'empty_sequencer.sv'.
+  `include "empty_driver.sv"
+                           |
+xmvlog: *E,COFILX (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/empty_pkg.sv,13|27): cannot open include file 'empty_driver.sv'.
+  `include "empty_monitor.sv"
+                            |
+xmvlog: *E,COFILX (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/empty_pkg.sv,14|28): cannot open include file 'empty_monitor.sv'.
+  `include "empty_agent.sv"
+                          |
+xmvlog: *E,COFILX (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/empty_pkg.sv,15|26): cannot open include file 'empty_agent.sv'.
+  empty_agent m_agt;
+            |
+xmvlog: *E,NOIPRT (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_env.sv,7|12): Unrecognized declaration 'empty_agent' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+    empty_seq seq = empty_seq::type_id::create("seq");
+            |
+xmvlog: *E,NOIPRT (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_test.sv,43|12): Unrecognized declaration 'empty_seq' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+    empty_seq seq = empty_seq::type_id::create("seq");
+            |
+xmvlog: *E,NOTINF (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_test.sv,43|12): Interfaces are not allowed within tasks [SystemVerilog].
+    empty_seq seq = empty_seq::type_id::create("seq");
+                |
+xmvlog: *E,ILLPDL (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_test.sv,43|16): Mixing of ansi & non-ansi style port declaration is not legal.
+    empty_seq seq = empty_seq::type_id::create("seq");
+                  |
+xmvlog: *E,EXPSMC (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_test.sv,43|18): expecting a semicolon (';') [12.3.2(IEEE)].
+    empty_seq seq = empty_seq::type_id::create("seq");
+                              |
+xmvlog: *E,ILLHIN (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_test.sv,43|30): illegal location for a hierarchical name (empty_seq).
+    empty_seq seq = empty_seq::type_id::create("seq");
+                                       |
+xmvlog: *E,ILLPREF (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_test.sv,43|39): Illegal syntax for a package reference name (multiple ::).
+    empty_seq seq = empty_seq::type_id::create("seq");
+                                              |
+xmvlog: *E,EXPSMC (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_test.sv,43|46): expecting a semicolon (';') [12.3.2(IEEE)].
+              get_full_name()), UVM_NONE)
+                                        |
+xmvlog: *E,EXPRPA (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_test.sv,45|40): expecting a right parenthesis (')') [A.2.6(IEEE)].
+    phase.raise_objection(this);
+        |
+xmvlog: *E,MISMUL (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/components/empty_test.sv,47|8): Missing "begin" in [SystemVerilog] task/function.
+	package worklib.empty_pkg:sv
+		errors: 16, warnings: 0
+file: /home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/top_tb.sv
+  import empty_pkg::*;
+                 |
+xmvlog: *E,NOPBIND (/home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/top_tb.sv,11|17): Package empty_pkg could not be bound.
+	module worklib.top_tb:sv
+		errors: 1, warnings: 0
+xmvlog: *W,SPDUSD: Include directory /home/gme/guilherme.manske/INOVAME/verification/spi_vip_integ/objects/ given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	23.09-s013: Exiting on Feb 03, 2025 at 16:52:12 -03  (total: 00:00:00)

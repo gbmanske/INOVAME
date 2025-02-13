@@ -1,0 +1,49 @@
+`timescale 1ns / 1ps
+
+module tb_mult;
+
+    // Inputs
+    reg [3:0] A;
+    reg [3:0] B;
+
+    // Output
+    wire [7:0] P;
+
+    // Instantiate the module under test (MUT)
+    mult uut (
+        .A(A),
+        .B(B),
+        .P(P)
+    );
+
+    // Testbench logic
+    initial begin
+        // Display header
+        $display("Time\tA\tB\tP");
+        $display("-------------------------");
+
+        // Apply test cases
+        A = 4'b0000; B = 4'b0000; #10;  // Test case 1: 0 * 0
+        $display("%0t\t%b\t%b\t%b\t%d", $time, A, B, P, P);
+
+        A = 4'b0011; B = 4'b0010; #10;  // Test case 2: 3 * 2
+        $display("%0t\t%b\t%b\t%b\t%d", $time, A, B, P, P);
+
+        A = 4'b1111; B = 4'b1111; #10;  // Test case 3: 15 * 15
+        $display("%0t\t%b\t%b\t%b\t%d", $time, A, B, P, P);
+
+        A = 4'b0101; B = 4'b0011; #10;  // Test case 4: 5 * 3
+        $display("%0t\t%b\t%b\t%b\t%d", $time, A, B, P, P);
+
+        A = 4'b1001; B = 4'b0110; #10;  // Test case 5: 9 * 6
+        $display("%0t\t%b\t%b\t%b\t%d", $time, A, B, P, P);
+
+        // Add more cases as needed
+        A = 4'b1010; B = 4'b0101; #10;  // Test case 6: 10 * 5
+        $display("%0t\t%b\t%b\t%b\t%d", $time, A, B, P, P);
+
+        // End simulation
+        $stop;
+    end
+
+endmodule

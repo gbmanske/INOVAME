@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/gme/guilherme.manske/hls/raiz/solution1/./sim/autowrap/testbench/raiz.cpp_pre.cpp.tb.cpp

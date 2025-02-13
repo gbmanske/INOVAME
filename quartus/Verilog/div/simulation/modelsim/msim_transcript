@@ -1,0 +1,51 @@
+# do div_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/div {/home/gme/guilherme.manske/quartus/Verilog/div/div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module div
+# 
+# Top level modules:
+# 	div
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/div {/home/gme/guilherme.manske/quartus/Verilog/div/tb_divider.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_divider
+# 
+# Top level modules:
+# 	tb_divider
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_divider
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_divider 
+# Loading work.tb_divider
+# Loading work.div
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time	A	B	Q	R
+# --------------------------
+# 10	1001	0010	0100	0001
+# 10	 9	 2	 4	 1
+# 20	1111	0011	0101	0000
+# 20	15	 3	 5	 0
+# 30	1010	0100	0010	0010
+# 30	10	 4	 2	 2
+# 40	0101	0011	0001	0010
+# 40	 5	 3	 1	 2
+# 50	1000	0000	0000	0000
+# 50	 8	 0	 0	 0
+# Break in Module tb_divider at /home/gme/guilherme.manske/quartus/Verilog/div/tb_divider.v line 48
+# Simulation Breakpoint: Break in Module tb_divider at /home/gme/guilherme.manske/quartus/Verilog/div/tb_divider.v line 48
+# MACRO ./div_run_msim_rtl_verilog.do PAUSED at line 17

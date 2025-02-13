@@ -1,0 +1,163 @@
+|reg4bits
+Q[0] <= dffrs:inst.Q
+Q[1] <= dffrs:inst1.Q
+Q[2] <= dffrs:inst2.Q
+Q[3] <= dffrs:inst3.Q
+S => dffrs:inst3.S
+S => dffrs:inst2.S
+S => dffrs:inst1.S
+S => dffrs:inst.S
+R => dffrs:inst3.R
+R => dffrs:inst2.R
+R => dffrs:inst1.R
+R => dffrs:inst.R
+D[0] => dffrs:inst.D
+D[1] => dffrs:inst1.D
+D[2] => dffrs:inst2.D
+D[3] => dffrs:inst3.D
+CLK => dffrs:inst3.CLK
+CLK => dffrs:inst2.CLK
+CLK => dffrs:inst1.CLK
+CLK => dffrs:inst.CLK
+Qn[0] <= dffrs:inst.Qn
+Qn[1] <= dffrs:inst1.Qn
+Qn[2] <= dffrs:inst2.Qn
+Qn[3] <= dffrs:inst3.Qn
+
+
+|reg4bits|dffrs:inst3
+Q <= latchDSR:inst1.Q
+S => latchDSR:inst1.S
+S => latchDSR:inst.S
+D => latchDSR:inst.D
+CLK => inst2.IN0
+CLK => latchDSR:inst1.enable
+R => latchDSR:inst.R
+R => latchDSR:inst1.R
+Qn <= latchDSR:inst1.Qn
+
+
+|reg4bits|dffrs:inst3|latchDSR:inst1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bits|dffrs:inst3|latchDSR:inst
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bits|dffrs:inst2
+Q <= latchDSR:inst1.Q
+S => latchDSR:inst1.S
+S => latchDSR:inst.S
+D => latchDSR:inst.D
+CLK => inst2.IN0
+CLK => latchDSR:inst1.enable
+R => latchDSR:inst.R
+R => latchDSR:inst1.R
+Qn <= latchDSR:inst1.Qn
+
+
+|reg4bits|dffrs:inst2|latchDSR:inst1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bits|dffrs:inst2|latchDSR:inst
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bits|dffrs:inst1
+Q <= latchDSR:inst1.Q
+S => latchDSR:inst1.S
+S => latchDSR:inst.S
+D => latchDSR:inst.D
+CLK => inst2.IN0
+CLK => latchDSR:inst1.enable
+R => latchDSR:inst.R
+R => latchDSR:inst1.R
+Qn <= latchDSR:inst1.Qn
+
+
+|reg4bits|dffrs:inst1|latchDSR:inst1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bits|dffrs:inst1|latchDSR:inst
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bits|dffrs:inst
+Q <= latchDSR:inst1.Q
+S => latchDSR:inst1.S
+S => latchDSR:inst.S
+D => latchDSR:inst.D
+CLK => inst2.IN0
+CLK => latchDSR:inst1.enable
+R => latchDSR:inst.R
+R => latchDSR:inst1.R
+Qn <= latchDSR:inst1.Qn
+
+
+|reg4bits|dffrs:inst|latchDSR:inst1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|reg4bits|dffrs:inst|latchDSR:inst
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

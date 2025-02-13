@@ -1,0 +1,29 @@
+|contador5
+clk => clk.IN3
+rst => rst.IN3
+q[0] <= FFD:ff1.port3
+q[1] <= FFD:ff2.port3
+q[2] <= FFD:ff3.port3
+
+
+|contador5|FFD:ff1
+d => q.DATAA
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador5|FFD:ff2
+d => q.DATAA
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador5|FFD:ff3
+d => q.DATAA
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

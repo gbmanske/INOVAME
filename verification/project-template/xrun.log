@@ -1,0 +1,37 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Jan 29, 2025 at 16:51:46 -03
+xrun
+	-lwdgen
+	-access rwc
+	-svseed 100016873
+	-uvmhome /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+	-f file_list.f
+		-sv
+		/home/gme/guilherme.manske/INOVAME/verification/project-template/my_txn.sv
+		/home/gme/guilherme.manske/INOVAME/verification/project-template/pkg.sv
+		/home/gme/guilherme.manske/INOVAME/verification/project-template/top_tb.sv
+	+UVM_VERBOSITY=UVM_DEBUG
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_DEBUG
+
+Loading snapshot worklib.top_tb:sv .................... Done
+SVSEED set from command line: 100016873
+xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d//additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+
+	Transaction:
+	Address: a15448b3
+	Length: 13
+	Size: 8
+	Raw data: - 63 - c3 - 47 - 8 - 41 - a0 - d3 - 9b - 75 - 10 - 43 - 59 - ee
+	pkg::my_txn@2_1
+	'{'h63, 'hc3, 'h47, 'h8, 'h41, 'ha0, 'hd3, 'h9b, 'h75, 'h10, 'h43, 'h59, 'hee}
+	Operation: OP_READ
+
+	Event done!
+
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun(64)	23.09-s013: Exiting on Jan 29, 2025 at 16:51:46 -03  (total: 00:00:00)

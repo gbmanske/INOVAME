@@ -1,0 +1,42 @@
+|freqdiv2
+Q <= dffrs:inst.Q
+S => dffrs:inst.S
+R => dffrs:inst.R
+CLK => dffrs:inst.CLK
+Qn <= dffrs:inst.Qn
+
+
+|freqdiv2|dffrs:inst
+Q <= latchDSR:inst1.Q
+S => latchDSR:inst1.S
+S => latchDSR:inst.S
+D => latchDSR:inst.D
+CLK => inst2.IN0
+CLK => latchDSR:inst1.enable
+R => latchDSR:inst.R
+R => latchDSR:inst1.R
+Qn <= latchDSR:inst1.Qn
+
+
+|freqdiv2|dffrs:inst|latchDSR:inst1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|freqdiv2|dffrs:inst|latchDSR:inst
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S => inst6.IN0
+R => inst5.IN0
+D => inst.IN1
+D => inst4.IN0
+enable => inst.IN2
+enable => inst1.IN0
+Qn <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,56 @@
+# do main_SPI_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SPI {/home/gme/guilherme.manske/quartus/Verilog/SPI/main_SPI.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module main_SPI
+# 
+# Top level modules:
+# 	main_SPI
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SPI {/home/gme/guilherme.manske/quartus/Verilog/SPI/tb_spi_mode0.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_spi_mode0
+# 
+# Top level modules:
+# 	tb_spi_mode0
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SPI {/home/gme/guilherme.manske/quartus/Verilog/SPI/spi_slave_ex.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module spi_slave_ex
+# 
+# Top level modules:
+# 	spi_slave_ex
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/SPI {/home/gme/guilherme.manske/quartus/Verilog/SPI/tb_spi_mode0.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_spi_mode0
+# 
+# Top level modules:
+# 	tb_spi_mode0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_mode0
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_spi_mode0 
+# Loading work.tb_spi_mode0
+# Loading work.main_SPI
+# Loading work.spi_slave_ex
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 	 Test passed.
+# 	 Test passed.
+# 	 Test passed.
+# 	 SUCCESS
+# Break in Module tb_spi_mode0 at /home/gme/guilherme.manske/quartus/Verilog/SPI/tb_spi_mode0.v line 141
+# Simulation Breakpoint: Break in Module tb_spi_mode0 at /home/gme/guilherme.manske/quartus/Verilog/SPI/tb_spi_mode0.v line 141
+# MACRO ./main_SPI_run_msim_rtl_verilog.do PAUSED at line 19

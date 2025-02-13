@@ -1,0 +1,1105 @@
+# Benchmark "top" written by ABC on Tue Jun 18 21:32:40 2024
+.model top
+.inputs i_9_ i_10_ i_7_ i_8_ i_5_ i_6_ i_3_ i_13_ i_4_ i_12_ i_1_ i_11_ \
+ i_2_ i_0_
+.outputs men1 men2 men0 men7 men5 men6 men3 men4
+
+.and_gate_delay 1
+.default_input_arrival 0 0
+.default_output_required -1e+09 -1e+09
+
+
+
+.gate NAi21      An=i_13_ B=i_4_ Y=new_n23_
+.gate NOi21      An=i_3_ B=i_8_ Y=new_n24_
+.gate INV        A=i_9_ Y=new_n25_
+.gate INV        A=i_3_ Y=new_n26_
+.gate NO2        A=new_n26_ B=new_n25_ Y=new_n27_
+.gate NO2        A=i_8_ B=i_10_ Y=new_n28_
+.gate INV        A=new_n28_ Y=new_n29_
+.gate OAI210     A0=new_n27_ A1=new_n24_ B0=new_n29_ Y=new_n30_
+.gate NOi21      An=i_11_ B=i_8_ Y=new_n31_
+.gate AO210      A0=i_12_ A1=i_8_ B0=i_3_ Y=new_n32_
+.gate OR2        A=new_n32_ B=new_n31_ Y=new_n33_
+.gate NA2        A=new_n33_ B=new_n30_ Y=new_n34_
+.gate XO2        A=new_n34_ B=new_n23_ Y=new_n35_
+.gate INV        A=i_4_ Y=new_n36_
+.gate INV        A=i_10_ Y=new_n37_
+.gate NAi21      An=i_11_ B=i_9_ Y=new_n38_
+.gate NOi21      An=i_12_ B=i_13_ Y=new_n39_
+.gate INV        A=new_n39_ Y=new_n40_
+.gate NO2        A=new_n36_ B=i_3_ Y=new_n41_
+.gate NAi31      An=i_9_ B=i_4_ C=i_8_ Y=new_n42_
+.gate INV        A=new_n35_ Y=men1
+.gate INV        A=i_11_ Y=new_n44_
+.gate NO2        A=new_n44_ B=i_6_ Y=new_n45_
+.gate INV        A=i_2_ Y=new_n46_
+.gate NA2        A=i_0_ B=i_3_ Y=new_n47_
+.gate INV        A=i_5_ Y=new_n48_
+.gate NO2        A=i_7_ B=i_10_ Y=new_n49_
+.gate AOI210     A0=i_7_ A1=new_n25_ B0=new_n49_ Y=new_n50_
+.gate OAI210     A0=new_n50_ A1=i_3_ B0=new_n48_ Y=new_n51_
+.gate AOI210     A0=new_n51_ A1=new_n47_ B0=new_n46_ Y=new_n52_
+.gate NA2        A=i_0_ B=i_2_ Y=new_n53_
+.gate NA2        A=i_7_ B=i_9_ Y=new_n54_
+.gate NO2        A=new_n54_ B=new_n53_ Y=new_n55_
+.gate NA2        A=new_n52_ B=new_n45_ Y=new_n56_
+.gate NA3        A=i_2_ B=i_6_ C=i_8_ Y=new_n57_
+.gate NO2        A=i_1_ B=i_6_ Y=new_n58_
+.gate NA2        A=i_8_ B=i_7_ Y=new_n59_
+.gate OAI210     A0=new_n59_ A1=new_n58_ B0=new_n57_ Y=new_n60_
+.gate NA2        A=new_n60_ B=i_12_ Y=new_n61_
+.gate NAi21      An=i_2_ B=i_7_ Y=new_n62_
+.gate INV        A=i_1_ Y=new_n63_
+.gate NA2        A=new_n63_ B=i_6_ Y=new_n64_
+.gate NA3        A=new_n64_ B=new_n62_ C=new_n31_ Y=new_n65_
+.gate NA2        A=i_1_ B=i_10_ Y=new_n66_
+.gate NO2        A=new_n66_ B=i_6_ Y=new_n67_
+.gate NAi31      An=new_n67_ B=new_n65_ C=new_n61_ Y=new_n68_
+.gate NA2        A=new_n50_ B=i_2_ Y=new_n69_
+.gate AOI210     A0=i_12_ A1=i_6_ B0=i_1_ Y=new_n70_
+.gate NA2        A=i_1_ B=i_6_ Y=new_n71_
+.gate NO2        A=new_n71_ B=new_n25_ Y=new_n72_
+.gate INV        A=i_0_ Y=new_n73_
+.gate NAi21      An=i_5_ B=i_10_ Y=new_n74_
+.gate NA2        A=i_5_ B=i_9_ Y=new_n75_
+.gate AOI210     A0=new_n75_ A1=new_n74_ B0=new_n73_ Y=new_n76_
+.gate NO2        A=new_n76_ B=new_n72_ Y=new_n77_
+.gate OAI210     A0=new_n70_ A1=new_n69_ B0=new_n77_ Y=new_n78_
+.gate OAI210     A0=new_n78_ A1=new_n68_ B0=i_0_ Y=new_n79_
+.gate NA2        A=i_12_ B=i_5_ Y=new_n80_
+.gate NA2        A=i_2_ B=i_8_ Y=new_n81_
+.gate NO2        A=new_n81_ B=new_n58_ Y=new_n82_
+.gate NO2        A=i_3_ B=i_9_ Y=new_n83_
+.gate NO2        A=i_3_ B=i_7_ Y=new_n84_
+.gate NO3        A=new_n84_ B=new_n83_ C=new_n63_ Y=new_n85_
+.gate INV        A=i_6_ Y=new_n86_
+.gate OR4        A=i_2_ B=i_11_ C=i_3_ D=i_8_ Y=new_n87_
+.gate INV        A=new_n87_ Y=new_n88_
+.gate NO2        A=i_2_ B=i_7_ Y=new_n89_
+.gate AOI210     A0=new_n88_ A1=new_n86_ B0=new_n89_ Y=new_n90_
+.gate OAI210     A0=new_n85_ A1=new_n82_ B0=new_n90_ Y=new_n91_
+.gate NAi21      An=i_6_ B=i_10_ Y=new_n92_
+.gate NA2        A=i_6_ B=i_9_ Y=new_n93_
+.gate AOI210     A0=new_n93_ A1=new_n92_ B0=new_n63_ Y=new_n94_
+.gate NA2        A=i_2_ B=i_6_ Y=new_n95_
+.gate NO3        A=new_n95_ B=new_n49_ C=new_n25_ Y=new_n96_
+.gate NO2        A=new_n96_ B=new_n94_ Y=new_n97_
+.gate AOI210     A0=new_n97_ A1=new_n91_ B0=new_n80_ Y=new_n98_
+.gate AN3        A=i_0_ B=i_2_ C=i_1_ Y=new_n99_
+.gate NAi21      An=i_6_ B=i_11_ Y=new_n100_
+.gate NO2        A=i_5_ B=i_8_ Y=new_n101_
+.gate NOi21      An=new_n101_ B=new_n100_ Y=new_n102_
+.gate NA2        A=new_n102_ B=new_n62_ Y=new_n103_
+.gate INV        A=i_7_ Y=new_n104_
+.gate NA2        A=new_n46_ B=new_n104_ Y=new_n105_
+.gate NO2        A=i_0_ B=i_5_ Y=new_n106_
+.gate NO2        A=new_n106_ B=new_n86_ Y=new_n107_
+.gate NA2        A=i_12_ B=i_3_ Y=new_n108_
+.gate NAi21      An=i_7_ B=i_11_ Y=new_n109_
+.gate NO3        A=new_n109_ B=new_n92_ C=new_n53_ Y=new_n110_
+.gate AN2        A=i_2_ B=i_10_ Y=new_n111_
+.gate OR2        A=new_n80_ B=new_n58_ Y=new_n112_
+.gate NO2        A=i_8_ B=new_n104_ Y=new_n113_
+.gate NA2        A=i_12_ B=i_7_ Y=new_n114_
+.gate NO2        A=new_n63_ B=new_n26_ Y=new_n115_
+.gate NA2        A=new_n115_ B=i_0_ Y=new_n116_
+.gate NA2        A=i_11_ B=i_12_ Y=new_n117_
+.gate OAI210     A0=new_n116_ A1=new_n114_ B0=new_n117_ Y=new_n118_
+.gate INV        A=new_n118_ Y=new_n119_
+.gate NAi31      An=new_n110_ B=new_n119_ C=new_n103_ Y=new_n120_
+.gate NOi21      An=i_1_ B=i_5_ Y=new_n121_
+.gate NA2        A=new_n121_ B=i_11_ Y=new_n122_
+.gate NA2        A=new_n104_ B=new_n37_ Y=new_n123_
+.gate NA2        A=i_7_ B=new_n25_ Y=new_n124_
+.gate NA2        A=new_n124_ B=new_n123_ Y=new_n125_
+.gate NO2        A=new_n125_ B=new_n46_ Y=new_n126_
+.gate NA2        A=new_n93_ B=new_n92_ Y=new_n127_
+.gate NAi21      An=i_3_ B=i_8_ Y=new_n128_
+.gate NA2        A=new_n128_ B=new_n62_ Y=new_n129_
+.gate NO2        A=new_n127_ B=new_n126_ Y=new_n130_
+.gate NO2        A=i_1_ B=new_n86_ Y=new_n131_
+.gate NO2        A=i_6_ B=i_5_ Y=new_n132_
+.gate NA2        A=new_n132_ B=i_3_ Y=new_n133_
+.gate AO210      A0=new_n133_ A1=new_n47_ B0=new_n131_ Y=new_n134_
+.gate OAI220     A0=new_n134_ A1=new_n109_ B0=new_n130_ B1=new_n122_ Y=new_n135_
+.gate NO3        A=new_n135_ B=new_n120_ C=new_n98_ Y=new_n136_
+.gate NA3        A=new_n136_ B=new_n79_ C=new_n56_ Y=men2
+.gate NO2        A=new_n63_ B=new_n37_ Y=new_n138_
+.gate NA2        A=i_6_ B=new_n25_ Y=new_n139_
+.gate NA2        A=new_n139_ B=new_n138_ Y=new_n140_
+.gate NA4        A=new_n140_ B=new_n77_ C=new_n69_ D=new_n30_ Y=men0
+.gate AN2        A=i_8_ B=i_7_ Y=new_n142_
+.gate NA2        A=new_n142_ B=i_6_ Y=new_n143_
+.gate NO2        A=i_12_ B=i_13_ Y=new_n144_
+.gate NAi21      An=i_5_ B=i_11_ Y=new_n145_
+.gate NOi21      An=new_n144_ B=new_n145_ Y=new_n146_
+.gate NO2        A=i_0_ B=i_1_ Y=new_n147_
+.gate NA2        A=i_2_ B=i_3_ Y=new_n148_
+.gate NO2        A=new_n148_ B=i_4_ Y=new_n149_
+.gate NA3        A=new_n149_ B=new_n147_ C=new_n146_ Y=new_n150_
+.gate OR2        A=new_n150_ B=new_n25_ Y=new_n151_
+.gate AN2        A=new_n144_ B=new_n83_ Y=new_n152_
+.gate NO2        A=new_n152_ B=new_n27_ Y=new_n153_
+.gate NA2        A=i_1_ B=i_5_ Y=new_n154_
+.gate NO2        A=new_n73_ B=new_n46_ Y=new_n155_
+.gate NA2        A=new_n155_ B=new_n36_ Y=new_n156_
+.gate NO3        A=new_n156_ B=new_n154_ C=new_n153_ Y=new_n157_
+.gate OR2        A=i_0_ B=i_1_ Y=new_n158_
+.gate NO3        A=new_n158_ B=new_n80_ C=i_13_ Y=new_n159_
+.gate NAi32      An=i_2_ Bn=i_3_ C=i_4_ Y=new_n160_
+.gate NAi21      An=new_n160_ B=new_n159_ Y=new_n161_
+.gate NOi21      An=i_4_ B=i_10_ Y=new_n162_
+.gate NA2        A=new_n162_ B=new_n39_ Y=new_n163_
+.gate NO2        A=i_3_ B=i_5_ Y=new_n164_
+.gate NO3        A=new_n73_ B=i_2_ C=i_1_ Y=new_n165_
+.gate NA2        A=new_n165_ B=new_n164_ Y=new_n166_
+.gate OAI210     A0=new_n166_ A1=new_n163_ B0=new_n161_ Y=new_n167_
+.gate NO2        A=new_n167_ B=new_n157_ Y=new_n168_
+.gate AOI210     A0=new_n168_ A1=new_n151_ B0=new_n143_ Y=new_n169_
+.gate NA3        A=new_n73_ B=new_n46_ C=i_1_ Y=new_n170_
+.gate NA2        A=i_3_ B=new_n48_ Y=new_n171_
+.gate NOi21      An=i_4_ B=i_9_ Y=new_n172_
+.gate NOi21      An=i_11_ B=i_13_ Y=new_n173_
+.gate NA2        A=new_n173_ B=new_n172_ Y=new_n174_
+.gate OR2        A=new_n174_ B=new_n171_ Y=new_n175_
+.gate NO2        A=i_4_ B=i_5_ Y=new_n176_
+.gate NAi21      An=i_12_ B=i_11_ Y=new_n177_
+.gate NO2        A=new_n177_ B=i_13_ Y=new_n178_
+.gate NA3        A=new_n178_ B=new_n176_ C=new_n83_ Y=new_n179_
+.gate AOI210     A0=new_n179_ A1=new_n175_ B0=new_n170_ Y=new_n180_
+.gate NO2        A=new_n73_ B=new_n63_ Y=new_n181_
+.gate NA2        A=new_n181_ B=new_n46_ Y=new_n182_
+.gate NA2        A=new_n36_ B=i_5_ Y=new_n183_
+.gate NAi31      An=new_n183_ B=new_n152_ C=i_11_ Y=new_n184_
+.gate NA2        A=i_3_ B=i_5_ Y=new_n185_
+.gate OR2        A=new_n185_ B=new_n174_ Y=new_n186_
+.gate AOI210     A0=new_n186_ A1=new_n184_ B0=new_n182_ Y=new_n187_
+.gate NO2        A=new_n73_ B=i_5_ Y=new_n188_
+.gate NO2        A=i_13_ B=i_10_ Y=new_n189_
+.gate NA3        A=new_n189_ B=new_n188_ C=new_n44_ Y=new_n190_
+.gate NO2        A=i_2_ B=i_1_ Y=new_n191_
+.gate NAi21      An=i_4_ B=i_12_ Y=new_n192_
+.gate NO4        A=new_n192_ B=i_1_ C=new_n190_ D=new_n25_ Y=new_n193_
+.gate NO3        A=new_n193_ B=new_n187_ C=new_n180_ Y=new_n194_
+.gate INV        A=i_8_ Y=new_n195_
+.gate NO2        A=new_n195_ B=i_7_ Y=new_n196_
+.gate NA2        A=new_n196_ B=i_6_ Y=new_n197_
+.gate NO3        A=i_3_ B=new_n86_ C=new_n48_ Y=new_n198_
+.gate NA2        A=new_n198_ B=new_n113_ Y=new_n199_
+.gate NO3        A=i_0_ B=i_2_ C=i_1_ Y=new_n200_
+.gate NA3        A=new_n200_ B=new_n39_ C=new_n44_ Y=new_n201_
+.gate NO3        A=i_11_ B=i_13_ C=i_9_ Y=new_n202_
+.gate OAI210     A0=new_n99_ A1=i_12_ B0=new_n202_ Y=new_n203_
+.gate AOI210     A0=new_n203_ A1=new_n201_ B0=new_n199_ Y=new_n204_
+.gate NO2        A=i_3_ B=i_8_ Y=new_n205_
+.gate NO3        A=i_11_ B=i_10_ C=i_9_ Y=new_n206_
+.gate NA3        A=new_n206_ B=new_n205_ C=new_n39_ Y=new_n207_
+.gate NO2        A=new_n106_ B=new_n58_ Y=new_n208_
+.gate INV        A=new_n208_ Y=new_n209_
+.gate NO2        A=i_13_ B=i_9_ Y=new_n210_
+.gate NA3        A=new_n210_ B=i_6_ C=new_n195_ Y=new_n211_
+.gate NAi21      An=i_12_ B=i_3_ Y=new_n212_
+.gate NO2        A=new_n44_ B=i_5_ Y=new_n213_
+.gate NO3        A=i_0_ B=i_2_ C=new_n63_ Y=new_n214_
+.gate NA3        A=new_n214_ B=new_n213_ C=i_10_ Y=new_n215_
+.gate OAI220     A0=new_n215_ A1=new_n211_ B0=new_n209_ B1=new_n207_ Y=new_n216_
+.gate AOI210     A0=new_n216_ A1=i_7_ B0=new_n204_ Y=new_n217_
+.gate OAI220     A0=new_n217_ A1=i_4_ B0=new_n197_ B1=new_n194_ Y=new_n218_
+.gate NAi21      An=i_12_ B=i_7_ Y=new_n219_
+.gate NA3        A=i_13_ B=new_n195_ C=i_10_ Y=new_n220_
+.gate NO2        A=new_n220_ B=new_n219_ Y=new_n221_
+.gate NA2        A=i_0_ B=i_5_ Y=new_n222_
+.gate NA2        A=new_n222_ B=new_n107_ Y=new_n223_
+.gate OAI220     A0=new_n223_ A1=i_1_ B0=new_n182_ B1=new_n133_ Y=new_n224_
+.gate NAi31      An=i_9_ B=i_6_ C=i_5_ Y=new_n225_
+.gate NO2        A=new_n36_ B=i_13_ Y=new_n226_
+.gate NO2        A=new_n73_ B=new_n26_ Y=new_n227_
+.gate NO2        A=new_n46_ B=new_n63_ Y=new_n228_
+.gate NA3        A=new_n228_ B=new_n227_ C=new_n226_ Y=new_n229_
+.gate INV        A=i_13_ Y=new_n230_
+.gate NO2        A=i_12_ B=new_n230_ Y=new_n231_
+.gate NA3        A=new_n231_ B=new_n200_ C=new_n198_ Y=new_n232_
+.gate OAI210     A0=new_n229_ A1=new_n225_ B0=new_n232_ Y=new_n233_
+.gate AOI220     A0=new_n233_ A1=new_n142_ B0=new_n224_ B1=new_n221_ Y=new_n234_
+.gate NO2        A=new_n185_ B=i_4_ Y=new_n235_
+.gate INV        A=new_n235_ Y=new_n236_
+.gate OR2        A=i_8_ B=i_7_ Y=new_n237_
+.gate NO2        A=new_n237_ B=new_n86_ Y=new_n238_
+.gate NO2        A=new_n53_ B=i_1_ Y=new_n239_
+.gate NA2        A=new_n239_ B=new_n238_ Y=new_n240_
+.gate INV        A=i_12_ Y=new_n241_
+.gate NO2        A=new_n44_ B=new_n241_ Y=new_n242_
+.gate NO3        A=new_n36_ B=i_8_ C=i_10_ Y=new_n243_
+.gate NA2        A=i_2_ B=i_1_ Y=new_n244_
+.gate NO2        A=new_n240_ B=new_n236_ Y=new_n245_
+.gate NO3        A=i_11_ B=i_7_ C=new_n37_ Y=new_n246_
+.gate NAi21      An=i_4_ B=i_3_ Y=new_n247_
+.gate NO2        A=new_n247_ B=new_n75_ Y=new_n248_
+.gate NO2        A=i_0_ B=i_6_ Y=new_n249_
+.gate NOi41      An=i_4_ B=i_8_ C=i_7_ D=i_10_ Y=new_n250_
+.gate NA2        A=new_n250_ B=new_n249_ Y=new_n251_
+.gate NO2        A=new_n244_ B=new_n185_ Y=new_n252_
+.gate NAi21      An=new_n251_ B=new_n252_ Y=new_n253_
+.gate INV        A=new_n253_ Y=new_n254_
+.gate AOI220     A0=new_n254_ A1=new_n39_ B0=new_n245_ B1=new_n210_ Y=new_n255_
+.gate NO2        A=i_11_ B=new_n230_ Y=new_n256_
+.gate NOi21      An=i_1_ B=i_6_ Y=new_n257_
+.gate NAi21      An=i_3_ B=i_7_ Y=new_n258_
+.gate NA2        A=new_n241_ B=i_9_ Y=new_n259_
+.gate OR4        A=new_n259_ B=new_n258_ C=new_n257_ D=new_n188_ Y=new_n260_
+.gate NO2        A=new_n48_ B=new_n25_ Y=new_n261_
+.gate NO2        A=i_12_ B=i_3_ Y=new_n262_
+.gate NA2        A=new_n73_ B=i_5_ Y=new_n263_
+.gate NA2        A=i_3_ B=i_9_ Y=new_n264_
+.gate NAi21      An=i_7_ B=i_10_ Y=new_n265_
+.gate NO2        A=new_n265_ B=new_n264_ Y=new_n266_
+.gate NA3        A=new_n266_ B=new_n263_ C=new_n64_ Y=new_n267_
+.gate NA2        A=new_n267_ B=new_n260_ Y=new_n268_
+.gate NA3        A=i_1_ B=i_8_ C=i_7_ Y=new_n269_
+.gate INV        A=new_n143_ Y=new_n270_
+.gate NA2        A=new_n241_ B=i_13_ Y=new_n271_
+.gate NO2        A=new_n271_ B=new_n75_ Y=new_n272_
+.gate AOI220     A0=new_n272_ A1=new_n270_ B0=new_n268_ B1=new_n256_ Y=new_n273_
+.gate NO2        A=new_n237_ B=new_n37_ Y=new_n274_
+.gate NA2        A=i_12_ B=i_6_ Y=new_n275_
+.gate OR2        A=i_13_ B=i_9_ Y=new_n276_
+.gate NO3        A=new_n276_ B=new_n275_ C=new_n48_ Y=new_n277_
+.gate NO2        A=new_n247_ B=i_2_ Y=new_n278_
+.gate NA3        A=new_n278_ B=new_n277_ C=new_n44_ Y=new_n279_
+.gate NA2        A=new_n256_ B=i_9_ Y=new_n280_
+.gate NA2        A=new_n263_ B=new_n64_ Y=new_n281_
+.gate OAI210     A0=new_n281_ A1=new_n280_ B0=new_n279_ Y=new_n282_
+.gate NO3        A=i_11_ B=new_n230_ C=new_n25_ Y=new_n283_
+.gate NO2        A=new_n258_ B=i_8_ Y=new_n284_
+.gate NO2        A=i_6_ B=new_n48_ Y=new_n285_
+.gate NA3        A=new_n285_ B=new_n284_ C=new_n283_ Y=new_n286_
+.gate NO3        A=new_n26_ B=new_n86_ C=i_5_ Y=new_n287_
+.gate NA3        A=new_n287_ B=new_n274_ C=new_n231_ Y=new_n288_
+.gate AOI210     A0=new_n288_ A1=new_n286_ B0=i_1_ Y=new_n289_
+.gate AOI210     A0=new_n282_ A1=new_n274_ B0=new_n289_ Y=new_n290_
+.gate NA4        A=new_n290_ B=new_n273_ C=new_n255_ D=new_n234_ Y=new_n291_
+.gate NO3        A=i_12_ B=new_n230_ C=new_n37_ Y=new_n292_
+.gate INV        A=new_n292_ Y=new_n293_
+.gate NOi21      An=new_n164_ B=new_n86_ Y=new_n294_
+.gate NO3        A=i_0_ B=new_n46_ C=i_1_ Y=new_n295_
+.gate AOI220     A0=new_n295_ A1=new_n198_ B0=new_n294_ B1=new_n239_ Y=new_n296_
+.gate NO2        A=new_n296_ B=i_7_ Y=new_n297_
+.gate NO3        A=i_0_ B=i_2_ C=new_n63_ Y=new_n298_
+.gate NO2        A=new_n244_ B=i_0_ Y=new_n299_
+.gate AOI220     A0=new_n299_ A1=new_n196_ B0=new_n298_ B1=new_n142_ Y=new_n300_
+.gate NA2        A=new_n285_ B=new_n26_ Y=new_n301_
+.gate NO2        A=new_n301_ B=new_n300_ Y=new_n302_
+.gate NA2        A=i_0_ B=i_1_ Y=new_n303_
+.gate NO2        A=new_n303_ B=i_2_ Y=new_n304_
+.gate NO2        A=new_n59_ B=i_6_ Y=new_n305_
+.gate NA3        A=new_n305_ B=new_n304_ C=new_n164_ Y=new_n306_
+.gate OAI210     A0=new_n166_ A1=new_n143_ B0=new_n306_ Y=new_n307_
+.gate NO3        A=new_n307_ B=new_n302_ C=new_n297_ Y=new_n308_
+.gate NO2        A=i_3_ B=i_10_ Y=new_n309_
+.gate NA3        A=new_n309_ B=new_n39_ C=new_n44_ Y=new_n310_
+.gate NO2        A=i_2_ B=new_n104_ Y=new_n311_
+.gate NA2        A=i_1_ B=new_n36_ Y=new_n312_
+.gate NOi21      An=new_n222_ B=new_n106_ Y=new_n313_
+.gate NA3        A=new_n313_ B=i_1_ C=new_n311_ Y=new_n314_
+.gate AN2        A=i_3_ B=i_10_ Y=new_n315_
+.gate NA4        A=new_n315_ B=new_n200_ C=new_n178_ D=new_n176_ Y=new_n316_
+.gate NO2        A=i_5_ B=new_n37_ Y=new_n317_
+.gate NO2        A=new_n46_ B=new_n26_ Y=new_n318_
+.gate OR2        A=new_n314_ B=new_n310_ Y=new_n319_
+.gate OAI220     A0=new_n319_ A1=i_6_ B0=new_n308_ B1=new_n293_ Y=new_n320_
+.gate NO4        A=new_n320_ B=new_n291_ C=new_n218_ D=new_n169_ Y=new_n321_
+.gate NO3        A=new_n44_ B=i_13_ C=i_9_ Y=new_n322_
+.gate NO2        A=new_n59_ B=new_n86_ Y=new_n323_
+.gate NA2        A=new_n299_ B=new_n323_ Y=new_n324_
+.gate NO3        A=i_6_ B=new_n195_ C=i_7_ Y=new_n325_
+.gate NA2        A=new_n325_ B=new_n200_ Y=new_n326_
+.gate AOI210     A0=new_n326_ A1=new_n324_ B0=new_n171_ Y=new_n327_
+.gate NO2        A=i_2_ B=i_3_ Y=new_n328_
+.gate OR2        A=i_0_ B=i_5_ Y=new_n329_
+.gate NA2        A=new_n222_ B=new_n329_ Y=new_n330_
+.gate NA4        A=new_n330_ B=new_n238_ C=new_n328_ D=i_1_ Y=new_n331_
+.gate NA3        A=new_n299_ B=new_n294_ C=new_n113_ Y=new_n332_
+.gate NAi21      An=i_8_ B=i_7_ Y=new_n333_
+.gate NO2        A=new_n333_ B=i_6_ Y=new_n334_
+.gate NO2        A=new_n158_ B=new_n46_ Y=new_n335_
+.gate NA3        A=new_n335_ B=new_n334_ C=new_n164_ Y=new_n336_
+.gate NA3        A=new_n336_ B=new_n332_ C=new_n331_ Y=new_n337_
+.gate OAI210     A0=new_n337_ A1=new_n327_ B0=i_4_ Y=new_n338_
+.gate NO2        A=i_12_ B=i_10_ Y=new_n339_
+.gate NOi21      An=i_5_ B=i_0_ Y=new_n340_
+.gate AOI210     A0=i_2_ A1=new_n48_ B0=new_n104_ Y=new_n341_
+.gate NO4        A=new_n341_ B=new_n312_ C=new_n340_ D=new_n128_ Y=new_n342_
+.gate NA4        A=new_n84_ B=new_n36_ C=new_n86_ D=i_8_ Y=new_n343_
+.gate NA2        A=new_n342_ B=new_n339_ Y=new_n344_
+.gate NO2        A=i_6_ B=i_8_ Y=new_n345_
+.gate NOi21      An=i_0_ B=i_2_ Y=new_n346_
+.gate AN2        A=new_n346_ B=new_n345_ Y=new_n347_
+.gate NO2        A=i_1_ B=i_7_ Y=new_n348_
+.gate AO220      A0=new_n348_ A1=new_n347_ B0=new_n334_ B1=new_n239_ Y=new_n349_
+.gate NA3        A=new_n349_ B=new_n41_ C=i_5_ Y=new_n350_
+.gate NA3        A=new_n350_ B=new_n344_ C=new_n338_ Y=new_n351_
+.gate NO3        A=new_n237_ B=new_n46_ C=i_1_ Y=new_n352_
+.gate NO3        A=new_n333_ B=i_2_ C=i_1_ Y=new_n353_
+.gate OAI210     A0=new_n353_ A1=new_n352_ B0=i_6_ Y=new_n354_
+.gate NA3        A=new_n257_ B=new_n311_ C=new_n195_ Y=new_n355_
+.gate AOI210     A0=new_n355_ A1=new_n354_ B0=new_n330_ Y=new_n356_
+.gate NOi21      An=new_n154_ B=new_n107_ Y=new_n357_
+.gate NO2        A=new_n357_ B=new_n124_ Y=new_n358_
+.gate OAI210     A0=new_n358_ A1=new_n356_ B0=i_3_ Y=new_n359_
+.gate INV        A=new_n84_ Y=new_n360_
+.gate NO2        A=new_n303_ B=new_n81_ Y=new_n361_
+.gate NA2        A=new_n361_ B=new_n132_ Y=new_n362_
+.gate NO2        A=new_n95_ B=new_n195_ Y=new_n363_
+.gate NA3        A=new_n313_ B=new_n363_ C=new_n63_ Y=new_n364_
+.gate AOI210     A0=new_n364_ A1=new_n362_ B0=new_n360_ Y=new_n365_
+.gate NO2        A=new_n195_ B=i_9_ Y=new_n366_
+.gate NA2        A=new_n366_ B=new_n208_ Y=new_n367_
+.gate NO2        A=new_n367_ B=new_n46_ Y=new_n368_
+.gate NO3        A=new_n368_ B=new_n365_ C=new_n302_ Y=new_n369_
+.gate AOI210     A0=new_n369_ A1=new_n359_ B0=new_n163_ Y=new_n370_
+.gate AOI210     A0=new_n351_ A1=new_n322_ B0=new_n370_ Y=new_n371_
+.gate NOi32      An=i_11_ Bn=i_12_ C=i_13_ Y=new_n372_
+.gate INV        A=new_n372_ Y=new_n373_
+.gate NAi21      An=i_0_ B=i_6_ Y=new_n374_
+.gate NAi21      An=i_1_ B=i_5_ Y=new_n375_
+.gate NA2        A=new_n375_ B=new_n374_ Y=new_n376_
+.gate NA2        A=new_n376_ B=new_n25_ Y=new_n377_
+.gate OAI210     A0=new_n377_ A1=new_n160_ B0=new_n251_ Y=new_n378_
+.gate NAi41      An=i_9_ B=i_4_ C=i_8_ D=i_7_ Y=new_n379_
+.gate OAI220     A0=new_n379_ A1=new_n375_ B0=new_n225_ B1=new_n160_ Y=new_n380_
+.gate AOI210     A0=new_n379_ A1=new_n160_ B0=new_n158_ Y=new_n381_
+.gate NOi32      An=i_4_ Bn=i_8_ C=i_9_ Y=new_n382_
+.gate NAi21      An=i_6_ B=i_1_ Y=new_n383_
+.gate NA3        A=new_n383_ B=new_n382_ C=new_n46_ Y=new_n384_
+.gate NO2        A=new_n384_ B=i_0_ Y=new_n385_
+.gate OR3        A=new_n385_ B=new_n381_ C=new_n380_ Y=new_n386_
+.gate NO2        A=i_1_ B=new_n104_ Y=new_n387_
+.gate NAi21      An=i_3_ B=i_4_ Y=new_n388_
+.gate NO2        A=new_n388_ B=i_9_ Y=new_n389_
+.gate AN2        A=i_6_ B=i_7_ Y=new_n390_
+.gate OAI210     A0=new_n390_ A1=new_n387_ B0=new_n389_ Y=new_n391_
+.gate NA2        A=i_2_ B=i_7_ Y=new_n392_
+.gate NO2        A=new_n388_ B=i_10_ Y=new_n393_
+.gate NA3        A=new_n393_ B=new_n392_ C=new_n249_ Y=new_n394_
+.gate AOI210     A0=new_n394_ A1=new_n391_ B0=new_n188_ Y=new_n395_
+.gate AOI210     A0=i_2_ A1=i_7_ B0=i_6_ Y=new_n396_
+.gate OAI210     A0=new_n396_ A1=new_n191_ B0=new_n393_ Y=new_n397_
+.gate AOI220     A0=new_n393_ A1=new_n348_ B0=new_n243_ B1=new_n191_ Y=new_n398_
+.gate AOI210     A0=new_n398_ A1=new_n397_ B0=i_5_ Y=new_n399_
+.gate NO4        A=new_n399_ B=new_n395_ C=new_n386_ D=new_n378_ Y=new_n400_
+.gate NO2        A=new_n400_ B=new_n373_ Y=new_n401_
+.gate NO2        A=new_n59_ B=new_n25_ Y=new_n402_
+.gate AN2        A=i_12_ B=i_5_ Y=new_n403_
+.gate NO2        A=i_4_ B=new_n26_ Y=new_n404_
+.gate NA2        A=new_n404_ B=new_n403_ Y=new_n405_
+.gate NO2        A=i_11_ B=i_6_ Y=new_n406_
+.gate NA3        A=new_n406_ B=new_n335_ C=new_n230_ Y=new_n407_
+.gate NO2        A=new_n407_ B=new_n405_ Y=new_n408_
+.gate NO2        A=new_n247_ B=i_5_ Y=new_n409_
+.gate NO2        A=i_5_ B=i_10_ Y=new_n410_
+.gate AOI220     A0=new_n410_ A1=new_n278_ B0=new_n409_ B1=new_n200_ Y=new_n411_
+.gate NA2        A=new_n144_ B=new_n45_ Y=new_n412_
+.gate NO2        A=new_n412_ B=new_n411_ Y=new_n413_
+.gate OAI210     A0=new_n413_ A1=new_n408_ B0=new_n402_ Y=new_n414_
+.gate NO2        A=new_n37_ B=new_n25_ Y=new_n415_
+.gate NO2        A=new_n150_ B=new_n86_ Y=new_n416_
+.gate OAI210     A0=new_n416_ A1=new_n408_ B0=new_n415_ Y=new_n417_
+.gate NO3        A=new_n86_ B=new_n48_ C=i_9_ Y=new_n418_
+.gate NO2        A=i_3_ B=new_n104_ Y=new_n419_
+.gate NA2        A=new_n309_ B=new_n75_ Y=new_n420_
+.gate NO2        A=i_11_ B=i_12_ Y=new_n421_
+.gate NA2        A=new_n421_ B=new_n36_ Y=new_n422_
+.gate NO2        A=new_n420_ B=new_n422_ Y=new_n423_
+.gate NA2        A=new_n410_ B=new_n241_ Y=new_n424_
+.gate NA3        A=new_n113_ B=new_n41_ C=i_11_ Y=new_n425_
+.gate NO2        A=new_n425_ B=new_n225_ Y=new_n426_
+.gate NAi21      An=i_13_ B=i_0_ Y=new_n427_
+.gate NO2        A=new_n427_ B=new_n244_ Y=new_n428_
+.gate OAI210     A0=new_n426_ A1=new_n423_ B0=new_n428_ Y=new_n429_
+.gate NA3        A=new_n429_ B=new_n417_ C=new_n414_ Y=new_n430_
+.gate NA2        A=new_n44_ B=new_n230_ Y=new_n431_
+.gate NO3        A=i_1_ B=i_12_ C=new_n86_ Y=new_n432_
+.gate NO2        A=i_0_ B=i_11_ Y=new_n433_
+.gate AN2        A=i_1_ B=i_6_ Y=new_n434_
+.gate NOi21      An=i_2_ B=i_12_ Y=new_n435_
+.gate NA2        A=new_n435_ B=new_n434_ Y=new_n436_
+.gate NO2        A=new_n436_ B=new_n1109_ Y=new_n437_
+.gate NO2        A=new_n1113_ B=i_4_ Y=new_n438_
+.gate NA2        A=new_n437_ B=new_n438_ Y=new_n439_
+.gate NAi21      An=i_9_ B=i_4_ Y=new_n440_
+.gate OR2        A=i_13_ B=i_10_ Y=new_n441_
+.gate NO3        A=new_n441_ B=new_n117_ C=new_n440_ Y=new_n442_
+.gate NO2        A=new_n174_ B=new_n123_ Y=new_n443_
+.gate OR2        A=new_n220_ B=new_n219_ Y=new_n444_
+.gate NO2        A=new_n104_ B=new_n25_ Y=new_n445_
+.gate NA2        A=new_n292_ B=new_n445_ Y=new_n446_
+.gate NA2        A=new_n285_ B=new_n214_ Y=new_n447_
+.gate OAI220     A0=new_n447_ A1=new_n444_ B0=new_n446_ B1=new_n357_ Y=new_n448_
+.gate INV        A=new_n448_ Y=new_n449_
+.gate AOI210     A0=new_n449_ A1=new_n439_ B0=new_n26_ Y=new_n450_
+.gate NA2        A=new_n332_ B=new_n331_ Y=new_n451_
+.gate AOI220     A0=new_n305_ A1=new_n295_ B0=new_n299_ B1=new_n323_ Y=new_n452_
+.gate NO2        A=new_n452_ B=new_n171_ Y=new_n453_
+.gate NO2        A=new_n185_ B=new_n86_ Y=new_n454_
+.gate AOI220     A0=new_n454_ A1=new_n304_ B0=new_n287_ B1=new_n214_ Y=new_n455_
+.gate NO2        A=new_n455_ B=i_7_ Y=new_n456_
+.gate NO3        A=new_n456_ B=new_n453_ C=new_n451_ Y=new_n457_
+.gate NA2        A=new_n198_ B=new_n99_ Y=new_n458_
+.gate NA3        A=new_n335_ B=new_n164_ C=new_n86_ Y=new_n459_
+.gate AOI210     A0=new_n459_ A1=new_n458_ B0=new_n333_ Y=new_n460_
+.gate NA2        A=new_n195_ B=i_10_ Y=new_n461_
+.gate NA3        A=new_n263_ B=new_n64_ C=i_2_ Y=new_n462_
+.gate NA2        A=new_n305_ B=new_n239_ Y=new_n463_
+.gate OAI220     A0=new_n463_ A1=new_n185_ B0=new_n462_ B1=new_n461_ Y=new_n464_
+.gate NO2        A=i_3_ B=new_n48_ Y=new_n465_
+.gate NA3        A=new_n348_ B=new_n347_ C=new_n465_ Y=new_n466_
+.gate NA2        A=new_n325_ B=new_n330_ Y=new_n467_
+.gate OAI210     A0=new_n467_ A1=i_1_ B0=new_n466_ Y=new_n468_
+.gate NO3        A=new_n468_ B=new_n464_ C=new_n460_ Y=new_n469_
+.gate AOI210     A0=new_n469_ A1=new_n457_ B0=new_n280_ Y=new_n470_
+.gate NO4        A=new_n470_ B=new_n450_ C=new_n430_ D=new_n401_ Y=new_n471_
+.gate NO2        A=new_n63_ B=i_4_ Y=new_n472_
+.gate NO2        A=new_n73_ B=i_13_ Y=new_n473_
+.gate NO2        A=i_10_ B=i_9_ Y=new_n474_
+.gate NAi21      An=i_12_ B=i_8_ Y=new_n475_
+.gate NO2        A=new_n475_ B=i_3_ Y=new_n476_
+.gate NO2        A=new_n46_ B=i_4_ Y=new_n477_
+.gate NA2        A=new_n477_ B=new_n107_ Y=new_n478_
+.gate NO2        A=new_n478_ B=new_n207_ Y=new_n479_
+.gate NA2        A=new_n318_ B=i_0_ Y=new_n480_
+.gate NO3        A=new_n23_ B=i_10_ C=i_9_ Y=new_n481_
+.gate NA2        A=new_n275_ B=new_n100_ Y=new_n482_
+.gate NA2        A=new_n482_ B=new_n481_ Y=new_n483_
+.gate NA2        A=i_8_ B=i_9_ Y=new_n484_
+.gate AOI210     A0=i_0_ A1=i_7_ B0=i_2_ Y=new_n485_
+.gate OR2        A=new_n485_ B=new_n484_ Y=new_n486_
+.gate NA2        A=new_n292_ B=new_n208_ Y=new_n487_
+.gate OAI220     A0=new_n487_ A1=new_n486_ B0=new_n483_ B1=new_n480_ Y=new_n488_
+.gate NA2        A=new_n256_ B=new_n317_ Y=new_n489_
+.gate NO3        A=i_6_ B=i_8_ C=i_7_ Y=new_n490_
+.gate INV        A=new_n490_ Y=new_n491_
+.gate NA3        A=i_2_ B=i_10_ C=i_9_ Y=new_n492_
+.gate NA4        A=new_n145_ B=new_n115_ C=new_n80_ D=new_n23_ Y=new_n493_
+.gate OAI220     A0=new_n493_ A1=new_n492_ B0=new_n491_ B1=new_n489_ Y=new_n494_
+.gate NO3        A=new_n494_ B=new_n488_ C=new_n479_ Y=new_n495_
+.gate NA2        A=new_n304_ B=new_n109_ Y=new_n496_
+.gate OR2        A=new_n496_ B=new_n211_ Y=new_n497_
+.gate OR2        A=new_n367_ B=new_n104_ Y=new_n498_
+.gate OA220      A0=new_n498_ A1=new_n163_ B0=new_n497_ B1=new_n236_ Y=new_n499_
+.gate NA2        A=new_n99_ B=i_13_ Y=new_n500_
+.gate NA2        A=new_n454_ B=new_n402_ Y=new_n501_
+.gate NO2        A=i_2_ B=i_13_ Y=new_n502_
+.gate NO2        A=new_n501_ B=new_n500_ Y=new_n503_
+.gate NO3        A=i_4_ B=new_n48_ C=i_8_ Y=new_n504_
+.gate NO2        A=i_6_ B=i_7_ Y=new_n505_
+.gate NA2        A=new_n505_ B=new_n504_ Y=new_n506_
+.gate NO2        A=i_11_ B=i_1_ Y=new_n507_
+.gate NO2        A=new_n73_ B=i_3_ Y=new_n508_
+.gate OR2        A=i_11_ B=i_8_ Y=new_n509_
+.gate NOi21      An=i_2_ B=i_7_ Y=new_n510_
+.gate NAi31      An=new_n509_ B=new_n510_ C=new_n508_ Y=new_n511_
+.gate NO2        A=new_n441_ B=i_6_ Y=new_n512_
+.gate NA3        A=new_n512_ B=new_n472_ C=new_n75_ Y=new_n513_
+.gate NO2        A=new_n513_ B=new_n511_ Y=new_n514_
+.gate NO2        A=i_3_ B=new_n195_ Y=new_n515_
+.gate NO2        A=i_6_ B=i_10_ Y=new_n516_
+.gate NA3        A=new_n516_ B=new_n322_ C=new_n515_ Y=new_n517_
+.gate NO2        A=new_n517_ B=new_n156_ Y=new_n518_
+.gate NA3        A=new_n250_ B=new_n173_ C=new_n132_ Y=new_n519_
+.gate NA2        A=new_n46_ B=new_n44_ Y=new_n520_
+.gate NO2        A=new_n158_ B=i_3_ Y=new_n521_
+.gate NAi31      An=new_n520_ B=new_n521_ C=new_n231_ Y=new_n522_
+.gate NA3        A=new_n415_ B=new_n181_ C=new_n149_ Y=new_n523_
+.gate NA3        A=new_n523_ B=new_n522_ C=new_n519_ Y=new_n524_
+.gate NO4        A=new_n524_ B=new_n518_ C=new_n514_ D=new_n503_ Y=new_n525_
+.gate NA2        A=new_n481_ B=new_n403_ Y=new_n526_
+.gate NA2        A=new_n490_ B=new_n410_ Y=new_n527_
+.gate NO2        A=new_n527_ B=new_n229_ Y=new_n528_
+.gate NAi21      An=new_n220_ B=new_n421_ Y=new_n529_
+.gate NO2        A=new_n26_ B=i_5_ Y=new_n530_
+.gate NO2        A=i_0_ B=new_n86_ Y=new_n531_
+.gate NA3        A=new_n531_ B=new_n530_ C=new_n142_ Y=new_n532_
+.gate OR3        A=new_n312_ B=new_n38_ C=new_n46_ Y=new_n533_
+.gate NO2        A=new_n533_ B=new_n532_ Y=new_n534_
+.gate NA2        A=new_n27_ B=i_10_ Y=new_n535_
+.gate NA2        A=new_n322_ B=new_n243_ Y=new_n536_
+.gate OAI220     A0=new_n536_ A1=new_n462_ B0=new_n535_ B1=new_n500_ Y=new_n537_
+.gate NA4        A=new_n315_ B=new_n228_ C=new_n73_ D=new_n241_ Y=new_n538_
+.gate NO2        A=new_n538_ B=new_n506_ Y=new_n539_
+.gate NO4        A=new_n539_ B=new_n537_ C=new_n534_ D=new_n528_ Y=new_n540_
+.gate NA4        A=new_n540_ B=new_n525_ C=new_n499_ D=new_n495_ Y=new_n541_
+.gate NA3        A=new_n315_ B=new_n178_ C=new_n176_ Y=new_n542_
+.gate OAI210     A0=new_n310_ A1=new_n183_ B0=new_n542_ Y=new_n543_
+.gate AN2        A=new_n295_ B=new_n238_ Y=new_n544_
+.gate NA2        A=new_n544_ B=new_n543_ Y=new_n545_
+.gate NA2        A=new_n122_ B=new_n112_ Y=new_n546_
+.gate AN2        A=new_n546_ B=new_n481_ Y=new_n547_
+.gate NA2        A=new_n322_ B=new_n165_ Y=new_n548_
+.gate OAI210     A0=new_n548_ A1=new_n236_ B0=new_n316_ Y=new_n549_
+.gate AOI220     A0=new_n549_ A1=new_n334_ B0=new_n547_ B1=new_n318_ Y=new_n550_
+.gate NA2        A=new_n403_ B=new_n230_ Y=new_n551_
+.gate NA2        A=new_n372_ B=new_n73_ Y=new_n552_
+.gate NA2        A=new_n390_ B=new_n382_ Y=new_n553_
+.gate AO210      A0=new_n552_ A1=new_n551_ B0=new_n553_ Y=new_n554_
+.gate NO2        A=new_n36_ B=i_8_ Y=new_n555_
+.gate NAi41      An=new_n552_ B=new_n516_ C=new_n555_ D=new_n46_ Y=new_n556_
+.gate INV        A=new_n442_ Y=new_n557_
+.gate NA3        A=new_n557_ B=new_n556_ C=new_n554_ Y=new_n558_
+.gate INV        A=new_n558_ Y=new_n559_
+.gate NA2        A=new_n263_ B=new_n64_ Y=new_n560_
+.gate OAI210     A0=i_8_ A1=new_n560_ B0=new_n134_ Y=new_n561_
+.gate AOI210     A0=new_n196_ A1=i_9_ B0=new_n274_ Y=new_n562_
+.gate NO2        A=new_n562_ B=new_n201_ Y=new_n563_
+.gate OR2        A=new_n185_ B=i_4_ Y=new_n564_
+.gate NO2        A=new_n564_ B=new_n86_ Y=new_n565_
+.gate AOI220     A0=new_n565_ A1=new_n563_ B0=new_n561_ B1=new_n443_ Y=new_n566_
+.gate NA4        A=new_n566_ B=new_n559_ C=new_n550_ D=new_n545_ Y=new_n567_
+.gate NA2        A=new_n409_ B=new_n304_ Y=new_n568_
+.gate NA2        A=new_n170_ B=new_n568_ Y=new_n569_
+.gate NO2        A=i_12_ B=new_n195_ Y=new_n570_
+.gate NA2        A=new_n570_ B=new_n230_ Y=new_n571_
+.gate NA3        A=new_n516_ B=new_n176_ C=new_n27_ Y=new_n572_
+.gate NO3        A=new_n572_ B=new_n571_ C=new_n496_ Y=new_n573_
+.gate NOi31      An=new_n325_ B=new_n441_ C=new_n38_ Y=new_n574_
+.gate OAI210     A0=new_n574_ A1=new_n573_ B0=new_n569_ Y=new_n575_
+.gate NO2        A=i_8_ B=i_7_ Y=new_n576_
+.gate OAI210     A0=i_0_ A1=i_12_ B0=i_5_ Y=new_n577_
+.gate NA2        A=new_n577_ B=new_n228_ Y=new_n578_
+.gate AOI220     A0=new_n335_ A1=new_n39_ B0=new_n239_ B1=new_n210_ Y=new_n579_
+.gate OAI220     A0=new_n579_ A1=new_n564_ B0=new_n578_ B1=new_n247_ Y=new_n580_
+.gate NA2        A=new_n44_ B=i_10_ Y=new_n581_
+.gate NO2        A=new_n581_ B=i_6_ Y=new_n582_
+.gate NA3        A=new_n582_ B=new_n580_ C=new_n576_ Y=new_n583_
+.gate AOI220     A0=new_n454_ A1=new_n335_ B0=new_n252_ B1=new_n249_ Y=new_n584_
+.gate OAI220     A0=new_n584_ A1=new_n271_ B0=new_n500_ B1=new_n133_ Y=new_n585_
+.gate NA2        A=new_n585_ B=new_n274_ Y=new_n586_
+.gate NOi31      An=new_n299_ B=new_n310_ C=new_n183_ Y=new_n587_
+.gate NA3        A=new_n315_ B=new_n176_ C=new_n99_ Y=new_n588_
+.gate NO2        A=new_n226_ B=new_n44_ Y=new_n589_
+.gate NO2        A=new_n158_ B=i_5_ Y=new_n590_
+.gate NA3        A=new_n590_ B=new_n431_ C=new_n328_ Y=new_n591_
+.gate OAI210     A0=new_n591_ A1=new_n589_ B0=new_n588_ Y=new_n592_
+.gate OAI210     A0=new_n592_ A1=new_n587_ B0=new_n490_ Y=new_n593_
+.gate NA4        A=new_n593_ B=new_n586_ C=new_n583_ D=new_n575_ Y=new_n594_
+.gate NA3        A=new_n222_ B=new_n71_ C=new_n44_ Y=new_n595_
+.gate NA2        A=new_n292_ B=new_n84_ Y=new_n596_
+.gate AOI210     A0=new_n595_ A1=new_n362_ B0=new_n596_ Y=new_n597_
+.gate NA2        A=new_n305_ B=new_n295_ Y=new_n598_
+.gate NO2        A=new_n598_ B=new_n175_ Y=new_n599_
+.gate NA2        A=new_n228_ B=new_n227_ Y=new_n600_
+.gate NA2        A=new_n474_ B=new_n226_ Y=new_n601_
+.gate NO2        A=new_n600_ B=new_n601_ Y=new_n602_
+.gate NA2        A=i_0_ B=new_n48_ Y=new_n603_
+.gate NA3        A=new_n570_ B=new_n283_ C=new_n603_ Y=new_n604_
+.gate NO2        A=new_n1110_ B=new_n604_ Y=new_n605_
+.gate NO4        A=new_n605_ B=new_n602_ C=new_n599_ D=new_n597_ Y=new_n606_
+.gate NO4        A=new_n257_ B=new_n42_ C=i_2_ D=new_n48_ Y=new_n607_
+.gate NO3        A=i_1_ B=i_5_ C=i_10_ Y=new_n608_
+.gate NO2        A=new_n237_ B=new_n36_ Y=new_n609_
+.gate AN2        A=new_n609_ B=new_n608_ Y=new_n610_
+.gate OA210      A0=new_n610_ A1=new_n607_ B0=new_n372_ Y=new_n611_
+.gate NO2        A=new_n441_ B=i_1_ Y=new_n612_
+.gate NOi31      An=new_n612_ B=new_n482_ C=new_n73_ Y=new_n613_
+.gate AN4        A=new_n613_ B=new_n438_ C=new_n530_ D=i_2_ Y=new_n614_
+.gate NO2        A=new_n452_ B=new_n179_ Y=new_n615_
+.gate NO3        A=new_n615_ B=new_n614_ C=new_n611_ Y=new_n616_
+.gate NOi21      An=i_10_ B=i_6_ Y=new_n617_
+.gate NO2        A=new_n86_ B=new_n25_ Y=new_n618_
+.gate AOI220     A0=new_n292_ A1=new_n618_ B0=new_n283_ B1=new_n617_ Y=new_n619_
+.gate NO2        A=new_n619_ B=new_n480_ Y=new_n620_
+.gate NO2        A=new_n114_ B=new_n23_ Y=new_n621_
+.gate NA2        A=new_n325_ B=new_n165_ Y=new_n622_
+.gate AOI220     A0=new_n622_ A1=new_n463_ B0=new_n186_ B1=new_n184_ Y=new_n623_
+.gate NO2        A=new_n200_ B=new_n37_ Y=new_n624_
+.gate NOi31      An=new_n146_ B=new_n624_ C=new_n343_ Y=new_n625_
+.gate NO3        A=new_n625_ B=new_n623_ C=new_n620_ Y=new_n626_
+.gate NO2        A=new_n552_ B=new_n398_ Y=new_n627_
+.gate INV        A=new_n328_ Y=new_n628_
+.gate NO2        A=i_12_ B=new_n86_ Y=new_n629_
+.gate NA3        A=new_n629_ B=new_n283_ C=new_n603_ Y=new_n630_
+.gate NA3        A=new_n406_ B=new_n292_ C=new_n222_ Y=new_n631_
+.gate AOI210     A0=new_n631_ A1=new_n630_ B0=new_n628_ Y=new_n632_
+.gate NA2        A=new_n176_ B=i_0_ Y=new_n633_
+.gate NO3        A=new_n633_ B=new_n354_ C=new_n310_ Y=new_n634_
+.gate OR2        A=i_2_ B=i_5_ Y=new_n635_
+.gate OR2        A=new_n635_ B=new_n434_ Y=new_n636_
+.gate AOI210     A0=new_n392_ A1=new_n249_ B0=new_n200_ Y=new_n637_
+.gate AOI210     A0=new_n637_ A1=new_n636_ B0=new_n529_ Y=new_n638_
+.gate NO4        A=new_n638_ B=new_n634_ C=new_n632_ D=new_n627_ Y=new_n639_
+.gate NA4        A=new_n639_ B=new_n626_ C=new_n616_ D=new_n606_ Y=new_n640_
+.gate NO4        A=new_n640_ B=new_n594_ C=new_n567_ D=new_n541_ Y=new_n641_
+.gate NA4        A=new_n641_ B=new_n471_ C=new_n371_ D=new_n321_ Y=men7
+.gate NO2        A=new_n109_ B=new_n92_ Y=new_n643_
+.gate NA2        A=new_n404_ B=new_n643_ Y=new_n644_
+.gate NA2        A=new_n516_ B=new_n84_ Y=new_n645_
+.gate OAI210     A0=new_n1111_ A1=new_n645_ B0=new_n644_ Y=new_n646_
+.gate NA3        A=i_7_ B=i_10_ C=i_9_ Y=new_n647_
+.gate NO2        A=new_n241_ B=i_4_ Y=new_n648_
+.gate NA2        A=new_n648_ B=i_8_ Y=new_n649_
+.gate AOI210     A0=new_n649_ A1=new_n108_ B0=new_n647_ Y=new_n650_
+.gate NA2        A=i_2_ B=new_n86_ Y=new_n651_
+.gate OAI210     A0=new_n89_ A1=new_n205_ B0=new_n206_ Y=new_n652_
+.gate NO2        A=i_7_ B=new_n37_ Y=new_n653_
+.gate NA2        A=i_4_ B=i_8_ Y=new_n654_
+.gate AOI210     A0=new_n654_ A1=new_n315_ B0=new_n653_ Y=new_n655_
+.gate OAI220     A0=new_n655_ A1=new_n651_ B0=new_n652_ B1=i_13_ Y=new_n656_
+.gate NO3        A=new_n656_ B=new_n650_ C=new_n646_ Y=new_n657_
+.gate AOI210     A0=new_n128_ A1=new_n62_ B0=i_10_ Y=new_n658_
+.gate AOI210     A0=new_n658_ A1=new_n241_ B0=new_n162_ Y=new_n659_
+.gate OR2        A=i_6_ B=i_10_ Y=new_n660_
+.gate NO2        A=new_n660_ B=new_n23_ Y=new_n661_
+.gate OR3        A=i_13_ B=i_6_ C=i_10_ Y=new_n662_
+.gate NO3        A=new_n662_ B=i_8_ C=new_n31_ Y=new_n663_
+.gate INV        A=new_n202_ Y=new_n664_
+.gate OR2        A=new_n659_ B=new_n276_ Y=new_n665_
+.gate AOI210     A0=new_n665_ A1=new_n657_ B0=new_n63_ Y=new_n666_
+.gate NOi21      An=i_11_ B=i_7_ Y=new_n667_
+.gate AO210      A0=i_12_ A1=i_7_ B0=i_2_ Y=new_n668_
+.gate NO2        A=new_n668_ B=new_n667_ Y=new_n669_
+.gate NA2        A=new_n669_ B=new_n210_ Y=new_n670_
+.gate NA3        A=i_3_ B=i_8_ C=i_9_ Y=new_n671_
+.gate NAi31      An=new_n671_ B=new_n219_ C=i_11_ Y=new_n672_
+.gate AOI210     A0=new_n672_ A1=new_n670_ B0=new_n63_ Y=new_n673_
+.gate NO3        A=new_n265_ B=new_n212_ C=i_8_ Y=new_n674_
+.gate OAI210     A0=new_n674_ A1=new_n231_ B0=new_n63_ Y=new_n675_
+.gate NA2        A=new_n435_ B=new_n31_ Y=new_n676_
+.gate OR2        A=new_n212_ B=new_n109_ Y=new_n677_
+.gate INV        A=new_n676_ Y=new_n678_
+.gate NO2        A=new_n63_ B=i_9_ Y=new_n679_
+.gate NO2        A=new_n679_ B=i_4_ Y=new_n680_
+.gate NA2        A=new_n680_ B=new_n678_ Y=new_n681_
+.gate NO2        A=i_1_ B=i_12_ Y=new_n682_
+.gate NA3        A=new_n682_ B=new_n111_ C=new_n24_ Y=new_n683_
+.gate NA4        A=new_n683_ B=new_n681_ C=new_n675_ D=new_n398_ Y=new_n684_
+.gate OAI210     A0=new_n684_ A1=new_n673_ B0=i_6_ Y=new_n685_
+.gate OAI210     A0=new_n671_ A1=new_n109_ B0=new_n492_ Y=new_n686_
+.gate NA2        A=new_n686_ B=new_n629_ Y=new_n687_
+.gate NO2        A=new_n241_ B=new_n86_ Y=new_n688_
+.gate NO2        A=new_n688_ B=i_11_ Y=new_n689_
+.gate INV        A=new_n687_ Y=new_n690_
+.gate NO4        A=new_n219_ B=new_n128_ C=i_13_ D=new_n86_ Y=new_n691_
+.gate NA2        A=new_n691_ B=new_n679_ Y=new_n692_
+.gate NA2        A=new_n241_ B=i_6_ Y=new_n693_
+.gate NO3        A=new_n660_ B=new_n237_ C=new_n23_ Y=new_n694_
+.gate AOI210     A0=i_1_ A1=new_n266_ B0=new_n694_ Y=new_n695_
+.gate OAI210     A0=new_n695_ A1=new_n44_ B0=new_n692_ Y=new_n696_
+.gate NA3        A=new_n576_ B=i_11_ C=new_n36_ Y=new_n697_
+.gate NA3        A=i_3_ B=i_8_ C=i_9_ Y=new_n698_
+.gate NO2        A=new_n46_ B=i_1_ Y=new_n699_
+.gate NA3        A=new_n699_ B=new_n275_ C=new_n44_ Y=new_n700_
+.gate NO2        A=new_n700_ B=new_n698_ Y=new_n701_
+.gate NA3        A=new_n679_ B=new_n328_ C=i_6_ Y=new_n702_
+.gate NO2        A=new_n702_ B=new_n23_ Y=new_n703_
+.gate AOI210     A0=new_n507_ A1=new_n445_ B0=new_n246_ Y=new_n704_
+.gate NO2        A=new_n704_ B=new_n651_ Y=new_n705_
+.gate NAi21      An=new_n697_ B=new_n94_ Y=new_n706_
+.gate NA2        A=new_n699_ B=new_n275_ Y=new_n707_
+.gate NO2        A=i_11_ B=new_n37_ Y=new_n708_
+.gate NA2        A=new_n708_ B=new_n24_ Y=new_n709_
+.gate OAI210     A0=new_n709_ A1=new_n707_ B0=new_n706_ Y=new_n710_
+.gate OR4        A=new_n710_ B=new_n705_ C=new_n703_ D=new_n701_ Y=new_n711_
+.gate NO3        A=new_n711_ B=new_n696_ C=new_n690_ Y=new_n712_
+.gate INV        A=i_1_ Y=new_n713_
+.gate NO2        A=new_n713_ B=new_n662_ Y=new_n714_
+.gate NO2        A=new_n440_ B=new_n86_ Y=new_n715_
+.gate NA2        A=new_n714_ B=new_n46_ Y=new_n716_
+.gate NA2        A=i_3_ B=new_n195_ Y=new_n717_
+.gate NO2        A=new_n717_ B=new_n114_ Y=new_n718_
+.gate AN2        A=new_n718_ B=new_n582_ Y=new_n719_
+.gate NO2        A=new_n237_ B=new_n44_ Y=new_n720_
+.gate NO3        A=new_n720_ B=new_n318_ C=new_n242_ Y=new_n721_
+.gate NO2        A=new_n117_ B=new_n37_ Y=new_n722_
+.gate NO2        A=new_n722_ B=i_6_ Y=new_n723_
+.gate NO2        A=new_n86_ B=i_9_ Y=new_n724_
+.gate NO2        A=new_n724_ B=new_n63_ Y=new_n725_
+.gate NO2        A=new_n725_ B=new_n682_ Y=new_n726_
+.gate NO4        A=new_n726_ B=new_n723_ C=new_n721_ D=i_4_ Y=new_n727_
+.gate NA2        A=i_1_ B=i_3_ Y=new_n728_
+.gate NO2        A=new_n484_ B=new_n95_ Y=new_n729_
+.gate INV        A=new_n729_ Y=new_n730_
+.gate NO2        A=new_n730_ B=new_n728_ Y=new_n731_
+.gate NO3        A=new_n731_ B=new_n727_ C=new_n719_ Y=new_n732_
+.gate NA4        A=new_n732_ B=new_n716_ C=new_n712_ D=new_n685_ Y=new_n733_
+.gate NO3        A=new_n509_ B=i_3_ C=i_7_ Y=new_n734_
+.gate NOi21      An=new_n734_ B=i_10_ Y=new_n735_
+.gate OA210      A0=new_n735_ A1=new_n250_ B0=new_n86_ Y=new_n736_
+.gate NA2        A=new_n390_ B=new_n389_ Y=new_n737_
+.gate NO3        A=new_n510_ B=new_n654_ C=new_n86_ Y=new_n738_
+.gate NA2        A=new_n738_ B=new_n25_ Y=new_n739_
+.gate NA2        A=new_n162_ B=new_n86_ Y=new_n740_
+.gate NA3        A=new_n740_ B=new_n739_ C=new_n737_ Y=new_n741_
+.gate OAI210     A0=new_n741_ A1=new_n736_ B0=i_1_ Y=new_n742_
+.gate NO2        A=new_n702_ B=new_n475_ Y=new_n743_
+.gate INV        A=new_n743_ Y=new_n744_
+.gate AOI210     A0=new_n744_ A1=new_n742_ B0=i_13_ Y=new_n745_
+.gate OR2        A=i_11_ B=i_7_ Y=new_n746_
+.gate NA3        A=new_n746_ B=i_3_ C=new_n138_ Y=new_n747_
+.gate AOI220     A0=new_n502_ A1=new_n162_ B0=new_n477_ B1=new_n138_ Y=new_n748_
+.gate NA2        A=new_n748_ B=new_n747_ Y=new_n749_
+.gate NO2        A=new_n510_ B=new_n24_ Y=new_n750_
+.gate AOI210     A0=new_n750_ A1=new_n715_ B0=new_n250_ Y=new_n751_
+.gate OAI220     A0=new_n751_ A1=new_n40_ B0=new_n54_ B1=new_n95_ Y=new_n752_
+.gate AOI210     A0=new_n749_ A1=new_n345_ B0=new_n752_ Y=new_n753_
+.gate NA2        A=new_n114_ B=new_n109_ Y=new_n754_
+.gate AOI220     A0=new_n754_ A1=new_n72_ B0=new_n406_ B1=new_n699_ Y=new_n755_
+.gate NO2        A=new_n755_ B=new_n247_ Y=new_n756_
+.gate AOI210     A0=new_n475_ A1=new_n36_ B0=i_13_ Y=new_n757_
+.gate NOi21      An=new_n757_ B=new_n645_ Y=new_n758_
+.gate NA2        A=new_n127_ B=i_13_ Y=new_n759_
+.gate NO2        A=new_n698_ B=new_n114_ Y=new_n760_
+.gate INV        A=new_n760_ Y=new_n761_
+.gate OAI220     A0=new_n761_ A1=new_n71_ B0=new_n759_ B1=new_n1112_ Y=new_n762_
+.gate NO3        A=new_n71_ B=new_n32_ C=new_n104_ Y=new_n763_
+.gate NA2        A=new_n26_ B=new_n195_ Y=new_n764_
+.gate INV        A=new_n763_ Y=new_n765_
+.gate AOI220     A0=new_n406_ A1=new_n699_ B0=new_n94_ B1=new_n105_ Y=new_n766_
+.gate OAI220     A0=new_n766_ A1=new_n649_ B0=new_n765_ B1=new_n664_ Y=new_n767_
+.gate NO4        A=new_n767_ B=new_n762_ C=new_n758_ D=new_n756_ Y=new_n768_
+.gate OR2        A=i_11_ B=i_6_ Y=new_n769_
+.gate NA3        A=new_n648_ B=new_n764_ C=i_7_ Y=new_n770_
+.gate AOI210     A0=new_n770_ A1=new_n761_ B0=new_n769_ Y=new_n771_
+.gate NA2        A=new_n689_ B=i_13_ Y=new_n772_
+.gate NA2        A=new_n105_ B=new_n764_ Y=new_n773_
+.gate NAi21      An=i_11_ B=i_12_ Y=new_n774_
+.gate NO3        A=new_n774_ B=i_13_ C=new_n86_ Y=new_n775_
+.gate NO3        A=new_n510_ B=new_n629_ C=new_n654_ Y=new_n776_
+.gate AOI220     A0=new_n776_ A1=new_n322_ B0=new_n775_ B1=new_n773_ Y=new_n777_
+.gate NA2        A=new_n777_ B=new_n772_ Y=new_n778_
+.gate OAI210     A0=new_n778_ A1=new_n771_ B0=new_n63_ Y=new_n779_
+.gate NO2        A=i_2_ B=i_12_ Y=new_n780_
+.gate NA2        A=new_n387_ B=new_n780_ Y=new_n781_
+.gate OAI210     A0=i_8_ A1=new_n389_ B0=new_n387_ Y=new_n782_
+.gate NO2        A=new_n128_ B=i_2_ Y=new_n783_
+.gate NA2        A=new_n783_ B=new_n682_ Y=new_n784_
+.gate NA3        A=new_n784_ B=new_n782_ C=new_n781_ Y=new_n785_
+.gate NA3        A=new_n785_ B=new_n45_ C=new_n230_ Y=new_n786_
+.gate NA4        A=new_n786_ B=new_n779_ C=new_n768_ D=new_n753_ Y=new_n787_
+.gate OR4        A=new_n787_ B=new_n745_ C=new_n733_ D=new_n666_ Y=men5
+.gate NA3        A=new_n24_ B=new_n780_ C=new_n109_ Y=new_n789_
+.gate NO2        A=new_n649_ B=i_11_ Y=new_n790_
+.gate NA2        A=new_n89_ B=new_n790_ Y=new_n791_
+.gate NA2        A=new_n791_ B=new_n789_ Y=new_n792_
+.gate NO3        A=i_11_ B=new_n241_ C=i_13_ Y=new_n793_
+.gate NO2        A=new_n124_ B=new_n23_ Y=new_n794_
+.gate NA2        A=i_12_ B=i_8_ Y=new_n795_
+.gate INV        A=new_n474_ Y=new_n796_
+.gate NA2        A=new_n1116_ B=new_n794_ Y=new_n797_
+.gate INV        A=new_n797_ Y=new_n798_
+.gate NO2        A=new_n798_ B=new_n792_ Y=new_n799_
+.gate INV        A=new_n173_ Y=new_n800_
+.gate INV        A=new_n250_ Y=new_n801_
+.gate INV        A=new_n476_ Y=new_n802_
+.gate AOI210     A0=new_n802_ A1=new_n801_ B0=new_n800_ Y=new_n803_
+.gate NO2        A=new_n484_ B=new_n26_ Y=new_n804_
+.gate NO2        A=new_n804_ B=new_n445_ Y=new_n805_
+.gate INV        A=new_n803_ Y=new_n806_
+.gate INV        A=new_n794_ Y=new_n807_
+.gate INV        A=new_n174_ Y=new_n808_
+.gate NO3        A=new_n668_ B=new_n38_ C=new_n26_ Y=new_n809_
+.gate AOI210     A0=new_n808_ A1=new_n89_ B0=new_n809_ Y=new_n810_
+.gate AOI210     A0=new_n810_ A1=new_n807_ B0=new_n195_ Y=new_n811_
+.gate OA210      A0=new_n669_ A1=new_n126_ B0=i_13_ Y=new_n812_
+.gate NA2        A=new_n202_ B=new_n205_ Y=new_n813_
+.gate NA2        A=new_n152_ B=i_8_ Y=new_n814_
+.gate AOI210     A0=new_n814_ A1=new_n813_ B0=new_n392_ Y=new_n815_
+.gate NA2        A=new_n212_ B=new_n148_ Y=new_n816_
+.gate NA2        A=new_n816_ B=new_n445_ Y=new_n817_
+.gate NO2        A=new_n105_ B=new_n44_ Y=new_n818_
+.gate NA3        A=new_n104_ B=new_n315_ C=new_n42_ Y=new_n819_
+.gate OAI210     A0=new_n819_ A1=new_n818_ B0=new_n817_ Y=new_n820_
+.gate NO4        A=new_n820_ B=new_n815_ C=new_n812_ D=new_n811_ Y=new_n821_
+.gate NA2        A=new_n621_ B=new_n28_ Y=new_n822_
+.gate NA2        A=new_n793_ B=new_n284_ Y=new_n823_
+.gate NA2        A=new_n823_ B=new_n822_ Y=new_n824_
+.gate NO2        A=new_n62_ B=i_12_ Y=new_n825_
+.gate INV        A=new_n824_ Y=new_n826_
+.gate NA4        A=new_n826_ B=new_n821_ C=new_n806_ D=new_n799_ Y=men6
+.gate NO2        A=new_n317_ B=i_1_ Y=new_n828_
+.gate NO2        A=new_n188_ B=new_n139_ Y=new_n829_
+.gate OAI210     A0=new_n829_ A1=new_n828_ B0=new_n783_ Y=new_n830_
+.gate NA4        A=new_n410_ B=new_n515_ C=new_n71_ D=new_n104_ Y=new_n831_
+.gate INV        A=new_n831_ Y=new_n832_
+.gate NO2        A=new_n225_ B=new_n520_ Y=new_n833_
+.gate NO2        A=new_n832_ B=new_n340_ Y=new_n834_
+.gate AO210      A0=new_n834_ A1=new_n830_ B0=i_12_ Y=new_n835_
+.gate NA2        A=new_n393_ B=new_n348_ Y=new_n836_
+.gate NA2        A=new_n735_ B=new_n71_ Y=new_n837_
+.gate NA2        A=new_n837_ B=new_n836_ Y=new_n838_
+.gate INV        A=new_n199_ Y=new_n839_
+.gate NO2        A=new_n838_ B=new_n839_ Y=new_n840_
+.gate INV        A=new_n339_ Y=new_n841_
+.gate NA2        A=new_n75_ B=new_n131_ Y=new_n842_
+.gate NO2        A=new_n842_ B=new_n841_ Y=new_n843_
+.gate NO3        A=new_n257_ B=new_n132_ C=i_9_ Y=new_n844_
+.gate NA2        A=new_n844_ B=new_n825_ Y=new_n845_
+.gate AOI210     A0=new_n845_ A1=new_n553_ B0=new_n188_ Y=new_n846_
+.gate NO2        A=new_n32_ B=i_11_ Y=new_n847_
+.gate NAi32      An=i_1_ Bn=i_9_ C=i_5_ Y=new_n848_
+.gate AOI210     A0=new_n769_ A1=new_n87_ B0=new_n848_ Y=new_n849_
+.gate OAI210     A0=new_n734_ A1=new_n609_ B0=new_n608_ Y=new_n850_
+.gate NAi21      An=new_n849_ B=new_n850_ Y=new_n851_
+.gate OR3        A=new_n851_ B=new_n846_ C=new_n843_ Y=new_n852_
+.gate NO2        A=new_n746_ B=i_2_ Y=new_n853_
+.gate NA2        A=new_n48_ B=new_n37_ Y=new_n854_
+.gate OAI210     A0=new_n854_ A1=new_n434_ B0=new_n377_ Y=new_n855_
+.gate NA2        A=new_n855_ B=new_n853_ Y=new_n856_
+.gate AO220      A0=new_n376_ A1=new_n366_ B0=new_n418_ B1=i_8_ Y=new_n857_
+.gate NA3        A=new_n857_ B=new_n262_ C=i_7_ Y=new_n858_
+.gate OR2        A=new_n669_ B=new_n476_ Y=new_n859_
+.gate NA3        A=new_n859_ B=new_n147_ C=new_n69_ Y=new_n860_
+.gate OR2        A=new_n796_ B=new_n36_ Y=new_n861_
+.gate NA4        A=new_n861_ B=new_n860_ C=new_n858_ D=new_n856_ Y=new_n862_
+.gate INV        A=new_n87_ Y=new_n863_
+.gate AOI220     A0=new_n863_ A1=new_n608_ B0=new_n833_ B1=new_n1115_ Y=new_n864_
+.gate NA3        A=new_n392_ B=new_n243_ C=new_n147_ Y=new_n865_
+.gate NA2        A=new_n418_ B=new_n70_ Y=new_n866_
+.gate NA4        A=new_n866_ B=new_n865_ C=new_n864_ D=new_n652_ Y=new_n867_
+.gate AO210      A0=new_n555_ A1=new_n46_ B0=new_n88_ Y=new_n868_
+.gate NA2        A=new_n868_ B=new_n516_ Y=new_n869_
+.gate AOI210     A0=new_n476_ A1=new_n474_ B0=new_n607_ Y=new_n870_
+.gate NO2        A=new_n660_ B=new_n105_ Y=new_n871_
+.gate OAI210     A0=new_n871_ A1=new_n112_ B0=new_n433_ Y=new_n872_
+.gate NA2        A=new_n249_ B=new_n46_ Y=new_n873_
+.gate INV        A=new_n636_ Y=new_n874_
+.gate NA3        A=new_n874_ B=new_n339_ C=i_7_ Y=new_n875_
+.gate NA4        A=new_n875_ B=new_n872_ C=new_n870_ D=new_n869_ Y=new_n876_
+.gate NO4        A=new_n876_ B=new_n867_ C=new_n862_ D=new_n852_ Y=new_n877_
+.gate NA4        A=new_n877_ B=new_n840_ C=new_n835_ D=new_n400_ Y=men3
+.gate NA2        A=i_12_ B=i_10_ Y=new_n879_
+.gate NA2        A=i_6_ B=i_7_ Y=new_n880_
+.gate NO2        A=new_n880_ B=i_0_ Y=new_n881_
+.gate NO2        A=i_11_ B=new_n241_ Y=new_n882_
+.gate OAI210     A0=new_n881_ A1=new_n299_ B0=new_n882_ Y=new_n883_
+.gate NO2        A=new_n883_ B=new_n195_ Y=new_n884_
+.gate NO3        A=new_n480_ B=new_n92_ C=new_n44_ Y=new_n885_
+.gate OA210      A0=new_n885_ A1=new_n884_ B0=new_n176_ Y=new_n886_
+.gate NA3        A=new_n865_ B=new_n652_ C=new_n391_ Y=new_n887_
+.gate NA2        A=new_n887_ B=new_n39_ Y=new_n888_
+.gate NOi21      An=new_n99_ B=new_n805_ Y=new_n889_
+.gate NO3        A=new_n677_ B=new_n484_ C=new_n131_ Y=new_n890_
+.gate NA2        A=new_n435_ B=new_n45_ Y=new_n891_
+.gate AN2        A=new_n482_ B=new_n55_ Y=new_n892_
+.gate NO3        A=new_n892_ B=new_n890_ C=new_n889_ Y=new_n893_
+.gate AOI210     A0=new_n893_ A1=new_n888_ B0=new_n48_ Y=new_n894_
+.gate NO4        A=new_n396_ B=new_n403_ C=new_n38_ D=i_0_ Y=new_n895_
+.gate NA2        A=new_n188_ B=new_n617_ Y=new_n896_
+.gate NOi21      An=new_n896_ B=new_n895_ Y=new_n897_
+.gate NA2        A=new_n757_ B=new_n724_ Y=new_n898_
+.gate NA2        A=new_n346_ B=new_n465_ Y=new_n899_
+.gate OAI220     A0=new_n899_ A1=new_n898_ B0=new_n897_ B1=new_n63_ Y=new_n900_
+.gate NOi21      An=i_5_ B=i_9_ Y=new_n901_
+.gate NA2        A=new_n901_ B=new_n473_ Y=new_n902_
+.gate INV        A=new_n738_ Y=new_n903_
+.gate NO3        A=new_n1113_ B=new_n275_ C=new_n73_ Y=new_n904_
+.gate NO2        A=new_n177_ B=new_n148_ Y=new_n905_
+.gate AOI210     A0=new_n905_ A1=new_n249_ B0=new_n904_ Y=new_n906_
+.gate OAI220     A0=new_n906_ A1=new_n183_ B0=new_n903_ B1=new_n902_ Y=new_n907_
+.gate NO4        A=new_n907_ B=new_n900_ C=new_n894_ D=new_n886_ Y=new_n908_
+.gate NA2        A=new_n188_ B=new_n24_ Y=new_n909_
+.gate NO2        A=new_n722_ B=new_n643_ Y=new_n910_
+.gate NO2        A=new_n910_ B=new_n909_ Y=new_n911_
+.gate NA2        A=new_n322_ B=new_n129_ Y=new_n912_
+.gate NAi21      An=new_n163_ B=new_n465_ Y=new_n913_
+.gate OAI220     A0=new_n913_ A1=new_n873_ B0=new_n912_ B1=new_n424_ Y=new_n914_
+.gate NO2        A=new_n914_ B=new_n911_ Y=new_n915_
+.gate NO2        A=new_n410_ B=new_n303_ Y=new_n916_
+.gate NA2        A=new_n916_ B=new_n760_ Y=new_n917_
+.gate NO4        A=new_n635_ B=new_n219_ C=new_n441_ D=new_n434_ Y=new_n918_
+.gate NA2        A=new_n918_ B=i_11_ Y=new_n919_
+.gate AN2        A=new_n99_ B=new_n248_ Y=new_n920_
+.gate NA2        A=new_n793_ B=new_n340_ Y=new_n921_
+.gate AOI210     A0=new_n516_ A1=new_n89_ B0=new_n58_ Y=new_n922_
+.gate OAI220     A0=new_n922_ A1=new_n921_ B0=new_n709_ B1=new_n578_ Y=new_n923_
+.gate NO2        A=new_n259_ B=new_n154_ Y=new_n924_
+.gate NA2        A=i_0_ B=i_10_ Y=new_n925_
+.gate OAI210     A0=new_n925_ A1=new_n86_ B0=new_n581_ Y=new_n926_
+.gate NO4        A=new_n114_ B=new_n58_ C=new_n717_ D=i_5_ Y=new_n927_
+.gate AO220      A0=new_n927_ A1=new_n926_ B0=new_n924_ B1=i_6_ Y=new_n928_
+.gate AOI220     A0=new_n346_ A1=new_n101_ B0=new_n188_ B1=new_n84_ Y=new_n929_
+.gate NA2        A=new_n612_ B=i_4_ Y=new_n930_
+.gate NA2        A=new_n191_ B=new_n205_ Y=new_n931_
+.gate OAI220     A0=new_n931_ A1=new_n921_ B0=new_n930_ B1=new_n929_ Y=new_n932_
+.gate NO4        A=new_n932_ B=new_n928_ C=new_n923_ D=new_n920_ Y=new_n933_
+.gate NA4        A=new_n933_ B=new_n919_ C=new_n917_ D=new_n915_ Y=new_n934_
+.gate NO2        A=new_n106_ B=new_n37_ Y=new_n935_
+.gate NA2        A=i_11_ B=i_9_ Y=new_n936_
+.gate NO3        A=i_12_ B=new_n936_ C=new_n651_ Y=new_n937_
+.gate AO220      A0=new_n937_ A1=new_n935_ B0=new_n277_ B1=new_n88_ Y=new_n938_
+.gate NO2        A=new_n48_ B=i_7_ Y=new_n939_
+.gate NAi31      An=new_n272_ B=new_n489_ C=new_n161_ Y=new_n940_
+.gate NO2        A=new_n936_ B=new_n73_ Y=new_n941_
+.gate NO2        A=new_n177_ B=i_0_ Y=new_n942_
+.gate INV        A=new_n942_ Y=new_n943_
+.gate NA2        A=new_n505_ B=new_n235_ Y=new_n944_
+.gate AOI210     A0=new_n390_ A1=new_n41_ B0=new_n432_ Y=new_n945_
+.gate OAI220     A0=new_n945_ A1=new_n902_ B0=new_n944_ B1=new_n943_ Y=new_n946_
+.gate NO3        A=new_n946_ B=new_n940_ C=new_n938_ Y=new_n947_
+.gate AOI210     A0=new_n475_ A1=new_n36_ B0=i_3_ Y=new_n948_
+.gate NA2        A=new_n173_ B=new_n106_ Y=new_n949_
+.gate NOi32      An=new_n948_ Bn=new_n191_ C=new_n949_ Y=new_n950_
+.gate AOI210     A0=new_n653_ A1=new_n340_ B0=new_n248_ Y=new_n951_
+.gate NO2        A=new_n951_ B=new_n891_ Y=new_n952_
+.gate NO2        A=new_n952_ B=new_n950_ Y=new_n953_
+.gate NOi21      An=i_7_ B=i_5_ Y=new_n954_
+.gate NOi31      An=new_n954_ B=i_0_ C=new_n774_ Y=new_n955_
+.gate NA3        A=new_n955_ B=new_n404_ C=i_6_ Y=new_n956_
+.gate OA210      A0=new_n949_ A1=new_n553_ B0=new_n956_ Y=new_n957_
+.gate NO3        A=new_n427_ B=new_n379_ C=new_n375_ Y=new_n958_
+.gate NO2        A=new_n269_ B=new_n329_ Y=new_n959_
+.gate NO2        A=new_n774_ B=new_n264_ Y=new_n960_
+.gate AOI210     A0=new_n960_ A1=new_n959_ B0=new_n958_ Y=new_n961_
+.gate NA4        A=new_n961_ B=new_n957_ C=new_n953_ D=new_n947_ Y=new_n962_
+.gate NO2        A=new_n909_ B=new_n244_ Y=new_n963_
+.gate AN2        A=new_n345_ B=new_n340_ Y=new_n964_
+.gate AO220      A0=new_n964_ A1=new_n905_ B0=new_n361_ B1=new_n27_ Y=new_n965_
+.gate OAI210     A0=new_n965_ A1=new_n963_ B0=i_10_ Y=new_n966_
+.gate NO2        A=new_n879_ B=new_n328_ Y=new_n967_
+.gate OA210      A0=new_n505_ A1=new_n228_ B0=new_n504_ Y=new_n968_
+.gate NA2        A=new_n967_ B=new_n941_ Y=new_n969_
+.gate NA3        A=new_n504_ B=new_n435_ C=new_n45_ Y=new_n970_
+.gate OAI210     A0=new_n913_ A1=i_7_ B0=new_n970_ Y=new_n971_
+.gate NO2        A=new_n262_ B=new_n46_ Y=new_n972_
+.gate NA2        A=new_n941_ B=new_n315_ Y=new_n973_
+.gate OAI210     A0=new_n972_ A1=new_n190_ B0=new_n973_ Y=new_n974_
+.gate AOI220     A0=new_n974_ A1=new_n505_ B0=new_n971_ B1=new_n73_ Y=new_n975_
+.gate NA3        A=new_n854_ B=new_n402_ C=new_n688_ Y=new_n976_
+.gate NA2        A=new_n95_ B=new_n44_ Y=new_n977_
+.gate NO2        A=new_n75_ B=new_n795_ Y=new_n978_
+.gate AOI220     A0=new_n978_ A1=new_n977_ B0=new_n176_ B1=new_n643_ Y=new_n979_
+.gate AOI210     A0=new_n979_ A1=new_n976_ B0=new_n47_ Y=new_n980_
+.gate NO3        A=new_n635_ B=new_n374_ C=new_n24_ Y=new_n981_
+.gate AOI210     A0=new_n750_ A1=new_n590_ B0=new_n981_ Y=new_n982_
+.gate NAi21      An=i_9_ B=i_5_ Y=new_n983_
+.gate NO2        A=new_n983_ B=new_n427_ Y=new_n984_
+.gate NO2        A=new_n647_ B=new_n108_ Y=new_n985_
+.gate AOI220     A0=new_n985_ A1=i_0_ B0=new_n984_ B1=new_n669_ Y=new_n986_
+.gate OAI220     A0=new_n986_ A1=new_n86_ B0=new_n982_ B1=new_n174_ Y=new_n987_
+.gate NO3        A=new_n987_ B=new_n980_ C=new_n558_ Y=new_n988_
+.gate NA4        A=new_n988_ B=new_n975_ C=new_n969_ D=new_n966_ Y=new_n989_
+.gate NO3        A=new_n989_ B=new_n962_ C=new_n934_ Y=new_n990_
+.gate NO2        A=i_0_ B=new_n774_ Y=new_n991_
+.gate NA2        A=new_n73_ B=new_n44_ Y=new_n992_
+.gate NO3        A=new_n108_ B=i_5_ C=new_n25_ Y=new_n993_
+.gate AO220      A0=new_n993_ A1=new_n73_ B0=new_n991_ B1=new_n176_ Y=new_n994_
+.gate NO2        A=new_n737_ B=new_n949_ Y=new_n995_
+.gate AOI210     A0=new_n994_ A1=new_n363_ B0=new_n995_ Y=new_n996_
+.gate NA2        A=new_n783_ B=new_n146_ Y=new_n997_
+.gate INV        A=new_n997_ Y=new_n998_
+.gate NA3        A=new_n998_ B=new_n724_ C=new_n73_ Y=new_n999_
+.gate NO2        A=new_n850_ B=new_n427_ Y=new_n1000_
+.gate NA3        A=new_n881_ B=i_2_ C=new_n48_ Y=new_n1001_
+.gate NA2        A=new_n882_ B=i_9_ Y=new_n1002_
+.gate AOI210     A0=new_n1001_ A1=new_n532_ B0=new_n1002_ Y=new_n1003_
+.gate NO2        A=new_n1003_ B=new_n1000_ Y=new_n1004_
+.gate NA3        A=new_n1004_ B=new_n999_ C=new_n996_ Y=new_n1005_
+.gate NA2        A=new_n964_ B=new_n392_ Y=new_n1006_
+.gate AOI210     A0=new_n310_ A1=new_n163_ B0=new_n1006_ Y=new_n1007_
+.gate NA2        A=new_n939_ B=new_n521_ Y=new_n1008_
+.gate AOI210     A0=i_11_ A1=new_n163_ B0=new_n1008_ Y=new_n1009_
+.gate NO2        A=new_n1009_ B=new_n1007_ Y=new_n1010_
+.gate NO3        A=new_n925_ B=new_n901_ C=new_n192_ Y=new_n1011_
+.gate AOI220     A0=new_n1011_ A1=i_11_ B0=new_n613_ B1=new_n75_ Y=new_n1012_
+.gate NO3        A=new_n213_ B=new_n403_ C=i_0_ Y=new_n1013_
+.gate OAI210     A0=new_n1013_ A1=new_n76_ B0=i_13_ Y=new_n1014_
+.gate INV        A=new_n222_ Y=new_n1015_
+.gate OAI220     A0=new_n571_ A1=new_n139_ B0=new_n693_ B1=new_n664_ Y=new_n1016_
+.gate NA3        A=new_n1016_ B=new_n419_ C=new_n1015_ Y=new_n1017_
+.gate NA4        A=new_n1017_ B=new_n1014_ C=new_n1012_ D=new_n1010_ Y=new_n1018_
+.gate NO2        A=new_n247_ B=new_n95_ Y=new_n1019_
+.gate AOI210     A0=new_n1019_ A1=new_n991_ B0=new_n110_ Y=new_n1020_
+.gate AOI220     A0=new_n954_ A1=new_n521_ B0=new_n881_ B1=new_n164_ Y=new_n1021_
+.gate NA2        A=new_n366_ B=new_n178_ Y=new_n1022_
+.gate OA220      A0=new_n1022_ A1=new_n1021_ B0=new_n1020_ B1=i_5_ Y=new_n1023_
+.gate AOI210     A0=i_0_ A1=new_n25_ B0=new_n177_ Y=new_n1024_
+.gate NA2        A=new_n1024_ B=new_n968_ Y=new_n1025_
+.gate NA3        A=new_n661_ B=new_n188_ C=new_n84_ Y=new_n1026_
+.gate NA2        A=new_n1026_ B=new_n588_ Y=new_n1027_
+.gate NO3        A=new_n891_ B=new_n54_ C=new_n48_ Y=new_n1028_
+.gate NA2        A=new_n526_ B=new_n519_ Y=new_n1029_
+.gate NO3        A=new_n1029_ B=new_n1028_ C=new_n1027_ Y=new_n1030_
+.gate NA3        A=new_n410_ B=new_n173_ C=new_n172_ Y=new_n1031_
+.gate NA3        A=new_n939_ B=new_n299_ C=i_10_ Y=new_n1032_
+.gate NA2        A=new_n1032_ B=new_n1031_ Y=new_n1033_
+.gate NA3        A=new_n410_ B=new_n347_ C=new_n226_ Y=new_n1034_
+.gate INV        A=new_n1034_ Y=new_n1035_
+.gate NOi31      An=new_n409_ B=new_n992_ C=new_n244_ Y=new_n1036_
+.gate NO3        A=new_n936_ B=new_n222_ C=new_n192_ Y=new_n1037_
+.gate NO4        A=new_n1037_ B=new_n1036_ C=new_n1035_ D=new_n1033_ Y=new_n1038_
+.gate NA4        A=new_n1038_ B=new_n1030_ C=new_n1025_ D=new_n1023_ Y=new_n1039_
+.gate AOI210     A0=new_n612_ A1=new_n570_ B0=new_n663_ Y=new_n1040_
+.gate NO3        A=new_n1040_ B=new_n603_ C=new_n360_ Y=new_n1041_
+.gate NA3        A=new_n882_ B=new_n111_ C=new_n124_ Y=new_n1042_
+.gate INV        A=new_n1042_ Y=new_n1043_
+.gate AOI210     A0=new_n1043_ A1=new_n1114_ B0=new_n1041_ Y=new_n1044_
+.gate NA3        A=new_n315_ B=i_5_ C=new_n195_ Y=new_n1045_
+.gate NAi31      An=new_n246_ B=new_n1045_ C=new_n247_ Y=new_n1046_
+.gate NO4        A=new_n244_ B=new_n213_ C=i_0_ D=i_12_ Y=new_n1047_
+.gate AOI220     A0=new_n1047_ A1=new_n1046_ B0=new_n832_ B1=new_n178_ Y=new_n1048_
+.gate AN2        A=new_n925_ B=new_n154_ Y=new_n1049_
+.gate NO4        A=new_n1049_ B=i_12_ C=new_n697_ D=new_n131_ Y=new_n1050_
+.gate NA2        A=new_n1050_ B=new_n222_ Y=new_n1051_
+.gate NA3        A=new_n101_ B=new_n617_ C=i_11_ Y=new_n1052_
+.gate NO2        A=new_n1052_ B=new_n156_ Y=new_n1053_
+.gate NA2        A=new_n954_ B=new_n502_ Y=new_n1054_
+.gate OAI220     A0=i_7_ A1=new_n1045_ B0=new_n1054_ B1=new_n725_ Y=new_n1055_
+.gate AOI210     A0=new_n1055_ A1=new_n942_ B0=new_n1053_ Y=new_n1056_
+.gate NA4        A=new_n1056_ B=new_n1051_ C=new_n1048_ D=new_n1044_ Y=new_n1057_
+.gate NO4        A=new_n1057_ B=new_n1039_ C=new_n1018_ D=new_n1005_ Y=new_n1058_
+.gate OAI210     A0=new_n853_ A1=new_n847_ B0=new_n37_ Y=new_n1059_
+.gate NA3        A=new_n948_ B=new_n387_ C=i_5_ Y=new_n1060_
+.gate NA3        A=new_n1060_ B=new_n1059_ C=new_n659_ Y=new_n1061_
+.gate NA2        A=new_n1061_ B=new_n210_ Y=new_n1062_
+.gate AN2        A=new_n746_ B=new_n388_ Y=new_n1063_
+.gate NA2        A=new_n189_ B=new_n191_ Y=new_n1064_
+.gate AO210      A0=new_n1063_ A1=new_n33_ B0=new_n1064_ Y=new_n1065_
+.gate OAI210     A0=new_n663_ A1=new_n661_ B0=new_n328_ Y=new_n1066_
+.gate NAi31      An=i_7_ B=i_2_ C=i_10_ Y=new_n1067_
+.gate NO2        A=new_n70_ B=new_n1067_ Y=new_n1068_
+.gate NO2        A=new_n1068_ B=new_n694_ Y=new_n1069_
+.gate NA3        A=new_n1069_ B=new_n1066_ C=new_n1065_ Y=new_n1070_
+.gate NO2        A=new_n492_ B=new_n275_ Y=new_n1071_
+.gate NO4        A=new_n237_ B=new_n145_ C=new_n728_ D=new_n37_ Y=new_n1072_
+.gate NO3        A=new_n1072_ B=new_n1071_ C=new_n918_ Y=new_n1073_
+.gate OAI210     A0=new_n1052_ A1=new_n148_ B0=new_n1073_ Y=new_n1074_
+.gate AOI210     A0=new_n1070_ A1=new_n48_ B0=new_n1074_ Y=new_n1075_
+.gate AOI210     A0=new_n1075_ A1=new_n1062_ B0=new_n73_ Y=new_n1076_
+.gate NO2        A=new_n610_ B=new_n399_ Y=new_n1077_
+.gate NO2        A=new_n1077_ B=new_n800_ Y=new_n1078_
+.gate OAI210     A0=new_n80_ A1=new_n54_ B0=new_n109_ Y=new_n1079_
+.gate NA2        A=new_n1079_ B=new_n76_ Y=new_n1080_
+.gate AOI210     A0=new_n1024_ A1=new_n939_ B0=new_n955_ Y=new_n1081_
+.gate AOI210     A0=new_n1081_ A1=new_n1080_ B0=new_n728_ Y=new_n1082_
+.gate NA2        A=new_n269_ B=new_n57_ Y=new_n1083_
+.gate AOI220     A0=new_n1083_ A1=new_n76_ B0=new_n361_ B1=new_n261_ Y=new_n1084_
+.gate NO2        A=new_n1084_ B=new_n241_ Y=new_n1085_
+.gate NA3        A=new_n99_ B=new_n317_ C=new_n31_ Y=new_n1086_
+.gate INV        A=new_n1086_ Y=new_n1087_
+.gate NO3        A=new_n1087_ B=new_n1085_ C=new_n1082_ Y=new_n1088_
+.gate OAI210     A0=new_n277_ A1=new_n159_ B0=new_n89_ Y=new_n1089_
+.gate NA3        A=new_n804_ B=new_n299_ C=new_n80_ Y=new_n1090_
+.gate AOI210     A0=new_n1090_ A1=new_n1089_ B0=i_11_ Y=new_n1091_
+.gate NA2        A=new_n654_ B=new_n219_ Y=new_n1092_
+.gate OAI210     A0=new_n1092_ A1=new_n948_ B0=new_n210_ Y=new_n1093_
+.gate NA2        A=new_n165_ B=i_5_ Y=new_n1094_
+.gate AOI210     A0=new_n1093_ A1=new_n813_ B0=new_n1094_ Y=new_n1095_
+.gate NO3        A=new_n59_ B=new_n58_ C=i_4_ Y=new_n1096_
+.gate OAI210     A0=new_n959_ A1=new_n317_ B0=new_n1096_ Y=new_n1097_
+.gate NO2        A=new_n1097_ B=new_n774_ Y=new_n1098_
+.gate NO4        A=new_n983_ B=new_n509_ C=new_n258_ D=new_n257_ Y=new_n1099_
+.gate NO2        A=new_n1099_ B=new_n607_ Y=new_n1100_
+.gate NO2        A=new_n849_ B=new_n380_ Y=new_n1101_
+.gate AOI210     A0=new_n1101_ A1=new_n1100_ B0=new_n40_ Y=new_n1102_
+.gate NO4        A=new_n1102_ B=new_n1098_ C=new_n1095_ D=new_n1091_ Y=new_n1103_
+.gate OAI210     A0=new_n1088_ A1=i_4_ B0=new_n1103_ Y=new_n1104_
+.gate NO3        A=new_n1104_ B=new_n1078_ C=new_n1076_ Y=new_n1105_
+.gate NA4        A=new_n1105_ B=new_n1058_ C=new_n990_ D=new_n908_ Y=men4
+.gate INV        A=i_5_ Y=new_n1109_
+.gate INV        A=new_n383_ Y=new_n1110_
+.gate INV        A=new_n144_ Y=new_n1111_
+.gate INV        A=i_1_ Y=new_n1112_
+.gate INV        A=i_9_ Y=new_n1113_
+.gate INV        A=i_5_ Y=new_n1114_
+.gate INV        A=i_7_ Y=new_n1115_
+.gate INV        A=i_3_ Y=new_n1116_
+.end

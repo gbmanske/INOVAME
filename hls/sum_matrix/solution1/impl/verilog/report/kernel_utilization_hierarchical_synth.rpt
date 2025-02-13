@@ -1,0 +1,74 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Mon Jan  6 15:47:07 2025
+| Host         : cadmicro-inf-el8-623207 running 64-bit Rocky Linux release 8.10 (Green Obsidian)
+| Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/kernel_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7a200tfbg484-3
+| Speed File   : -3
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------------------------------------------------+------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                                Instance                               |                                 Module                                 | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++-----------------------------------------------------------------------+------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| bd_0_wrapper                                                          |                                                                  (top) |       2584 |       2189 |       0 |  395 | 3827 |      0 |      3 |          8 |
+|   bd_0_i                                                              |                                                                   bd_0 |       2584 |       2189 |       0 |  395 | 3827 |      0 |      3 |          8 |
+|     hls_inst                                                          |                                                        bd_0_hls_inst_0 |       2584 |       2189 |       0 |  395 | 3827 |      0 |      3 |          8 |
+|       (hls_inst)                                                      |                                                        bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       inst                                                            |                                                 bd_0_hls_inst_0_kernel |       2584 |       2189 |       0 |  395 | 3827 |      0 |      3 |          8 |
+|         (inst)                                                        |                                                 bd_0_hls_inst_0_kernel |         18 |         18 |       0 |    0 |  319 |      0 |      0 |          0 |
+|         control_s_axi_U                                               |                                   bd_0_hls_inst_0_kernel_control_s_axi |        206 |        206 |       0 |    0 |  235 |      0 |      0 |          0 |
+|         gmem0_m_axi_U                                                 |                                     bd_0_hls_inst_0_kernel_gmem0_m_axi |       1351 |       1055 |       0 |  296 | 1923 |      0 |      2 |          0 |
+|           bus_read                                                    |                                bd_0_hls_inst_0_kernel_gmem0_m_axi_read |        386 |        385 |       0 |    1 |  616 |      0 |      0 |          0 |
+|             fifo_burst                                                |              bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo__parameterized1_5 |         17 |         16 |       0 |    1 |   13 |      0 |      0 |          0 |
+|             fifo_rctl                                                 |              bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo__parameterized1_6 |          9 |          9 |       0 |    0 |    8 |      0 |      0 |          0 |
+|             rreq_burst_conv                                           |                   bd_0_hls_inst_0_kernel_gmem0_m_axi_burst_converter_7 |        320 |        320 |       0 |    0 |  524 |      0 |      0 |          0 |
+|             rs_rdata                                                  |           bd_0_hls_inst_0_kernel_gmem0_m_axi_reg_slice__parameterized2 |         40 |         40 |       0 |    0 |   71 |      0 |      0 |          0 |
+|           bus_write                                                   |                               bd_0_hls_inst_0_kernel_gmem0_m_axi_write |        597 |        489 |       0 |  108 |  838 |      0 |      0 |          0 |
+|             (bus_write)                                               |                               bd_0_hls_inst_0_kernel_gmem0_m_axi_write |          6 |          6 |       0 |    0 |   10 |      0 |      0 |          0 |
+|             fifo_burst                                                |                bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo__parameterized4 |         26 |         22 |       0 |    4 |   16 |      0 |      0 |          0 |
+|             fifo_resp                                                 |              bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo__parameterized1_3 |         17 |         16 |       0 |    1 |   13 |      0 |      0 |          0 |
+|             rs_resp                                                   |           bd_0_hls_inst_0_kernel_gmem0_m_axi_reg_slice__parameterized1 |          4 |          4 |       0 |    0 |    5 |      0 |      0 |          0 |
+|             wreq_burst_conv                                           |                     bd_0_hls_inst_0_kernel_gmem0_m_axi_burst_converter |        322 |        322 |       0 |    0 |  524 |      0 |      0 |          0 |
+|             wreq_throttle                                             |                            bd_0_hls_inst_0_kernel_gmem0_m_axi_throttle |        222 |        119 |       0 |  103 |  270 |      0 |      0 |          0 |
+|           load_unit                                                   |                                bd_0_hls_inst_0_kernel_gmem0_m_axi_load |        186 |         93 |       0 |   93 |  233 |      0 |      1 |          0 |
+|             (load_unit)                                               |                                bd_0_hls_inst_0_kernel_gmem0_m_axi_load |          1 |          1 |       0 |    0 |   94 |      0 |      0 |          0 |
+|             buff_rdata                                                |                bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo__parameterized3 |         41 |         41 |       0 |    0 |   36 |      0 |      1 |          0 |
+|             fifo_rreq                                                 |                              bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo_1 |        144 |         51 |       0 |   93 |  103 |      0 |      0 |          0 |
+|           store_unit                                                  |                               bd_0_hls_inst_0_kernel_gmem0_m_axi_store |        182 |         88 |       0 |   94 |  236 |      0 |      1 |          0 |
+|             (store_unit)                                              |                               bd_0_hls_inst_0_kernel_gmem0_m_axi_store |          1 |          1 |       0 |    0 |   93 |      0 |      0 |          0 |
+|             buff_wdata                                                |                bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo__parameterized0 |         10 |         10 |       0 |    0 |   20 |      0 |      1 |          0 |
+|             fifo_wreq                                                 |                                bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo |        144 |         51 |       0 |   93 |  103 |      0 |      0 |          0 |
+|             fifo_wrsp                                                 |                bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo__parameterized1 |         20 |         19 |       0 |    1 |   13 |      0 |      0 |          0 |
+|             user_resp                                                 |                bd_0_hls_inst_0_kernel_gmem0_m_axi_fifo__parameterized2 |          7 |          7 |       0 |    0 |    7 |      0 |      0 |          0 |
+|         gmem1_m_axi_U                                                 |                                     bd_0_hls_inst_0_kernel_gmem1_m_axi |        574 |        480 |       0 |   94 |  852 |      0 |      1 |          0 |
+|           bus_read                                                    |                                bd_0_hls_inst_0_kernel_gmem1_m_axi_read |        386 |        385 |       0 |    1 |  616 |      0 |      0 |          0 |
+|             fifo_burst                                                |                bd_0_hls_inst_0_kernel_gmem1_m_axi_fifo__parameterized1 |         17 |         16 |       0 |    1 |   13 |      0 |      0 |          0 |
+|             fifo_rctl                                                 |              bd_0_hls_inst_0_kernel_gmem1_m_axi_fifo__parameterized1_0 |          9 |          9 |       0 |    0 |    8 |      0 |      0 |          0 |
+|             rreq_burst_conv                                           |                     bd_0_hls_inst_0_kernel_gmem1_m_axi_burst_converter |        320 |        320 |       0 |    0 |  524 |      0 |      0 |          0 |
+|             rs_rdata                                                  |           bd_0_hls_inst_0_kernel_gmem1_m_axi_reg_slice__parameterized2 |         40 |         40 |       0 |    0 |   71 |      0 |      0 |          0 |
+|           bus_write                                                   |                               bd_0_hls_inst_0_kernel_gmem1_m_axi_write |          2 |          2 |       0 |    0 |    3 |      0 |      0 |          0 |
+|             rs_resp                                                   |           bd_0_hls_inst_0_kernel_gmem1_m_axi_reg_slice__parameterized1 |          2 |          2 |       0 |    0 |    3 |      0 |      0 |          0 |
+|           load_unit                                                   |                                bd_0_hls_inst_0_kernel_gmem1_m_axi_load |        186 |         93 |       0 |   93 |  233 |      0 |      1 |          0 |
+|             (load_unit)                                               |                                bd_0_hls_inst_0_kernel_gmem1_m_axi_load |          1 |          1 |       0 |    0 |   94 |      0 |      0 |          0 |
+|             buff_rdata                                                |                bd_0_hls_inst_0_kernel_gmem1_m_axi_fifo__parameterized3 |         41 |         41 |       0 |    0 |   36 |      0 |      1 |          0 |
+|             fifo_rreq                                                 |                                bd_0_hls_inst_0_kernel_gmem1_m_axi_fifo |        144 |         51 |       0 |   93 |  103 |      0 |      0 |          0 |
+|         grp_kernel_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_92     | bd_0_hls_inst_0_kernel_kernel_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2 |        388 |        383 |       0 |    5 |  498 |      0 |      0 |          4 |
+|           (grp_kernel_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_92) | bd_0_hls_inst_0_kernel_kernel_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2 |        196 |        191 |       0 |    5 |  496 |      0 |      0 |          2 |
+|           flow_control_loop_pipe_sequential_init_U                    |          bd_0_hls_inst_0_kernel_flow_control_loop_pipe_sequential_init |          5 |          5 |       0 |    0 |    2 |      0 |      0 |          0 |
+|           mul_31ns_32ns_62_1_1_U1                                     |                            bd_0_hls_inst_0_kernel_mul_31ns_32ns_62_1_1 |        187 |        187 |       0 |    0 |    0 |      0 |      0 |          2 |
+|         mul_32ns_32ns_64_1_1_U12                                      |                            bd_0_hls_inst_0_kernel_mul_32ns_32ns_64_1_1 |         47 |         47 |       0 |    0 |    0 |      0 |      0 |          4 |
++-----------------------------------------------------------------------+------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

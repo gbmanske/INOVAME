@@ -1,0 +1,61 @@
+module ula (
+input [31:0]a,b,
+input [2:0] sel,
+output [31:0] s,
+output fov,fz,fn	
+);
+
+
+
+assign when s
+
+
+always @(*) begin
+// inicializa flags
+case (sel)
+   3'b000: begin
+               s = a & b;                      // AND operation
+               fov = 0'b0;                         // Overflow flag (em branco)
+               fz = ~(|s);                          // Zero flag (em branco)
+               fn = s[31];                          // Negative flag (em branco)
+           end
+    3'b001: begin
+               s = a | b;                      // OR operation
+               fov = 0'b0;                         // Overflow flag (em branco)
+               fz = ~(|s);                          // Zero flag (em branco)
+               fn = s[31];                          // Negative flag (em branco)
+           end
+    3'b010: begin
+               s = a + b;                      // ADDITION operation
+               fov = (a[31] == b[31]) && (a[31] != s[31];                         // Overflow flag (em branco)
+               fz = ~(|s);                          // Zero flag (em branco)
+               fn = s[31];                          // Negative flag (em branco))
+           end
+    3'b100: begin
+               s = a & (~b);                   // AND with NOT b
+               fov = 0'b0;                         // Overflow flag (em branco)
+               fz = ~(|s);                          // Zero flag (em branco)
+               fn = s[31];                          // Negative flag (em branco)
+           end
+    3'b101: begin
+               s = a | (~b);                   // OR with NOT b
+               fov = 0'b0;                         // Overflow flag (em branco)
+               fz = ~(|s);                          // Zero flag (em branco)
+               fn = s[31];                          // Negative flag (em branco))
+           end
+    3'b110: begin
+               s = a - b;                      // Subtraction
+               fov = (a[31] != b[31]) && (a[31] == s[31];      // Overflow flag (em branco)
+               fz = ~(|s);                          // Zero flag (em branco)
+               fn = s[31];                          // Negative flag (em branco))
+           end
+    default: begin
+               s = 32'b0; 							  // Clear output
+               fov = 0'b0;                         // Overflow flag (em branco)
+               fz = 0'b0;                          // Zero flag (em branco)
+               fn = 0'b0;                          // Negative flag (em branco))
+           end			  
+endcase
+//atualiza flags
+end
+endmodule

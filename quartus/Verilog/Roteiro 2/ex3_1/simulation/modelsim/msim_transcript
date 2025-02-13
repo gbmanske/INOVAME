@@ -1,0 +1,50 @@
+# do ex3_1_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {ex3_1.vo}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ex3_1
+# 
+# Top level modules:
+# 	ex3_1
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/ex3_1 {/home/gme/guilherme.manske/quartus/Verilog/ex3_1/tb_compare_concat.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_compare_concat
+# 
+# Top level modules:
+# 	tb_compare_concat
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs="+acc"  tb_compare_concat
+# vsim +transport_int_delays +transport_path_delays -L altera_mf_ver -L altera_ver -L lpm_ver -L sgate_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps tb_compare_concat 
+# Loading work.tb_compare_concat
+# Loading work.ex3_1
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# Loading instances from ex3_1_v.sdo
+# Loading timing data from ex3_1_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_compare_concat File: /home/gme/guilherme.manske/quartus/Verilog/ex3_1/tb_compare_concat.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# a=01, b=10, c=11 => result=0
+# a=11, b=00, c=01 => result=1
+# a=10, b=10, c=10 => result=0
+# Break in Module tb_compare_concat at /home/gme/guilherme.manske/quartus/Verilog/ex3_1/tb_compare_concat.v line 32
+# Simulation Breakpoint: Break in Module tb_compare_concat at /home/gme/guilherme.manske/quartus/Verilog/ex3_1/tb_compare_concat.v line 32
+# MACRO ./ex3_1_run_msim_gate_verilog.do PAUSED at line 17

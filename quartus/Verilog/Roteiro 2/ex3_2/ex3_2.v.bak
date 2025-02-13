@@ -1,0 +1,13 @@
+/*Implemente um driver de dados de 8 bits de largura. O driver deve passar a
+entrada para a saída quando o sinal de enable for ativo e estar em alta
+impedância (z) quando o enable está inativo.*/
+
+module ex3_2(data_in,enable,data_out)
+
+input [7:0] data_in;
+input enable;
+output [7:0] data_out;
+
+data_out = enable ? data_in : 8'bZZZZZZZZ;
+
+endmodule

@@ -1,0 +1,59 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Feb 05, 2025 at 12:06:49 -03
+xrun
+	-lwdgen
+	-access rwc
+	-uvm
+	-uvmhome /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+	-svseed 100008998
+	-sv
+	-f file_list.f
+		/home/gme/guilherme.manske/INOVAME/verification/project-spi/spi_if.sv
+		+incdir+/home/gme/guilherme.manske/INOVAME/verification/project-spi/objects/
+		+incdir+/home/gme/guilherme.manske/INOVAME/verification/project-spi/components/
+		/home/gme/guilherme.manske/INOVAME/verification/project-spi/spi_pkg.sv
+		/home/gme/guilherme.manske/INOVAME/verification/project-spi/top_tb.sv
+	+UVM_VERBOSITY=UVM_MEDIUM
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_MEDIUM
+
+Recompiling... reason: file './components/spi_base_test.sv' is newer than expected.
+	expected: Tue Feb  4 17:10:24 2025
+	actual:   Wed Feb  5 12:06:44 2025
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+file: /home/gme/guilherme.manske/INOVAME/verification/project-spi/spi_pkg.sv
+	package worklib.spi_pkg:sv
+		errors: 0, warnings: 0
+file: /home/gme/guilherme.manske/INOVAME/verification/project-spi/top_tb.sv
+	module worklib.top_tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		spi_pkg
+		top_tb
+        `uvm_info("Number of master items received", $sformat("%0d", master_items_q.size()), UVM_NONE) 
+                                                                                                     |
+xmelab: *E,NOTSYF (./components/spi_scoreboard.sv,28|101): System task was invoked like a function (it has no return value) [2.7.4(IEEE Std 1364-2001)].
+        `uvm_info("Number of slave items received", $sformat("%0d", slave_items_q.size()), UVM_NONE)        
+                                                                                                   |
+xmelab: *E,NOTSYF (./components/spi_scoreboard.sv,29|99): System task was invoked like a function (it has no return value) [2.7.4(IEEE Std 1364-2001)].
+        `uvm_info("master_scbd", $sformat("Received item in MASTER."), UVM_LOW)
+                                                                              |
+xmelab: *E,NOTSYF (./components/spi_scoreboard.sv,35|78): System task was invoked like a function (it has no return value) [2.7.4(IEEE Std 1364-2001)].
+        `uvm_info("master_scdb", $sformat("%s", m_item.sprint()), UVM_FULL)
+                                                                          |
+xmelab: *E,NOTSYF (./components/spi_scoreboard.sv,36|74): System task was invoked like a function (it has no return value) [2.7.4(IEEE Std 1364-2001)].
+        `uvm_info("slave_scbd", $sformat("Received item in SLAVE."), UVM_LOW)
+                                                                            |
+xmelab: *E,NOTSYF (./components/spi_scoreboard.sv,41|76): System task was invoked like a function (it has no return value) [2.7.4(IEEE Std 1364-2001)].
+        `uvm_info("slave_scdb", $sformat("%s", m_item.sprint()), UVM_FULL)
+                                                                         |
+xmelab: *E,NOTSYF (./components/spi_scoreboard.sv,42|73): System task was invoked like a function (it has no return value) [2.7.4(IEEE Std 1364-2001)].
+xrun: *E,ELBERR: Error (*E) or soft error (*SE) occurred during elaboration (status 1), exiting.
+TOOL:	xrun(64)	23.09-s013: Exiting on Feb 05, 2025 at 12:06:49 -03  (total: 00:00:00)

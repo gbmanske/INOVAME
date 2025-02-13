@@ -1,0 +1,48 @@
+module maquinaVenda ( input clk, rst, R, C, output reg L, [1:0] state_out );
+localparam IDLE = 0, CENT50 = 1, REAL1 = 2, LIBERA = 3;// definição de estados como parametros
+
+
+always @ (posedge clk) begin // lógica para atualizar estado
+	if (rst)	state <= IDLE;
+	else 	state <= next_state;
+end
+always @ (*) begin // lógica para atualizar estado
+	case(state) begin
+		IDLE: begin
+			if(R) next_state = REAL1;
+			else if (C) next_state = CENT50;
+			else next_state = IDLE;
+		end
+		CENT50: begin
+			if(R) next_state = LIBERA;
+			else if (C) next_state = REAL1;
+			else next_state = CENT50;
+		end
+		REAL1: begin
+			if(R) next_state = LIBERA;
+			else if (C) next_state = LIBERA;
+			else next_state = REAL1;
+		end
+		LIBERA: begin
+			next_state = IDLE;
+		end
+	endcase
+end
+
+always @(*) begin // logica para atualizar saida
+	case(state) begin
+		IDLE: begin
+			L = 0;
+		end
+		CENT50: begin
+			L = 0;
+		end
+		REAL1: begin
+			L = 0;
+		end
+		LIBERA: begin
+			L = 0;
+		end
+	endcase
+end
+endmodule

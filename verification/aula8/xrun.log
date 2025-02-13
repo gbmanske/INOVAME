@@ -1,0 +1,46 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Feb 10, 2025 at 16:51:52 -03
+xrun
+	-lwdgen
+	-access rwc
+	-uvm
+	-uvmhome /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/
+	-gui
+	-svseed 100003762
+	-coverage all
+	-sv
+	-f file_list.f
+		/home/gme/guilherme.manske/INOVAME/verification/aula8/alu_if.sv
+		+incdir+/home/gme/guilherme.manske/INOVAME/verification/aula8/objects/
+		+incdir+/home/gme/guilherme.manske/INOVAME/verification/aula8/components/
+		/home/gme/guilherme.manske/INOVAME/verification/aula8/alu_pkg.sv
+		/home/gme/guilherme.manske/INOVAME/verification/aula8/alu.v
+		/home/gme/guilherme.manske/INOVAME/verification/aula8/top_tb.sv
+	+UVM_VERBOSITY=UVM_MEDIUM
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_MEDIUM
+
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED set from command line: 100003762
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> source /tools/cadence/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d//additions/sv/files/tcl/uvm_sim.tcl
+xcelium> ^C
+xcelium> exit
+xmsim: *W,NORUNCMD: No 'run' command issued.
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  top_tb(top_tb)
+  scope    :  scope
+  testname :  test_sv100003762
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_1b53ff19_00d85a30.ucm
+  data               :  ./cov_work/scope/test_sv100003762/icc_1b53ff19_00d85a30.ucd
+TOOL:	xrun(64)	23.09-s013: Exiting on Feb 10, 2025 at 16:52:47 -03  (total: 00:00:55)

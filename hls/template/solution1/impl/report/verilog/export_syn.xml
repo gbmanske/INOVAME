@@ -1,0 +1,148 @@
+<profile>
+  <RunData>
+    <RUN_TYPE>synth</RUN_TYPE>
+    <VIVADO_VERSION>v.2023.2</VIVADO_VERSION>
+    <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+  </RunData>
+  <TimingReport>
+    <TargetClockPeriod>10.000</TargetClockPeriod>
+    <AchievedClockPeriod>4.799</AchievedClockPeriod>
+    <CLOCK_NAME>ap_clk</CLOCK_NAME>
+    <CP_FINAL>4.799</CP_FINAL>
+    <CP_ROUTE>NA</CP_ROUTE>
+    <CP_SYNTH>4.799</CP_SYNTH>
+    <CP_TARGET>10.000</CP_TARGET>
+    <SLACK_FINAL>5.201</SLACK_FINAL>
+    <SLACK_ROUTE/>
+    <SLACK_SYNTH>5.201</SLACK_SYNTH>
+    <TIMING_MET>TRUE</TIMING_MET>
+    <TNS_FINAL>0.000</TNS_FINAL>
+    <TNS_ROUTE>NA</TNS_ROUTE>
+    <TNS_SYNTH>0.000</TNS_SYNTH>
+    <WNS_FINAL>5.201</WNS_FINAL>
+    <WNS_ROUTE>NA</WNS_ROUTE>
+    <WNS_SYNTH>5.201</WNS_SYNTH>
+  </TimingReport>
+  <AreaReport>
+    <Resources>
+      <BRAM>3</BRAM>
+      <CLB>0</CLB>
+      <DSP>0</DSP>
+      <FF>3619</FF>
+      <LATCH>0</LATCH>
+      <LUT>2542</LUT>
+      <SRL>441</SRL>
+      <URAM>0</URAM>
+    </Resources>
+    <AvailableResources>
+      <BRAM>730</BRAM>
+      <CLB>0</CLB>
+      <DSP>740</DSP>
+      <FF>269200</FF>
+      <LUT>134600</LUT>
+      <URAM>0</URAM>
+    </AvailableResources>
+  </AreaReport>
+  <RtlModules>
+    <RtlModule CELL="inst" DEPTH="0" IS_TOP="1" TYPE="function" MODULENAME="kernel" DISPNAME="inst" RTLNAME="kernel">
+      <SubModules count="3">control_s_axi_U gmem0_m_axi_U gmem1_m_axi_U</SubModules>
+      <Resources BRAM="3" FF="3619" LUT="2542"/>
+      <LocalResources FF="302" LUT="33"/>
+    </RtlModule>
+    <RtlModule CELL="inst/control_s_axi_U" BINDMODULE="kernel_control_s_axi" DEPTH="1" TYPE="resource" MODULENAME="control_s_axi" DISPNAME="control_s_axi_U" RTLNAME="kernel_control_s_axi">
+      <Resources FF="235" LUT="206"/>
+      <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem0_m_axi_U" BINDMODULE="kernel_gmem0_m_axi" DEPTH="1" TYPE="resource" MODULENAME="gmem0_m_axi" DISPNAME="gmem0_m_axi_U" RTLNAME="kernel_gmem0_m_axi">
+      <Resources BRAM="2" FF="2164" LUT="1631"/>
+      <BindNode BINDTYPE="adapter" BRAM="2" BUNDLEDNAME="gmem0" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem0_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+    <RtlModule CELL="inst/gmem1_m_axi_U" BINDMODULE="kernel_gmem1_m_axi" DEPTH="1" TYPE="resource" MODULENAME="gmem1_m_axi" DISPNAME="gmem1_m_axi_U" RTLNAME="kernel_gmem1_m_axi">
+      <Resources BRAM="1" FF="918" LUT="672"/>
+      <BindNode BINDTYPE="adapter" BRAM="2" BUNDLEDNAME="gmem1" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem1_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+    </RtlModule>
+  </RtlModules>
+  <TimingPaths>
+    <TPATH DATAPATH_DELAY="4.380" DATAPATH_LOGIC_DELAY="2.242" DATAPATH_NET_DELAY="2.138" ENDPOINT_PIN="gmem1_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/ENARDEN" LOGIC_LEVELS="4" MAX_FANOUT="28" SLACK="5.201" STARTPOINT_PIN="gmem1_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK">
+      <CELL NAME="gmem1_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg" PRIMITIVE_TYPE="BMEM.bram.RAMB18E1" LINE_NUMBER="2757"/>
+      <CELL NAME="gmem1_m_axi_U/load_unit/buff_rdata/U_fifo_mem/raddr[7]_i_4" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="456"/>
+      <CELL NAME="gmem1_m_axi_U/load_unit/bus_wide_gen.rreq_offset/U_fifo_srl/raddr[7]_i_3" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="456"/>
+      <CELL NAME="gmem1_m_axi_U/load_unit/buff_rdata/U_fifo_mem/raddr[7]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" LINE_NUMBER="456"/>
+      <CELL NAME="gmem1_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg_i_1__1" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="9"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="4.407" DATAPATH_LOGIC_DELAY="1.039" DATAPATH_NET_DELAY="3.368" ENDPOINT_PIN="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[0]/R" LOGIC_LEVELS="6" MAX_FANOUT="30" SLACK="5.205" STARTPOINT_PIN="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]/C">
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_12" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_11" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_8" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="9"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="4.407" DATAPATH_LOGIC_DELAY="1.039" DATAPATH_NET_DELAY="3.368" ENDPOINT_PIN="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[10]/R" LOGIC_LEVELS="6" MAX_FANOUT="30" SLACK="5.205" STARTPOINT_PIN="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]/C">
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_12" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_11" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_8" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="9"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[10]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="4.407" DATAPATH_LOGIC_DELAY="1.039" DATAPATH_NET_DELAY="3.368" ENDPOINT_PIN="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[11]/R" LOGIC_LEVELS="6" MAX_FANOUT="30" SLACK="5.205" STARTPOINT_PIN="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]/C">
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_12" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_11" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_8" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="9"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[11]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+    <TPATH DATAPATH_DELAY="4.407" DATAPATH_LOGIC_DELAY="1.039" DATAPATH_NET_DELAY="3.368" ENDPOINT_PIN="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[12]/R" LOGIC_LEVELS="6" MAX_FANOUT="30" SLACK="5.205" STARTPOINT_PIN="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]/C">
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[5]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_12" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_11" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_8" PRIMITIVE_TYPE="LUT.others.LUT4" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/dout[33]_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_4" PRIMITIVE_TYPE="LUT.others.LUT6" LINE_NUMBER="462"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.wreq_offset/U_fifo_srl/bus_wide_gen.len_cnt[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT5" LINE_NUMBER="9"/>
+      <CELL NAME="gmem0_m_axi_U/store_unit/bus_wide_gen.len_cnt_reg[12]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="1088"/>
+    </TPATH>
+  </TimingPaths>
+  <VivadoReportFiles>
+    <ReportFile TYPE="design_analysis" PATH="verilog/report/kernel_design_analysis_synth.rpt"/>
+    <ReportFile TYPE="failfast" PATH="verilog/report/kernel_failfast_synth.rpt"/>
+    <ReportFile TYPE="timing" PATH="verilog/report/kernel_timing_synth.rpt"/>
+    <ReportFile TYPE="timing_paths" PATH="verilog/report/kernel_timing_paths_synth.rpt"/>
+    <ReportFile TYPE="utilization" PATH="verilog/report/kernel_utilization_synth.rpt"/>
+    <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/kernel_utilization_hierarchical_synth.rpt"/>
+  </VivadoReportFiles>
+  <GeneralInfo NAME="General Information">
+    <item NAME="Date" VALUE="Tue Jan 07 14:22:14 -03 2025"/>
+    <item NAME="Version" VALUE="2023.2 (Build 4023990 on Oct 11 2023)"/>
+    <item NAME="Project" VALUE="template"/>
+    <item NAME="Solution" VALUE="solution1 (Vivado IP Flow Target)"/>
+    <item NAME="Product family" VALUE="artix7"/>
+    <item NAME="Target device" VALUE="xc7a200t-fbg484-3"/>
+  </GeneralInfo>
+  <RunOptions NAME="Run Constraints &amp; Options">
+    <General NAME="Design Constraints &amp; Options">
+      <item NAME="RTL Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis target clock" VALUE="10 ns"/>
+      <item NAME="C-Synthesis uncertainty" VALUE="27%"/>
+      <item NAME="config_export -ip_xdc_file" VALUE=""/>
+      <item NAME="config_export -ip_xdc_ooc_file" VALUE=""/>
+    </General>
+    <Syn NAME="RTL Synthesis Options">
+      <item NAME="config_export -vivado_synth_strategy" VALUE="default"/>
+      <item NAME="config_export -vivado_synth_design_args" VALUE="-directive sdx_optimization_effort_high"/>
+    </Syn>
+    <Reporting NAME="Reporting Options">
+      <item NAME="config_export -vivado_report_level" VALUE="2"/>
+      <item NAME="config_export -vivado_max_timing_paths" VALUE="10"/>
+    </Reporting>
+  </RunOptions>
+</profile>
+

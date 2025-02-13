@@ -1,0 +1,45 @@
+# do interp_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /tools/intel/quartus/13.1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/interp {/home/gme/guilherme.manske/quartus/Verilog/interp/interp.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module interp
+# 
+# Top level modules:
+# 	interp
+# 
+# vlog -vlog01compat -work work +incdir+/home/gme/guilherme.manske/quartus/Verilog/interp {/home/gme/guilherme.manske/quartus/Verilog/interp/tb_pixel_interpolator.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_pixel_interpolator
+# 
+# Top level modules:
+# 	tb_pixel_interpolator
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_pixel_interpolator
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_pixel_interpolator 
+# Loading work.tb_pixel_interpolator
+# Loading work.interp
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Teste de Interpolação de Pixels
+# P0= 10, P1= 20, P2= 30, P3= 40, Interpolated= 25
+# P0=  0, P1=255, P2=255, P3=  0, Interpolated=  0
+# P0=255, P1=255, P2=255, P3=255, Interpolated=  0
+# P0=  0, P1=  0, P2=  0, P3=  0, Interpolated=  0
+# P0=128, P1=128, P2=128, P3=128, Interpolated=  0
+# Break in Module tb_pixel_interpolator at /home/gme/guilherme.manske/quartus/Verilog/interp/tb_pixel_interpolator.v line 37
+# Simulation Breakpoint: Break in Module tb_pixel_interpolator at /home/gme/guilherme.manske/quartus/Verilog/interp/tb_pixel_interpolator.v line 37
+# MACRO ./interp_run_msim_rtl_verilog.do PAUSED at line 17

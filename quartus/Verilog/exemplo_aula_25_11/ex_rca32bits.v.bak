@@ -1,0 +1,19 @@
+module ex_rca32bits(
+input [31:0] a,b,
+//input cin,
+output reg [31:0] s,cout
+output reg overflow,
+integer i
+);
+always @(a,b)
+begin
+	
+	s[0] = a[0] ^ b[0] ^ cin;
+	cout[0] = (a[0] & b[0]);
+	for(i=1,i<=31,i+1)
+	begin
+		s[i] = a[i] ^ b[i] ^ cout[i-1];
+		cout[i] = (a[i] & b[i]) | (a[i] & cout[i-1]) | (b[i] & cout[i-1]);
+	end
+end
+endmodule

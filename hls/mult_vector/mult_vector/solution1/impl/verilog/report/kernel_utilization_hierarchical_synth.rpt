@@ -1,0 +1,44 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Mon Jan  6 14:48:46 2025
+| Host         : cadmicro-inf-el8-623207 running 64-bit Rocky Linux release 8.10 (Green Obsidian)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/kernel_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7a200tfbg484-3
+| Speed File   : -3
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|            Instance           |                   Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| bd_0_wrapper                  |                                     (top) |       2234 |       1841 |       0 |  393 | 3299 |      0 |      3 |          3 |
+|   bd_0_i                      |                                      bd_0 |       2234 |       1841 |       0 |  393 | 3299 |      0 |      3 |          3 |
+|     hls_inst                  |                           bd_0_hls_inst_0 |       2234 |       1841 |       0 |  393 | 3299 |      0 |      3 |          3 |
+|       (hls_inst)              |                           bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       inst                    |                    bd_0_hls_inst_0_kernel |       2234 |       1841 |       0 |  393 | 3299 |      0 |      3 |          3 |
+|         (inst)                |                    bd_0_hls_inst_0_kernel |         25 |         22 |       0 |    3 |  289 |      0 |      0 |          1 |
+|         control_s_axi_U       |      bd_0_hls_inst_0_kernel_control_s_axi |        206 |        206 |       0 |    0 |  235 |      0 |      0 |          0 |
+|         gmem0_m_axi_U         |        bd_0_hls_inst_0_kernel_gmem0_m_axi |       1406 |       1110 |       0 |  296 | 1923 |      0 |      2 |          0 |
+|           bus_read            |   bd_0_hls_inst_0_kernel_gmem0_m_axi_read |        386 |        385 |       0 |    1 |  616 |      0 |      0 |          0 |
+|           bus_write           |  bd_0_hls_inst_0_kernel_gmem0_m_axi_write |        596 |        488 |       0 |  108 |  838 |      0 |      0 |          0 |
+|           load_unit           |   bd_0_hls_inst_0_kernel_gmem0_m_axi_load |        191 |         98 |       0 |   93 |  233 |      0 |      1 |          0 |
+|           store_unit          |  bd_0_hls_inst_0_kernel_gmem0_m_axi_store |        233 |        139 |       0 |   94 |  236 |      0 |      1 |          0 |
+|         gmem1_m_axi_U         |        bd_0_hls_inst_0_kernel_gmem1_m_axi |        582 |        488 |       0 |   94 |  852 |      0 |      1 |          0 |
+|           bus_read            |   bd_0_hls_inst_0_kernel_gmem1_m_axi_read |        386 |        385 |       0 |    1 |  616 |      0 |      0 |          0 |
+|           bus_write           |  bd_0_hls_inst_0_kernel_gmem1_m_axi_write |          2 |          2 |       0 |    0 |    3 |      0 |      0 |          0 |
+|           load_unit           |   bd_0_hls_inst_0_kernel_gmem1_m_axi_load |        194 |        101 |       0 |   93 |  233 |      0 |      1 |          0 |
+|         mul_32s_32s_32_1_1_U1 | bd_0_hls_inst_0_kernel_mul_32s_32s_32_1_1 |         15 |         15 |       0 |    0 |    0 |      0 |      0 |          2 |
++-------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

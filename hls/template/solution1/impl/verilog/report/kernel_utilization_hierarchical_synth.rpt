@@ -1,0 +1,43 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Tue Jan  7 14:21:59 2025
+| Host         : cadmicro-inf-el8-623207 running 64-bit Rocky Linux release 8.10 (Green Obsidian)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/kernel_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7a200tfbg484-3
+| Speed File   : -3
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------+------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|         Instance        |                  Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------+------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| bd_0_wrapper            |                                    (top) |       2542 |       2101 |       0 |  441 | 3619 |      0 |      3 |          0 |
+|   bd_0_i                |                                     bd_0 |       2542 |       2101 |       0 |  441 | 3619 |      0 |      3 |          0 |
+|     hls_inst            |                          bd_0_hls_inst_0 |       2542 |       2101 |       0 |  441 | 3619 |      0 |      3 |          0 |
+|       (hls_inst)        |                          bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       inst              |                   bd_0_hls_inst_0_kernel |       2542 |       2101 |       0 |  441 | 3619 |      0 |      3 |          0 |
+|         (inst)          |                   bd_0_hls_inst_0_kernel |         33 |         30 |       0 |    3 |  302 |      0 |      0 |          0 |
+|         control_s_axi_U |     bd_0_hls_inst_0_kernel_control_s_axi |        206 |        206 |       0 |    0 |  235 |      0 |      0 |          0 |
+|         gmem0_m_axi_U   |       bd_0_hls_inst_0_kernel_gmem0_m_axi |       1631 |       1293 |       0 |  338 | 2164 |      0 |      2 |          0 |
+|           bus_read      |  bd_0_hls_inst_0_kernel_gmem0_m_axi_read |        395 |        394 |       0 |    1 |  624 |      0 |      0 |          0 |
+|           bus_write     | bd_0_hls_inst_0_kernel_gmem0_m_axi_write |        605 |        497 |       0 |  108 |  882 |      0 |      0 |          0 |
+|           load_unit     |  bd_0_hls_inst_0_kernel_gmem0_m_axi_load |        279 |        180 |       0 |   99 |  291 |      0 |      1 |          0 |
+|           store_unit    | bd_0_hls_inst_0_kernel_gmem0_m_axi_store |        352 |        222 |       0 |  130 |  367 |      0 |      1 |          0 |
+|         gmem1_m_axi_U   |       bd_0_hls_inst_0_kernel_gmem1_m_axi |        672 |        572 |       0 |  100 |  918 |      0 |      1 |          0 |
+|           bus_read      |  bd_0_hls_inst_0_kernel_gmem1_m_axi_read |        397 |        396 |       0 |    1 |  624 |      0 |      0 |          0 |
+|           bus_write     | bd_0_hls_inst_0_kernel_gmem1_m_axi_write |          2 |          2 |       0 |    0 |    3 |      0 |      0 |          0 |
+|           load_unit     |  bd_0_hls_inst_0_kernel_gmem1_m_axi_load |        273 |        174 |       0 |   99 |  291 |      0 |      1 |          0 |
++-------------------------+------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

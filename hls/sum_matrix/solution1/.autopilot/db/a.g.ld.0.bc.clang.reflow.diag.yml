@@ -1,0 +1,406 @@
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       in1
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sum_matrix.cpp, Line: 25, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep4seq
+  - ArrayName:       in2
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sum_matrix.cpp, Line: 25, Column: 42 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep5seq
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: sum_matrix.cpp, Line: 25, Column: 24 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.18
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       in1
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:23:19'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep4seq
+  - ArrayName:       in2
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:23:19'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          scevgep5seq
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_23_1
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:23:19'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       in1
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep4seq
+  - ArrayName:       in2
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          scevgep5seq
+  - ArrayName:       out
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '> at '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ' '
+  - Function:        'kernel(unsigned int*, unsigned int*, unsigned int*, int, int)'
+    DebugLoc:        { File: sum_matrix.cpp, Line: 19, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sum_matrix.cpp, Line: 24, Column: 26 }
+Function:        _Z6kernelPjS_S_ii
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         'sum_matrix.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
