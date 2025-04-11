@@ -1,0 +1,272 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Mar 11, 2025 at 16:09:39 -03
+xrun
+	-f file_list.f
+		-smartorder
+		-work work
+		-top tb_adder
+		-notimingchecks
+		-gui
+		-access +rw
+		../rtl/somadores/normais/carry_select/*
+		../rtl/somadores/normais/ripple_carry/*
+		../rtl/componentes/*
+		../tb/tb_adder.sv
+	-input wave.tcl
+Recompiling... reason: file '../tb/tb_adder.sv' is newer than expected.
+	expected: Tue Mar 11 16:06:48 2025
+	actual:   Tue Mar 11 16:09:28 2025
+file: ../tb/tb_adder.sv
+	module work.tb_adder:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'work' ....... Done
+	Top level design units:
+		tb_adder
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		work.tb_adder:sv <0x58615bf9>
+			streams:   6, words: 12445
+		work.ripple_carry_adder:sv <0x66b67dcf>
+			streams:   6, words:  2125
+		work.carry_select_adder:sv <0x0af521fa>
+			streams:  24, words: 10356
+		work.ripple_carry_adder:sv <0x01bfb2c1>
+			streams:   6, words:  2125
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 38       4
+		Registers:               35      17
+		Scalar wires:           172       -
+		Expanded wires:          32       2
+		Vectored wires:          19       -
+		Initial blocks:           1       1
+		Cont. assignments:       14       6
+		Pseudo assignments:     102       -
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: work.tb_adder:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> 
+xcelium> # XM-Sim Command File
+xcelium> # TOOL:	xmsim(64)	23.09-s013
+xcelium> #
+xcelium> #
+xcelium> # You can restore this configuration with:
+xcelium> #
+xcelium> #      xrun -f file_list.f -input wave.tcl
+xcelium> #
+xcelium> 
+xcelium> set tcl_prompt1 {puts -nonewline "xcelium> "}
+puts -nonewline "xcelium> "
+xcelium> set tcl_prompt2 {puts -nonewline "> "}
+puts -nonewline "> "
+xcelium> set vlog_format %h
+%h
+xcelium> set vhdl_format %v
+%v
+xcelium> set real_precision 6
+6
+xcelium> set display_unit auto
+auto
+xcelium> set time_unit module
+module
+xcelium> set heap_garbage_size -200
+-200
+xcelium> set heap_garbage_time 0
+0
+xcelium> set assert_report_level note
+note
+xcelium> set assert_stop_level error
+error
+xcelium> set autoscope yes
+yes
+xcelium> set assert_1164_warnings yes
+yes
+xcelium> set pack_assert_off {}
+xcelium> set severity_pack_assert_off {note warning}
+note warning
+xcelium> set assert_output_stop_level failed
+failed
+xcelium> set tcl_debug_level 0
+0
+xcelium> set relax_path_name 1
+1
+xcelium> set vhdl_vcdmap XX01ZX01X
+XX01ZX01X
+xcelium> set intovf_severity_level ERROR
+ERROR
+xcelium> set probe_screen_format 0
+0
+xcelium> set rangecnst_severity_level ERROR
+ERROR
+xcelium> set textio_severity_level ERROR
+ERROR
+xcelium> set vital_timing_checks_on 1
+xmsim: *E,NOEVTC: VITAL timing checks not available: -notimingchecks was used during elaboration.
+1
+xcelium> set vlog_code_show_force 0
+0
+xcelium> set assert_count_attempts 1
+1
+xcelium> set tcl_all64 false
+false
+xcelium> set tcl_runerror_exit false
+false
+xcelium> set assert_report_incompletes 0
+0
+xcelium> set show_force 1
+1
+xcelium> set force_reset_by_reinvoke 0
+0
+xcelium> set tcl_relaxed_literal 0
+0
+xcelium> set probe_exclude_patterns {}
+xcelium> set probe_packed_limit 4k
+4k
+xcelium> set probe_unpacked_limit 16k
+16k
+xcelium> set assert_internal_msg no
+no
+xcelium> set svseed 1
+1
+xcelium> set assert_reporting_mode 0
+0
+xcelium> set vcd_compact_mode 0
+0
+xcelium> set vhdl_forgen_loopindex_enum_pos 0
+0
+xcelium> set tcl_sigval_prefix {#}
+#
+xcelium> alias . run
+xcelium> alias indago verisium
+xcelium> alias quit exit
+xcelium> database -open -vcd -into sad.vcd _sad.vcd1 -timescale fs
+Created VCD database _sad.vcd1
+xcelium> database -open -evcd -into sad.vcd _sad.vcd -timescale fs
+xmsim: *E,FNINUS: File name sad.vcd is already in use as a VCD file.
+xcelium> database -open -shm -into waves.shm waves -default
+Created default SHM database waves
+xcelium> probe -create -database waves tb_adder.A tb_adder.B tb_adder.Cin tb_adder.Cout tb_adder.S tb_adder.S2 tb_adder.i
+Created probe 1
+xcelium> 
+xcelium> simvision -input wave.tcl.svcf
+xcelium> run 1us
+xmsim: *W,DFUSE: $dumpfile sad.vcd is already in use (VCD file).
+            File: ../tb/tb_adder.sv, line = 37, pos = 10
+           Scope: tb_adder
+            Time: 0 FS + 0
+
+Teste 1 correto:     0 ==          0
+Teste 2 correto: 59929 == 59929
+Teste 3 correto: 61104 == 61104
+Teste 4 correto: 47088 == 47088
+Teste 5 correto: 17588 == 17588
+Teste 6 correto: 26758 == 26758
+Teste 7 correto: 58710 == 58710
+Teste 8 correto: 60597 == 60597
+Teste 9 correto: 16524 == 16524
+Teste 10 correto: 43858 == 43858
+Teste 11 correto:  1991 ==  1991
+Teste 12 correto: 36904 == 36904
+Teste 13 correto: 44270 == 44270
+Teste 14 correto: 64252 == 64252
+Teste 15 correto: 49505 == 49505
+Teste 16 correto: 36489 == 36489
+Teste 17 correto: 13560 == 13560
+Teste 18 correto: 57219 == 57219
+Teste 19 correto: 29956 == 29956
+Teste 20 correto:   917 ==   917
+Teste 21 correto: 27466 == 27466
+Teste 22 correto:   100 ==   100
+Teste 23 correto: 23819 == 23819
+Teste 24 correto:  6793 ==  6793
+Teste 25 correto: 43519 == 43519
+Teste 26 correto:  1179 ==  1179
+Teste 27 correto: 27478 == 27478
+Teste 28 correto: 60965 == 60965
+Teste 29 correto: 62135 == 62135
+Teste 30 correto: 29354 == 29354
+Teste 31 correto: 10562 == 10562
+Teste 32 correto: 26790 == 26790
+Teste 33 correto: 52880 == 52880
+Teste 34 correto: 37004 == 37004
+Teste 35 correto: 38830 == 38830
+Teste 36 correto:  9161 ==  9161
+Teste 37 correto: 11815 == 11815
+Teste 38 correto: 17345 == 17345
+Teste 39 correto:  3831 ==  3831
+Teste 40 correto: 18637 == 18637
+Teste 41 correto: 18842 == 18842
+Teste 42 correto: 61765 == 61765
+Teste 43 correto:  7933 ==  7933
+Teste 44 correto: 28785 == 28785
+Teste 45 correto: 32904 == 32904
+Teste 46 correto: 23959 == 23959
+Teste 47 correto: 28444 == 28444
+Teste 48 correto: 33521 == 33521
+Teste 49 correto: 14862 == 14862
+Teste 50 correto: 36021 == 36021
+Teste 51 correto: 40497 == 40497
+Teste 52 correto: 38925 == 38925
+Teste 53 correto: 50379 == 50379
+Teste 54 correto: 41501 == 41501
+Teste 55 correto:  8860 ==  8860
+Teste 56 correto: 55041 == 55041
+Teste 57 correto: 14044 == 14044
+Teste 58 correto: 49357 == 49357
+Teste 59 correto: 10811 == 10811
+Teste 60 correto: 22157 == 22157
+Teste 61 correto: 19936 == 19936
+Teste 62 correto: 60227 == 60227
+Teste 63 correto: 31339 == 31339
+Teste 64 correto: 64749 == 64749
+Teste 65 correto: 20212 == 20212
+Teste 66 correto: 58238 == 58238
+Teste 67 correto: 20491 == 20491
+Teste 68 correto: 24544 == 24544
+Teste 69 correto: 59062 == 59062
+Teste 70 correto:  2809 ==  2809
+Teste 71 correto: 16248 == 16248
+Teste 72 correto: 42148 == 42148
+Teste 73 correto:  2374 ==  2374
+Teste 74 correto: 17077 == 17077
+Teste 75 correto:  5264 ==  5264
+Teste 76 correto: 24567 == 24567
+Teste 77 correto: 53823 == 53823
+Teste 78 correto: 52015 == 52015
+Teste 79 correto: 45747 == 45747
+Teste 80 correto: 30232 == 30232
+Teste 81 correto: 25794 == 25794
+Teste 82 correto:  9317 ==  9317
+Teste 83 correto: 62652 == 62652
+Teste 84 correto: 64195 == 64195
+Teste 85 correto: 52074 == 52074
+Teste 86 correto: 60884 == 60884
+Teste 87 correto: 36107 == 36107
+Teste 88 correto:  4407 ==  4407
+Teste 89 correto: 55383 == 55383
+Teste 90 correto: 50812 == 50812
+Teste 91 correto: 58749 == 58749
+Teste 92 correto: 52274 == 52274
+Teste 93 correto:  1319 ==  1319
+Teste 94 correto: 11482 == 11482
+Teste 95 correto: 65393 == 65393
+Teste 96 correto:  3569 ==  3569
+Teste 97 correto: 21238 == 21238
+Teste 98 correto: 24300 == 24300
+Teste 99 correto: 21445 == 21445
+Teste 100 correto: 26677 == 26677
+Simulation stopped via $stop(1) at time 600 NS + 0
+xcelium> ^C
+xcelium> exit
+...Regained control from SimVision
+-------------------------------------
+TOOL:	xrun(64)	23.09-s013: Exiting on Mar 11, 2025 at 16:10:49 -03  (total: 00:01:10)

@@ -1,0 +1,160 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[13:01:57.196489] Configured Lic search path (23.02-s003): 5280@pgmicro01.ufrgs.br
+
+Version: 23.12-s086_1, built Wed Jul 24 15:05:35 PDT 2024
+Options: 
+Date:    Tue Mar 18 13:01:57 2025
+Host:    cadmicro-inf-el8-623207 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (6cores*12cpus*1physical cpu*12th Gen Intel(R) Core(TM) i5-12400 18432KB) (32673640KB)
+PID:     1348336
+OS:      Rocky Linux release 8.10 (Green Obsidian)
+
+Checking out license: Genus_Synthesis
+[13:01:58.186122] Periodic Lic check successful
+[13:01:58.710418] Feature usage summary:
+[13:01:58.710418] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (1 second elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (8 seconds elapsed).
+
+WARNING: This version of the tool is 236 days old.
+@genus:root: 1> set DESIGN fa
+fa
+@genus:root: 2> 
+@genus:root: 2> set_db init_lib_search_path ../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/timing
+  Setting attribute of root '/': 'init_lib_search_path' = ../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/timing
+1 ../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/timing
+@genus:root: 3> set_db init_hdl_search_path ../rtl
+  Setting attribute of root '/': 'init_hdl_search_path' = ../rtl
+1 ../rtl
+@genus:root: 4> 
+@genus:root: 4> read_libs { fast_vdd1v0_basicCells.lib slow_vdd1v0_basicCells.lib }
+
+  Message Summary for Library both libraries:
+  *******************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 2
+  *******************************************
+ 
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'fast_vdd1v0' and 'slow_vdd1v0'.
+        : This is a common source of delay calculation confusion and should be avoided.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 0.000000) in library 'fast_vdd1v0_basicCells.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-9'.
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ACHCONX2 and slow_vdd1v0/ACHCONX2).  Deleting (slow_vdd1v0/ACHCONX2).
+        : Library cell names must be unique.  Any duplicates will be deleted.  Only the first (as determined by the order of libraries) will be retained.
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDFHX1 and slow_vdd1v0/ADDFHX1).  Deleting (slow_vdd1v0/ADDFHX1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDFHX2 and slow_vdd1v0/ADDFHX2).  Deleting (slow_vdd1v0/ADDFHX2).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDFHX4 and slow_vdd1v0/ADDFHX4).  Deleting (slow_vdd1v0/ADDFHX4).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDFHXL and slow_vdd1v0/ADDFHXL).  Deleting (slow_vdd1v0/ADDFHXL).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDFX1 and slow_vdd1v0/ADDFX1).  Deleting (slow_vdd1v0/ADDFX1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDFX2 and slow_vdd1v0/ADDFX2).  Deleting (slow_vdd1v0/ADDFX2).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDFX4 and slow_vdd1v0/ADDFX4).  Deleting (slow_vdd1v0/ADDFX4).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDFXL and slow_vdd1v0/ADDFXL).  Deleting (slow_vdd1v0/ADDFXL).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDHX1 and slow_vdd1v0/ADDHX1).  Deleting (slow_vdd1v0/ADDHX1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDHX2 and slow_vdd1v0/ADDHX2).  Deleting (slow_vdd1v0/ADDHX2).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDHX4 and slow_vdd1v0/ADDHX4).  Deleting (slow_vdd1v0/ADDHX4).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/ADDHXL and slow_vdd1v0/ADDHXL).  Deleting (slow_vdd1v0/ADDHXL).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/AND2X1 and slow_vdd1v0/AND2X1).  Deleting (slow_vdd1v0/AND2X1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/AND2X2 and slow_vdd1v0/AND2X2).  Deleting (slow_vdd1v0/AND2X2).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/AND2X4 and slow_vdd1v0/AND2X4).  Deleting (slow_vdd1v0/AND2X4).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/AND2X6 and slow_vdd1v0/AND2X6).  Deleting (slow_vdd1v0/AND2X6).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/AND2X8 and slow_vdd1v0/AND2X8).  Deleting (slow_vdd1v0/AND2X8).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/AND2XL and slow_vdd1v0/AND2XL).  Deleting (slow_vdd1v0/AND2XL).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (fast_vdd1v0/AND3X1 and slow_vdd1v0/AND3X1).  Deleting (slow_vdd1v0/AND3X1).
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-22'.
+@genus:root: 5> 
+@genus:root: 5> read_physical -lef { \
+genus.../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef \
+genus.../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef \
+}
+Error   : File error. [FILE-100] [read_physical]
+        : Cannot open file 'genus.../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef'
+        : Make sure that the file is a readable regular file and has the specified name.
+1
+@genus:root: 6> exit
+
+Lic Summary:
+[13:03:06.313912] Cdslmd servers: pgmicro01
+[13:03:06.838211] Feature usage summary:
+[13:03:06.838211] Genus_Synthesis
+
+Normal exit.

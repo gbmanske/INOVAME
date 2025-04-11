@@ -1,0 +1,58 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[13:37:48.196561] Configured Lic search path (23.02-s003): 5280@pgmicro01.ufrgs.br
+
+Version: 23.12-s086_1, built Wed Jul 24 15:05:35 PDT 2024
+Options: 
+Date:    Tue Mar 18 13:37:48 2025
+Host:    cadmicro-inf-el8-623207 (x86_64 w/Linux 4.18.0-553.27.1.el8_10.x86_64) (6cores*12cpus*1physical cpu*12th Gen Intel(R) Core(TM) i5-12400 18432KB) (32673640KB)
+PID:     1355902
+OS:      Rocky Linux release 8.10 (Green Obsidian)
+
+Checking out license: Genus_Synthesis
+[13:37:48.436098] Periodic Lic check successful
+[13:37:48.436105] Feature usage summary:
+[13:37:48.436106] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (0 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (7 seconds elapsed).
+
+WARNING: This version of the tool is 236 days old.
+@genus:root: 1> set DESIGN fa
+fa
+@genus:root: 2> set adder ripple_carry_adder
+ripple_carry_adder
+@genus:root: 3> 
+@genus:root: 3> set_db init_lib_search_path ../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/timing
+  Setting attribute of root '/': 'init_lib_search_path' = ../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/timing
+1 ../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/timing
+@genus:root: 4> set_db init_hdl_search_path ../rtl
+  Setting attribute of root '/': 'init_hdl_search_path' = ../rtl
+1 ../rtl
+@genus:root: 5> read_physical -lef { ../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef ../../gpdk045_workspace/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef }
+Error   : The init design flow needs to be initialized in a proper sequence.  The sequence of initialization is as follow.
+  uninitialized - timing_initialized - physical_initialized - design_initialized - power_initialized - initialization_complete.
+ [TUI-340] [read_physical]
+        : Cannot perform initialization step 'physical_initialized' from current state 'uninitialized'. Please check and correct your initialization steps.
+        : Command Failed.
+1
+@genus:root: 6> exit
+
+Lic Summary:
+[13:44:55.350867] Cdslmd servers: pgmicro01
+[13:44:55.350872] Feature usage summary:
+[13:44:55.350872] Genus_Synthesis
+
+Normal exit.

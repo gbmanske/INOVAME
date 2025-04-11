@@ -1,0 +1,61 @@
+module carry_select_adder_gpt #(
+    parameter int WIDTH = 32,
+    parameter int BLOCKS [0:3] = {4, 6, 8, 14} // Define os tamanhos dos blocos
+)(
+    input  logic [WIDTH-1:0] A, B,
+    input  logic Cin,
+    output logic [WIDTH-1:0] S,
+    output logic Cout
+);
+
+    logic [WIDTH-1:0] S0, S1; // Soma com Carry 0 e Carry 1
+    logic [WIDTH-1:0] C0, C1; // Carry out de cada bloco
+    logic [3:0] C_mid; // Carry intermediário entre blocos
+
+    genvar i;
+    integer start_bit = 0;
+
+    generate
+        for (i = 0; i < 4; i = i + 1) begin : CSA_BLOCKS
+            localparam int BLOCK_SIZE = BLOCKS[i];
+
+            if (i == 0) begin
+                // Primeiro bloco, recebe diretamente o carry de entrada
+                ripple_carry_adder #(.WIDTH(BLOCK_SIZE)) RCA_LSB (
+                    .A(A[start_bit +: BLOCK_SIZE]),
+                    .B(B[start_bit +: BLOCK_SIZE]),
+                    .Cin(Cin),
+                    .S(S[start_bit +: BLOCK_SIZE]),
+                    .Cout(C_mid[i])
+                );
+            end else begin
+                // Blocos seguintes pré-calculam com Carry 0 e Carry 1
+                ripple_carry_adder #(.WIDTH(BLOCK_SIZE)) RCA_C0 (
+                    .A(A[start_bit +: BLOCK_SIZE]),
+                    .B(B[start_bit +: BLOCK_SIZE]),
+                    .Cin(1'b0),
+                    .S(S0[start_bit +: BLOCK_SIZE]),
+                    .Cout(C0[start_bit +: BLOCK_SIZE])
+                );
+
+                ripple_carry_adder #(.WIDTH(BLOCK_SIZE)) RCA_C1 (
+                    .A(A[start_bit +: BLOCK_SIZE]),
+                    .B(B[start_bit +: BLOCK_SIZE]),
+                    .Cin(1'b1),
+                    .S(S1[start_bit +: BLOCK_SIZE]),
+                    .Cout(C1[start_bit +: BLOCK_SIZE])
+                );
+
+                // Multiplexador para escolher a soma correta
+                assign S[start_bit +: BLOCK_SIZE] = (C_mid[i-1]) ? S1[start_bit +: BLOCK_SIZE] : S0[start_bit +: BLOCK_SIZE];
+                assign C_mid[i] = (C_mid[i-1]) ? C1[start_bit + BLOCK_SIZE - 1] : C0[start_bit + BLOCK_SIZE - 1];
+            end
+
+            // Atualiza o índice de início do próximo bloco
+            assign start_bit = start_bit + BLOCK_SIZE;
+        end
+    endgenerate
+
+    assign Cout = C_mid[3]; // Carry final
+
+endmodule
