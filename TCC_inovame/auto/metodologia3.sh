@@ -11,6 +11,7 @@ brent_kung_32bits
 sklansky_32bits 
 ladner_fischer_32bits 
 han_carlson_32bits"
+
 cd ../scripts
 bash ../auto/ajusta1_init_design.sh "ripple_carry_adder_32bits"
 cd ../auto
