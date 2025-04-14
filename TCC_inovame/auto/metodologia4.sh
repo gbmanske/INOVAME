@@ -22,7 +22,7 @@ do
     cd ../scripts
     bash ../auto/ajusta1_init_design.sh $somador
     
-    echo "Rodando $somador - GEN EFFORT = $gen_eff - MAP EFFORT = $map_eff - OPT EFFORT = $opt_eff"
+    echo "Rodando $somador - Atraso $atraso"
     
     #Rodar genus
     cd ../genus
